@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/svgIcons/Hamburgure.tsx", "app/svgIcons/LowerDotBg.jsx", "app/svgIcons/UpperDotBg.jsx"  ],
   "exclude": ["node_modules"]
 }

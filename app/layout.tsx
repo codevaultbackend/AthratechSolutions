@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import TopNavigation from "./Component/topNavigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,21 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Athratech Tech Solutions",
-  description: "Provides varios tech selutions",
+  title: "Athratech Tech",
+  description: "Provides various tech solutions",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        {children}
+        {/* Navbar */}
+        <TopNavigation />
+
+        {/* Page content */}
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
