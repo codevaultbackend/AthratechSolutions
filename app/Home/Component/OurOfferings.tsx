@@ -53,7 +53,7 @@ export default function HeroSection() {
           !font-Bricolage_Grotesque
         "
       >
-        We help <span className="text-[23px] text-[400] text-[#8A8888] mr-[10px]">startups and enterprises craft digital products</span> 
+        We help <span className=" max-[768px]:text-[23px] text-[400] text-[#8A8888] mr-[10px]">startups and enterprises craft digital products</span> 
         <br className="hidden md:block" />
         that <span className="text-black">truly connect</span> with their customers.
       </h1>
