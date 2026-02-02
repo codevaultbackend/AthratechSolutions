@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "./Component/topNavigation";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { inter, calligraffitti, bricolage } from "./fonts";
+import Footer from "./Component/Footer";
 
 export const metadata: Metadata = {
   title: "Athratech Tech",
@@ -25,14 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} antialiased bg-white max-w-[1440px] w-full mx-auto `}
       >
         {/* Navbar */}
         <TopNavigation />
-
         {/* Page content */}
         <main className="relative">{children}</main>
+        <Footer />
       </body>
     </html>
   );

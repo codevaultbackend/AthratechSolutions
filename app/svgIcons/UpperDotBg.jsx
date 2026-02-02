@@ -7,7 +7,7 @@ export default function UpperDotBg() {
     return (
         <>
             <svg width="1440" height="377" viewBox="0 0 1440 377" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="1962" height="556" transform="matrix(1 0 0 -1 -245 377)" fill="url(#pattern0_2245_1039)" fill-opacity="0.6" />
+                <rect width="1962" height="556" transform="matrix(1 0 0 -1 -245 377)" fill="url(#pattern0_2245_1039)" fillOpacity="0.6" />
                 <defs>
                     <pattern id="pattern0_2245_1039" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlink:href="#image0_2245_1039" transform="matrix(0.000244141 0 0 0.000860465 0 -1.4118)" />

@@ -3,7 +3,7 @@ export default function LowerDotBg() {
     return (
         <>
             <svg width="1440" height="898" viewBox="0 0 1440 898" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect x="-124" y="-256" width="1688" height="1154" fill="url(#pattern0_2245_1038)" fill-opacity="0.98" />
+                <rect x="-124" y="-256" width="1688" height="1154" fill="url(#pattern0_2245_1038)" fillOpacity="0.98" />
                 <defs>
                     <pattern id="pattern0_2245_1038" patternContentUnits="objectBoundingBox" width="1" height="1">
                         <use xlink:href="#image0_2245_1038" transform="scale(0.000244141 0.000356773)" />
