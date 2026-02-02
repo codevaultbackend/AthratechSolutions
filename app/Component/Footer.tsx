@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-[#6f6f6f]">
+    <footer className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-[#6f6f6f] z-[9]">
       {/* ===== Background vignette ===== */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#7a7a7a_0%,_#5f5f5f_45%,_#1a1a1a_100%)]" />
 

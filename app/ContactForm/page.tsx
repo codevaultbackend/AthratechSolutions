@@ -2,18 +2,18 @@
 
 export default function ContactForm() {
   return (
-    <section className="bg-[#fff] py-[120px] px-4">
+    <section className="bg-[#fff] py-[120px] px-4 relative z-[9]">
       <div className="max-w-[1100px] mx-auto">
         {/* ===== Header ===== */}
         <div className="text-center mb-[64px]">
           <p className="font-calligraffitti text-[#8A8A8A] text-[20px] mb-2">
-            Contact
+            Need a reply fast? 🚀
           </p>
           <h2 className="text-[42px] md:text-[56px] font-[400] text-black leading-[1.1] mb-4">
-            Let’s talk about your project
+            Let’s Talk!
           </h2>
           <p className="text-[#6F6F6F] max-w-[520px] mx-auto text-[15px] md:text-[16px]">
-            Tell us a bit about what you’re building and we’ll get back within 24 hours.
+            Share your requirements here or send us an email and we will follow up in 24 hrs
           </p>
         </div>
 

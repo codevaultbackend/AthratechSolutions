@@ -63,7 +63,7 @@ export default function TopNavigation() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="flex justify-center items-center fixed top-[20px] right-[5%] z-[999999999999] "
+              className="flex justify-center items-center fixed top-[20px] right-[5%] z-40 "
             >
               <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] ">
                 <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">

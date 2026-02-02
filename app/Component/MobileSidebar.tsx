@@ -58,7 +58,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
               key={item}
               href="/"
               onClick={onClose}
-              className="text-[28px] font-[400] text-[#BEBEBE] hover:text-white transition"
+              className="text-[24px] font-[400] leading-[100%] text-[#BEBEBE] hover:text-white transition"
             >
               {item}
             </Link>
@@ -67,7 +67,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
 
         {/* CTA */}
         <div className="pb-[48px] flex flex-col items-center gap-6">
-          <p className="text-[18px] text-[#EAEAEA]">
+          <p className="text-[16px] font-[400] text-[#FFFFFF]">
             Have a project for us?
           </p>
 
