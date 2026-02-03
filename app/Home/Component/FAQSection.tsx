@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#EDEDED] py-[120px] px-4">
+    <section className="bg-[#EDEDED] py-[120px] px-4" id="Faq">
       {/* ===== Header ===== */}
       <div className="text-center mb-[64px]">
         <p className="font-calligraffitti text-[#8A8A8A] mb-2">FAQs</p>
@@ -66,18 +66,18 @@ export default function FAQSection() {
                     ml-4 flex h-6 w-6 items-center justify-center
                     rounded-full bg-black text-white
                     transition-transform duration-300
-                    ${isOpen ? "rotate-45" : "rotate-0"}
+                    
                   `}
                 >
-                  +
+                  <i className={`fa-solid  ${isOpen ? "fa-minus" : "fa-plus"}`}></i>
                 </span>
               </button>
 
               {/* Answer */}
               <div
                 className={`
-                  overflow-hidden transition-all duration-300
-                  ${isOpen ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"}
+                  overflow-hidden transition-all duration-300 !h-[54px]
+                  ${isOpen ? "!max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"}
                 `}
               >
                 <p className="text-sm text-gray-600 leading-relaxed">

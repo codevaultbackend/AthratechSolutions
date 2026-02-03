@@ -43,7 +43,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-[#fff] py-[120px] px-4 relative z-[999]">
+    <section className="bg-[#fff] py-[120px] px-4 relative z-[9]">
       <div className="max-w-[1100px] mx-auto">
         {/* ===== Header ===== */}
         <div className="text-center mb-[64px]">

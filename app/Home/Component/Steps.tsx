@@ -67,7 +67,7 @@ export default function Steps() {
     return (
         <section className="relative min-h-screen bg-[url('/StepsBg.jpg')] bg-cover bg-center bg-no-repeat pt-[110px] pb-[120px]">
 
-        <img src="/StepsBg.png" alt="steps" className="absolute top-0 left-0 w-full h-full" />
+            <img src="/StepsBg.png" alt="steps" className="absolute top-0 left-0 w-full h-full" />
 
             {/* ===== Heading ===== */}
             <div className="text-center mb-[90px]">
@@ -128,13 +128,35 @@ export default function Steps() {
 
                                 {/* Center circle */}
                                 <div className={`absolute left-1/2 -translate-x-1/2  !rounded-full max-[780px]:translate-x-0 max-[780px]:left-[24px] `}>
-                                    
-                                        <img
-                                            src={step.count}
-                                            alt={step.title}
-                                            className={`" !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[128px] h-[128px]`}
-                                        />
-                                    
+
+
+
+                                    <div className=" rounded-full 
+              bg-gradient-to-br from-[#f2f0ed] to-[#e6e3df]
+              flex items-center justify-center
+              shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4),0_20px_40px_rgba(0,0,0,0.4)] !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[128px] h-[128px]">
+
+
+                                        <div className="w-[92px] h-[92px] rounded-full
+                bg-gradient-to-br from-white/50 to-white/10
+                flex items-center justify-center
+                shadow-[inset_0_0_0_2px_rgba(255,255,255,0.6)] ">
+
+
+                                            <div className="w-[50px] h-[50px] rounded-full bg-black
+                  flex items-center justify-center
+                  text-white text-2xl font-medium
+                  shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15),0_10px_20px_rgba(0,0,0,0.6)]">
+                                                {index}
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
                                 </div>
                             </li>
                         );

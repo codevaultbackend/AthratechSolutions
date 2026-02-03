@@ -22,6 +22,7 @@ export default function HeroSection() {
         flex flex-col items-center
         px-4
       "
+      id="OurOffering"
     >
       {/* ===== Heading ===== */}
       <p
