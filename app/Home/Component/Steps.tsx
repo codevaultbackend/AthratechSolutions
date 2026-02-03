@@ -77,7 +77,7 @@ export default function Steps() {
                     <span className="w-[124px] h-[1px] bg-gradient-to-l from-[#9C9C9C] to-[#DFDFDF]" />
                 </p>
 
-                <h2 className="text-[56px] font-[400] leading-[1.05] max-w-[620px] mx-auto max-[780px]:text-[24px] max-[780px]:text-[400] text-center">
+                <h2 className="text-[56px] font-[400] leading-[1.05] max-w-[620px] mx-auto max-[780px]:text-[24px] max-[780px]:text-[400] text-center font-bricolage">
                     Take the first step 🚶
                     <br />
                     <span className="text-[#8A8A8A]">and we will guide you</span>
@@ -87,11 +87,12 @@ export default function Steps() {
             {/* ===== Timeline ===== */}
             <div className="relative max-w-[1200px] mx-auto">
                 {/* Base line */}
-                <div className="absolute left-1/2 max-[780px]:left-[30px] top-0 h-full w-[2px] bg-[#CFCFCF] -translate-x-1/2" />
+                <div className="absolute left-1/2 max-[780px]:left-[50px] top-0 h-full border-[#CFCFCF]
+                border-2 border-dashed -translate-x-1/2" />
 
                 {/* Active line */}
                 <div
-                    className="absolute left-1/2 max-[780px]:left-[30px] top-0 w-[2px] bg-[#000000] -translate-x-1/2 transition-all duration-700"
+                    className="absolute left-1/2 max-[780px]:left-[50.4px] top-0 w-[3px] bg-[#000000] -translate-x-1/2 transition-all duration-700"
                     style={{
                         height:
                             activeStep >= 0
@@ -109,7 +110,7 @@ export default function Steps() {
                                 key={index}
                                 ref={(el) => (itemRefs.current[index] = el)}
                                 data-index={index}
-                                className={`relative flex items-center  ${step.side === "left" ? "justify-start " : "justify-end"
+                                className={`relative flex items-center max-[768px]:pl-[38px] max-[768px]:pr-[20px] ${step.side === "left" ? "justify-start " : "justify-end"
                                     }`}
                             >
                                 {/* Text */}
@@ -119,14 +120,14 @@ export default function Steps() {
                     ${step.side === "left" ? "text-right pr-[80px] max-[780px]:!pl-[60px] max-[780px]:!pr-0 max-[780px]:!text-left" : "text-left pl-[80px] max-[780px]:!pl-[60px]"}
                   `}
                                 >
-                                    <h3 className="text-[22px] font-[500] mb-3">{step.title}</h3>
+                                    <h3 className="text-[22px] font-[500] mb-3 font-bricolage">{step.title}</h3>
                                     <p className="text-[14px] text-[#7A7A7A] leading-[1.7]">
                                         {step.des}
                                     </p>
                                 </div>
 
                                 {/* Center circle */}
-                                <div className={`absolute left-1/2 -translate-x-1/2  !rounded-full max-[780px]:translate-x-0 max-[780px]:left-[5px] `}>
+                                <div className={`absolute left-1/2 -translate-x-1/2  !rounded-full max-[780px]:translate-x-0 max-[780px]:left-[24px] `}>
                                     
                                         <img
                                             src={step.count}

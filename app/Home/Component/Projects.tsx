@@ -20,7 +20,7 @@ export default function Projects() {
           <span className="w-[124px] max-md:w-[60px] h-[1px] bg-gradient-to-l from-[#9C9C9C] to-[#DFDFDF]" />
         </p>
 
-        <h2 className="text-[56px] max-md:text-[32px] font-[400] leading-[1.1] text-black">
+        <h2 className="text-[56px] max-md:text-[32px] font-[400] font-bricolage leading-[1.1] text-black">
           Work Booming in the Market
         </h2>
       </div>

@@ -50,7 +50,7 @@ export default function HeroSection() {
           max-md:text-[32px]
           max-md:leading-[40px]
           max-md:max-w-[340px]
-          !font-Bricolage_Grotesque
+          font-bricolage
         "
       >
         We help <span className=" max-[768px]:text-[23px] text-[400] text-[#8A8888] mr-[10px]">startups and enterprises craft digital products</span> 
@@ -62,19 +62,20 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none">
 
         {/* LEFT COLUMN */}
-        <Label className="top-[30%] left-[6%] max-md:top-[56%] max-md:left-[4%]">
+        
+        <Label className="top-[30%] left-[6%] max-md:top-[74%] max-md:right-[10%]  max-md:left-auto max-md:rotate-[-10deg]">
           <Marketing className="w-6 h-6 bg-pink-400 rounded-full p-1" />
           Marketing
         </Label>
 
-        <Label className="top-[46%] left-[8%] rotate-[-2.6deg] max-md:top-[67%]">
+        <Label className="top-[46%] left-[8%] rotate-[-2.6deg]  max-md:bottom-[7%] max-md:left-[16%] max-md:top-auto max-md:rotate-[-7deg] ">
           <Icon bg="bg-black text-white">
             <UIUX />
           </Icon>
           UI/UX
         </Label>
 
-        <Label className="top-[62%] left-[14%] rotate-[5.11deg] max-md:top-[79%] max-md:left-[8%]">
+        <Label className="top-[62%] left-[14%] rotate-[5.11deg] max-md:top-[74.4%] max-md:left-[10%] max-md:rotate-[7deg]">
           <Icon bg="bg-green-500">
             <SocialMedia />
           </Icon>
@@ -82,21 +83,21 @@ export default function HeroSection() {
         </Label>
 
         {/* RIGHT COLUMN */}
-        <Label className="top-[30%] right-[6%] max-md:top-[56%] max-md:right-[4%]">
+        <Label className="top-[30%] right-[6%] max-md:top-[51%] max-md:right-[4%] max-md:rotate-[-7deg]">
           <Icon bg="bg-orange-500">
             <DesignSystem />
           </Icon>
           Design System
         </Label>
 
-        <Label className="top-[46%] right-[8%] max-md:top-[67%]">
+        <Label className="top-[46%] right-[8%] max-md:top-[62%] max-md:rotate-0">
           <Icon bg="bg-green-200">
             <Addcamp />
           </Icon>
           Ad Campaign
         </Label>
 
-        <Label className="top-[62%] right-[14%] rotate-[6deg] max-md:top-[78%] max-md:right-[8%]">
+        <Label className="top-[57%] right-[14%] rotate-[6deg] max-md:bottom-[7%] max-md:top-auto max-md:!rotate(8deg) max-md:right-[20%]">
           <Icon bg="bg-blue-400">
             <Seo />
           </Icon>
@@ -104,7 +105,7 @@ export default function HeroSection() {
         </Label>
 
         {/* BOTTOM ROW */}
-        <Label className="bottom-[22%] left-[20%] rotate-[-8deg] max-md:bottom-[2%] max-md:left-[6%]">
+        <Label className="bottom-[22%] left-[20%] rotate-[-8deg] max-md:top-[62%] max-md:left-[8%] max-md:bottom-auto max-md:rotate-0 ">
           <Icon bg="bg-yellow-400">
             <Developement />
           </Icon>
@@ -118,7 +119,7 @@ export default function HeroSection() {
           SAAS Products
         </Label>
 
-        <Label className="bottom-[22%] right-[20%] rotate-[-9deg] max-md:bottom-[2%] max-md:right-[6%]">
+        <Label className="bottom-[22%] right-[20%] rotate-[-9deg] max-md:top-[51%] max-md:left-[4%] max-md:bottom-auto max-md:right-auto max-md:rotate-[7deg]">
           <Icon bg="bg-sky-400">
             <BrandIdentity />
           </Icon>

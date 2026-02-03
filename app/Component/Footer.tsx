@@ -15,7 +15,7 @@ export default function Footer() {
         bottom-4  lg:bottom-10
         text-[80px] sm:text-[140px] lg:text-[220px]
         font-extrabold text-white/5 tracking-wider
-        select-none whitespace-nowrap max-[780px]:rotate-90 max-[780px]:!bottom-12
+        select-none whitespace-nowrap max-[780px]:rotate-90 max-[600px]:translate-x-1
       ">
         ATHRATECH
       </div>

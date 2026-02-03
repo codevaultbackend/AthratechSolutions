@@ -13,10 +13,10 @@ export default function VideoSection() {
     ];
 
     return (
-        <section className="w-full  rounded-bl-[40px] bg-[#fff] relative bottom-[-30px] z-[9] rounded-br-[40px]  ">
+        <section className="w-full  rounded-bl-[40px] bg-[#fff] relative  z-[9] rounded-br-[40px]  ">
             {/* Video Section */}
             <div className="max-w-full  ">
-                <div className="h-[847px] max-[768px]:h-[263px] max-[768px]:!rounded-0 bg-black rounded-[40px]">
+                <div className="h-[847px] max-[768px]:h-[263px] max-[768px]:!rounded-none bg-black rounded-[40px]">
                     <img src="/videosection.png" alt="athraIntro" className="h-full w-full" />
                 </div>
             </div>

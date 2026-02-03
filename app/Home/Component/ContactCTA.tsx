@@ -18,7 +18,7 @@ export default function ContactCTA() {
             {/* Main Content */}
             <div className="relative z-10 text-center max-w-[620px] px-4">
 
-                <h2 className="text-[48px] max-md:text-[28px] font-[600] text-black leading-tight">
+                <h2 className="text-[48px] max-md:text-[28px] font-[600] text-black leading-tight font-bricolage">
                     We’ll reply in 24hrs
                 </h2>
 
