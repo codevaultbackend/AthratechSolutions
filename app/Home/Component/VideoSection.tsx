@@ -16,8 +16,8 @@ export default function VideoSection() {
         <section className="w-full  rounded-bl-[40px] bg-[#fff] relative  z-[9] rounded-br-[40px]  ">
             {/* Video Section */}
             <div className="max-w-full  ">
-                <div className="h-[847px] max-[768px]:h-[263px] max-[768px]:!rounded-none bg-black rounded-[40px]">
-                    <img src="/videosection.png" alt="athraIntro" className="h-full w-full" />
+                <div className="h-[847px] max-[768px]:h-[263px] max-[768px]:!rounded-none bg-black rounded-[40px] overflow-hidden">
+                    <video src="/AthraVideo.mp4" muted loop autoPlay className="w-full h-full"></video>
                 </div>
             </div>
 

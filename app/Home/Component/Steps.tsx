@@ -87,12 +87,12 @@ export default function Steps() {
             {/* ===== Timeline ===== */}
             <div className="relative max-w-[1200px] mx-auto">
                 {/* Base line */}
-                <div className="absolute left-1/2 max-[780px]:left-[50px] top-0 h-full border-[#CFCFCF]
-                border-2 border-dashed -translate-x-1/2" />
+                <div className="absolute left-1/2 max-[780px]:left-[50px] top-0 h-full border-[#e9e9e9]
+                border-[1.5px]  -translate-x-1/2" />
 
                 {/* Active line */}
                 <div
-                    className="absolute left-1/2 max-[780px]:left-[50.4px] top-0 w-[3px] bg-[#000000] -translate-x-1/2 transition-all duration-700"
+                    className="absolute left-1/2 max-[780px]:left-[50.4px] top-0 w-[1.5px] bg-[#000000] -translate-x-1/2 transition-all duration-800"
                     style={{
                         height:
                             activeStep >= 0
@@ -120,8 +120,8 @@ export default function Steps() {
                     ${step.side === "left" ? "text-right pr-[80px] max-[780px]:!pl-[60px] max-[780px]:!pr-0 max-[780px]:!text-left" : "text-left pl-[80px] max-[780px]:!pl-[60px]"}
                   `}
                                 >
-                                    <h3 className="text-[22px] font-[500] mb-3 font-bricolage">{step.title}</h3>
-                                    <p className="text-[14px] text-[#7A7A7A] leading-[1.7]">
+                                    <h3 className="text-[35px] font-[400] mb-2 font-bricolage leading-[100%]">{step.title}</h3>
+                                    <p className="text-[16px] text-[#7A7A7A] font-[400] leading-[1.7]">
                                         {step.des}
                                     </p>
                                 </div>
@@ -132,22 +132,22 @@ export default function Steps() {
 
 
                                     <div className=" rounded-full 
-              bg-gradient-to-br from-[#f2f0ed] to-[#e6e3df]
+              bg-gradient-to-br from-[#f2f0ed] to-[#f1f1f1]
               flex items-center justify-center
-              shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4),0_20px_40px_rgba(0,0,0,0.4)] !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[128px] h-[128px]">
+               !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[148px] h-[148px]">
 
 
                                         <div className="w-[92px] h-[92px] rounded-full
                 bg-gradient-to-br from-white/50 to-white/10
                 flex items-center justify-center
-                shadow-[inset_0_0_0_2px_rgba(255,255,255,0.6)] ">
+                shadow-[inset_0_0_0_2px_rgba(255,255,255,0.6)] max-[768px]:h-auto ">
 
 
-                                            <div className="w-[50px] h-[50px] rounded-full bg-black
+                                            <div className="w-[60px] h-[60px] rounded-full bg-black
                   flex items-center justify-center
                   text-white text-2xl font-medium
-                  shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15),0_10px_20px_rgba(0,0,0,0.6)]">
-                                                {index}
+                  ">
+                                                {index+1}.
                                             </div>
 
                                         </div>

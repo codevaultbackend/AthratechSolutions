@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full min-h-screen bg-white overflow-hidden">
+        <section className="relative w-full min-h-screen lg:min-h-[82vh] bg-white overflow-hidden">
 
             {/* Bottom texture */}
             <img
@@ -12,7 +12,7 @@ export default function HeroSection() {
                 alt=""
                 className="absolute bottom-0 w-full  opacity-[40%] max-[768px]:h-[50%] max-[768px]:bottom-[-7%] max-[768px]:opacity-[60%] z-[9]"
             />
-            
+
             {/* ================= HERO CONTENT ================= */}
             <div className="relative z-10 flex flex-col items-center text-center
         pt-[116px] px-6
@@ -30,7 +30,7 @@ export default function HeroSection() {
             max-[1280px]:text-[90px]
             max-[1024px]:text-[64px]
             max-[768px]:text-[54px]
-            max-[480px]:text-[54px]
+            max-[480px]:text-[50px]
           "
                 >
                     <span className="mb-5">Where </span>
@@ -117,7 +117,9 @@ export default function HeroSection() {
                     max-sm:w-full
                   ">
                                         <p className="text-white text-sm">
-                                            Contact Us
+                                            Contact Us  <span className="transition-transform group-hover:translate-x-1 ml-[10px]">
+                                                →
+                                            </span>
                                         </p>
                                     </div>
                                 </div>

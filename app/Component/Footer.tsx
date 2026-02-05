@@ -7,13 +7,13 @@ export default function Footer() {
     return (
         <footer className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-[#6f6f6f] z-[9]">
             {/* ===== Background vignette ===== */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#7a7a7a_0%,_#5f5f5f_45%,_#1a1a1a_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(#7a7a7a_-92%,_#5f5f5f_30%,_#1a1a1a_79%)]" />
 
             {/* ===== Watermark ===== */}
             <div className="
         pointer-events-none absolute left-1/2 -translate-x-1/2
-        bottom-4  lg:bottom-10
-        text-[80px] sm:text-[140px] lg:text-[220px]
+        bottom-4  lg:bottom-[-76px]
+        text-[70px] sm:text-[140px] lg:text-[210px]
         font-extrabold text-white/5 tracking-wider
         select-none whitespace-nowrap max-[780px]:rotate-90 max-[600px]:translate-x-1
       ">
@@ -49,7 +49,7 @@ export default function Footer() {
                     </h2>
 
                     {/* CTA Button */}
-                    <Link href="/contact">
+                    <Link href="/ContactForm">
                         <div className="flex justify-center">
                             <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]">
                                 <div className="rounded-full p-[5px] sm:p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
@@ -151,6 +151,19 @@ export default function Footer() {
                     <p className="text-[13px] sm:text-[14px] opacity-70 text-center sm:text-left">
                         Copyright © Athratech Pvt. Ltd.
                     </p>
+                    <div className="social-icons flex gap-3.5">
+                        <Link href='https://www.instagram.com/athratech_official/'><i className="fa-brands fa-instagram text-[22px]"></i></Link>
+
+                        <Link href='https://www.facebook.com/profile.php?id=61584218076871'>
+                            <i className="fa-brands fa-facebook text-[22px]"></i></Link>
+                        <Link href='https://www.linkedin.com/company/athratech-private-limited/'>
+                            <i className="fa-brands fa-linkedin text-[22px]"></i>
+                        </Link>
+                        <Link href='https://x.com/AthraTech'>
+                        <i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+                        
+
+                    </div>
                 </div>
             </div>
         </footer>

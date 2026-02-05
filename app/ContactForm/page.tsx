@@ -66,7 +66,7 @@ export default function ContactForm() {
             className="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[28px]"
           >
             <Input label="Your Name " name="full_name"  />
-            <Input label="Your Company" name="budget" />
+            <Input label="Your Company (Optional)" name="budget" />
             <Input label="Email Address" name="email" type="email" />
             <Input label="Phone Number" name="phone" />
             

@@ -47,14 +47,14 @@ export default function HeroSection() {
           text-[46px] leading-[56px]
           max-w-[720px]
           max-[760px]:!text-[24px]
-
+          max-[1470px]:mt-[50px]
           max-md:text-[32px]
           max-md:leading-[40px]
           max-md:max-w-[340px]
           font-bricolage
         "
       >
-        We help <span className=" max-[768px]:text-[23px] text-[400] text-[#8A8888] mr-[10px]">startups and enterprises craft digital products</span> 
+        We help <span className=" max-[768px]:text-[23px] text-[400] text-[#8A8888] ">startups and enterprises craft digital products</span> 
         <br className="hidden md:block" />
         that <span className="text-black">truly connect</span> with their customers.
       </h1>
@@ -106,7 +106,7 @@ export default function HeroSection() {
         </Label>
 
         {/* BOTTOM ROW */}
-        <Label className="bottom-[22%] left-[20%] rotate-[-8deg] max-md:top-[62%] max-md:left-[8%] max-md:bottom-auto max-md:rotate-0 ">
+        <Label className="bottom-[17%] left-[25%] rotate-[-8deg] max-md:top-[62%] max-md:left-[8%] max-md:bottom-auto max-md:rotate-0 ">
           <Icon bg="bg-yellow-400">
             <Developement />
           </Icon>
