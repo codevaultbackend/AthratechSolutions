@@ -66,7 +66,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
         </nav>
 
         {/* CTA */}
-        <div className="pb-[48px] flex flex-col items-center gap-6">
+        <div className="pb-[48px] flex flex-col items-center gap-6 max-[768px]:mb-[70px]">
           <p className="text-[16px] font-[400] text-[#FFFFFF] font-bricolage">
             Have a project for us?
           </p>
