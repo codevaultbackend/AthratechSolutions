@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
     }, [animate]);
 
     return (
-        <section className="bg-[#ECECEC] py-15 px-4">
+        <section className="bg-[#ECECEC] py-15 px-4" id="testimonial">
             <div className="max-w-[1200px] mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-12">

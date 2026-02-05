@@ -47,6 +47,18 @@ export default function ContactForm() {
       <div className="max-w-[1100px] mx-auto">
         {/* ===== Header ===== */}
         <div className="text-center mb-[64px]">
+          <div className="flex -space-x-3 mx-auto w-fit">
+            {["contactHero.png", "contactHero1.png", "contactHero2.png"].map(
+              (item, i) => (
+                <div
+                  key={i}
+                  className="w-9 h-9 rounded-full border border-white overflow-hidden "
+                >
+                  <img src={item} alt="icons" className="h-full w-full "/>
+                </div>
+              )
+            )}
+          </div>
           <p className="font-bricolage  text-[#191919] font-[600] text-[36px] mb-2">
             Need a reply fast? 🚀
           </p>
@@ -65,11 +77,11 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[28px]"
           >
-            <Input label="Your Name " name="full_name"  />
+            <Input label="Your Name " name="full_name" />
             <Input label="Your Company (Optional)" name="budget" />
             <Input label="Email Address" name="email" type="email" />
             <Input label="Phone Number" name="phone" />
-            
+
 
             <div className="md:col-span-2">
               <Textarea label="Tell us about your project" name="message" />
@@ -92,7 +104,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] disabled:opacity-60"
+                className="group relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] disabled:opacity-60 ml-auto"
               >
                 <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
                   <div className="flex items-center gap-4 px-8 py-3 rounded-full bg-black border border-white/80 text-white text-[15px] font-[500]">

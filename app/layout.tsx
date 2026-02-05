@@ -7,6 +7,27 @@ import { inter, calligraffitti, bricolage } from "./fonts";
 export const metadata: Metadata = {
   title: "Athratech Tech",
   description: "Provides various tech solutions",
+
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+      },
+      {
+        url: "/favicon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -19,16 +40,6 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable}`}
     >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
-
       <body className="antialiased bg-white max-w-[1440px] w-full mx-auto">
         {/* Navbar */}
         <TopNavigation />
@@ -36,7 +47,17 @@ export default function RootLayout({
         {/* Page content */}
         <main className="relative">{children}</main>
 
+        {/* Footer */}
         <Footer />
+
+        {/* Font Awesome */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
       </body>
     </html>
   );

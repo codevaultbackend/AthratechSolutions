@@ -65,12 +65,16 @@ export default function Steps() {
     }, []);
 
     return (
-        <section className="relative min-h-screen bg-[url('/StepsBg.jpg')] bg-cover bg-center bg-no-repeat pt-[110px] pb-[120px]">
-
-            <img src="/StepsBg.png" alt="steps" className="absolute top-0 left-0 w-full h-full" />
+        <section
+            className="relative min-h-screen bg-[url('/StepsBg.png')] bg-cover bg-center bg-no-repeat pt-[110px] pb-[120px]"
+            id="steps"
+        >
+            <div className="absolute inset-0 bg-[#f5f5f5]/45 z-0"></div>
 
             {/* ===== Heading ===== */}
-            <div className="text-center mb-[90px]">
+            
+
+            <div className="text-center mb-[90px] relative z-10">
                 <p className="font-calligraffitti text-[#7A7A7A] mb-6 flex gap-4 items-center justify-center text-[24px]">
                     <span className="w-[124px] h-[1px] bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
                     Process
@@ -85,7 +89,10 @@ export default function Steps() {
             </div>
 
             {/* ===== Timeline ===== */}
-            <div className="relative max-w-[1200px] mx-auto">
+            <div className="relative max-w-[1200px] mx-auto z-10">
+               
+
+
                 {/* Base line */}
                 <div className="absolute left-1/2 max-[780px]:left-[50px] top-0 h-full border-[#e9e9e9]
                 border-[1.5px]  -translate-x-1/2" />
@@ -127,27 +134,27 @@ export default function Steps() {
                                 </div>
 
                                 {/* Center circle */}
-                                <div className={`absolute left-1/2 -translate-x-1/2  !rounded-full max-[780px]:translate-x-0 max-[780px]:left-[24px] `}>
+                                <div className={`absolute left-1/2 -translate-x-1/2  !rounded-full max-[780px]:translate-x-0 max-[780px]:left-[24px] z-[9999] `}>
 
 
 
                                     <div className=" rounded-full 
               bg-gradient-to-br from-[#f2f0ed] to-[#f1f1f1]
               flex items-center justify-center
-               !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[148px] h-[148px]">
+               !rounded-full object-cover max-[780px]:w-[51px] max-[780px]:h-[51px]  w-[148px] h-[148px] z-[999999]">
 
 
                                         <div className="w-[92px] h-[92px] rounded-full
                 bg-gradient-to-br from-white/50 to-white/10
                 flex items-center justify-center
-                shadow-[inset_0_0_0_2px_rgba(255,255,255,0.6)] max-[768px]:h-auto ">
+                shadow-[inset_0_0_0_2px_rgba(255,255,255,0.6)] max-[768px]:h-auto z-[999999] ">
 
 
                                             <div className="w-[60px] h-[60px] rounded-full bg-black
                   flex items-center justify-center
-                  text-white text-2xl font-medium
+                  text-white text-2xl font-medium z-[999999]
                   ">
-                                                {index+1}.
+                                                {index + 1}.
                                             </div>
 
                                         </div>

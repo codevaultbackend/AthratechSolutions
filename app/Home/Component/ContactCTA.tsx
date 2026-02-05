@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ContactCTA() {
     return (
-        <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4">
+        <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4" id="contactcta">
 
             {/* Decorative Arc */}
             <div className="absolute top-[15%] max-md:top-[8%] max-md:top-[21%]">
@@ -72,13 +72,13 @@ export default function ContactCTA() {
 
             {/* Right Side Note (Desktop Only) */}
             <div className="absolute left-[64%] top-[55%] hidden lg:block">
-                <p className="text-[12px] text-gray-400 italic leading-relaxed">
+                <p className="text-[24px] text-[#888888] font-[400] italic leading-relaxed font-calligraffitti">
                     We get booked fast 🚀 <br />
                     contact us now
                 </p>
 
                 {/* curved arrow */}
-                <LetsTallk className="absolute left-[-74%]" />
+                <LetsTallk className="absolute !left-[-74%]" />
             </div>
         </section>
     );

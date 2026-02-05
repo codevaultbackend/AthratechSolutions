@@ -97,11 +97,16 @@ export default function Footer() {
                             Navigation
                         </h4>
                         <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                            <li>Home</li>
-                            <li>Process</li>
-                            <li>Projects</li>
-                            <li>Testimonials</li>
-                            <li>FAQ</li>
+                            <a href="#herosection" className="!mb-8"><li className="!mb-4">Home</li></a>
+                            <a href="#steps"><li className="!mb-4">Process</li></a>
+                            <a href="#projects"><li className="!mb-4">Projects</li></a>
+                            <a href="#testimonial"><li className="!mb-4">Testimonials</li></a>
+                            <a href="#Faq"><li className="!mb-4">FAQ</li></a>
+                            
+                            
+                            
+                            
+                            
                         </ul>
                     </div>
 
@@ -136,7 +141,7 @@ export default function Footer() {
                         </h4>
                         <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
                             <li>+917303835369</li>
-                            <li>Address</li>
+                            <li>Address : UNIT NO: 244-A, IT SPAZ Park, Sector 49, Gurugram, Haryana 122018, India</li>
                         </ul>
                     </div>
                 </div>

@@ -15,8 +15,8 @@ export default function HeroSection() {
     <section
       className="
         relative w-full
-        min-h-[89vh]
-        max-md:min-h-[100vh]
+        min-h-[648px]
+        max-md:min-h-[112vh]
         bg-[url('/OurOfferingbg.jpg')]
         bg-cover bg-center bg-no-repeat
         flex flex-col items-center

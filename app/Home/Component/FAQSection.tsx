@@ -52,7 +52,7 @@ export default function FAQSection() {
           return (
             <div
               key={index}
-              className="rounded-[14px] bg-white px-5 py-4 shadow-sm transition"
+              className={`rounded-[14px] bg-white px-5 py-4 shadow-sm transition ${isOpen ? "h-auto" : "h-[56px]"}`}
             >
               <button
                 onClick={() => setOpen(isOpen ? null : index)}

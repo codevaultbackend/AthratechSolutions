@@ -23,13 +23,13 @@ export default function Projects() {
   ];
 
   return (
-    <section className="relative bg-[#EFEFEF] py-[120px]">
+    <section className="relative bg-[#EFEFEF] py-[120px]" id="projects">
       {/* ===== Heading ===== */}
       <div className="text-center mb-[80px]">
         <p className="font-calligraffitti text-[#7A7A7A] mb-2 flex gap-4 items-center justify-center text-[24px] font-[400]">
           <span className="inline-block w-[124px] h-[1px] bg-[linear-gradient(231deg,__#9C9C9C_42%,_#DFDFDF)] "></span>
           Projects <span className="inline-block w-[124px] h-[1px] bg-[linear-gradient(152deg,__#9C9C9C_42%,_#DFDFDF)] "></span></p>
-        <h2 className="text-[56px] font-[400] font-bar leading-[100%] text-black max-[768px]:text-[24px] max-[768px]:font-[500] ">
+        <h2 className="text-[56px] font-[400] font-bar leading-[100%] text-black max-[768px]:text-[24px] max-[768px]:font-[500] font-bricolage ">
           Work Booming in the Market
         </h2>
       </div>

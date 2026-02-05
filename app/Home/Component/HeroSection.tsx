@@ -1,10 +1,51 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 
 export default function HeroSection() {
+
+    const yellowImages = [
+        "/yellowcard.png",
+        "/yellowcard2.png",
+        "/yellowcard1.png",
+
+    ];
+
+    const blackImages = [
+        "/yellowcard1.png",
+        "/blackcards.png",
+        "/yellowcard2.png",
+
+
+    ];
+
+    const [yellowIndex, setYellowIndex] = useState(0);
+    const [blackIndex, setBlackIndex] = useState(0);
+    const [showAnim, setShowAnim] = useState(false);
+
+    useEffect(() => {
+        // Start animation after 1s
+        const timer = setTimeout(() => {
+            setShowAnim(true);
+        }, 1000);
+
+        // Change images every 3s
+        const interval = setInterval(() => {
+            setYellowIndex((prev) => (prev + 1) % yellowImages.length);
+            setBlackIndex((prev) => (prev + 1) % blackImages.length);
+        }, 3000);
+
+        return () => {
+            clearTimeout(timer);
+            clearInterval(interval);
+        };
+    }, []);
+
     return (
-        <section className="relative w-full min-h-screen lg:min-h-[82vh] bg-white overflow-hidden">
+        <section className="relative w-full min-h-[588px]
+        max-md:min-h-[100vh] bg-white overflow-hidden" id="herosection">
 
             {/* Bottom texture */}
             <img
@@ -14,7 +55,7 @@ export default function HeroSection() {
             />
 
             {/* ================= HERO CONTENT ================= */}
-            <div className="relative z-10 flex flex-col items-center text-center
+            <div className="relative z-[9] flex flex-col items-center text-center
         pt-[116px] px-6
         max-md:pt-[96px]
         max-sm:pt-[84px]"
@@ -49,7 +90,13 @@ export default function HeroSection() {
                 rotate-[-8deg]
                 overflow-hidden
               "
-                        > <img src="/yellowcard.png" alt="blackcards" className="h-full w-full " /> </span>
+                        > <img
+                                src={yellowImages[yellowIndex]}
+                                alt="yellowcard"
+                                className={`h-full w-full transition-opacity duration-1000 ${showAnim ? "opacity-100" : "opacity-0"
+                                    }`}
+                            />
+                        </span>
                     </span>
 
                     <span className="text-gray-400 !mb-5">Ideas</span>
@@ -60,7 +107,13 @@ export default function HeroSection() {
                     <span className="inline-block min-[600px]:hidden rotate-[6deg] align-middle ml-2 mt-2-0 !overflow-hidden rounded-[30px] !mt-3 shadow-[0_12px_30px_rgba(0,0,0,0.25)]
                 ">
                         <span className="block w-[110px] h-[70px] rounded-[30px] bg-black shadow-xl border-[2px] border-black !overflow-hidden" >
-                            <img src="/blackcards.png" alt="blackcards" className="h-full w-full  " /> </span>
+                            <img
+                                src={blackImages[blackIndex]}
+                                alt="blackcards"
+                                className={`h-full w-full transition-opacity duration-1000 ${showAnim ? "opacity-100" : "opacity-0"
+                                    }`}
+                            />
+                        </span>
                     </span>
 
                     <span className="text-black ml-2 !mb-5">Impact</span>
@@ -71,7 +124,13 @@ export default function HeroSection() {
                     <div className="w-[138px] h-[88px] rounded-[30px] bg-black shadow-xl !overflow-hidden  shadow-[0_12px_30px_rgba(0,0,0,0.25)]
                 !overflow-hidden  shadow-[0_12px_30px_rgba(0,0,0,0.25)]
                 border-[2px] border-black" >
-                        <img src="/blackcards.png" alt="blackcards" className="h-full w-full  " /> </div>
+                        <img
+                            src={blackImages[blackIndex]}
+                            alt="blackcards"
+                            className={`h-full w-full transition-opacity duration-500 ${showAnim ? "opacity-100" : "opacity-0"
+                                }`}
+                        />
+                    </div>
                 </div>
 
                 {/* Subtext */}
