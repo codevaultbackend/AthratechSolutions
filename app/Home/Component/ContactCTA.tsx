@@ -9,9 +9,9 @@ export default function ContactCTA() {
         <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4" id="contactcta">
 
             {/* Decorative Arc */}
-            <div className="absolute top-[15%] max-md:top-[8%] max-md:top-[21%]">
-                <div className="relative h-[260px] w-[260px] max-md:h-[160px] max-md:w-[160px]  max-md:rotate-[282deg] rounded-full border-[12px] border-transparent">
-                    <div className="absolute inset-0 rounded-full border-[16px] border-[#f5f5f5] border-l-transparent border-b-transparent rotate-45"></div>
+            <div className="absolute top-[2%] max-md:top-[5%] max-md:top-[11%]">
+                <div className="relative h-[290px] w-[290px] max-md:h-[160px] max-md:w-[160px]  max-md:rotate-[282deg] rounded-full border-[32px] border-transparent">
+                    <div className="absolute inset-0 rounded-full border-[32px] border-[#FFFFFF] border-l-transparent border-b-transparent lg:rotate-[-44deg] lg:top-0"></div>
                 </div>
             </div>
 
@@ -77,8 +77,8 @@ export default function ContactCTA() {
                     contact us now
                 </p>
 
-                {/* curved arrow */}
-                <LetsTallk className="absolute !left-[-74%]" />
+               
+                <LetsTallk className="!absolute !left-[-57%] top-[60px]" />
             </div>
         </section>
     );

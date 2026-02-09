@@ -3,23 +3,31 @@
 import Image from "next/image";
 
 export default function Projects() {
+                          
   const projects = [
-    {
-      img: "/sanklpmochup.png",
-      alt: "Mobile App",
-    },
-    {
-      img: "/chugenmockup.png",
-      alt: "Desktop Website",
+     {
+      img: "/mpsmockup.png",
+      alt: "Laptop Website",
+      slug:'https://manpowersolution.org.in/'
     },
     {
       img: "/decovistamockup.png",
       alt: "Desktop Website",
+      slug:'https://decovista.in/'
+    },
+     {
+      img: "/chugenmockup.png",
+      alt: "Desktop Website",
+      slug:'https://www.chugenhatcheries.com/'
     },
     {
-      img: "/mpsmockup.png",
-      alt: "Laptop Website",
+      img: "/sanklpmochup.png",
+      alt: "Mobile App",
+      slug:'https://sankalpsetufoundation.org/'
     },
+   
+   
+    
   ];
 
   return (
@@ -37,19 +45,18 @@ export default function Projects() {
       {/* ===== Grid ===== */}
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[24px] px-4">
         {projects.map((item, index) => (
-          <div
-            key={index}
-            className="relative  bg-[linear-gradient(155deg,#DFDFDF,#A1A1A1,#111111)]  p-[0px] flex items-center justify-center !max-w-[628px] !max-h-[577px] !rounded-[60px] shadow-[2px_3px_11px_4px_#A1A1A1]  overflow-clip shadow-[2px 3px 11px 4px gray]"
-          >
+          <a href={item.slug} key={index}
+            className="relative  bg-[linear-gradient(205deg,#DFDFDF,#A1A1A1,#111111)]  flex items-center justify-center !max-w-[628px] !max-h-[577px] !rounded-[60px] shadow-[2px_3px_5px_2px_#A1A1A1]  px-2.5">
+          
             <Image
               src={item.img}
               alt={item.alt}
               width={520}
               height={380}
-              className="object-cover h-full w-full "
+              className=" h-full w-full rounded-none "
               priority
             />
-          </div>
+          </a>
         ))}
       </div>
     </section>

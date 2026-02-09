@@ -84,10 +84,11 @@ export default function Footer() {
                             Services
                         </h4>
                         <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                            <li>UI/UX</li>
-                            <li>Development</li>
-                            <li>Marketing</li>
-                            <li>Ad Campaigns</li>
+                            <a href="/ContactForm" > <li className="!mb-4">UI/UX</li></a>
+                           
+                            <a href="/ContactForm" ><li className="!mb-4">Development</li></a>
+                            <a href="/ContactForm" ><li className="!mb-4">Marketing</li></a>
+                            <a href="/ContactForm" ><li className="!mb-4">Ad Campaigns</li></a>
                         </ul>
                     </div>
 
@@ -96,17 +97,13 @@ export default function Footer() {
                         <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                             Navigation
                         </h4>
+
                         <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                            <a href="#herosection" className="!mb-8"><li className="!mb-4">Home</li></a>
-                            <a href="#steps"><li className="!mb-4">Process</li></a>
+                            <a href="/" className="!mb-8"><li className="!mb-4">Home</li></a>
+                            <a href="#OurOffering"><li className="!mb-4">Process</li></a>
                             <a href="#projects"><li className="!mb-4">Projects</li></a>
                             <a href="#testimonial"><li className="!mb-4">Testimonials</li></a>
                             <a href="#Faq"><li className="!mb-4">FAQ</li></a>
-                            
-                            
-                            
-                            
-                            
                         </ul>
                     </div>
 
@@ -139,9 +136,9 @@ export default function Footer() {
                         <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                             Contact
                         </h4>
-                        <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                            <li>+917303835369</li>
-                            <li>Address : UNIT NO: 244-A, IT SPAZ Park, Sector 49, Gurugram, Haryana 122018, India</li>
+                        <ul className="space-y-3 sm:space-y-4 !text-[16px] font-[500] sm:text-[24px] leading-[150%]">
+                            <a href="tel:+91 7303835369"><li className="!mb-4">+91 7303835369</li></a>
+                            <li className="!mb-4">Address : UNIT NO: 244-A, IT SPAZ Park, Sector 49, Gurugram, Haryana 122018, India</li>
                         </ul>
                     </div>
                 </div>
@@ -165,8 +162,8 @@ export default function Footer() {
                             <i className="fa-brands fa-linkedin text-[22px]"></i>
                         </Link>
                         <Link href='https://x.com/AthraTech'>
-                        <i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
-                        
+                            <i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+
 
                     </div>
                 </div>

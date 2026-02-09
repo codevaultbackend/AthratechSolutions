@@ -26,16 +26,14 @@ export default function HeroSection() {
     const [showAnim, setShowAnim] = useState(false);
 
     useEffect(() => {
-        // Start animation after 1s
         const timer = setTimeout(() => {
             setShowAnim(true);
-        }, 1000);
+        }, 900);
 
-        // Change images every 3s
         const interval = setInterval(() => {
             setYellowIndex((prev) => (prev + 1) % yellowImages.length);
             setBlackIndex((prev) => (prev + 1) % blackImages.length);
-        }, 3000);
+        }, 900);
 
         return () => {
             clearTimeout(timer);
@@ -86,16 +84,22 @@ export default function HeroSection() {
                 !rounded-[30px]
                 bg-gradient-to-b from-[#FFD976] to-[#F4A900]
                 shadow-[0_12px_30px_rgba(0,0,0,0.25)]
-                border-[2px] border-black
+                border-[3px] border-black
                 rotate-[-8deg]
                 overflow-hidden
               "
                         > <img
                                 src={yellowImages[yellowIndex]}
                                 alt="yellowcard"
-                                className={`h-full w-full transition-opacity duration-1000 ${showAnim ? "opacity-100" : "opacity-0"
-                                    }`}
+                                className={`
+    h-full w-full
+    transition-all duration-700 ease-out
+    ${showAnim
+                                        ? "opacity-100 translate-y-0 scale-100"
+                                        : "opacity-0 translate-y-8 scale-95"}
+  `}
                             />
+
                         </span>
                     </span>
 
@@ -108,7 +112,7 @@ export default function HeroSection() {
                 ">
                         <span className="block w-[110px] h-[70px] rounded-[30px] bg-black shadow-xl border-[2px] border-black !overflow-hidden" >
                             <img
-                                src={blackImages[blackIndex]}
+                                src='/blackcards.png'
                                 alt="blackcards"
                                 className={`h-full w-full transition-opacity duration-1000 ${showAnim ? "opacity-100" : "opacity-0"
                                     }`}
@@ -125,7 +129,7 @@ export default function HeroSection() {
                 !overflow-hidden  shadow-[0_12px_30px_rgba(0,0,0,0.25)]
                 border-[2px] border-black" >
                         <img
-                            src={blackImages[blackIndex]}
+                            src='/blackcards.png'
                             alt="blackcards"
                             className={`h-full w-full transition-opacity duration-500 ${showAnim ? "opacity-100" : "opacity-0"
                                 }`}

@@ -47,20 +47,31 @@ export default function MobileSidebar({ open, onClose }: Props) {
         {/* Menu */}
         <nav className="flex-1 flex flex-col items-center justify-center gap-[36px]">
           {[
-            "Home",
-            "Services",
-            "Process",
-            "Projects",
-            "Testimonials",
-            "FAQ",
-          ].map((item) => (
+           {
+            label: "Home",
+            slug:'/'
+           },
+            {
+            label: "Services",
+            slug:'#OurOffering'
+           }, {
+            label: "Projects",
+            slug:'#projects'
+           }, {
+            label: "Testimonials",
+            slug:'#testimonial'
+           }, {
+            label: "FAQ",
+            slug:'#Faq'
+           }, 
+          ].map((item,index) => (
             <Link
-              key={item}
-              href="/"
+              key={index}
+              href={item.slug}
               onClick={onClose}
               className="text-[24px] font-[400] leading-[100%] text-[#BEBEBE] hover:text-white transition"
             >
-              {item}
+              {item.label}
             </Link>
           ))}
         </nav>
@@ -71,7 +82,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
             Have a project for us?
           </p>
 
-          <Link href="/contact" onClick={onClose}>
+          <Link href="/ContactForm" onClick={onClose}>
             <div className="px-[36px] py-[14px] rounded-full bg-white text-black text-[18px] font-[500] flex items-center gap-3">
               Let’s Talk
               <span className="text-[20px]">→</span>
