@@ -9,7 +9,7 @@ export default function ContactCTA() {
         <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4" id="contactcta">
 
             {/* Decorative Arc */}
-            <div className="absolute top-[2%] max-md:top-[5%] max-md:top-[11%]">
+            <div className="absolute top-[20%] max-md:top-[5%] max-md:top-[11%]">
                 <div className="relative h-[290px] w-[290px] max-md:h-[160px] max-md:w-[160px]  max-md:rotate-[282deg] rounded-full border-[32px] border-transparent">
                     <div className="absolute inset-0 rounded-full border-[32px] border-[#FFFFFF] border-l-transparent border-b-transparent lg:rotate-[-44deg] lg:top-0"></div>
                 </div>
