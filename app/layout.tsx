@@ -3,6 +3,7 @@ import "./globals.css";
 import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
 import { inter, calligraffitti, bricolage } from "./fonts";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Athratech Tech",
@@ -50,6 +51,16 @@ export default function RootLayout({
         {/* Footer */}
         <Footer />
 
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLCHP3548"></Script>
+        <Script>
+          {` window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1PLCHP3548');`}
+        </Script>
+
         {/* Font Awesome */}
         <link
           rel="stylesheet"
@@ -58,6 +69,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+
       </body>
     </html>
   );
