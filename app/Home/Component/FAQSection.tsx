@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#EDEDED] py-[120px] px-4 pb-[245px] mb-[-30px]" id="Faq">
+    <section className="bg-[#EDEDED]  px-4 h-fit  pb-[70px] -mb-[30px]" id="Faq">
       {/* ===== Header ===== */}
       <div className="text-center mb-[64px]">
          <p className="font-calligraffitti text-[#7A7A7A] mb-2 flex gap-4 items-center justify-center text-[24px] font-[400]">
@@ -45,7 +45,7 @@ export default function FAQSection() {
       </div>
 
       {/* ===== FAQ Grid ===== */}
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 h-[111px] gap-x-[32px] gap-y-[20px]">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
         {faqs.map((item, index) => {
           const isOpen = open === index;
 

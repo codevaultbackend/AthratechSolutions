@@ -43,7 +43,7 @@ export default function HeroSection() {
 
     return (
         <section className="relative w-full min-h-[588px]
-        max-md:min-h-[100vh] bg-white overflow-hidden" id="herosection">
+        max-md:min-h-auto max-[768px]:mb-[40px] bg-white overflow-hidden" id="herosection">
 
             {/* Bottom texture */}
             <img
