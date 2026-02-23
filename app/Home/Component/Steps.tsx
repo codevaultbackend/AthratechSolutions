@@ -66,13 +66,28 @@ export default function Steps() {
 
     return (
         <section
-            className="relative min-h-screen bg-[url('/StepsBg.png')] bg-cover bg-center bg-no-repeat pt-[110px] pb-[120px]"
+            className="
+    relative min-h-screen
+    pt-[110px] pb-[120px]
+    bg-[#f5f5f5]
+  "
             id="steps"
         >
-            <div className="absolute inset-0 bg-[#f5f5f5]/45 z-0"></div>
+            <div
+                className="absolute inset-0 z-0 pointer-events-none"
+                style={{
+                    backgroundImage: `
+      linear-gradient(#e8e8e8 1px, transparent 1px),
+      linear-gradient(90deg, #e8e8e8 1px, transparent 1px)
+    `,
+                    backgroundSize: "60px 60px",
+                }}
+            />
+       <div className="absolute bottom-0 left-0 w-full h-[180px] pointer-events-none z-[5]
+bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
 
             {/* ===== Heading ===== */}
-            
+
 
             <div className="text-center mb-[90px] relative z-10">
                 <p className="font-calligraffitti text-[#7A7A7A] mb-6 flex gap-4 items-center justify-center text-[24px]">
@@ -90,7 +105,7 @@ export default function Steps() {
 
             {/* ===== Timeline ===== */}
             <div className="relative max-w-[1200px] mx-auto z-10">
-               
+
 
 
                 {/* Base line */}

@@ -193,13 +193,13 @@ export default function HeroSection() {
                     {/* Trusted Clients */}
                     <div className="flex items-center gap-3 max-sm:flex-col">
                         <div className="flex -space-x-3">
-                            {["Avatar1.png", "Avatar2.png", "Avatar3.png", "Avatar4.png"].map(
+                            {["contactHero.png", "contactHero1.png", "contactHero2.png"].map(
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="w-8 h-8 rounded-full border border-white overflow-hidden"
+                                        className="lg:w-9 lg:h-9 max-[768px]:w-[28px] max-[768px]:h-[28px] rounded-full border border-white overflow-hidden "
                                     >
-                                        <img src={item} alt="" />
+                                        <img src={item} alt="icons" className="h-full w-full " />
                                     </div>
                                 )
                             )}

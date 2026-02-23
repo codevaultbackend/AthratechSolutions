@@ -6,13 +6,45 @@ import Link from "next/link";
 
 export default function ContactCTA() {
     return (
-        <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4" id="contactcta">
+        <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4 " id="contactcta">
 
             {/* Decorative Arc */}
-            <div className="absolute top-[20%] max-md:top-[5%] max-md:top-[11%]">
-                <div className="relative h-[290px] w-[290px] max-md:h-[160px] max-md:w-[160px]  max-md:rotate-[282deg] rounded-full border-[32px] border-transparent">
-                    <div className="absolute inset-0 rounded-full border-[32px] border-[#FFFFFF] border-l-transparent border-b-transparent lg:rotate-[-44deg] lg:top-0"></div>
-                </div>
+            {/* Decorative Arch – Exact Match */}
+            <div className="absolute pointer-events-none lg:right-[35%] lg:top-[11%] max-[768px]:!top-[-5%] max-[768px]:!right-[-12%]">
+                <svg
+                    width="368"
+                    height="368"
+                    viewBox="0 0 720 520"
+                    fill="none"
+                    className="rotate-[30deg]"
+                >
+                    <defs>
+                        {/* Right → Left Fade */}
+                        <linearGradient
+                            id="archFade"
+                            x1="100%"
+                            y1="0%"
+                            x2="0%"
+                            y2="0%"
+                        >
+                            <stop offset="0%" stopColor="white" stopOpacity="1" />
+                            <stop offset="45%" stopColor="white" stopOpacity="0.9" />
+                            <stop offset="70%" stopColor="white" stopOpacity="0.4" />
+                            <stop offset="100%" stopColor="white" stopOpacity="0" />
+                        </linearGradient>
+                    </defs>
+
+                    <path
+                        d="
+        M 120 380
+        C 200 140, 520 140, 600 380
+      "
+                        stroke="url(#archFade)"
+                        strokeWidth="92"
+                        strokeLinecap="round"
+                        fill="none"
+                    />
+                </svg>
             </div>
 
             {/* Main Content */}
@@ -77,7 +109,7 @@ export default function ContactCTA() {
                     contact us now
                 </p>
 
-               
+
                 <LetsTallk className="!absolute !left-[-57%] top-[60px]" />
             </div>
         </section>

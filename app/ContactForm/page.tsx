@@ -52,17 +52,17 @@ export default function ContactForm() {
               (item, i) => (
                 <div
                   key={i}
-                  className="w-9 h-9 rounded-full border border-white overflow-hidden "
+                  className="lg:w-9 lg:h-9 max-[768px]:w-[28px] max-[768px]:h-[28px] rounded-full border border-white overflow-hidden "
                 >
                   <img src={item} alt="icons" className="h-full w-full "/>
                 </div>
               )
             )}
           </div>
-          <p className="font-bricolage  text-[#191919] font-[600] text-[36px] mb-2">
+          <p className="font-bricolage  text-[#191919] font-[600] max-[768px]:text-[24px] lg:text-[36px] mb-2">
             Need a reply fast? 🚀
           </p>
-          <h2 className="font-bricolage text-[118px] md:text-[56px] font-[600] text-[#111111] leading-[1.1] mb-4">
+          <h2 className="font-bricolage lg:text-[118px] max-[768px]:text-[38px] md:text-[56px] font-[600] text-[#111111] leading-[1.1] mb-4">
             Let’s Talk!
           </h2>
           <p className="text-[#343434]  leading-[150%] max-w-[520px] mx-auto text-[15px] md:text-[16px]">
