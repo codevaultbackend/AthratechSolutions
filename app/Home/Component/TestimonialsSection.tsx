@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
 
                 <div className="flex flex-col lg:flex-row gap-6">
                     {/* LEFT STATS */}
-                    <div className="bg-[url('/testslideleft.png')] bg-cover bg-center text-white rounded-[22px] p-8 w-full lg:w-[280px] flex flex-col justify-between">
+                    <div className="bg-[url('/testslideleft.png')] bg-cover bg-center text-white rounded-[22px] p-8 w-full lg:w-[280px] flex flex-col justify-between ">
                         <Stat value="26+" label="Finished Projects" />
                         <Stat value="98%" label="Client Satisfaction" />
                         <Stat value="26+" label="Happy Clients" />
@@ -150,9 +150,9 @@ export default function TestimonialsSection() {
 /* ===== Stat Component ===== */
 function Stat({ value, label }: { value: string; label: string }) {
     return (
-        <div>
-            <p className="text-[36px] font-semibold font-bricolage">{value}</p>
-            <p className="text-sm text-white/60 font-bricolage">{label}</p>
+        <div className="mb-[44px]">
+            <p className="text-[72px] max-[768px]:text-[60px] leading-[100%] text-[#FFFFFF] font-[700] font-bricolage">{value}</p>
+            <p className="text-[16px] text-[#FFFFFF] font-[400] font-bricolage">{label}</p>
         </div>
     );
 }

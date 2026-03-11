@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const avatars = ["/contactHero.png", "/contactHero1.png", "/contactHero2.png", "/trusted3.png"];
+
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,25 +19,29 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     const payload = {
-      full_name: data.get("full_name"),
-      email: data.get("email"),
-      phone: data.get("phone"),
-      company_name: data.get("budget"),
-      message: data.get("message"),
+      full_name: String(data.get("full_name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      phone: String(data.get("phone") || "").trim(),
+      company_name: String(data.get("company_name") || "").trim(),
+      message: String(data.get("message") || "").trim(),
     };
 
     try {
       const res = await fetch("https://athratech.onrender.com/api/form/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error("Failed to submit");
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
 
       setSuccess(true);
       form.reset();
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -43,64 +49,89 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-[#fff] py-[120px] px-4 relative z-[9]">
-      <div className="max-w-[1100px] mx-auto">
-        {/* ===== Header ===== */}
-        <div className="text-center mb-[64px]">
-          <div className="flex -space-x-3 mx-auto w-fit">
-            {["contactHero.png", "contactHero1.png", "contactHero2.png"].map(
-              (item, i) => (
-                <div
-                  key={i}
-                  className="lg:w-9 lg:h-9 max-[768px]:w-[28px] max-[768px]:h-[28px] rounded-full border border-white overflow-hidden "
-                >
-                  <img src={item} alt="icons" className="h-full w-full "/>
-                </div>
-              )
-            )}
+    <section className="relative overflow-hidden  ">
+      
+
+      <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8 z-[999]">
+       
+
+        {/* header */}
+        <div className="mx-auto max-w-[760px] max-[600px]:mt-[42px] pb-10 pt-10 text-center md:pb-14 md:pt-[84px]">
+          <div className="mb-4 flex justify-center -space-x-1 md:mb-5 md:-space-x-3">
+            {avatars.map((src, i) => (
+              <div
+                key={i}
+                className="h-8 w-8 overflow-hidden rounded-[80px] border-2 border-[#F3F3F3] shadow-sm md:h-[51px] md:w-[48px]"
+              >
+                <img
+                  src={src}
+                  alt={`Contact avatar ${i + 1}`}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
           </div>
-          <p className="font-bricolage  text-[#191919] font-[600] max-[768px]:text-[24px] lg:text-[36px] mb-2">
+
+          <p className="font-bricolage text-[18px] font-semibold leading-none tracking-[-0.03em] text-[#191919] md:text-[34px] max-[600px]:mt-[22px]">
             Need a reply fast? 🚀
           </p>
-          <h2 className="font-bricolage lg:text-[118px] max-[768px]:text-[38px] md:text-[56px] font-[600] text-[#111111] leading-[1.1] mb-4">
+
+          <h2 className="font-bricolage mt-2 text-[56px] font-semibold leading-[0.92] tracking-[-0.055em] text-[#111111] md:mt-3 md:text-[108px] lg:text-[118px] max-[600px]:mt-[22px]">
             Let’s Talk!
           </h2>
-          <p className="text-[#343434]  leading-[150%] max-w-[520px] mx-auto text-[15px] md:text-[16px]">
-            Share your requirements here or send us an email and we will follow up
-            in 24 hrs
+
+          <p className="mx-auto mt-4 max-w-[570px] text-[24px] leading-[150%] font-[400] text-[#4A4A4A] md:mt-6 md:text-[18px] md:leading-[1.5] font-inter max-[600px]:mt-[22px] max-[768px]:mb-[68px]">
+            Share your requirements here or send us an email and we will follow up in 24 hrs
           </p>
         </div>
 
-        {/* ===== Form Card ===== */}
-        <div className="bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] p-6 sm:p-10 md:p-14">
+        {/* form */}
+        <div className="mx-auto max-w-[780px] pb-[50px] md:pb-[50px]">
           <form
             onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[28px]"
+            className="grid grid-cols-1 gap-x-8 gap-y-5 md:grid-cols-2 md:gap-y-8"
           >
-            <Input label="Your Name " name="full_name" />
-            <Input label="Your Company (Optional)" name="budget" />
-            <Input label="Email Address" name="email" type="email" />
-            <Input label="Phone Number" name="phone" />
+            <Field
+              label="Name"
+              name="full_name"
+              placeholder="Max Mullet"
+              autoComplete="name"
+            />
 
+            <Field
+              label="Company Name"
+              name="company_name"
+              placeholder="MaverickMinds"
+              autoComplete="organization"
+              required={false}
+            />
+
+            <Field
+              label="Email"
+              name="email"
+              type="email"
+              placeholder="Max@gmail.com"
+              autoComplete="email"
+            />
+
+            <Field
+              label="Phone Number"
+              name="phone"
+              type="tel"
+              placeholder="+91"
+              autoComplete="tel"
+            />
 
             <div className="md:col-span-2">
-              <Textarea label="Tell us about your project" name="message" />
+              <TextAreaField
+                label="Project Description"
+                name="message"
+                placeholder="We need to launch Maverickmind’s new UI and improve usability on key user flows such as climate, health and orbital escape velocity..."
+              />
             </div>
 
-            {/* Status */}
-            <div className="md:col-span-2 text-center">
-              {success && (
-                <p className="text-green-600 text-sm">
-                  ✅ Message sent successfully
-                </p>
-              )}
-              {error && (
-                <p className="text-red-500 text-sm">{error}</p>
-              )}
-            </div>
-
-            {/* Submit */}
-            <div className="md:col-span-2 flex justify-center pt-6">
+            <div className="md:col-span-2 flex justify-stretch md:justify-end">
+              <div className="md:col-span-2 flex justify-center ">
               <button
                 type="submit"
                 disabled={loading}
@@ -108,7 +139,7 @@ export default function ContactForm() {
               >
                 <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
                   <div className="flex items-center gap-4 px-8 py-3 rounded-full bg-black border border-white/80 text-white text-[15px] font-[500]">
-                    {loading ? "Sending..." : "Send Message"}
+                    {loading ? "Sending..." : "Continue"}
                     <span className="transition-transform group-hover:translate-x-1">
                       →
                     </span>
@@ -116,6 +147,17 @@ export default function ContactForm() {
                 </div>
               </button>
             </div>
+            </div>
+
+            <div className="md:col-span-2 min-h-[22px]">
+              {success ? (
+                <p className="text-sm text-green-600">Message sent successfully.</p>
+              ) : null}
+              {!success && error ? (
+                <p className="text-sm text-red-500">{error}</p>
+              ) : null}
+            </div>
+
           </form>
         </div>
       </div>
@@ -123,50 +165,61 @@ export default function ContactForm() {
   );
 }
 
-/* ===== Reusable Inputs ===== */
-
-function Input({
+function Field({
   label,
   name,
+  placeholder,
   type = "text",
+  autoComplete,
+  required = true,
 }: {
   label: string;
   name: string;
+  placeholder: string;
   type?: string;
+  autoComplete?: string;
+  required?: boolean;
 }) {
   return (
-    <div className="relative">
+    <label className="block">
+      <span className="mb-3 block text-[14px] font-medium leading-none text-[#2A2A2A] md:mb-4 md:text-[15px]">
+        {label}
+      </span>
+
       <input
         name={name}
         type={type}
-        required
-        className="peer w-full rounded-[14px] bg-[#F4F4F4] border border-[#E1E1E1] px-4 pt-6 pb-2 text-[15px] text-black focus:outline-none focus:border-black"
+        placeholder={placeholder}
+        autoComplete={autoComplete}
+        required={required}
+        className="h-[54px] w-full rounded-[16px] border border-transparent bg-[#ECECEC] px-4 text-[14px] text-[#161616] outline-none placeholder:text-[#B7B7B7] focus:border-[#1A1A1A] md:h-[68px] md:rounded-[22px] md:px-7 md:text-[18px]"
       />
-      <label className="absolute left-4 top-2 text-[12px] text-[#8A8A8A] peer-focus:text-black">
-        {label}
-      </label>
-    </div>
+    </label>
   );
 }
 
-function Textarea({
+function TextAreaField({
   label,
   name,
+  placeholder,
 }: {
   label: string;
   name: string;
+  placeholder: string;
 }) {
   return (
-    <div className="relative">
+    <label className="block">
+      <span className="mb-3 block text-[14px] font-medium leading-none text-[#2A2A2A] md:mb-4 md:text-[15px]">
+        {label}
+      </span>
+
       <textarea
         name={name}
-        rows={5}
+        placeholder={placeholder}
         required
-        className="peer w-full rounded-[18px] border bg-[#F4F4F4] border-[#E1E1E1] px-4 pt-6 pb-2 text-[15px] text-black resize-none focus:outline-none focus:border-black"
+        rows={5}
+        className="h-[92px] w-full resize-none rounded-[16px] border border-transparent bg-[#ECECEC] px-4 py-4 text-[13px] leading-[1.65] text-[#161616] outline-none placeholder:text-[#B7B7B7] focus:border-[#1A1A1A] md:h-[174px] md:rounded-[22px] md:px-7 md:py-7 md:text-[18px]"
       />
-      <label className="absolute left-4 top-2 text-[12px] text-[#8A8A8A] peer-focus:text-black">
-        {label}
-      </label>
-    </div>
+    </label>
   );
 }

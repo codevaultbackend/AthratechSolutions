@@ -15,7 +15,7 @@ export default function TopNavigation() {
         <img
           src="/Upper.png"
           alt="upper-dots"
-          className="absolute top-0 left-0 w-full z-[9] object-cover opacity-[40%] max-[768px]:h-[400px] "
+          className="absolute top-0 left-0 w-full z-[9] object-cover opacity-[40%] max-[768px]:h-[400px]"
         />
 
         {/* dotted background */}
@@ -32,6 +32,7 @@ export default function TopNavigation() {
 
         {/* navbar */}
         <div className="relative z-10 mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8">
+          
           {/* logo */}
           <Link href="/" className="flex items-center">
             <img
@@ -39,7 +40,7 @@ export default function TopNavigation() {
               alt="Athratech"
               className="h-[55px] w-[189px] object-contain max-[768px]:hidden"
             />
-             <img
+            <img
               src="/AthraMobileLogo.png"
               alt="Athratech"
               className="h-[48px] w-[58px] object-contain min-[768px]:hidden"
@@ -47,9 +48,10 @@ export default function TopNavigation() {
           </Link>
 
           {/* actions */}
-          <div className="flex items-center gap-4 max-[768px]:gap-0 relative z-10">
-            {/* Book a Call (unchanged) */}
-            <a href="tel:+917303835369" className="max-[600px]:hidden mr-[32px] max-[768px]:!mr-[0px]  ">
+          <div className="flex items-center gap-4 relative z-10">
+
+            {/* Book a Call */}
+            <a href="tel:+917303835369" className="max-[600px]:hidden">
               <div className="flex justify-center items-center">
                 <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]">
                   <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
@@ -63,26 +65,25 @@ export default function TopNavigation() {
               </div>
             </a>
 
-            {/* Hamburger (ONLY behavior changed) */}
-            <div className="w-[62px] h-[62px] max-[768px]:w-[40px] max-[768px]:h-[40px]"></div>
+            {/* Hamburger */}
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className=" w-[62px] h-[62px] max-[768px]:!w-[40px] max-[768px]:!h-[40px] flex justify-center items-center fixed top-[20px] right-[80px] max-[768px]:right-[20px] !z-[99999999] "
+              className="w-[48px] h-[48px] md:w-[48px] md:h-[48px] flex justify-center items-center z-[99997]"
             >
-              <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] ">
+              <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]">
                 <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
-                  <div className="flex items-center  p-2 rounded-full bg-black border-[0.5px] border-white">
-                    <Hamburgure className="w-[24px] h-[24px] max-[768px]:w-[14px] max-[768px]:h-[14px]" />
+                  <div className="flex items-center p-2 rounded-full bg-black border-[0.5px] border-white">
+                    <Hamburgure className="w-[18px] h-[18px]" />
                   </div>
                 </div>
               </div>
             </button>
+
           </div>
         </div>
       </header>
 
-      {/* Sidebar */}
       <MobileSidebar open={open} onClose={() => setOpen(false)} />
     </>
   );

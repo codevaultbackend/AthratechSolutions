@@ -23,8 +23,8 @@ export default function VideoSection() {
 
             {/* Logo Carousel */}
             <div className="relative  pb-[32px] overflow-hidden ">
-                <h3 className="text-center text-[#939393] text-[23px] font-[400] mt-[32px] font-calligraffitti ">Trusted by Companies</h3>
-                <div className="flex mt-8 w-max animate-logo-scroll gap-16 ">
+                <h3 className="text-center text-[#939393] text-[23px] font-[400] mt-[38px] font-calligraffitti ">Trusted by Companies</h3>
+                <div className="flex my-8 w-max animate-logo-scroll gap-16 ">
                     {[...AllLogos, ...AllLogos].map((logo, index) => (
                         <div
                             key={index}

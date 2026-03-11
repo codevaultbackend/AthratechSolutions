@@ -59,7 +59,7 @@ export default function ContactCTA() {
                 </p>
 
                 {/* Button */}
-                <Link href="/contact">
+                <Link href="/ContactForm">
                     <div className="flex justify-center items-center pb-[34px] max-md:pb-[16px] ">
                         {/* OUTER GLOW */}
                         <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] max-[768px]:w-full ">
