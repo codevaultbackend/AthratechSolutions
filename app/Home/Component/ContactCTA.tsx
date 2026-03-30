@@ -8,8 +8,6 @@ export default function ContactCTA() {
     return (
         <section className="relative flex min-h-[100vh] max-md:min-h-[70vh] items-center justify-center bg-[#EDEDED] overflow-hidden px-4 " id="contactcta">
 
-            {/* Decorative Arc */}
-            {/* Decorative Arch – Exact Match */}
             <div className="absolute pointer-events-none lg:right-[35%] lg:top-[11%] max-[768px]:!top-[-5%] max-[768px]:!right-[-12%]">
                 <svg
                     width="368"

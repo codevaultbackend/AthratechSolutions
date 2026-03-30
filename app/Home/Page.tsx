@@ -1,25 +1,29 @@
-import Image from "next/image";
-import TopNavigation from "../Component/topNavigation";
 import HeroSection from "./Component/HeroSection";
+import AutoSlidingCards from "./Component/AutoSlidingCards";
 import VideoSection from "./Component/VideoSection";
 import OurOfferings from "./Component/OurOfferings";
 import Steps from "./Component/Steps";
-import Projects from "./Component/Projects";
+import StackedProjectsSection from "./Component/StackedScrollSections";
 import ContactCTA from "./Component/ContactCTA";
-import FAQSection from "./Component/FAQSection";
 import TestimonialsSection from "./Component/TestimonialsSection";
+import FAQSection from "./Component/FAQSection";
+import ImpactSection from "./Component/ImpactSection";
+import BlogsSection from "./Component/BlogsSection";
 
 export default function Home() {
-    return (
-        <div className=" min-h-[100vh]">
-           <HeroSection />
-           <VideoSection />
-           <OurOfferings />
-           <Steps />
-           <Projects />
-           <ContactCTA />
-           <TestimonialsSection />
-           <FAQSection />
-        </div>
-    );
+  return (
+    <main className="min-h-screen bg-[#F5F7FB]">
+      <HeroSection />
+      <AutoSlidingCards />
+      <VideoSection />
+      <OurOfferings />
+      <Steps />
+      <StackedProjectsSection />
+      <BlogsSection />
+      <ImpactSection />
+      <ContactCTA />
+      <TestimonialsSection />
+      <FAQSection />
+    </main>
+  );
 }

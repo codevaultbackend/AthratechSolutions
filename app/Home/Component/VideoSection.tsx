@@ -13,16 +13,9 @@ export default function VideoSection() {
     ];
 
     return (
-        <section className="w-full  rounded-bl-[40px] bg-[#fff] relative  z-[9] rounded-br-[40px]  ">
-            {/* Video Section */}
-            <div className="max-w-full  ">
-                <div className="h-[847px] max-[768px]:h-[263px] max-[768px]:!rounded-none bg-black rounded-[40px] overflow-hidden">
-                    <video src="/AthraVideo.mp4" muted loop autoPlay className="w-full h-full"></video>
-                </div>
-            </div>
-
+        <section className="w-full  bg-[#EEECEA]  relative  z-[9]    ">
             {/* Logo Carousel */}
-            <div className="relative  pb-[32px] overflow-hidden ">
+            <div className="relative bg-[#fff] pb-[32px] overflow-hidden rounded-bl-[32px] rounded-br-[32px] ">
                 <h3 className="text-center text-[#939393] text-[23px] font-[400] mt-[38px] font-calligraffitti ">Trusted by Companies</h3>
                 <div className="flex my-8 w-max animate-logo-scroll gap-16 ">
                     {[...AllLogos, ...AllLogos].map((logo, index) => (
