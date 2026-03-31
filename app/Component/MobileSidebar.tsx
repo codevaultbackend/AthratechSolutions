@@ -51,6 +51,8 @@ export default function MobileSidebar({ open, onClose }: Props) {
             { label: "Services", slug: "#OurOffering" },
             { label: "Projects", slug: "#projects" },
             { label: "Testimonials", slug: "#testimonial" },
+            { label: "Blogs", slug: "/Blog" },
+            { label: "Projects", slug: "/Projects" },
             { label: "FAQ", slug: "#Faq" },
           ].map((item, index) => (
             <Link

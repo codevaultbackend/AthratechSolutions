@@ -7,11 +7,6 @@
   --font-calligraffitti: "Calligraffitti", cursive;
 }
 
-body{
-  user-select: none;
-  overflow-y: hidden;
-}
-
 /* Font utility classes */
 .font-inter {
   font-family: var(--font-inter);
@@ -149,12 +144,6 @@ body {
 .marquee-wrapper:hover .marquee-left,
 .marquee-wrapper:hover .marquee-right {
   animation-duration: 60s;
-}
-@import "tailwindcss";
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

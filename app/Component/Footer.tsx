@@ -5,7 +5,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-[#6f6f6f] z-[9]">
+    <footer className="relative overflow-hidden  bg-[#EFEFEF] ">
+
+      <div className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] z-[9]">
 
       {/* ===== Background vignette (ENHANCED) ===== */}
       <div className="absolute inset-0 z-[0] 
@@ -30,6 +32,7 @@ export default function Footer() {
             font-extrabold tracking-[8px]
             text-white/10
             whitespace-nowrap select-none
+             max-[600px]:text-[50px]
              
           "
           style={{
@@ -161,6 +164,7 @@ export default function Footer() {
           </div>
         </div>
 
+      </div>
       </div>
     </footer>
   );

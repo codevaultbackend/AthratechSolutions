@@ -45,7 +45,7 @@ function GalleryCard({
 
   return (
     <article
-      className={`
+      className={` autoslide
         relative shrink-0 overflow-hidden
         ${outerRoundedClass}
         bg-[#EEECEA]

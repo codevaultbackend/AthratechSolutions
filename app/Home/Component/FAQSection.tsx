@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#EDEDED]  px-4 h-fit  pb-[225px] pt-[165px] " id="Faq">
+    <section className="bg-[#EFEFEF]  px-4 h-fit  pb-[225px] pt-[165px] " id="Faq">
       {/* ===== Header ===== */}
       <div className="text-center mb-[64px]">
          <p className="font-calligraffitti text-[#7A7A7A] mb-2 flex gap-4 items-center justify-center text-[24px] font-[400]">

@@ -1,154 +1,132 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { projectsData } from "@/app/context/projects";
 
-const projects = [
-  {
-    id: 1,
-    title: "MedDope",
-    description:
-      "A modern healthcare platform crafted to simplify appointment booking, doctor discovery, and patient interaction with a clean mobile-first experience.",
-    image: "/images/projects/meddope.png",
-    bg: "bg-[#0D1B66]",
-    imageFirst: true,
-  },
-  {
-    id: 2,
-    title: "SocialStartUp Foundation",
-    description:
-      "A professional foundation website with strong storytelling, service clarity, and a trustworthy interface built to help users understand the mission instantly.",
-    image: "/images/projects/socialstartup.png",
-    bg: "bg-[#F6F7FB]",
-    imageFirst: false,
-  },
-  {
-    id: 3,
-    title: "Shagun Handicraft",
-    description:
-      "A handcrafted products showcase with elegant layouts, product storytelling, and a premium visual identity tailored for modern Indian ecommerce audiences.",
-    image: "/images/projects/shagun.png",
-    bg: "bg-[#F6F7FB]",
-    imageFirst: true,
-  },
-  {
-    id: 4,
-    title: "Mami Power Solutions",
-    description:
-      "A bold and conversion-focused business website that presents services, trust signals, and contact flow in a sharp and structured format.",
-    image: "/images/projects/mami.png",
-    bg: "bg-[#6B46FF]",
-    imageFirst: false,
-  },
-];
-
-function ProjectCard({
-  title,
-  description,
-  image,
-  bg,
-  imageFirst,
-  index,
-}: {
-  title: string;
-  description: string;
-  image: string;
-  bg: string;
-  imageFirst: boolean;
-  index: number;
-}) {
+export default function StackedProjects() {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.55, delay: index * 0.08 }}
-      className="group"
-    >
-      <div className="overflow-hidden rounded-[28px] border border-[#E7E7E7] bg-white shadow-[0_10px_35px_rgba(16,24,40,0.06)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_18px_50px_rgba(16,24,40,0.10)]">
-        <div
-          className={`grid min-h-[280px] grid-cols-1 lg:min-h-[330px] lg:grid-cols-2 ${
-            !imageFirst ? "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1" : ""
-          }`}
-        >
-          <div className="flex items-center p-4 sm:p-5 lg:p-6">
-            <div
-              className={`relative h-[220px] w-full overflow-hidden rounded-[22px] ${bg} sm:h-[260px] lg:h-full`}
-            >
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority={index < 2}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center p-5 sm:p-7 lg:p-9">
-            <div className="max-w-[460px]">
-              <div className="mb-4 inline-flex rounded-full border border-[#E8E8E8] bg-[#FAFAFA] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-[#666666]">
-                Featured Project
-              </div>
-
-              <h3 className="text-[24px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#111111] sm:text-[30px] lg:text-[36px]">
-                {title}
-              </h3>
-
-              <p className="mt-4 max-w-[46ch] text-[14px] leading-[1.8] text-[#5F5F5F] sm:text-[15px]">
-                {description}
-              </p>
-
-              <button className="mt-7 inline-flex h-11 items-center gap-2 rounded-full bg-[#111111] px-5 text-[13px] font-medium text-white transition-all duration-300 hover:bg-[#222222]">
-                View Project
-                <ArrowUpRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.article>
-  );
-}
-
-export default function ProjectsSection() {
-  return (
-    <section className="w-full bg-[#ECECEC] py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.45 }}
-          className="mx-auto mb-12 max-w-[760px] text-center sm:mb-16"
-        >
-          <span className="inline-flex rounded-full border border-[#DCDCDC] bg-white px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-[#555555]">
-            Our Projects
-          </span>
-
-          <h2 className="mt-5 text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-[#111111] sm:text-[44px] lg:text-[58px]">
-            Work Blooming in the Market
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-[620px] text-[14px] leading-[1.8] text-[#666666] sm:text-[15px]">
-            We craft digital products that look premium, feel smooth, and help
-            brands stand out with clarity, trust, and strong visual impact.
+    <section className="bg-[#EFEFEF] py-[48px] sm:py-[64px] md:py-[80px] lg:py-[120px]">
+      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-6 lg:px-6">
+        {/* Header */}
+        <div className="mb-[40px] text-center sm:mb-[50px] md:mb-[80px]">
+          <p className="mb-2 flex items-center justify-center gap-3 font-calligraffitti text-[16px] text-[#7A7A7A] sm:gap-4 sm:text-[18px] md:text-[22px]">
+            <span className="inline-block h-[1px] w-[40px] bg-gradient-to-r from-transparent to-[#CFCFCF] sm:w-[60px] md:w-[100px]" />
+            Projects
+            <span className="inline-block h-[1px] w-[40px] bg-gradient-to-l from-transparent to-[#CFCFCF] sm:w-[60px] md:w-[100px]" />
           </p>
-        </motion.div>
 
-        <div className="space-y-5 sm:space-y-6">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              bg={project.bg}
-              imageFirst={project.imageFirst}
-              index={index}
-            />
+          <h2 className="font-bricolage text-[28px] font-[500] leading-[1.08] text-[#0B0B0B] sm:text-[36px] md:text-[52px]">
+            Work Booming in the Market
+          </h2>
+        </div>
+
+        {/* Sticky stacked cards */}
+        <div className="relative space-y-6 pb-4 sm:space-y-10 sm:pb-6 md:space-y-16 md:pb-8">
+          {projectsData.map((project, index) => (
+            <div
+              key={project.slug}
+              className="sticky top-3 overflow-hidden rounded-[24px] border border-[#EAEAEA] bg-white shadow-[0px_30px_80px_rgba(0,0,0,0.06)] sm:top-5 md:top-24"
+              style={{
+                zIndex: 10 + index,
+                transform: `scale(${1 - index * 0.02})`,
+                transformOrigin: "top center",
+              }}
+            >
+              <div
+                className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${
+                  project.reverse
+                    ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
+                    : ""
+                }`}
+              >
+                {/* Image */}
+                <div className="relative h-full p-4 sm:p-5 md:p-6">
+                  <div
+                    className="relative h-[240px] overflow-hidden rounded-[18px] border border-[#EEEEEE] shadow-md sm:h-[300px] md:h-full md:min-h-[368px]"
+                    style={{ background: project.imageBg }}
+                  >
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.12),transparent_28%)]" />
+
+                    <div
+                      className="absolute"
+                      style={{
+                        width: project.imageConfig.width,
+                        height: project.imageConfig.height,
+                        top: project.imageConfig.top ?? "50%",
+                        left: project.imageConfig.left,
+                        right: project.imageConfig.right,
+                        bottom: project.imageConfig.bottom,
+                        transform:
+                          !project.imageConfig.top &&
+                          !project.imageConfig.left &&
+                          !project.imageConfig.right &&
+                          !project.imageConfig.bottom
+                            ? "translate(-50%, -50%)"
+                            : undefined,
+                      }}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className={
+                          project.imageConfig.objectFit === "cover"
+                            ? "object-cover"
+                            : "object-contain"
+                        }
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={index < 2}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col justify-between px-5 py-6 sm:px-7 sm:py-7 md:px-10 md:py-9">
+                  <div>
+                    <h3 className="mb-4 font-bricolage text-[40px] font-[500] leading-[100%] text-[#000000] line-clamp-1 md:text-[30px]">
+                      {project.title}
+                    </h3>
+
+                    <p className="mb-5 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] line-clamp-1 md:text-[15px]">
+                      {project.description}
+                    </p>
+
+                    <div className="space-y-5">
+                      {project.details.map((detail, detailIndex) => (
+                        <div
+                          key={`${project.slug}-${detailIndex}`}
+                          className="pt-4"
+                        >
+                          <h4 className="text-[16px] font-[500] tracking-[0] text-[#0E0E0E]">
+                            {detail.title}
+                          </h4>
+                          <p className="max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] line-clamp-1 md:text-[15px]">
+                            {detail.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-8">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="inline-flex h-[50px] items-center gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4"
+                    >
+                      <span className="text-[13px] leading-[100%] text-[#797979]">
+                        View Project
+                      </span>
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DDD] bg-[#121212] text-[#fff]">
+                        <ArrowUpRight size={16} />
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

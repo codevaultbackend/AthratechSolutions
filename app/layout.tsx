@@ -4,6 +4,7 @@ import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
 import { inter, calligraffitti, bricolage } from "./fonts";
 import Script from "next/script";
+import { BlogsProvider } from "./context/BlogsContext";
 
 export const metadata: Metadata = {
   title: "Athratech Tech",
@@ -46,7 +47,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Meta Pixel Code */}
+        {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -72,17 +73,30 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="antialiased bg-white max-w-[1440px] w-full mx-auto">
-        {/* Navbar */}
-        <TopNavigation />
+      {/* FIXED BODY */}
+      <body className="antialiased bg-white">
+        
+        {/* Container moved INSIDE body */}
+        <div className="max-w-[1440px] w-full mx-auto">
+          
+          {/* Navbar */}
+          <TopNavigation />
 
-        {/* Page content */}
-        <main className="relative">{children}</main>
+          {/* Page Content */}
+          
+          <main className="relative">
+            <BlogsProvider>
+              {children}
+            </BlogsProvider>
+            
+          </main>
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
 
-        {/* Meta Pixel Noscript Fallback */}
+        </div>
+
+        {/* Meta Pixel Fallback */}
         <noscript>
           <img
             height="1"

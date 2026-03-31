@@ -19,9 +19,9 @@ export default function Home() {
       <OurOfferings />
       <Steps />
       <StackedProjectsSection />
-      <BlogsSection />
-      <ImpactSection />
       <ContactCTA />
+      <ImpactSection />
+      <BlogsSection />
       <TestimonialsSection />
       <FAQSection />
     </main>
