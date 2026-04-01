@@ -29,7 +29,7 @@ export default function TopNavigation() {
 
         {/* availability pill */}
         <div className="absolute left-1/2 top-0 z-20 w-full max-w-[215px] -translate-x-1/2 max-[600px]:translate-y-32">
-          <div className="relative flex items-center justify-center gap-2 rounded-full px-2 py-[11px] text-[12px] font-[400] text-white max-[780px]:py-[6px] max-[600px]:bg-black">
+          <div className="relative flex items-center justify-center gap-2 rounded-full px-2 py-[11px] text-[12px] font-[400] text-white max-[780px]:py-[6px] max-[600px]:bg-black max-[768px]:top-[-32px]">
             <NavigationLabel className="absolute inset-0 -z-10 h-full w-full text-[#252525] max-[600px]:hidden" />
             <span className="h-2 w-2 rounded-full bg-green-500" />
             Available for New Projects
@@ -37,7 +37,7 @@ export default function TopNavigation() {
         </div>
 
         {/* navbar */}
-        <div className="relative z-10 mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8">
+        <div className="relative z-10 mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8 pr-[180px] max-[900px]:pr-[170px] max-[768px]:pr-8">
           {/* logo */}
           <Link href="/" className="flex items-center">
             <img
@@ -55,9 +55,12 @@ export default function TopNavigation() {
           {/* actions */}
           <div className="flex items-center gap-4">
             {/* Book a Call */}
-            <a href="tel:+917303835369" className="max-[600px]:hidden">
+            <a
+              href="tel:+917303835369"
+              className="fixed right-[96px] top-6 z-[99996] max-[600px]:hidden"
+            >
               <div className="flex items-center justify-center">
-                <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]">
+                <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] top-[-7px]">
                   <div className="rounded-full bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)] p-[6px]">
                     <div className="flex h-[48px] items-center rounded-full border-[0.5px] border-white bg-black px-4">
                       <h3 className="!text-[16px] font-[500] text-white">
