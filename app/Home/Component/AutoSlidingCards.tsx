@@ -19,12 +19,17 @@ const topRow: GalleryItem[] = [
 ];
 
 const bottomRow: GalleryItem[] = [
-  { id: 1, title: "Attendance App", image: "/Project7.png" },
   { id: 2, title: "Chugen", image: "/Project5.png" },
   { id: 3, title: "Fastresponce", image: "/Project2.png" },
   { id: 4, title: "Attendance", image: "/Project3.png" },
   { id: 5, title: "Presentation", image: "/Project6.jpeg" },
   { id: 6, title: "Collaboration", image: "/Project1.png" },
+  { id: 1, title: "Attendance App", image: "/Project7.png" },
+  
+  
+  
+  
+  
 ];
 
 function GalleryCard({
@@ -72,11 +77,11 @@ function GalleryCard({
 
 function SlidingRow({
   items,
-  direction = "left",
+  direction = "right",
   rowType,
 }: {
   items: GalleryItem[];
-  direction?: "left" | "right";
+  direction?: "right" | "left";
   rowType: "top" | "bottom";
 }) {
   const duplicated = [...items, ...items];
@@ -190,8 +195,8 @@ export default function HeroGalleryCarousel() {
       <div className="mx-auto w-full max-w-[1600px] border-[#EEECEA]">
         <div className="rounded-[10px] bg-white">
           <div className="space-y-3 sm:space-y-4 md:space-y-5">
-            <SlidingRow items={topRow} direction="right" rowType="top" />
-            <SlidingRow items={bottomRow} direction="left" rowType="bottom" />
+            <SlidingRow items={topRow} direction="left" rowType="top" />
+            <SlidingRow items={bottomRow} direction="right" rowType="bottom" />
           </div>
         </div>
       </div>

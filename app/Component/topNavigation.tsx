@@ -57,7 +57,7 @@ export default function TopNavigation() {
             {/* Book a Call */}
             <a
               href="tel:+917303835369"
-              className="fixed right-[96px] top-6 z-[99996] max-[600px]:hidden"
+              className="fixed right-[96px] top-6 !z-[99999999999999]  max-[600px]:hidden"
             >
               <div className="flex items-center justify-center">
                 <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] top-[-7px]">

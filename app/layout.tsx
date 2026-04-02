@@ -74,10 +74,10 @@ export default function RootLayout({
       </head>
 
       {/* FIXED BODY */}
-      <body className="antialiased bg-white">
+      <body className="antialiased bg-white relative">
         
         {/* Container moved INSIDE body */}
-        <div className="max-w-[1440px] w-full mx-auto">
+        <div className="max-w-[1440px] w-full mx-auto relative">
           
           {/* Navbar */}
           <TopNavigation />
