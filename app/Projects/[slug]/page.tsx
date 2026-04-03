@@ -101,7 +101,7 @@ function CaseStudyImage({
     sizes,
     wrapperClassName,
     roundedClassName = "rounded-[16px] md:rounded-[22px] lg:rounded-[24px]",
-    bgClassName = "bg-[#EFEFEF]",
+    bgClassName = "bg-[#EAEAEA]",
     fit = "cover",
 }: {
     card: CaseStudyImageCard;
@@ -245,7 +245,7 @@ function FastResponseSectionOne({
                     fit="contain"
                     sizes="(max-width: 1023px) 100vw, 760px"
                     wrapperClassName="aspect-[1.03/0.9] min-h-[260px] sm:min-h-[360px] lg:min-h-[610px]"
-                    bgClassName="bg-[#F1F1F1]"
+                    bgClassName="bg-[#F1F1F1] overflow-hidden !rounded-[36px]"
                 />
 
                 <div className="grid grid-rows-[1fr_auto] gap-4 lg:gap-[18px]">
@@ -259,9 +259,9 @@ function FastResponseSectionOne({
 
                     <CaseStudyImage
                         card={rightBottomGraphic}
-                        fit="contain"
+                        fit="cover"
                         sizes="(max-width: 1023px) 100vw, 445px"
-                        wrapperClassName="aspect-[1.16/0.52] min-h-[110px] sm:min-h-[128px] lg:min-h-[150px]"
+                        wrapperClassName="aspect-[1.16/0.52] min-h-[110px] sm:min-h-[128px] lg:min-h-[150px] mx-auto"
                         bgClassName="bg-transparent"
                     />
                 </div>
@@ -293,20 +293,20 @@ function FastResponseSectionTwo({
                 description={sectionTwoDescription}
             />
 
-            <div className="mt-[16px]  grid grid-cols-1 !justify-between !gap-4 sm:mt-[20px] sm:grid-cols-2 lg:mt-[24px] lg:!gap-[28px]">
+            <div className="mt-[16px] grid grid-cols-1 gap-4 sm:mt-[20px] sm:grid-cols-[minmax(0,709px)_minmax(0,423px)] sm:justify-between sm:gap-5 lg:mt-[24px] lg:gap-[28px]">
                 <CaseStudyImage
                     card={topLeft}
                     fit="contain"
-                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 610px"
-                    wrapperClassName=" !max-w-[709px] w-full aspect-[1.18/0.76] min-h-[180px] sm:min-h-[220px] lg:min-h-[380px] "
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 65vw, 709px"
+                    wrapperClassName="w-full max-w-[709px] justify-self-start aspect-[1.18/0.76] min-h-[180px] sm:min-h-[220px] lg:min-h-[380px]"
                     bgClassName="bg-[#F1F1F1]"
                 />
 
                 <CaseStudyImage
                     card={topRight}
                     fit="contain"
-                    sizes="(max-width: 539px) 100vw, (max-width: 1023px) 50vw, 510px"
-                    wrapperClassName=" max-w-[423px] w-full min-h-[180px] sm:min-h-[220px] lg:min-h-[380px]"
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 35vw, 423px"
+                    wrapperClassName="w-full max-w-[423px] justify-self-end min-h-[180px] sm:min-h-[220px] lg:min-h-[380px]"
                     bgClassName="bg-[#F1F1F1]"
                 />
             </div>
@@ -382,7 +382,7 @@ function MarkDayHero({
             </div>
 
             {/* hero image */}
-            <div className="mt-[18px] overflow-hidden rounded-[18px] bg-black shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:mt-[24px] lg:mt-[30px] lg:rounded-[24px]">
+            <div className="mt-[18px] overflow-hidden rounded-[18px] bg-[#02050C] shadow-[0_10px_30px_rgba(0,0,0,0.06)] md:mt-[24px] lg:mt-[30px] lg:rounded-[24px]">
                 <div className="relative aspect-[1.06/0.84] w-full sm:aspect-[1.35/0.84] lg:aspect-[16/8.7]">
                     <Image
                         src={caseStudy.heroImage}
@@ -444,9 +444,9 @@ function MarkDaySectionOne({
                 description={sectionOneDescription}
             />
 
-            <div className="mt-[16px] grid grid-cols-1 gap-4 sm:mt-[20px] lg:mt-[24px]">
-                {/* top two cards */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-[18px]">
+            <div className="mt-[16px] grid grid-cols-2 items-stretch gap-4 sm:mt-[20px] lg:mt-[24px]">
+                {/* left two cards */}
+                <div className="grid h-full grid-cols-1 gap-4 lg:gap-[18px]">
                     <CaseStudyImage
                         card={leftTop}
                         fit="contain"
@@ -466,14 +466,13 @@ function MarkDaySectionOne({
                     />
                 </div>
 
-                {/* bottom full width image */}
                 <CaseStudyImage
                     card={rightTall}
                     fit="cover"
-                    sizes="(max-width: 1023px) 100vw, 760px"
-                    wrapperClassName="aspect-[2.05/1] min-h-[220px] sm:min-h-[320px] lg:min-h-[430px]"
+                    sizes="(max-width: 1023px) 100vw, 633px"
+                    wrapperClassName="h-full min-h-[356px] sm:min-h-[456px] lg:min-h-[508px] w-full max-w-[633px] justify-self-end"
                     roundedClassName="rounded-[14px] md:rounded-[18px] lg:rounded-[20px]"
-                    bgClassName="bg-[#F5F5F5]"
+                    bgClassName="bg-[#000]"
                 />
             </div>
         </SectionContainer>
@@ -505,7 +504,7 @@ function MarkDaySectionTwo({
                     sizes="(max-width: 1023px) 100vw, 1280px"
                     wrapperClassName="aspect-[1.1/1] sm:aspect-[1.4/0.95] lg:aspect-[16/8.8] min-h-[260px] sm:min-h-[360px] lg:min-h-[560px]"
                     roundedClassName="rounded-[18px] md:rounded-[22px] lg:rounded-[24px]"
-                    bgClassName="bg-black"
+                    bgClassName="black"
                 />
             </div>
         </SectionContainer>

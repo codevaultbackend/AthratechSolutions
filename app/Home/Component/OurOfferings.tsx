@@ -19,7 +19,7 @@ export default function HeroSection() {
       w-full
       min-h-[650px]
       max-md:min-h-[840px]
-      bg-[url('/OurOfferingbg.jpg')]
+      bg-[url('https://ik.imagekit.io/j4xu3pewo/fast_response_assets/OurOfferingbg_mgtwzM_6P.jpg')]
       bg-cover bg-center
       flex flex-col items-center
       px-4
@@ -42,7 +42,7 @@ export default function HeroSection() {
         max-md:text-[18px]
       "
       >
-        <span className="w-[124px] h-[1px] bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF] max-md:w-[56px]" />
+        <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />    
         Our offerings ?
         <span className="w-[124px] h-[1px] bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF] max-md:w-[56px]" />
       </p>

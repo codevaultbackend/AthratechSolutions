@@ -26,7 +26,7 @@ export default function VideoSection() {
                             <img
                                 src={logo}
                                 alt="Client Logo"
-                                className="h-12 object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
+                                className="h-12 object-contain  opacity-70 hover:opacity-100  transition"
                             />
                         </div>
                     ))}

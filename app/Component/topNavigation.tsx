@@ -17,7 +17,7 @@ export default function TopNavigation() {
       <header className="relative w-full bg-white">
         {isHomePage && (
           <img
-            src="/Upper.png"
+            src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198154/Upper_me2xug.png"
             alt="upper-dots"
             className="absolute left-0 top-0 z-[9] w-full object-cover opacity-[40%] max-[768px]:h-[400px]"
           />
@@ -37,16 +37,16 @@ export default function TopNavigation() {
         </div>
 
         {/* navbar */}
-        <div className="relative z-10 mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8 pr-[180px] max-[900px]:pr-[170px] max-[768px]:pr-8">
+        <div className="relative z-[9999] mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8 pr-[180px] max-[900px]:pr-[170px] max-[768px]:pr-8">
           {/* logo */}
           <Link href="/" className="flex items-center">
             <img
-              src="/AthraLogo.png"
+              src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198141/AthraLogo_oyvmzh.png"
               alt="Athratech"
               className="h-[55px] w-[189px] object-contain max-[768px]:hidden"
             />
             <img
-              src="/AthraMobileLogo.png"
+              src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198155/web-app-manifest-512x512_d8ehdz.png"
               alt="Athratech"
               className="h-[48px] w-[58px] object-contain min-[768px]:hidden"
             />
@@ -57,7 +57,7 @@ export default function TopNavigation() {
             {/* Book a Call */}
             <a
               href="tel:+917303835369"
-              className="fixed right-[96px] top-6 !z-[99999999999999]  max-[600px]:hidden"
+              className="fixed right-[96px] top-6 z-[99996] max-[600px]:hidden"
             >
               <div className="flex items-center justify-center">
                 <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] top-[-7px]">
@@ -79,7 +79,7 @@ export default function TopNavigation() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed right-8 top-6 z-[99997] flex h-[48px] w-[48px] items-center justify-center max-[768px]:right-4 max-[768px]:top-5"
+        className="fixed right-8 top-6 z-[9999] flex h-[48px] w-[48px] items-center justify-center max-[768px]:right-4 max-[768px]:top-5"
       >
         <div className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]">
           <div className="rounded-full bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)] p-[6px]">

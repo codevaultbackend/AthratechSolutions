@@ -79,7 +79,7 @@ export const projectsData: ProjectItem[] = [
     slug: "markday",
     description:
       "An intuitive attendance portal designed for seamless tracking and leave management, enhancing workforce efficiency and contributing to scalable organizational growth.",
-    image: "/Project1.png",
+    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project4_YJROaams7.jpg",
     reverse: false,
     imageBg: "linear-gradient(135deg, #0F172A 0%, #1E293B 45%, #334155 100%)",
     imageConfig: {
@@ -107,7 +107,7 @@ export const projectsData: ProjectItem[] = [
       heroDescription:
         "An intuitive attendance portal designed for seamless tracking and leave management, enhancing workforce efficiency and contributing to scalable organizational growth.",
       heroHighlight: "designed for seamless tracking and leave management",
-      heroImage: "/Attendance1.png",
+      heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Attendance1_7sGFXRW_s.jpg",
       heroImageAlt: "Mark Day attendance portal hero image",
       meta: [
         {
@@ -125,17 +125,17 @@ export const projectsData: ProjectItem[] = [
         "The attendance application was limited by a basic, outdated interface that failed to reflect its full capabilities. This hindered user experience, efficiency, and overall scalability. The goal was to transform it into a modern, intuitive platform that streamlines attendance, simplifies leave management, and delivers a seamless experience for organizations and their workforce.",
       sectionOneMarkDayStackImages: [
         {
-          image: "/Attendance2.png",
+          image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Attendance2__4yiuvcHF.jpg",
           alt: "Mark Day mobile screen preview",
           imageClassName: "object-cover object-center w-full h-full",
         },
         {
-          image: "/Attendance3.png",
+          image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Attendance3_GZPXEUdqP.jpg",
           alt: "Mark Day desktop dashboard preview",
           imageClassName: "object-cover object-center w-full h-full",
         },
         {
-          image: "/Attendance4.png",
+          image: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775215039/Attendance4_emhfo1.png",
           alt: "Mark Day attendance calendar screen",
           imageClassName:
             "object-contain object-center w-full h-full p-3 md:p-5 lg:p-6 scale-[0.96]",
@@ -143,7 +143,7 @@ export const projectsData: ProjectItem[] = [
       ],
 
       sectionTwoBottomImage: {
-        image: "/Attendance5.png",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Attendance5_T05xQ_lLL.jpg",
         alt: "Mark Day attendance insight screen",
         imageClassName: "object-cover object-center w-full h-full",
       },
@@ -152,7 +152,7 @@ export const projectsData: ProjectItem[] = [
       sectionTwoDescription:
         "Mark Day gives organizations better visibility into attendance behavior, leave tracking, and day-to-day workforce activity. It helps teams reduce manual effort, improve clarity, and make smarter operational decisions through a more connected attendance experience.",
       sectionTwoBottomImage: {
-        image: "/Attendance5.png",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Attendance5_T05xQ_lLL.jpg",
         alt: "Mark Day attendance insight screen",
         className:
           "rounded-[20px] bg-black min-h-[260px] md:min-h-[520px] overflow-hidden",
@@ -165,7 +165,7 @@ export const projectsData: ProjectItem[] = [
     slug: "fastresponse",
     description:
       "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
-    image: "/fastresponce1.png",
+    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project3_wIA5PzDqk.jpg",
     reverse: true,
     imageBg: "linear-gradient(135deg, #020617 0%, #111827 45%, #000000 100%)",
     imageConfig: {
@@ -194,7 +194,7 @@ export const projectsData: ProjectItem[] = [
         "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
       heroHighlight:
         "quickly booking trusted professionals for household services",
-      heroImage: "/fastresponce1.png",
+      heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/fastresponce1_LvsKDntV5.jpg",
       heroImageAlt: "FastResponse app hero image",
       meta: [
         {
@@ -213,7 +213,7 @@ export const projectsData: ProjectItem[] = [
 
       sectionOneStackImages: [
         {
-          image: "/fastresponce2.png",
+          image: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775215667/fastresponce2_fkmrkz.png",
           alt: "FastResponse mobile booking interface",
           className:
             "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
@@ -221,14 +221,14 @@ export const projectsData: ProjectItem[] = [
             "object-contain object-center w-full h-full p-4 sm:p-5 md:p-8",
         },
         {
-          image: "/fastresponce3.png",
+          image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/fastresponce3_XT1BVsD6j.jpg",
           alt: "Technician service visual",
           className:
             "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
           imageClassName: "object-cover object-center w-full h-full",
         },
         {
-          image: "/fastresponce4.png",
+          image: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198144/fastresponce4_dzib4i.png",
           alt: "Book your technician caption card",
           className:
             "rounded-[16px] md:rounded-[22px] bg-transparent overflow-hidden",
@@ -241,7 +241,7 @@ export const projectsData: ProjectItem[] = [
         "FastResponse was designed to simplify how users search, compare, and book technicians while giving businesses greater operational visibility. The experience improves booking speed, service discoverability, scheduling clarity, and trust across the complete customer journey.",
       sectionTwoTopImages: [
         {
-          image: "/fastresponce5.png",
+          image: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198150/fastresponce5_idni7b.png",
           alt: "FastResponse map and tracking UI",
           className:
             "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
@@ -249,7 +249,7 @@ export const projectsData: ProjectItem[] = [
             "object-contain object-center w-full h-full p-3 sm:p-4 md:p-6",
         },
         {
-          image: "/fastresponce6.png",
+          image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/fastresponce6_C5KAAqV81.jpg",
           alt: "FastResponse premium salon service banner",
           className:
             "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
@@ -257,7 +257,7 @@ export const projectsData: ProjectItem[] = [
         },
       ],
       sectionTwoBottomImage: {
-        image: "/fastresponce7.png",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/fastresponce7_7zgy4TIHU.jpg",
         alt: "Happy customers using FastResponse services",
         className:
           "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
@@ -270,7 +270,7 @@ export const projectsData: ProjectItem[] = [
     slug: "sankalpsetufoundation",
     description:
       "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "/SankalpSetu.png",
+    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/SankalpSetu_bVzi2YGgL.jpg",
     reverse: true,
     imageBg: "#EDEDED",
     imageConfig: {
@@ -281,25 +281,22 @@ export const projectsData: ProjectItem[] = [
       left: "-16%",
     },
     websiteUrl: "https://www.sankalpsetufoundation.org/",
-    details: [],
-  },
-  
-  {
-    title: "Man Power Solutions",
-    slug: "manpower",
-    description:
-      "Manpower Solutions helps companies scale faster through structured bulk hiring from top colleges across India.",
-    image: "/mpsmockup.png",
-    reverse: true,
-    imageBg: "linear-gradient(135deg, #312E81 0%, #4F46E5 50%, #4C3AA5 100%)",
-    imageConfig: {
-      width: "100%",
-      height: "100%",
-      objectFit: "contain",
-      top: "0.6%",
-      left: "0%",
-    },
-    websiteUrl: "https://your-live-site.com",
-    details: [],
-  },
+    details: [
+      {
+        title: "Education",
+        description:
+          "Supporting children with access to learning and awareness programs.",
+      },
+      {
+        title: "Healthcare",
+        description:
+          "Providing essential aid, hygiene support, and community health initiatives.",
+      },
+      {
+        title: "Skill Development",
+        description:
+          "Enabling youth with vocational training for sustainable livelihoods.",
+      },
+    ],
+  }
 ];

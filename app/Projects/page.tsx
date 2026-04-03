@@ -13,7 +13,7 @@ import ProjectGrid from "./Component/ProjectGrid";
 export default function Projects() {
     return (
         <>
-            <section className="mx-auto grid w-full max-w-[1728px] grid-cols-1 gap-y-10 px-4 pb-[82px] pt-[86px] sm:px-6 md:pt-[100px] lg:grid-cols-[540px_1fr] lg:gap-x-[90px] lg:px-8 lg:pb-[120px] xl:grid-cols-[600px_1fr] xl:gap-x-[140px] xl:px-12 xl:pt-[118px]">
+            <section className="mx-auto grid w-full max-w-[1728px] max-[1224px]:!grid-cols-1 gap-y-10 px-4 pb-[82px] pt-[86px] sm:px-6 md:pt-[100px] lg:grid-cols-[540px_1fr] lg:gap-x-[90px] lg:px-8 lg:pb-[120px] xl:grid-cols-[600px_1fr] xl:gap-x-[140px] xl:px-12 xl:pt-[118px]">
                 <div className="flex items-start">
                     <h1 className="font-bricolage text-[58px] font-[600] leading-[0.9] tracking-[-0.075em] text-[#000000] sm:text-[78px] md:text-[94px] lg:text-[108px] xl:text-[120px]">
                         Our

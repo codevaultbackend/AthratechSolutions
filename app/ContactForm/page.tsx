@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const avatars = ["/contactHero.png", "/contactHero1.png", "/contactHero2.png", "/trusted3.png"];
+const avatars = ["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg"];
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);

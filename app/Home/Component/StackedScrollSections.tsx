@@ -7,17 +7,23 @@ import { projectsData } from "@/app/context/projects";
 
 export default function StackedProjects() {
   return (
-    <section className="bg-[#EFEFEF] py-[48px] sm:py-[64px] md:py-[80px] lg:py-[120px]">
+    <section className="bg-[#EFEFEF] pt-[120px] pb-[48px] sm:pt-[130px] sm:pb-[64px] md:pt-[140px] md:pb-[80px] lg:pt-[170px] lg:pb-[120px]">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-6 lg:px-6">
         {/* Header */}
-        <div className="mb-[40px] text-center sm:mb-[50px] md:mb-[80px]">
-          <p className="mb-2 flex items-center justify-center gap-3 font-calligraffitti text-[16px] text-[#7A7A7A] sm:gap-4 sm:text-[18px] md:text-[22px]">
-            <span className="inline-block h-[1px] w-[40px] bg-gradient-to-r from-transparent to-[#CFCFCF] sm:w-[60px] md:w-[100px]" />
+        <div className="mb-12 text-center sm:mb-14 lg:mb-16">
+          <p
+            className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
+            style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
+          >
+            <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
             Projects
-            <span className="inline-block h-[1px] w-[40px] bg-gradient-to-l from-transparent to-[#CFCFCF] sm:w-[60px] md:w-[100px]" />
+            <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
           </p>
 
-          <h2 className="font-bricolage text-[28px] font-[500] leading-[1.08] text-[#0B0B0B] sm:text-[36px] md:text-[52px]">
+          <h2
+            className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
+            style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
+          >
             Work Booming in the Market
           </h2>
         </div>
@@ -31,11 +37,12 @@ export default function StackedProjects() {
             return (
               <div
                 key={project.slug}
-                className="sticky top-3 sm:top-5 md:top-24"
+                className="sticky top-[90px] sm:top-[100px] md:top-[120px]"
                 style={{
                   zIndex: 10 + index,
                 }}
               >
+
                 <div
                   className="overflow-hidden rounded-[24px] border border-[#EAEAEA] bg-white shadow-[0px_30px_80px_rgba(0,0,0,0.06)]"
                   style={{
@@ -47,8 +54,8 @@ export default function StackedProjects() {
                 >
                   <div
                     className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
-                        ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
-                        : ""
+                      ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
+                      : ""
                       }`}
                   >
                     {/* Image */}
@@ -60,7 +67,7 @@ export default function StackedProjects() {
                         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.12),transparent_28%)]" />
 
                         <div
-                          className="absolute"
+                          className="absolute bg-[#000]"
                           style={{
                             width: project.imageConfig.width,
                             height: project.imageConfig.height,
@@ -123,10 +130,10 @@ export default function StackedProjects() {
 
                       <div className="mt-8">
                         <Link
-                          href={`/projects/${project.slug}`}
-                          className="inline-flex h-[50px] items-center gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4"
+                          href={`/Projects/${project.slug}`}
+                          className="inline-flex h-[50px] items-center gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4 max-w-[194px] w-full justify-between"
                         >
-                          <span className="text-[13px] leading-[100%] text-[#797979]">
+                          <span className="text-[16px] font-[400] leading-[100%] text-[#797979] text-center pl-[20px]">
                             View Project
                           </span>
                           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DDD] bg-[#121212] text-[#fff]">

@@ -125,14 +125,21 @@ export default function ImpactSection() {
         >
             <div className="mx-auto w-full max-w-[1180px]">
 
-                <div className="text-center mb-12">
-                    <p className="font-calligraffitti text-[#7A7A7A] mb-2 flex gap-4 items-center justify-center text-[24px] font-[400]">
-                        <span className="inline-block w-[124px] h-[1px] bg-[linear-gradient(231deg,__#9C9C9C_42%,_#DFDFDF)] "></span>
-                        Impact <span className="inline-block w-[124px] h-[1px] bg-[linear-gradient(152deg,__#9C9C9C_42%,_#DFDFDF)] "></span></p>
+                <div className="mb-12 text-center sm:mb-14 lg:mb-16">
+                    <p
+                        className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
+                        style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
+                    >
+                        <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
+                       Impact
+                        <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
+                    </p>
 
-                    <h2 className="text-[28px] sm:text-[40px] font-semibold font-bricolage">
-                        We make it simple,
-                        <br className="hidden sm:block" /> and the numbers speak results.
+                    <h2
+                        className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
+                        style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
+                    >
+                        We make it simple, <br />and deliver results.
                     </h2>
                 </div>
 

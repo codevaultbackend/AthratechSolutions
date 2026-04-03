@@ -33,8 +33,8 @@ export const blogsData: BlogItem[] = [
         date: "February 16, 2026",
         title: "Glassmorphism in 2026: How to Use Frosted Glass Without Killing UX",
         shortTitle: "Glassmorphism in 2026: How to Use Frosted Glass...",
-        image: "/Glassmorphism.png",
-        heroImage: "/GlassMorphismBlog1.png",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Glassmorphism_DDWuIzHvq.jpg",
+        heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/GlassMorphismBlog1_VudcwtmJd.jpg",
         href: "/Blog/glassmorphism-in-2026",
         intro:
             "Glassmorphism has become one of the most recognizable UI trends in modern digital design. With its frosted glass backgrounds, soft transparency, and layered depth, it creates visually appealing interfaces that feel modern and premium. However, if implemented poorly, glassmorphism can reduce readability, create visual clutter, and negatively impact user experience. In 2026, the key is not just using the trend, but using it strategically and responsibly.",
@@ -59,7 +59,7 @@ export const blogsData: BlogItem[] = [
             },
             {
                 type: "image",
-                src: "/GlassMorphismBlog2.png",
+                src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/GlassMorphismBlog2_S9RLMQcDD.jpg",
                 alt: "Glassmorphism design example",
             },
             { type: "heading", content: "The UX Risks of Glassmorphism" },
@@ -101,7 +101,7 @@ export const blogsData: BlogItem[] = [
             },
             {
                 type: "image",
-                src: "/GlassMorphismBlog1.png",
+                src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/GlassMorphismBlog1_VudcwtmJd.jpg",
                 alt: "Glass UI dashboard preview",
             },
             { type: "heading", content: "The Future of Glassmorphism" },
@@ -124,8 +124,8 @@ export const blogsData: BlogItem[] = [
         date: "February 16, 2026",
         title: "How AI can change the future of Coding",
         shortTitle: "How AI can change the future of Coding",
-        image: "/Ai.png",
-        heroImage: "/AiChange1",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Ai_JfGmO1aGA.jpg",
+        heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/AiChange1_ABdRC8MOn.jpg",
         href: "/Blog/ai-future-of-coding",
         intro:
             "Artificial intelligence is reshaping how developers write, test, and maintain software. From code suggestions to automated debugging, AI is becoming a practical partner in day-to-day development workflows.",
@@ -142,7 +142,7 @@ export const blogsData: BlogItem[] = [
                 content:
                     "AI-powered tools are already helping developers write code more efficiently. These tools can suggest functions, detect errors, and even generate entire blocks of code based on simple instructions. By handling repetitive tasks, AI allows developers to focus more on problem-solving, architecture, and innovation instead of routine coding.",
             },
-            { type: "image", src: "/AiChange2.png", alt: "AI in coding" },
+            { type: "image", src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/AiChange2_gDL60nBN6.jpg", alt: "AI in coding" },
             { type: "heading", content: "Faster Development Cycles" },
             {
                 type: "paragraph",
@@ -181,8 +181,8 @@ export const blogsData: BlogItem[] = [
         date: "February 16, 2026",
         title: "AI will replace 70% of marketers in 2026… unless you do THIS",
         shortTitle: "AI will replace 70% of marketers in 2026..unless....",
-        image: "/Aireplace.png",
-        heroImage: "/AiReplace (2).png",
+        image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Aireplace_MZOyTSSRr.jpg",
+        heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/AiReplace__2__1hFe8wIGp.jpg",
         href: "/Blog/ai-marketers-2026",
         intro:
             "Marketing teams are rapidly adopting AI for content generation, campaign optimization, and customer targeting. That shift is changing what marketers need to be valuable.",
@@ -193,7 +193,7 @@ export const blogsData: BlogItem[] = [
                 content:
                     "Artificial Intelligence is rapidly transforming the marketing industry. From content creation and ad targeting to customer insights and campaign automation, AI is reshaping how marketing teams operate. Many repetitive and data-heavy tasks that once required entire teams can now be handled by intelligent systems in seconds. This shift has led to a growing concern that a large portion of traditional marketing roles could become obsolete. However, the future of marketing is not about replacement—it is about adaptation.",
             },
-            { type: "image", src: "/AiReplace3.png", alt: "AI marketing future" },
+            { type: "image", src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Aireplace3_VM18hLSxf.jpg", alt: "AI marketing future" },
             { type: "heading", content: "The Rise of AI in Marketing" },
             {
                 type: "paragraph",
@@ -239,8 +239,8 @@ export const blogsData: BlogItem[] = [
   date: "February 16, 2026",
   title: "SEO in 2026: What Modern Brands Need to Win Organic Search",
   shortTitle: "SEO in 2026: What Modern Brands Need to Win Organic Search",
-  image: "/Seo.png",
-  heroImage: "/seo.png",
+  image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/seo_6Xt2kuBQ7.jpg",
+  heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/seo_AWp1nLmSj.jpg",
   href: "/Blog/seo-glassmorphism",
   intro:
     "SEO in 2026 is no longer just about keywords. Search performance now depends on content quality, technical speed, trust signals, user intent alignment, and a brand’s ability to create pages that genuinely help people.",
@@ -256,7 +256,7 @@ export const blogsData: BlogItem[] = [
       content:
         "Today, strong SEO performance comes from the combination of technical excellence, content depth, site structure, trust signals, and consistent publishing. It is no longer enough to create pages for search engines alone. The pages that win are the ones designed for humans first and optimized intelligently second.",
     },
-    { type: "image", src: "/seo2.jpeg", alt: "SEO strategy and search growth" },
+    { type: "image", src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/seo2_OYKjS_OHD.jpg", alt: "SEO strategy and search growth" },
 
     { type: "heading", content: "Why SEO Matters More Than Ever" },
     {
@@ -332,8 +332,8 @@ export const blogsData: BlogItem[] = [
   date: "February 16, 2026",
   title: "Paid Ads in 2026: How to Spend Smarter, Not Just More",
   shortTitle: "Paid Ads in 2026: How to Spend Smarter, Not Just More",
-  image: "/Adds.png",
-  heroImage: "/ads2.jpeg",
+  image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Adds_Uzdu51LcR.jpg",
+  heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/ads2_Hf_8Lljs8.jpg",
   href: "/Blog/ads-glassmorphism",
   intro:
     "Paid advertising in 2026 rewards brands that test quickly, build stronger creatives, optimize landing pages, and measure the metrics that actually impact growth.",
@@ -349,7 +349,7 @@ export const blogsData: BlogItem[] = [
       content:
         "Modern ad performance depends on a full funnel approach. A strong campaign is not just about the ad itself. It also depends on the audience strategy, the offer, the landing page, the tracking setup, and the speed at which a team can learn and improve from real data.",
     },
-    { type: "image", src: "/adds1.jpeg", alt: "Paid ads campaign performance" },
+    { type: "image", src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/adds1_9r2y_B18m.jpg", alt: "Paid ads campaign performance" },
 
     { type: "heading", content: "Why Bigger Budgets No Longer Guarantee Better Results" },
     {
@@ -420,8 +420,8 @@ export const blogsData: BlogItem[] = [
   date: "February 16, 2026",
   title: "UI/UX in 2026: Designing Digital Products People Actually Enjoy",
   shortTitle: "UI/UX in 2026: Designing Digital Products People Actually Enjoy",
-  image: "/Uiux.png",
-  heroImage: "/UIux1.jpeg",
+  image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/uiux_vbF--CV8b.jpg",
+  heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/UIux1_xqcNWXr9_.jpg",
   href: "/Blog/uiux-glassmorphism",
   intro:
     "Great UI/UX in 2026 is about more than visual polish. It is about creating interfaces that feel intuitive, fast, inclusive, and genuinely helpful from the very first interaction.",
@@ -437,7 +437,7 @@ export const blogsData: BlogItem[] = [
       content:
         "As digital products become more complex, good design plays an even bigger role in helping users move with confidence. Great UI creates visual clarity. Great UX creates flow, trust, and ease. Together, they shape how people feel about a product long before they think about features or pricing.",
     },
-    { type: "image", src: "/UIux2.jpeg", alt: "Modern UI UX product design" },
+    { type: "image", src: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/UIux2_aiEJWAJed.jpg", alt: "Modern UI UX product design" },
 
     { type: "heading", content: "Why UI/UX Matters More Now" },
     {

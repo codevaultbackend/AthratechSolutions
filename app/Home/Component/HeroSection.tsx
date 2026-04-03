@@ -5,31 +5,23 @@ import { useEffect, useState } from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 
 const yellowImages = [
-  "/yellowcard.png",
-  "/yellowcard2.png",
-  "/yellowcard1.png",
-];
-
-const blackImages = [
-  "/yellowcard1.png",
-  "/blackcards.png",
-  "/yellowcard2.png",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/yellowcard2_7R_AsJTJx.jpg",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/yellowcard1_XF7Lindh5.jpg",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/yellowcard_Jk10esSWM.jpg",
 ];
 
 export default function HeroSection() {
   const [yellowIndex, setYellowIndex] = useState(0);
-  const [blackIndex, setBlackIndex] = useState(0);
   const [showAnim, setShowAnim] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAnim(true);
-    }, 900);
+    }, 280);
 
     const interval = setInterval(() => {
       setYellowIndex((prev) => (prev + 1) % yellowImages.length);
-      setBlackIndex((prev) => (prev + 1) % blackImages.length);
-    }, 900);
+    }, 2400);
 
     return () => {
       clearTimeout(timer);
@@ -39,14 +31,14 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full max-h-[578px] bg-white overflow-hidden pb-[110px] max-[768px]:min-h-auto max-[768px]:pb-[72px]"
+      className="relative w-full max-[768px]:h-[570px] max-h-[578px] bg-white overflow-hidden pb-[110px] max-[768px]:min-h-auto max-[768px]:pb-[72px]"
       id="herosection"
     >
       {/* Bottom texture */}
       <img
-        src="/bottom.png"
+        src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/bottom_YplQaSFri.jpg"
         alt=""
-        className="absolute bottom-0 left-0 w-full opacity-[40%] z-[1] pointer-events-none max-[768px]:h-[52%] max-[768px]:bottom-[-7%] max-[768px]:opacity-[60%] object-cover"
+        className="absolute bottom-0 left-0 w-full opacity-[40%] z-[1] pointer-events-none max-[768px]:h-[52%] max-[768px]:bottom-[0%] max-[768px]:opacity-[100%] max-[768px]:object-contain max-[768px]:w-[200%] object-cover"
       />
 
       <div
@@ -71,9 +63,23 @@ export default function HeroSection() {
           "
         >
           <span className="flex items-center justify-center flex-wrap gap-x-2 gap-y-3">
-            <span>Where</span>
+            <span
+              className={`inline-block overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                showAnim
+                  ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                  : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+              }`}
+            >
+              Where
+            </span>
 
-            <span className="inline-flex align-middle">
+            <span
+              className={`inline-flex align-middle transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${
+                showAnim
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
               <span
                 className="
                   w-[161px] h-[100px]
@@ -88,24 +94,60 @@ export default function HeroSection() {
                 <img
                   src={yellowImages[yellowIndex]}
                   alt="yellowcard"
-                  className={`h-full w-full transition-all duration-700 ease-out ${
+                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
                     showAnim
                       ? "opacity-100 translate-y-0 scale-100"
-                      : "opacity-0 translate-y-8 scale-95"
+                      : "opacity-0 translate-y-8 scale-[0.96]"
                   }`}
                 />
               </span>
             </span>
 
-            <span className="text-gray-400">Ideas</span>
+            <span className="inline-block overflow-hidden align-middle">
+              <span
+                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${
+                  showAnim
+                    ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                    : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+                }`}
+              >
+                Ideas
+              </span>
+            </span>
           </span>
 
           <span className="mt-2 flex items-center justify-center flex-wrap gap-x-2 gap-y-3">
-            <span className="text-gray-400">become</span>
+            <span className="inline-block overflow-hidden align-middle">
+              <span
+                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${
+                  showAnim
+                    ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                    : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+                }`}
+              >
+                become
+              </span>
+            </span>
 
-            <span className="text-black">Impact</span>
+            <span className="inline-block overflow-hidden align-middle">
+              <span
+                className={`inline-block text-black transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ml-[20px] ${
+                  showAnim
+                    ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                    : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+                }`}
+              >
+                Impact
+              </span>
+            </span>
 
-            <span className="inline-flex ml-[22px] align-middle rotate-[6deg] overflow-hidden rounded-[30px] shadow-[0_12px_30px_rgba(0,0,0,0.25)]">
+            <span
+              className={`inline-flex ml-[22px] align-middle rotate-[6deg] overflow-hidden rounded-[30px] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[500ms] ${
+                showAnim
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
               <span
                 className="
                   w-[138px] h-[88px]
@@ -117,12 +159,12 @@ export default function HeroSection() {
                 "
               >
                 <img
-                  src='/blackcards.png'
+                  src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/blackcards_-SXlzQrRA.jpg"
                   alt="blackcards"
-                  className={`h-full w-full  transition-all duration-700 ease-out ${
+                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
                     showAnim
                       ? "opacity-100 translate-y-0 scale-100"
-                      : "opacity-0 translate-y-6 scale-95"
+                      : "opacity-0 translate-y-6 scale-[0.97]"
                   }`}
                 />
               </span>
@@ -134,11 +176,23 @@ export default function HeroSection() {
         <div className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center">
           {/* Row 1 */}
           <div className="flex items-center justify-center gap-[8px] leading-none max-[768px]:w-full">
-            <span className="text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em]">
+            <span
+              className={`inline-block overflow-hidden text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                showAnim
+                  ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                  : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+              }`}
+            >
               Where
             </span>
 
-            <span className="inline-flex align-middle translate-y-[1px]">
+            <span
+              className={`inline-flex align-middle translate-y-[1px] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${
+                showAnim
+                  ? "opacity-100 translate-y-[1px]"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
               <span
                 className="
                   w-[88px] h-[56px]
@@ -154,10 +208,10 @@ export default function HeroSection() {
                 <img
                   src={yellowImages[yellowIndex]}
                   alt="yellowcard"
-                  className={`h-full w-full transition-all duration-700 ease-out ${
+                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
                     showAnim
                       ? "opacity-100 translate-y-0 scale-100"
-                      : "opacity-0 translate-y-5 scale-95"
+                      : "opacity-0 translate-y-5 scale-[0.96]"
                   }`}
                 />
               </span>
@@ -165,15 +219,27 @@ export default function HeroSection() {
           </div>
 
           {/* Row 2 */}
-          <div className="mt-[2px] max-[768px]:w-full flex items-center justify-center leading-none">
-            <span className="text-[54px]  max-[359px]:text-[42px] font-semibold text-[#A8A8A8] tracking-[-0.04em]">
+          <div className="mt-[2px] max-[768px]:w-full flex items-center justify-center leading-none overflow-hidden">
+            <span
+              className={`inline-block text-[54px] max-[359px]:text-[42px] font-semibold text-[#A8A8A8] tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${
+                showAnim
+                  ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                  : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+              }`}
+            >
               Ideas become
             </span>
           </div>
 
           {/* Row 3 */}
           <div className="mt-[4px] max-[768px]:w-full flex items-center justify-center gap-[8px] leading-none">
-            <span className="inline-flex align-middle translate-y-[1px] rotate-[5deg]">
+            <span
+              className={`inline-flex align-middle translate-y-[1px] rotate-[5deg] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${
+                showAnim
+                  ? "opacity-100 translate-y-[1px]"
+                  : "opacity-0 translate-y-4"
+              }`}
+            >
               <span
                 className="
                   w-[82px] h-[52px]
@@ -186,26 +252,34 @@ export default function HeroSection() {
                 "
               >
                 <img
-                  src='/blackcards.png'
+                  src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/blackcards_-SXlzQrRA.jpg"
                   alt="blackcards"
-                  className={`h-full w-full transition-all duration-700 ease-out ${
+                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
                     showAnim
                       ? "opacity-100 translate-y-0 scale-100"
-                      : "opacity-0 translate-y-5 scale-95"
+                      : "opacity-0 translate-y-5 scale-[0.97]"
                   }`}
                 />
               </span>
             </span>
 
-            <span className="text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em]">
-              Impact
+            <span className="overflow-hidden inline-block">
+              <span
+                className={`inline-block text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ${
+                  showAnim
+                    ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
+                    : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
+                }`}
+              >
+                Impact
+              </span>
             </span>
           </div>
         </div>
 
         {/* Subtext */}
         <p
-          className="
+          className={`
             mt-8
             max-w-[520px]
             text-[#6D6D6D]
@@ -216,7 +290,9 @@ export default function HeroSection() {
             max-[768px]:max-w-[90%]
             max-[768px]:text-[11px]
             max-[768px]:leading-[135%]
-          "
+            transition-all duration-[1300ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[550ms]
+            ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+          `}
         >
           We help startups and brands create beautiful,
           <br className="max-[768px]:hidden" />
@@ -225,7 +301,7 @@ export default function HeroSection() {
 
         {/* CTA ROW */}
         <div
-          className="
+          className={`
             mt-10
             flex items-center gap-6
             flex-wrap justify-center
@@ -233,7 +309,9 @@ export default function HeroSection() {
             max-[768px]:mt-6
             max-[768px]:flex-col
             max-[768px]:gap-3
-          "
+            transition-all duration-[1300ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[700ms]
+            ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+          `}
         >
           <Link href="/ContactForm" className="max-[768px]:w-full">
             <div className="flex justify-center max-[768px]:w-full">
@@ -277,11 +355,11 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-2">
             <div className="flex -space-x-3">
               {[
-                "trusted1.png",
-                "trusted2.png",
-                "trusted3.png",
-                "trusted4.png",
-                "trusted5.png",
+                "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted2_Gpx2WsvJL.jpg",
+                "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted1_SqdS_J0U0.jpg",
+                "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted3_Z1_e49fKev.jpg",
+                "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted4_Ktz0pbcRZ.jpg",
+                "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted5_SyyYgiQk2.jpg",
               ].map((item, i) => (
                 <div
                   key={i}

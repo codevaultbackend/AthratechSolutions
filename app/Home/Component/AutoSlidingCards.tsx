@@ -10,26 +10,21 @@ type GalleryItem = {
 };
 
 const topRow: GalleryItem[] = [
-  { id: 1, title: "Attendance App", image: "/Project7.png" },
-  { id: 2, title: "Chugen", image: "/Project5.png" },
-  { id: 3, title: "Fastresponce", image: "/Project2.png" },
-  { id: 4, title: "Attendance", image: "/Project3.png" },
-  { id: 5, title: "Presentation", image: "/Project6.jpeg" },
-  { id: 6, title: "Collaboration", image: "/Project1.png" },
+  { id: 1, title: "Attendance App", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project7_asKb6pwR1.jpg" },
+  { id: 2, title: "Chugen", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/WhatsApp%20Image%202026-04-02%20at%2018.40.21%20(1).jpeg" },
+  { id: 3, title: "Fastresponce", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/WhatsApp%20Image%202026-04-02%20at%2018.40.22%20(1).jpeg" },
+  { id: 4, title: "Attendance", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project3_wIA5PzDqk.jpg" },
+  { id: 5, title: "Presentation", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project6_O2uE7r-s_.jpg" },
+  { id: 6, title: "Collaboration", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project1_YY_tsb35A.jpg" },
 ];
 
 const bottomRow: GalleryItem[] = [
-  { id: 2, title: "Chugen", image: "/Project5.png" },
-  { id: 3, title: "Fastresponce", image: "/Project2.png" },
-  { id: 4, title: "Attendance", image: "/Project3.png" },
-  { id: 5, title: "Presentation", image: "/Project6.jpeg" },
-  { id: 6, title: "Collaboration", image: "/Project1.png" },
-  { id: 1, title: "Attendance App", image: "/Project7.png" },
-  
-  
-  
-  
-  
+  { id: 2, title: "Chugen", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/WhatsApp%20Image%202026-04-02%20at%2018.40.23.jpeg" },
+  { id: 3, title: "Fastresponce", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project2_saZmDztS1.jpg" },
+  { id: 4, title: "Attendance", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project3_wIA5PzDqk.jpg" },
+  { id: 5, title: "Presentation", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project6_O2uE7r-s_.jpg" },
+   { id: 6, title: "Collaboration", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project1_YY_tsb35A.jpg" },
+  { id: 1, title: "Attendance App", image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/WhatsApp%20Image%202026-04-02%20at%2018.40.22.jpeg" }, 
 ];
 
 function GalleryCard({

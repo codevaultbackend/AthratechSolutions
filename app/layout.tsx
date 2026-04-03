@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon_sqkqfp.ico" },
+      { url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon-96x96_e4nsao.png", sizes: "96x96", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",
@@ -77,7 +77,7 @@ export default function RootLayout({
       <body className="antialiased bg-white relative">
         
         {/* Container moved INSIDE body */}
-        <div className="max-w-[1440px] w-full mx-auto relative">
+        <div className="max-w-full w-full mx-auto relative">
           
           {/* Navbar */}
           <TopNavigation />

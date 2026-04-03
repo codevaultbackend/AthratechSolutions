@@ -12,19 +12,19 @@ type Step = {
 export default function Steps() {
     const steps: Step[] = [
         {
-            count: "/count1.jpg",
+            count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count1_0x9mSOEVq.jpg",
             title: "Conversation",
             des: "We talk about your business, you tell us about your current activities and results.",
             side: "right",
         },
         {
-            count: "/count2.png",
+            count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count2_5ieaQKyPW.jpg",
             title: "Analysis",
             des: "We analyse your design requirement and current solutions to lead you to your goals.",
             side: "left",
         },
         {
-            count: "/count3.png",
+            count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count3_QhqB7zVw_.jpg",
             title: "Get your work Done",
             des: "We execute the plan efficiently and deliver measurable results.",
             side: "right",
@@ -83,7 +83,7 @@ export default function Steps() {
                     backgroundSize: "60px 60px",
                 }}
             />
-       <div className="absolute bottom-0 left-0 w-full h-[180px] pointer-events-none z-[5]
+            <div className="absolute bottom-0 left-0 w-full h-[180px] pointer-events-none z-[5]
 bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
 
             {/* ===== Heading ===== */}

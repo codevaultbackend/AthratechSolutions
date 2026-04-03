@@ -10,7 +10,7 @@ export default function BlogGrids() {
   return (
     <section className="bg-[#fff] px-4 pb-[70px] pt-[56px] sm:px-6 sm:pb-[90px] sm:pt-[70px] md:px-8 md:pb-[110px] md:pt-[86px] lg:px-10 lg:pb-[140px] lg:pt-[110px] xl:px-[42px] xl:pb-[180px] xl:pt-[124px] 2xl:px-[48px]">
       <div className="mx-auto max-w-[780px] text-center">
-        <h1 className="mb-[22px] font-bricolage text-[80px] font-[600] text-[#111111] leading-[0.95] tracking-[-0.06em] text-[#111111] min-[480px]:text-[44px] sm:mb-[28px] sm:text-[52px] md:text-[61px] lg:mb-[34px] lg:text-[72px] xl:mb-[40px] xl:text-[80px]">
+        <h1 className="mb-[22px] font-bricolage text-[80px] font-[600] text-[#111111] leading-[0.95] tracking-[-0.06em] text-[#111111] min-[480px]:text-[44px] sm:mb-[28px] max-[768px]:text-[52px] md:text-[61px] lg:mb-[34px] lg:text-[72px] xl:mb-[40px] xl:text-[80px]">
           Our Blogs
         </h1>
 
