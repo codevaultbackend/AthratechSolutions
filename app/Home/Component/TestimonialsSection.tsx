@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.06_z3vfwm.jpg",
     quote:
       "Their product design and frontend execution gave our platform a cleaner structure, better usability, and a more premium brand presence. The final result felt polished, responsive, and aligned with what our users actually needed.",
-    name: "Aarohi",
+    name: "Aarav",
     role: "Product Manager, NovaSuite",
   },
   {

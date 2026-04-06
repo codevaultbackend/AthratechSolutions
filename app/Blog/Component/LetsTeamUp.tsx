@@ -19,7 +19,7 @@ export default function LetsTeamUp() {
                    max-sm:top-[8%]"
       >
         <Image
-          src="/Ellipse 13 (1).png"
+          src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198143/Ellipse_13_1_jmp0p0.png"
           alt="arch background"
           width={559}
           height={980}
@@ -72,9 +72,10 @@ export default function LetsTeamUp() {
                   <h3 className="text-[16px] font-[500] tracking-tight text-white max-md:text-[14px] max-sm:text-[13px]">
                     Let’s Talk
                   </h3>
+                 
 
                   <div className="flex shrink-0 -space-x-3 max-sm:-space-x-2.5">
-                    {["/Avatar1.png", "/Avatar2.png", "/Avatar3.png", "/Avatar4.png"].map(
+                    {["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg"].map(
                       (src, i) => (
                         <div
                           key={i}

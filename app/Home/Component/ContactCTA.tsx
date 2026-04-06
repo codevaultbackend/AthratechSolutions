@@ -75,7 +75,7 @@ export default function ContactCTA() {
 
                                     {/* AVATARS */}
                                     <div className="flex -space-x-3">
-                                        {["/Avatar1.png", "/Avatar2.png", "/Avatar3.png", "/Avatar4.png"].map(
+                                        {["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg"].map(
                                             (src, i) => (
                                                 <div
                                                     key={i}

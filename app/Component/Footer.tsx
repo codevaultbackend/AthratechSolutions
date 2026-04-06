@@ -52,7 +52,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center mb-6 sm:mb-8">
           <Image
-            src="/AthraWhiteLogo.png"
+            src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
             alt="logo"
             width={146}
             height={42}
