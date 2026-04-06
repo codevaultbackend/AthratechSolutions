@@ -29,7 +29,7 @@ export default function TopNavigation() {
 
         {/* availability pill */}
         <div className="absolute left-1/2 top-0 z-20 w-full max-w-[215px] -translate-x-1/2 max-[600px]:translate-y-32">
-          <div className="relative flex items-center justify-center gap-2 rounded-full px-2 py-[11px] text-[12px] font-[400] text-white max-[780px]:py-[6px] max-[600px]:bg-black max-[768px]:top-[-32px]">
+          <div className={`relative flex items-center justify-center gap-2 rounded-full px-2 py-[11px] text-[12px] font-[400] text-white max-[780px]:py-[6px] max-[600px]:bg-black max-[768px]:top-[-32px] ${isHomePage && 'max-[768px]:mt-[50px]'}`}>
             <NavigationLabel className="absolute inset-0 -z-10 h-full w-full text-[#252525] max-[600px]:hidden" />
             <span className="h-2 w-2 rounded-full bg-green-500" />
             Available for New Projects
@@ -37,13 +37,13 @@ export default function TopNavigation() {
         </div>
 
         {/* navbar */}
-        <div className="relative z-[9999] mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-8 pr-[180px] max-[900px]:pr-[170px] max-[768px]:pr-8">
+        <div className="relative z-[9999] mx-auto flex h-[96px]  items-center justify-between !px-8  max-[768px]:!pl-[20px]">
           {/* logo */}
           <Link href="/" className="flex items-center">
             <img
               src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198141/AthraLogo_oyvmzh.png"
               alt="Athratech"
-              className="h-[55px] w-[189px] object-contain max-[768px]:hidden"
+              className="h-[55px] w-[189px] object-contain max-[768px]:hidden "
             />
             <img
               src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198155/web-app-manifest-512x512_d8ehdz.png"

@@ -1,11 +1,27 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { projectsData } from "@/app/context/projects";
 
 export default function StackedProjects() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+
+    return () => {
+      window.removeEventListener("resize", checkDesktop);
+    };
+  }, []);
+
   return (
     <section className="bg-[#EFEFEF] pt-[120px] pb-[48px] sm:pt-[130px] sm:pb-[64px] md:pt-[140px] md:pb-[80px] lg:pt-[170px] lg:pb-[120px]">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-6 lg:px-6">
@@ -31,44 +47,43 @@ export default function StackedProjects() {
         {/* Sticky stacked cards */}
         <div className="relative space-y-6 pb-4 sm:space-y-10 sm:pb-6 md:space-y-16 md:pb-8">
           {projectsData.map((project, index) => {
-            const scale = 1 - index * 0.02;
-            const offsetCompensation = `${index * -10}px`;
+            const scale = isDesktop ? 1 - index * 0.02 : 1;
+            const offsetCompensation = isDesktop ? `${index * -10}px` : "0px";
 
             return (
               <div
                 key={project.slug}
-                className="sticky top-[90px] sm:top-[100px] md:top-[120px]"
+                className={isDesktop ? "sticky top-[120px]" : "relative"}
                 style={{
                   zIndex: 10 + index,
                 }}
               >
-
                 <div
                   className="overflow-hidden rounded-[24px] border border-[#EAEAEA] bg-white shadow-[0px_30px_80px_rgba(0,0,0,0.06)]"
                   style={{
                     transform: `scale(${scale})`,
                     transformOrigin: "top center",
                     marginTop: offsetCompensation,
-                    marginBottom: index === projectsData.length - 1 ? "104px" : "0px",
+                    marginBottom:
+                      index === projectsData.length - 1 ? "104px" : "0px",
                   }}
                 >
                   <div
-                    className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
-                      ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
-                      : ""
-                      }`}
+                    className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${
+                      project.reverse
+                        ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
+                        : ""
+                    }`}
                   >
                     {/* Image */}
                     <div className="relative h-full p-4 sm:p-5 md:p-6">
-                      <div
-                        className="relative h-[240px] overflow-hidden rounded-[18px] border border-[#EEEEEE] shadow-md sm:h-[300px] md:h-full md:min-h-[368px]"
-                        style={{ background: project.imageBg }}
-                      >
+                      <div className="relative h-[240px] overflow-hidden rounded-[18px] border border-[#EEEEEE] shadow-md sm:h-[300px] md:h-full md:min-h-[368px]">
                         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.12),transparent_28%)]" />
 
                         <div
-                          className="absolute bg-[#000]"
+                          className="absolute"
                           style={{
+                            background: project.imageBg,
                             width: project.imageConfig.width,
                             height: project.imageConfig.height,
                             top: project.imageConfig.top ?? "50%",
@@ -77,9 +92,9 @@ export default function StackedProjects() {
                             bottom: project.imageConfig.bottom,
                             transform:
                               !project.imageConfig.top &&
-                                !project.imageConfig.left &&
-                                !project.imageConfig.right &&
-                                !project.imageConfig.bottom
+                              !project.imageConfig.left &&
+                              !project.imageConfig.right &&
+                              !project.imageConfig.bottom
                                 ? "translate(-50%, -50%)"
                                 : undefined,
                           }}
@@ -103,11 +118,11 @@ export default function StackedProjects() {
                     {/* Content */}
                     <div className="flex flex-col justify-between px-5 py-6 sm:px-7 sm:py-7 md:px-10 md:py-9">
                       <div>
-                        <h3 className="mb-4 font-bricolage text-[40px] font-[500] leading-[100%] text-[#000000] line-clamp-1 md:text-[30px]">
+                        <h3 className="mb-4 line-clamp-1 font-bricolage text-[40px] font-[500] leading-[100%] text-[#000000] md:text-[30px]">
                           {project.title}
                         </h3>
 
-                        <p className="mb-5 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] line-clamp-1 md:text-[15px]">
+                        <p className="mb-5 line-clamp-1 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
                           {project.description}
                         </p>
 
@@ -120,7 +135,7 @@ export default function StackedProjects() {
                               <h4 className="text-[16px] font-[500] tracking-[0] text-[#0E0E0E]">
                                 {detail.title}
                               </h4>
-                              <p className="max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] line-clamp-1 md:text-[15px]">
+                              <p className="line-clamp-1 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
                                 {detail.description}
                               </p>
                             </div>
@@ -131,9 +146,9 @@ export default function StackedProjects() {
                       <div className="mt-8">
                         <Link
                           href={`/Projects/${project.slug}`}
-                          className="inline-flex h-[50px] items-center gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4 max-w-[194px] w-full justify-between"
+                          className="inline-flex h-[50px] w-full max-w-[194px] items-center justify-between gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4"
                         >
-                          <span className="text-[16px] font-[400] leading-[100%] text-[#797979] text-center pl-[20px]">
+                          <span className="pl-[20px] text-center text-[16px] font-[400] leading-[100%] text-[#797979]">
                             View Project
                           </span>
                           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DDD] bg-[#121212] text-[#fff]">

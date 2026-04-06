@@ -41,7 +41,7 @@ type Blog = (typeof blogsContent)[number];
 
 function FeaturedBlogCard({ blog }: { blog: Blog }) {
     return (
-        <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#DADADA] bg-white p-[9px] transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0px_8px_30px_rgba(0,0,0,0.04)]">
+        <article className="group relative flex h-full flex-col max-[768px]:!flex-col-reverse overflow-hidden rounded-[28px] border border-[#DADADA] bg-white p-[9px] transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0px_8px_30px_rgba(0,0,0,0.04)]">
             <div className="flex flex-col p-5 sm:p-6 lg:p-7">
                 <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] font-medium text-[#707070]">
                     <span

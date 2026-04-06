@@ -20,35 +20,35 @@ const faqs = [
     a: "Refunds depend on project stage. We believe in transparency and fairness in all engagements.",
   },
   {
-    q: "What does the Athratech’s workflow look like?",
+    q: "Athratech’s workflow?",
     a: "Our workflow includes discovery, analysis, design, iteration, and delivery—keeping you involved at every stage.",
-  },
+  }
 ];
 
 export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#EFEFEF]  px-4 h-fit  pb-[225px] pt-[165px] " id="Faq">
+    <section className="bg-[#EFEFEF]  px-4 h-fit  pb-[225px] pt-[165px] max-[768px]:pt-[45px] max-[768px]:pb-[125px] " id="Faq">
       {/* ===== Header ===== */}
       <div className="mb-12 text-center sm:mb-14 lg:mb-16">
-          <p
-            className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
-            style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
-          >
-            <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
-            FAQs
-            <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
-          </p>
+        <p
+          className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
+          style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
+        >
+          <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
+          FAQs
+          <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
+        </p>
 
-          <h2
-            className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
-            style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
-          >
-            Your Questions, Answered
-          </h2>
-          <p className="text-[#8A8A8A] text-[16px] font-[400] leading-[100%] mt-[24px] font-inter">Helping you understand our process and offerings at Athratech</p>
-        </div>
+        <h2
+          className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
+          style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
+        >
+          Your Questions, Answered
+        </h2>
+        <p className="text-[#8A8A8A] text-[16px] font-[400] leading-[100%] mt-[24px] font-inter">Helping you understand our process and offerings at Athratech</p>
+      </div>
 
       {/* ===== FAQ Grid ===== */}
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
@@ -74,7 +74,7 @@ export default function FAQSection() {
                   className={`
                     ml-4 flex h-6 w-6 items-center justify-center
                     rounded-full bg-black text-white
-                    transition-transform duration-300
+                    transition-transform duration-300 !ml-[33px]
                     
                   `}
                 >

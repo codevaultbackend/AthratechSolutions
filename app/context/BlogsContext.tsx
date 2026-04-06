@@ -19,6 +19,7 @@ export function BlogsProvider({ children }: { children: React.ReactNode }) {
 
 export function useBlogs() {
   const context = useContext(BlogsContext);
+  
 
   if (!context) {
     throw new Error("useBlogs must be used inside BlogsProvider");

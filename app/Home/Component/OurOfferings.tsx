@@ -18,61 +18,73 @@ export default function HeroSection() {
       relative
       w-full
       min-h-[650px]
-      max-md:min-h-[840px]
-      bg-[url('https://ik.imagekit.io/j4xu3pewo/fast_response_assets/OurOfferingbg_mgtwzM_6P.jpg')]
+      max-md:min-h-[743px]
       bg-cover bg-center
       flex flex-col items-center
       px-4
-      overflow-hidden
+      overflow-hidden 
+      isolate
     "
     >
-
+   <img src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/OurOfferingbg_mgtwzM_6P.jpg" alt="bg" className="absolute inset-0 h-full w-full object-cover z-0 max-[768px]:top-[-20px]" />
       {/* HEADING */}
 
-      <p
-        className="
-        font-calligraffitti
-        text-[#7A7A7A]
-        flex items-center gap-4 justify-center
-        text-[24px]
-        mt-[180px]
-        mb-[60px]
+      <div className="relative
+      z-[9999]">
+        <p
+          className="
+      font-calligraffitti
+      text-[#7A7A7A]
+      mx-auto
+      flex w-full max-w-[420px] items-center justify-center
+      text-[24px]
+      mt-[180px]
+      mb-[60px]
+      relative
+      z-[9999]
 
-        max-md:mt-[90px]
-        max-md:text-[18px]
-      "
-      >
-        <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />    
-        Our offerings ?
-        <span className="w-[124px] h-[1px] bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF] max-md:w-[56px]" />
-      </p>
+      max-md:mt-[90px]
+      max-md:mb-[36px]
+      max-md:max-w-[300px]
+      max-md:text-[18px]
+    "
+        >
+          <span className="h-[1px] flex-1 bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
 
-      <h1
-        className="
-        text-center
-        text-gray-800
-        text-[38px]
-        leading-[56px]
-        max-w-[720px]
-        font-bricolage
+          <span className="shrink-0 px-4 max-md:px-3">
+            Our offerings ?
+          </span>
 
-        max-md:text-[30px]
-        max-md:leading-[40px]
-        max-md:max-w-[340px]
-      "
-      >
-        We help{" "}
-        <span className="text-[#8A8888]">
-          startups and enterprises craft digital products
-        </span>
-        <br className="hidden md:block" />
-        that <span className="text-black">truly connect</span> with their
-        customers.
-      </h1>
+          <span className="h-[1px] flex-1 bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
+        </p>
+
+        <h1
+          className="
+      text-center
+      text-gray-800
+      text-[38px]
+      leading-[56px]
+      max-w-[720px]
+      font-bricolage
+
+      max-md:text-[30px]
+      max-md:leading-[40px]
+      max-md:max-w-[340px]
+    "
+        >
+          We help{" "}
+          <span className="text-[#8A8888]">
+            startups and enterprises craft digital products
+          </span>
+          <br className="hidden md:block" />
+          that <span className="text-black">truly connect</span> with their
+          customers.
+        </h1>
+      </div>
 
       {/* DESKTOP FLOATING PILLS */}
 
-      <div className="absolute inset-0 pointer-events-none max-md:hidden">
+      <div className="absolute inset-0 pointer-events-none max-md:hidden z-[9999]">
 
         <Label className="top-[38%] left-[7%]">
           <Marketing className="w-6 h-6 bg-pink-400 rounded-full p-1" />

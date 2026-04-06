@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 
@@ -14,31 +15,34 @@ export default function HeroSection() {
   const [yellowIndex, setYellowIndex] = useState(0);
   const [showAnim, setShowAnim] = useState(false);
 
+    
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAnim(true);
-    }, 280);
+    }, 1600);
 
     const interval = setInterval(() => {
       setYellowIndex((prev) => (prev + 1) % yellowImages.length);
-    }, 2400);
+    }, 2200);
 
     return () => {
+
       clearTimeout(timer);
       clearInterval(interval);
     };
-  }, []);
+  }, [yellowImages.length]);
 
   return (
     <section
-      className="relative w-full max-[768px]:h-[570px] max-h-[578px] bg-white overflow-hidden pb-[110px] max-[768px]:min-h-auto max-[768px]:pb-[72px]"
+      className="relative w-full max-[768px]:h-dvh max-h-[578px] bg-white overflow-hidden pb-[110px] max-[768px]:min-h-auto max-[768px]:pb-[72px] min-[1540px]:max-h-[770px]"
       id="herosection"
     >
       {/* Bottom texture */}
       <img
         src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/bottom_YplQaSFri.jpg"
         alt=""
-        className="absolute bottom-0 left-0 w-full opacity-[40%] z-[1] pointer-events-none max-[768px]:h-[52%] max-[768px]:bottom-[0%] max-[768px]:opacity-[100%] max-[768px]:object-contain max-[768px]:w-[200%] object-cover"
+        className="absolute bottom-0 left-0 w-full opacity-[50%] z-[2] pointer-events-none max-[768px]:h-[52%] max-[768px]:bottom-[0%] max-[768px]:opacity-[100%] max-[768px]:object-contain max-[768px]:w-[200%] object-cover max-[768px]:!bottom-[-20px]"
       />
 
       <div
@@ -54,31 +58,31 @@ export default function HeroSection() {
         <h1
           className="
             font-semibold
+            max-[768px]:font-[500]
             !leading-[100%]
             text-black
             text-[116px]
             max-[1280px]:text-[90px]
             max-[1024px]:text-[64px]
             max-[768px]:hidden
+            max-[768px]:mt-[0px]
           "
         >
-          <span className="flex items-center justify-center flex-wrap gap-x-2 gap-y-3">
+          <span className="flex items-center justify-center flex-wrap gap-x-2 gap-y-3 max-[768px]:mt-[20px]">
             <span
-              className={`inline-block overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                showAnim
+              className={`inline-block overflow-hidden transition-all duration-[1200ms]  ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                   ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                   : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-              }`}
+                }`}
             >
               Where
             </span>
 
             <span
-              className={`inline-flex align-middle transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${
-                showAnim
+              className={`inline-flex align-middle transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${showAnim
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
-              }`}
+                }`}
             >
               <span
                 className="
@@ -94,36 +98,33 @@ export default function HeroSection() {
                 <img
                   src={yellowImages[yellowIndex]}
                   alt="yellowcard"
-                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    showAnim
+                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                       ? "opacity-100 translate-y-0 scale-100"
                       : "opacity-0 translate-y-8 scale-[0.96]"
-                  }`}
+                    }`}
                 />
               </span>
             </span>
 
             <span className="inline-block overflow-hidden align-middle">
               <span
-                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${
-                  showAnim
+                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${showAnim
                     ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                     : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-                }`}
+                  }`}
               >
                 Ideas
               </span>
             </span>
           </span>
 
-          <span className="mt-2 flex items-center justify-center flex-wrap gap-x-2 gap-y-3">
+          <span className="mt-2 flex items-center justify-center flex-wrap gap-x-2 gap-y-3 max-[768px]:mt-[20px]">
             <span className="inline-block overflow-hidden align-middle">
               <span
-                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${
-                  showAnim
+                className={`inline-block text-gray-400 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${showAnim
                     ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                     : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-                }`}
+                  }`}
               >
                 become
               </span>
@@ -131,22 +132,20 @@ export default function HeroSection() {
 
             <span className="inline-block overflow-hidden align-middle">
               <span
-                className={`inline-block text-black transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ml-[20px] ${
-                  showAnim
+                className={`inline-block text-black transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ml-[20px] ${showAnim
                     ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                     : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-                }`}
+                  }`}
               >
                 Impact
               </span>
             </span>
 
             <span
-              className={`inline-flex ml-[22px] align-middle rotate-[6deg] overflow-hidden rounded-[30px] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[500ms] ${
-                showAnim
+              className={`inline-flex max-[768px]:mt-[20px] ml-[22px] align-middle rotate-[6deg] overflow-hidden rounded-[30px] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[500ms] ${showAnim
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
-              }`}
+                }`}
             >
               <span
                 className="
@@ -161,11 +160,10 @@ export default function HeroSection() {
                 <img
                   src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/blackcards_-SXlzQrRA.jpg"
                   alt="blackcards"
-                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    showAnim
+                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                       ? "opacity-100 translate-y-0 scale-100"
                       : "opacity-0 translate-y-6 scale-[0.97]"
-                  }`}
+                    }`}
                 />
               </span>
             </span>
@@ -173,25 +171,23 @@ export default function HeroSection() {
         </h1>
 
         {/* ================= MOBILE HEADING ================= */}
-        <div className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center">
+        <div className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:mt-[20px]">
           {/* Row 1 */}
           <div className="flex items-center justify-center gap-[8px] leading-none max-[768px]:w-full">
             <span
-              className={`inline-block overflow-hidden text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                showAnim
+              className={`inline-block overflow-hidden text-[54px] max-[359px]:text-[42px] font-semibold max-[768px]:font-[500] text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                   ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                   : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-              }`}
+                }`}
             >
               Where
             </span>
 
             <span
-              className={`inline-flex align-middle translate-y-[1px] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${
-                showAnim
+              className={`inline-flex align-middle translate-y-[1px] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-100 ${showAnim
                   ? "opacity-100 translate-y-[1px]"
                   : "opacity-0 translate-y-4"
-              }`}
+                }`}
             >
               <span
                 className="
@@ -208,24 +204,22 @@ export default function HeroSection() {
                 <img
                   src={yellowImages[yellowIndex]}
                   alt="yellowcard"
-                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    showAnim
+                  className={`h-full w-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                       ? "opacity-100 translate-y-0 scale-100"
                       : "opacity-0 translate-y-5 scale-[0.96]"
-                  }`}
+                    }`}
                 />
               </span>
             </span>
           </div>
 
           {/* Row 2 */}
-          <div className="mt-[2px] max-[768px]:w-full flex items-center justify-center leading-none overflow-hidden">
+          <div className="mt-[2px] max-[768px]:w-full flex items-center justify-center leading-none overflow-hidden ">
             <span
-              className={`inline-block text-[54px] max-[359px]:text-[42px] font-semibold text-[#A8A8A8] tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${
-                showAnim
+              className={`inline-block text-[54px] max-[359px]:text-[42px] max-[768px]:font-[500] font-semibold text-[#A8A8A8] tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-200 ${showAnim
                   ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                   : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-              }`}
+                }`}
             >
               Ideas become
             </span>
@@ -234,11 +228,10 @@ export default function HeroSection() {
           {/* Row 3 */}
           <div className="mt-[4px] max-[768px]:w-full flex items-center justify-center gap-[8px] leading-none">
             <span
-              className={`inline-flex align-middle translate-y-[1px] rotate-[5deg] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${
-                showAnim
+              className={`inline-flex align-middle translate-y-[1px] rotate-[5deg] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-300 ${showAnim
                   ? "opacity-100 translate-y-[1px]"
                   : "opacity-0 translate-y-4"
-              }`}
+                }`}
             >
               <span
                 className="
@@ -254,22 +247,20 @@ export default function HeroSection() {
                 <img
                   src="https://ik.imagekit.io/j4xu3pewo/fast_response_assets/blackcards_-SXlzQrRA.jpg"
                   alt="blackcards"
-                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    showAnim
+                  className={`h-full w-full object-cover transition-all duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${showAnim
                       ? "opacity-100 translate-y-0 scale-100"
                       : "opacity-0 translate-y-5 scale-[0.97]"
-                  }`}
+                    }`}
                 />
               </span>
             </span>
 
             <span className="overflow-hidden inline-block">
               <span
-                className={`inline-block text-[54px] max-[359px]:text-[42px] font-semibold text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ${
-                  showAnim
+                className={`inline-block text-[54px] max-[359px]:text-[42px] max-[768px]:font-[500] font-semibold text-black tracking-[-0.04em] transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[400ms] ${showAnim
                     ? "opacity-100 translate-y-0 [clip-path:inset(0_0_0_0)]"
                     : "opacity-0 translate-y-8 [clip-path:inset(100%_0_0_0)]"
-                }`}
+                  }`}
               >
                 Impact
               </span>
@@ -281,17 +272,18 @@ export default function HeroSection() {
         <p
           className={`
             mt-8
+            max-[768px]:mt-[40px]
             max-w-[520px]
             text-[#6D6D6D]
             text-[16px]
             leading-[100%]
             font-[500]
-            max-[768px]:mt-5
+            max-[768px]:!mt-5
             max-[768px]:max-w-[90%]
             max-[768px]:text-[11px]
             max-[768px]:leading-[135%]
             transition-all duration-[1300ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[550ms]
-            ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+            ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} 
           `}
         >
           We help startups and brands create beautiful,
@@ -309,6 +301,7 @@ export default function HeroSection() {
             max-[768px]:mt-6
             max-[768px]:flex-col
             max-[768px]:gap-3
+            max-[768px]:mt-[20px]
             transition-all duration-[1300ms] ease-[cubic-bezier(0.22,1,0.36,1)] delay-[700ms]
             ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}

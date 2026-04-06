@@ -89,14 +89,30 @@ bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
             {/* ===== Heading ===== */}
 
 
-            <div className="text-center mb-[90px] relative z-10">
-                <p className="font-calligraffitti text-[#7A7A7A] mb-6 flex gap-4 items-center justify-center text-[24px]">
-                    <span className="w-[124px] h-[1px] bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
-                    Process
-                    <span className="w-[124px] h-[1px] bg-gradient-to-l from-[#9C9C9C] to-[#DFDFDF]" />
+            <div className="relative z-10 mb-[56px] text-center sm:mb-[70px] md:mb-[90px]">
+                <p
+                    className="
+      mx-auto mb-4 flex w-full max-w-[320px] items-center justify-center
+      font-calligraffitti text-[18px] text-[#7A7A7A]
+      sm:mb-5 sm:max-w-[380px] sm:text-[20px]
+      md:mb-6 md:max-w-[460px] md:text-[24px]
+    "
+                >
+                    <span className="h-[1px] flex-1 bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
+                    <span className="shrink-0 px-3 sm:px-4">Process</span>
+                    <span className="h-[1px] flex-1 bg-gradient-to-l from-[#9C9C9C] to-[#DFDFDF]" />
                 </p>
 
-                <h2 className="text-[56px] font-[400] leading-[1.05] max-w-[620px] mx-auto max-[780px]:text-[24px] max-[780px]:text-[400] text-center font-bricolage">
+                <h2
+                    className="
+      mx-auto max-w-[300px]
+      text-center font-bricolage font-[400]
+      text-[24px] leading-[1.15]
+      sm:max-w-[420px] sm:text-[34px]
+      md:max-w-[540px] md:text-[44px]
+      lg:max-w-[620px] lg:text-[56px]
+    "
+                >
                     Take the first step 🚶
                     <br />
                     <span className="text-[#8A8A8A]">and we will guide you</span>

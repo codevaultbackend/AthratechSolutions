@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { projectsData } from "@/app/context/projects";
 
 type ProjectCard = {
   id: number;
   title: string;
   description: string;
   image: string;
+  imgLayout: string;
   href: string;
   external?: boolean;
   cardBg: string;
@@ -21,30 +21,33 @@ const projectCards: ProjectCard[] = [
     title: "Mark Day",
     description:
       "A smart attendance and leave management system enabling seamless check-ins, leave requests, and history tracking—built to simplify workforce management and boost organizational efficiency.",
-    image: "/project1.png",
+    image: "/Attendance.png",
+    imgLayout: '',
     href: "/Projects/markday",
     external: false,
-    cardBg: "bg-[#09185F]",
-  },
-  {
-    id: 3,
-    title: "Fast Response",
-    description:
-      "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
-    image: "/project3.png",
-    href: "/Projects/fastresponse",
-    external: false,
-    cardBg: "bg-[#050505]",
+    cardBg: "bg-[#010A37]",
   },
   {
     id: 4,
     title: "SankalPSetu Foundation",
     description:
       "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "/SankalpSetu.png",
+    image: "/Sankalp.png",
+    imgLayout: '!h-[389px] !w-[403px] max-[768px]:!w-[246px] max-[768px]:!h-[247px] max-[768px]:!left-[12%] ',
     href: "https://www.sankalpsetufoundation.org/",
     external: true,
-    cardBg: "bg-[#ECEAEA]",
+    cardBg: "bg-[#EDEDED]",
+  },
+   {
+    id: 3,
+    title: "Fast Response",
+    description:
+      "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
+    image: "/FRProject.png",
+    imgLayout: '',
+    href: "/Projects/fastresponse",
+    external: false,
+    cardBg: "bg-[#010A37]",
   },
 ];
 
@@ -63,7 +66,9 @@ export default function ProjectGrid() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    className={`object-cover transition-transform duration-500 group-hover:scale-[1.03] ${item.imgLayout}`}
+                    priority={item.id === 1}
                   />
                 </div>
 
@@ -77,7 +82,7 @@ export default function ProjectGrid() {
                   </p>
 
                   <div className="mt-[14px] inline-flex items-center gap-[7px] text-[14px] font-[500] text-[#4F74FF]">
-                    <span>{item.external? "View site" : "View Project"}</span>
+                    <span>{item.external ? "View site" : "View Project"}</span>
                     <ArrowRight size={14} />
                   </div>
                 </div>

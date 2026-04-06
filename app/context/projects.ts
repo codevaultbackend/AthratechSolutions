@@ -79,9 +79,9 @@ export const projectsData: ProjectItem[] = [
     slug: "markday",
     description:
       "An intuitive attendance portal designed for seamless tracking and leave management, enhancing workforce efficiency and contributing to scalable organizational growth.",
-    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project4_YJROaams7.jpg",
+    image: "/Attendance.png",
     reverse: false,
-    imageBg: "linear-gradient(135deg, #0F172A 0%, #1E293B 45%, #334155 100%)",
+    imageBg: "#010A37",
     imageConfig: {
       width: "110%",
       height: "110%",
@@ -159,15 +159,49 @@ export const projectsData: ProjectItem[] = [
         imageClassName: "object-cover w-full h-full",
       },
     },
+  }, 
+  {
+    title: "SankalpSetu Foundation",
+    slug: "sankalpsetufoundation",
+    description:
+      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
+    image: "/Sankalp.png",
+    reverse: true,
+    imageBg: "#EDEDED",
+    imageConfig: {
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+      top: "0%",
+      left: "0%",
+    },
+    websiteUrl: "https://www.sankalpsetufoundation.org/",
+    details: [
+      {
+        title: "Education",
+        description:
+          "Supporting children with access to learning and awareness programs.",
+      },
+      {
+        title: "Healthcare",
+        description:
+          "Providing essential aid, hygiene support, and community health initiatives.",
+      },
+      {
+        title: "Skill Development",
+        description:
+          "Enabling youth with vocational training for sustainable livelihoods.",
+      },
+    ],
   },
   {
     title: "Fast Response",
     slug: "fastresponse",
     description:
       "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
-    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Project3_wIA5PzDqk.jpg",
+    image: "/FRProject.png",
     reverse: true,
-    imageBg: "linear-gradient(135deg, #020617 0%, #111827 45%, #000000 100%)",
+    imageBg: "#010A37",
     imageConfig: {
       width: "100%",
       height: "100%",
@@ -265,38 +299,4 @@ export const projectsData: ProjectItem[] = [
       },
     },
   },
-  {
-    title: "SankalpSetu Foundation",
-    slug: "sankalpsetufoundation",
-    description:
-      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/SankalpSetu_bVzi2YGgL.jpg",
-    reverse: true,
-    imageBg: "#EDEDED",
-    imageConfig: {
-      width: "140%",
-      height: "140%",
-      objectFit: "contain",
-      top: "-20%",
-      left: "-16%",
-    },
-    websiteUrl: "https://www.sankalpsetufoundation.org/",
-    details: [
-      {
-        title: "Education",
-        description:
-          "Supporting children with access to learning and awareness programs.",
-      },
-      {
-        title: "Healthcare",
-        description:
-          "Providing essential aid, hygiene support, and community health initiatives.",
-      },
-      {
-        title: "Skill Development",
-        description:
-          "Enabling youth with vocational training for sustainable livelihoods.",
-      },
-    ],
-  }
 ];
