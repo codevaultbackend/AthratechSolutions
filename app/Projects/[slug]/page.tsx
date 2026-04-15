@@ -178,9 +178,9 @@ function FastResponseHero({
 
             <div className="mt-[18px] max-w-[1004px] mx-auto  lg:!my-[98px]  lg:pb-[15px]">
                 <div className="grid grid-cols-1 gap-y-5 md:grid-cols-[1fr_auto] md:items-end md:gap-x-12">
-                    <h1 className="text-[33px] font-bricolage font-semibold leading-none tracking-[-0.055em] text-[#000000] sm:text-[40px] lg:text-[54px]">
+                    <h2 className="text-[33px] font-bricolage font-semibold leading-none tracking-[-0.055em] text-[#000000] sm:text-[40px] lg:text-[54px]">
                         {title}
-                    </h1>
+                    </h2>
 
                     <div className="grid grid-cols-2 gap-x-7 gap-y-3 sm:gap-x-10 lg:gap-x-14">
                         {caseStudy.meta.slice(0, 2).map((item, index) => (

@@ -58,7 +58,7 @@ export default function HeroSection() {
           <span className="h-[1px] flex-1 bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
         </p>
 
-        <h1
+        <div
           className="
       text-center
       text-gray-800
@@ -79,7 +79,7 @@ export default function HeroSection() {
           <br className="hidden md:block" />
           that <span className="text-black">truly connect</span> with their
           customers.
-        </h1>
+        </div>
       </div>
 
       {/* DESKTOP FLOATING PILLS */}

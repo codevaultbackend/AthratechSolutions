@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 
         max-[768px]:!bottom-0 lg:bottom-[-90px] z-[1] w-full flex justify-center overflow-hidden">
 
-        <h1
+        <div
           className="
             text-[90px] max-[768px]:text-[45
             px] lg:text-[210px]
@@ -43,7 +43,7 @@ export default function Footer() {
           }}
         >
           ATHRATECH
-        </h1>
+        </div>
       </div>
 
       {/* ===== Main Content ===== */}

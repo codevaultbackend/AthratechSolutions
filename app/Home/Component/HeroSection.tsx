@@ -55,7 +55,7 @@ export default function HeroSection() {
         "
       >
         {/* ================= DESKTOP / TABLET HEADING ================= */}
-        <h1
+        <div
           className="
             font-semibold
             max-[768px]:font-[500]
@@ -168,7 +168,7 @@ export default function HeroSection() {
               </span>
             </span>
           </span>
-        </h1>
+        </div>
 
         {/* ================= MOBILE HEADING ================= */}
         <div className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:mt-[20px]">

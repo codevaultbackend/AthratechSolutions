@@ -507,4 +507,5 @@ export const blogsData: BlogItem[] = [
     },
   ],
 },
+
 ]
