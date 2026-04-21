@@ -55,7 +55,7 @@ export default function HeroSection() {
         "
       >
         {/* ================= DESKTOP / TABLET HEADING ================= */}
-        <div
+        <h1
           className="
             font-semibold
             max-[768px]:font-[500]
@@ -168,10 +168,10 @@ export default function HeroSection() {
               </span>
             </span>
           </span>
-        </div>
+        </h1>
 
         {/* ================= MOBILE HEADING ================= */}
-        <div className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:mt-[20px]">
+        <h1 className="hidden max-[768px]:flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center max-[768px]:mt-[20px]">
           {/* Row 1 */}
           <div className="flex items-center justify-center gap-[8px] leading-none max-[768px]:w-full">
             <span
@@ -266,7 +266,7 @@ export default function HeroSection() {
               </span>
             </span>
           </div>
-        </div>
+        </h1>
 
         {/* Subtext */}
         <p
