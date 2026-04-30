@@ -34,19 +34,19 @@ export default function RootLayout({
     >
       <head>
         {/* Google Analytics */}
-         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-65X3FRJR5W"
-          strategy="afterInteractive"
-        />
 
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-65X3FRJR5W');
-          `}
-        </Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZH5Y1C6Z4"></script>
+        <script>
+          {
+            `
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6ZH5Y1C6Z4');
+    `
+          }
+        </script>
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -76,20 +76,20 @@ export default function RootLayout({
 
       {/* FIXED BODY */}
       <body className="antialiased bg-white relative">
-        
+
         {/* Container moved INSIDE body */}
         <div className="max-w-full w-full mx-auto relative">
-          
+
           {/* Navbar */}
           <TopNavigation />
 
           {/* Page Content */}
-          
+
           <main className="relative">
             <BlogsProvider>
               {children}
             </BlogsProvider>
-            
+
           </main>
 
           {/* Footer */}
