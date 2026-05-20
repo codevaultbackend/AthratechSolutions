@@ -21,7 +21,7 @@ const projectCards: ProjectCard[] = [
     title: "Mark Day",
     description:
       "A smart attendance and leave management system enabling seamless check-ins, leave requests, and history tracking—built to simplify workforce management and boost organizational efficiency.",
-    image: "/Attendance.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
     imgLayout: '',
     href: "/Projects/markday",
     external: false,
@@ -32,7 +32,7 @@ const projectCards: ProjectCard[] = [
     title: "SankalPSetu Foundation",
     description:
       "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "/Sankalp.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255599/website-images/f6rytrr2w2pua0cu0hza.png",
     imgLayout: '!h-[389px] !w-[403px] max-[768px]:!w-[246px] max-[768px]:!h-[247px] max-[768px]:!left-[12%] ',
     href: "https://www.sankalpsetufoundation.org/",
     external: true,
@@ -43,7 +43,7 @@ const projectCards: ProjectCard[] = [
     title: "Fast Response",
     description:
       "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
-    image: "/FRProject.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
     imgLayout: '',
     href: "/Projects/fastresponse",
     external: false,

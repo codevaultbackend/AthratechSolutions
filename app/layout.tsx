@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
 import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
+
 import { inter, calligraffitti, bricolage } from "./fonts";
+
 import Script from "next/script";
+
 import { BlogsProvider } from "./context/BlogsContext";
+import { ServicesProvider } from "./context/ServicesContext";
 
 export const metadata: Metadata = {
   title: "Athratech Tech",
@@ -12,10 +17,20 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon_sqkqfp.ico" },
-      { url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon-96x96_e4nsao.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      {
+        url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon_sqkqfp.ico",
+      },
+      {
+        url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775221940/favicon-96x96_e4nsao.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
     ],
+
     apple: "/apple-touch-icon.png",
   },
 
@@ -34,31 +49,61 @@ export default function RootLayout({
     >
       <head>
         {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6ZH5Y1C6Z4"
+        />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZH5Y1C6Z4"></script>
-        <script>
-          {
-            `
-    window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-6ZH5Y1C6Z4');
-    `
-          }
-        </script>
+              function gtag(){
+                dataLayer.push(arguments);
+              }
+
+              gtag('js', new Date());
+
+              gtag('config', 'G-6ZH5Y1C6Z4');
+            `,
+          }}
+        />
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+            {
+              if(f.fbq)return;
+
+              n=f.fbq=function(){
+                n.callMethod
+                  ? n.callMethod.apply(n,arguments)
+                  : n.queue.push(arguments)
+              };
+
+              if(!f._fbq)f._fbq=n;
+
+              n.push=n;
+              n.loaded=!0;
+              n.version='2.0';
+              n.queue=[];
+
+              t=b.createElement(e);
+              t.async=!0;
+              t.src=v;
+
+              s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)
+
+            }(
+              window,
+              document,
+              'script',
+              'https://connect.facebook.net/en_US/fbevents.js'
+            );
+
             fbq('init', '25984887041146356');
             fbq('track', 'PageView');
           `}
@@ -74,28 +119,24 @@ export default function RootLayout({
         />
       </head>
 
-      {/* FIXED BODY */}
-      <body className="antialiased bg-white relative">
+      <body className="relative bg-white antialiased">
+        {/* PROVIDERS FIX */}
+        <ServicesProvider>
+          <BlogsProvider>
+            <div className="relative mx-auto w-full max-w-full">
+              {/* Navbar */}
+              <TopNavigation />
 
-        {/* Container moved INSIDE body */}
-        <div className="max-w-full w-full mx-auto relative">
+              {/* Main Content */}
+              <main className="relative">
+                {children}
+              </main>
 
-          {/* Navbar */}
-          <TopNavigation />
-
-          {/* Page Content */}
-
-          <main className="relative">
-            <BlogsProvider>
-              {children}
-            </BlogsProvider>
-
-          </main>
-
-          {/* Footer */}
-          <Footer />
-
-        </div>
+              {/* Footer */}
+              <Footer />
+            </div>
+          </BlogsProvider>
+        </ServicesProvider>
 
         {/* Meta Pixel Fallback */}
         <noscript>

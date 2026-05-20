@@ -85,7 +85,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
               return (
                 <div
                   key={`${section.type}-${index}`}
-                  className="mt-10 overflow-hidden rounded-[28px] bg-[#D8DDE3] shadow-[0_20px_60px_rgba(0,0,0,0.08)] md:mt-12"
+                  className="mt-10 overflow-hidden rounded-[38px] bg-[#D8DDE3] shadow-[0_20px_60px_rgba(0,0,0,0.08)] md:mt-12 "
                 >
                   <Image
                     src={section.src}

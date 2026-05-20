@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden  bg-[#EFEFEF] ">
 
-      <div className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] z-[9]">
+      <div className="relative overflow-hidden rounded-tl-[28px] rounded-tr-[28px]  z-[9]">
 
       {/* ===== Background vignette (ENHANCED) ===== */}
       <div className="absolute inset-0 z-[0] 
@@ -101,11 +101,11 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-              <a href="/ContactForm"><li className="!mb-4">UI/UX</li></a>
-              <a href="/ContactForm"><li className="!mb-4">Development</li></a>
-              <a href="/ContactForm"><li className="!mb-4">Marketing</li></a>
-              <a href="/ContactForm"><li className="!mb-4">Ad Campaigns</li></a>
+              <Link href='/services/ui-ux-design'><li className="!mb-4">UI/UX</li></Link>
+              <Link href='/services/frontend-backend-development'><li className="!mb-4">Development</li></Link>
+              <Link href='/services/marketing'><li className="!mb-4">Marketing</li></Link>
             </ul>
+            
           </div>
 
           {/* Navigation */}
@@ -142,7 +142,8 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 sm:space-y-4 !text-[16px] font-[500] sm:text-[24px] leading-[150%]">
-              <a href="tel:+917303835369"><li className="!mb-4">+91 7303835369</li></a>
+              <a href="tel:+91 92666 88954"><li className="!mb-4">+91 92666 88954</li></a>
+              <a href="mailto:office.athratech@gmail.com"><li className="!mb-4">office.athratech@gmail.com</li></a>
               <li className="!mb-4">
                 Address : UNIT NO: 244-A, IT SPAZ Park, Sector 49, Gurugram, Haryana 122018, India
               </li>

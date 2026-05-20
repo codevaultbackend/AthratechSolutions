@@ -131,7 +131,7 @@ export default function ImpactSection() {
                         style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
                     >
                         <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
-                       Impact
+                        Impact
                         <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
                     </p>
 
@@ -148,14 +148,11 @@ export default function ImpactSection() {
                         <div
                             key={index}
                             className="
-                group relative min-h-[170px] rounded-[20px] border border-[#ececec]
-                bg-white p-5 shadow-[0_2px_10px_rgba(16,24,40,0.04),0_12px_30px_rgba(16,24,40,0.05)]
-                transition-all duration-300
-                sm:min-h-[185px] sm:rounded-[22px] sm:p-6
-                lg:min-h-[200px] lg:rounded-[24px] lg:p-7
+                group relative min-h-[170px]  bg-[#fff]
+                 p-5 transition-all duration-300 shadow-[3px_3px_17px_0_#0000001A] rounded-[32px]
+            
               "
                         >
-                            <div className="absolute inset-x-0 top-0 h-[1px] rounded-t-[24px] bg-gradient-to-r from-transparent via-[#e8e8e8] to-transparent" />
 
                             <div className="flex h-full flex-col justify-between">
 

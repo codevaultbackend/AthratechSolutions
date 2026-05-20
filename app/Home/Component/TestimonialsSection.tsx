@@ -13,51 +13,51 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475611/WhatsApp_Image_2026-04-06_at_17.09.07_a0ih5z.jpg",
+    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/adck0mq8ewiejntqq6si.jpg",
     quote:
-      "Athratech helped us simplify our product experience with a user-friendly interface, stronger UX decisions, and a modern design system. After launch, customer engagement improved, onboarding became smoother, and our team received far better feedback from users.",
-    name: "Vijaya",
-    role: "Founder & CTO, Tamarisk",
+      "ATHRATECH delivered exactly what we needed with professionalism and dedication. Their team understood our vision and provided seamless support throughout the project.",
+    name: "Nihal Kumar Gupta",
+    role: "Treasurer,  SankalpSetu Foundation",
   },
   {
     id: 2,
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.07_1_kzwxoq.jpg",
     quote:
-      "The Athratech team turned complex business data into clear dashboards and actionable insights. Their strategy improved campaign visibility, supported faster decisions, and helped us strengthen conversion performance across multiple marketing channels.",
-    name: "Rohan",
-    role: "Growth Lead, MarketEdge",
+      "Working with ATHRATECH was a smooth experience. Their creative approach and timely execution helped us improve our digital presence effectively.",
+    name: "Heera Lal",
+    role: "Project Manager, Amsom Construct Ability Pvt Ltd",
   },
   {
     id: 3,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.06_z3vfwm.jpg",
+    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/g0iebuslpunmn0fidvz8.jpg",
     quote:
-      "Their product design and frontend execution gave our platform a cleaner structure, better usability, and a more premium brand presence. The final result felt polished, responsive, and aligned with what our users actually needed.",
-    name: "Aarav",
-    role: "Product Manager, NovaSuite",
+      "ATHRATECH combines creativity with technical expertise. Their commitment, communication, and quality of work truly impressed us.",
+    name: "Sangita Kumari",
+    role: " Director, Fast Response",
   },
   {
     id: 4,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.08_tg3o7q.jpg",
+    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168059/ss_page_assets/idrhtutsykug6jajedxy.png",
     quote:
-      "Athratech completely improved our app experience by focusing on real user behavior, not just visuals. They reduced friction, streamlined the core journey, and delivered a scalable UI that helped increase retention and overall customer satisfaction.",
-    name: "Karan",
-    role: "Co-Founder, PixelForge",
+      "The team at ATHRATECH provided reliable solutions tailored to our requirements. Their support and professionalism made the entire process hassle-free.",
+    name: "Raman Kumar Jha",
+    role: "HOD, Jagsom Electricals Pvt Ltd",
   },
   {
     id: 5,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.07_2_xx9dmf.jpg",
+    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.08_tg3o7q.jpg",
     quote:
-      "From brand communication to UI consistency, Athratech helped us build a more trustworthy digital presence. Their design thinking, attention to detail, and responsive implementation made a visible difference in how customers interacted with our product.",
-    name: "Sneha",
-    role: "Marketing Head, Elevana",
+      "ATHRATECH helped us build a modern and impactful brand presence. Their attention to detail and design quality exceeded our expectations.",
+    name: "Krishna Mishra",
+    role: "Manager, Vibhushanam ",
   },
   {
     id: 6,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.08_1_s95sgw.jpg",
+    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168056/ss_page_assets/suhawmdyttxpzfbaj49v.jpg",
     quote:
-      "Working with Athratech gave us a dependable digital partner for design, development, and growth strategy. Their team communicated clearly, delivered on time, and helped us launch a high-quality product with measurable business impact.",
-    name: "Manavi",
-    role: "Director, BrightLayer",
+      "We appreciate ATHRATECH for their innovative ideas and prompt service. Their team delivered outstanding results with great coordination.",
+    name: "Deepak Kumar Jha",
+    role: "Director, Chugen Hatcheries",
   },
 ];
 

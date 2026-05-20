@@ -7,11 +7,21 @@ type BlogsContextType = {
   blogs: BlogItem[];
 };
 
-const BlogsContext = createContext<BlogsContextType | undefined>(undefined);
+const BlogsContext = createContext<BlogsContextType | undefined>(
+  undefined
+);
 
-export function BlogsProvider({ children }: { children: React.ReactNode }) {
+export function BlogsProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <BlogsContext.Provider value={{ blogs: blogsData }}>
+    <BlogsContext.Provider
+      value={{
+        blogs: blogsData,
+      }}
+    >
       {children}
     </BlogsContext.Provider>
   );
@@ -19,10 +29,11 @@ export function BlogsProvider({ children }: { children: React.ReactNode }) {
 
 export function useBlogs() {
   const context = useContext(BlogsContext);
-  
 
-  if (!context) {
-    throw new Error("useBlogs must be used inside BlogsProvider");
+  if (context === undefined) {
+    throw new Error(
+      "useBlogs must be used inside BlogsProvider"
+    );
   }
 
   return context;

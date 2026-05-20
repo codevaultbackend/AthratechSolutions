@@ -17,7 +17,7 @@ const blogsContent = [
     },
     {
         slug: "ai-future-of-coding",
-        author: "Parag Sharma",
+        author: "Siddharth Jha",
         date: "16 March, 2026",
         title: "How AI can change the future of Coding",
         cta1: "AI",
@@ -27,7 +27,7 @@ const blogsContent = [
     },
     {
         slug: "ai-marketers-2026",
-        author: "Parag Sharma",
+        author: "Surjeet Mathur",
         date: "16 March, 2026",
         title: "AI will replace 70% of marketers in 2026… unless you do THIS",
         cta1: "Marketing",

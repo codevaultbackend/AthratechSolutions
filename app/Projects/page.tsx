@@ -43,22 +43,26 @@ export default function Projects() {
                                             </h3>
 
                                             <div className="flex -space-x-3">
-                                                {["/Avatar1.png", "/Avatar2.png", "/Avatar3.png", "/Avatar4.png"].map(
-                                                    (src, i) => (
-                                                        <div
-                                                            key={i}
-                                                            className="h-[26px] w-[26px] overflow-hidden rounded-full max-md:h-[22px] max-md:w-[22px]"
-                                                        >
-                                                            <Image
-                                                                src={src}
-                                                                alt="avatar"
-                                                                width={56}
-                                                                height={56}
-                                                                className="object-cover"
-                                                            />
-                                                        </div>
-                                                    )
-                                                )}
+                                                {["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted2_Gpx2WsvJL.jpg",
+                                                    "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted1_SqdS_J0U0.jpg",
+                                                    "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted3_Z1_e49fKev.jpg",
+                                                    "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted4_Ktz0pbcRZ.jpg",
+                                                    "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/trusted5_SyyYgiQk2.jpg",].map(
+                                                        (src, i) => (
+                                                            <div
+                                                                key={i}
+                                                                className="h-[26px] w-[26px] overflow-hidden rounded-full max-md:h-[22px] max-md:w-[22px]"
+                                                            >
+                                                                <Image
+                                                                    src={src}
+                                                                    alt="avatar"
+                                                                    width={26}
+                                                                    height={26}
+                                                                    className=" h-[26px] w-[26px] object-cover"
+                                                                />
+                                                            </div>
+                                                        )
+                                                    )}
                                             </div>
                                         </div>
                                     </div>

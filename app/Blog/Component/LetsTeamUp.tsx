@@ -16,7 +16,7 @@ export default function LetsTeamUp() {
         className="pointer-events-none absolute left-1/2 top-[15%] z-0 -translate-x-1/2
                    max-lg:top-[12%]
                    max-md:top-[10%]
-                   max-sm:top-[8%]"
+                   max-[768px]:!top-[20%]"
       >
         <Image
           src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198143/Ellipse_13_1_jmp0p0.png"

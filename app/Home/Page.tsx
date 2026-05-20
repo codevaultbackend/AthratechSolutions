@@ -9,6 +9,9 @@ import TestimonialsSection from "./Component/TestimonialsSection";
 import FAQSection from "./Component/FAQSection";
 import ImpactSection from "./Component/ImpactSection";
 import BlogsSection from "./Component/BlogsSection";
+import WhyAthraTechSection from "./Component/WhyAthraTechSection";
+import WhatWeExcelAtSection from "./Component/Whatweexcel";
+import StepsSection from "./Component/StepsSection";
 
 export default function Home() {
   return (
@@ -16,8 +19,9 @@ export default function Home() {
       <HeroSection />
       <AutoSlidingCards />
       <VideoSection />
-      <OurOfferings />
-      <Steps />
+      <WhyAthraTechSection />
+      <WhatWeExcelAtSection/>
+      <StepsSection />
       <StackedProjectsSection />
       <ContactCTA />
       <ImpactSection />

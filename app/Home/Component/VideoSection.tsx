@@ -13,7 +13,7 @@ export default function VideoSection() {
     ];
 
     return (
-        <section className="w-full  bg-[#EFEFEF]  relative  z-[9]    ">
+        <section className="w-full  relative  z-[9]    ">
             {/* Logo Carousel */}
             <div className="relative bg-[#fff] pb-[32px] overflow-hidden rounded-bl-[32px] rounded-br-[32px] ">
                 <h3 className="text-center text-[#939393] text-[23px] font-[400] mt-[38px] font-calligraffitti max-[768px]:mt-[21px] ">Trusted by Companies</h3>

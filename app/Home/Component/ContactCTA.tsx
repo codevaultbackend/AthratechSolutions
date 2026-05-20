@@ -86,7 +86,7 @@ export default function ContactCTA() {
                                                         alt="avatar"
                                                         width={56}
                                                         height={56}
-                                                        className="object-cover"
+                                                        className="object-cover h-full w-full"
                                                     />
                                                 </div>
                                             )

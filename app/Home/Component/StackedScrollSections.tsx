@@ -69,11 +69,10 @@ export default function StackedProjects() {
                   }}
                 >
                   <div
-                    className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${
-                      project.reverse
+                    className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
                         ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
                         : ""
-                    }`}
+                      }`}
                   >
                     {/* Image */}
                     <div className="relative h-full p-4 sm:p-5 md:p-6">
@@ -92,9 +91,9 @@ export default function StackedProjects() {
                             bottom: project.imageConfig.bottom,
                             transform:
                               !project.imageConfig.top &&
-                              !project.imageConfig.left &&
-                              !project.imageConfig.right &&
-                              !project.imageConfig.bottom
+                                !project.imageConfig.left &&
+                                !project.imageConfig.right &&
+                                !project.imageConfig.bottom
                                 ? "translate(-50%, -50%)"
                                 : undefined,
                           }}
@@ -118,24 +117,24 @@ export default function StackedProjects() {
                     {/* Content */}
                     <div className="flex flex-col justify-between px-5 py-6 sm:px-7 sm:py-7 md:px-10 md:py-9">
                       <div>
-                        <h3 className="mb-4 line-clamp-1 font-bricolage text-[40px] font-[500] leading-[100%] text-[#000000] md:text-[30px]">
+                        <h3 className="mb-4 line-clamp-1 font-bricolage text-[38px] font-[500] leading-[100%] text-[#000000] md:text-[30px]">
                           {project.title}
                         </h3>
 
-                        <p className="mb-5 line-clamp-1 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
+                        <p className="mb-4  max-w-[460px] text-[14px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
                           {project.description}
                         </p>
 
-                        <div className="space-y-5">
+                        <div className="space-y-3">
                           {project.details.map((detail, detailIndex) => (
                             <div
                               key={`${project.slug}-${detailIndex}`}
-                              className="pt-4"
+                              className=""
                             >
-                              <h4 className="text-[16px] font-[500] tracking-[0] text-[#0E0E0E]">
+                              <h4 className="text-[14px] font-[500] tracking-[0] text-[#0E0E0E]">
                                 {detail.title}
                               </h4>
-                              <p className="line-clamp-1 max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
+                              <p className=" max-w-[460px] text-[14px] font-[400] leading-[100%] text-[#797979] ">
                                 {detail.description}
                               </p>
                             </div>
@@ -145,7 +144,13 @@ export default function StackedProjects() {
 
                       <div className="mt-8">
                         <Link
-                          href={`/Projects/${project.slug}`}
+                          href={
+                            project.websiteUrl
+                              ? project.websiteUrl
+                              : `/Projects/${project.slug}`
+                          }
+                          target={project.websiteUrl ? "_blank" : "_self"}
+                          rel={project.websiteUrl ? "noopener noreferrer" : undefined}
                           className="inline-flex h-[50px] w-full max-w-[194px] items-center justify-between gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4"
                         >
                           <span className="pl-[20px] text-center text-[16px] font-[400] leading-[100%] text-[#797979]">

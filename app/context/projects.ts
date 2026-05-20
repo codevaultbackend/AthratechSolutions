@@ -79,7 +79,7 @@ export const projectsData: ProjectItem[] = [
     slug: "markday",
     description:
       "An intuitive attendance portal designed for seamless tracking and leave management, enhancing workforce efficiency and contributing to scalable organizational growth.",
-    image: "/Attendance.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
     reverse: false,
     imageBg: "#010A37",
     imageConfig: {
@@ -111,7 +111,7 @@ export const projectsData: ProjectItem[] = [
       heroImageAlt: "Mark Day attendance portal hero image",
       meta: [
         {
-          label: "Role",
+          label: "Deliverables",
           value: "UI/UX, Strategy, Development",
         },
         {
@@ -161,11 +161,13 @@ export const projectsData: ProjectItem[] = [
     },
   }, 
   {
-    title: "SankalpSetu Foundation",
-    slug: "sankalpsetufoundation",
+
+  title: "SankalpSetu Foundation",
+  slug: "sankalpsetu-foundation",
+  websiteUrl: "https://www.sankalpsetufoundation.org/",
     description:
       "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "/Sankalp.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255599/website-images/f6rytrr2w2pua0cu0hza.png",
     reverse: true,
     imageBg: "#EDEDED",
     imageConfig: {
@@ -199,7 +201,7 @@ export const projectsData: ProjectItem[] = [
     slug: "fastresponse",
     description:
       "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
-    image: "/FRProject.png",
+    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
     reverse: true,
     imageBg: "#010A37",
     imageConfig: {
