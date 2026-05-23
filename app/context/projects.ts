@@ -202,7 +202,7 @@ export const projectsData: ProjectItem[] = [
     description:
       "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
     image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
-    reverse: true,
+    reverse: false,
     imageBg: "#010A37",
     imageConfig: {
       width: "100%",

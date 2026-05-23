@@ -70,6 +70,8 @@ export default function RootLayout({
           }}
         />
 
+        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25"/>
+
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
