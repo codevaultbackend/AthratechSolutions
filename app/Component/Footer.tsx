@@ -125,7 +125,7 @@ export default function Footer() {
           {/* Links */}
           <div>
             <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
-              Links
+              Success Stories
             </h4>
             <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
               <a href="https://decovista.in/"><li className="!mb-4">Decovista</li></a>
@@ -145,7 +145,7 @@ export default function Footer() {
               <a href="tel:+91 92666 88954"><li className="!mb-4">+91 92666 88954</li></a>
               <a href="mailto:office.athratech@gmail.com"><li className="!mb-4">office.athratech@gmail.com</li></a>
               <li className="!mb-4">
-                Address : UNIT NO: 244-A, IT SPAZ Park, Sector 49, Gurugram, Haryana 122018, India
+                Address : Unit No. 244 A, Tower B2, Spaze I tech park, Tower, Sohna - Gurgaon Rd, Block S, Sector 49, Gurugram, Haryana 122018
               </li>
             </ul>
           </div>
@@ -154,7 +154,7 @@ export default function Footer() {
         {/* ===== Bottom Bar ===== */}
         <div className="border-t border-white/30 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[13px] sm:text-[14px] opacity-70 text-center sm:text-left">
-            Copyright © Athratech Pvt. Ltd.
+            Copyright 2026 © Athratech Pvt. Ltd.
           </p>
 
           <div className="social-icons flex gap-3.5">

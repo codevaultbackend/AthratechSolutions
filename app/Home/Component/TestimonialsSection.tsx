@@ -15,15 +15,15 @@ const testimonials: Testimonial[] = [
     id: 1,
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/adck0mq8ewiejntqq6si.jpg",
     quote:
-      "ATHRATECH delivered exactly what we needed with professionalism and dedication. Their team understood our vision and provided seamless support throughout the project.",
+      "ATHRATECH delivered seamless digital solutions with strong technical expertise and reliable support throughout the project.",
     name: "Nihal Kumar Gupta",
-    role: "Treasurer,  SankalpSetu Foundation",
+    role: "Treasurer, SankalpSetu Foundation",
   },
   {
     id: 2,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.07_1_kzwxoq.jpg",
+    avatar :"https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518706/website-images/inwcmkfwygfkokaxgjj4.png",
     quote:
-      "Working with ATHRATECH was a smooth experience. Their creative approach and timely execution helped us improve our digital presence effectively.",
+      "ATHRATECH combined creativity and timely execution to strengthen our digital presence and user experience.",
     name: "Heera Lal",
     role: "Project Manager, Amsom Construct Ability Pvt Ltd",
   },
@@ -31,31 +31,31 @@ const testimonials: Testimonial[] = [
     id: 3,
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/g0iebuslpunmn0fidvz8.jpg",
     quote:
-      "ATHRATECH combines creativity with technical expertise. Their commitment, communication, and quality of work truly impressed us.",
+      "Their team delivered a smooth experience through creative thinking, technical expertise, and professional execution.",
     name: "Sangita Kumari",
-    role: " Director, Fast Response",
+    role: "Director, Fast Response",
   },
   {
     id: 4,
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168059/ss_page_assets/idrhtutsykug6jajedxy.png",
     quote:
-      "The team at ATHRATECH provided reliable solutions tailored to our requirements. Their support and professionalism made the entire process hassle-free.",
-    name: "Raman Kumar Jha",
+      "ATHRATECH provided scalable and reliable solutions tailored to our business needs with excellent communication.",
+    name: "Raman Kumar",
     role: "HOD, Jagsom Electricals Pvt Ltd",
   },
   {
     id: 5,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1775475610/WhatsApp_Image_2026-04-06_at_17.09.08_tg3o7q.jpg",
+    avatar :"https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518067/website-images/f552c4djelk2amskqp5a.png",
     quote:
-      "ATHRATECH helped us build a modern and impactful brand presence. Their attention to detail and design quality exceeded our expectations.",
+      "The team helped us build a modern brand presence with high-quality design and attention to every detail.",
     name: "Krishna Mishra",
-    role: "Manager, Vibhushanam ",
+    role: "Manager, Vibhushanam",
   },
   {
     id: 6,
     avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168056/ss_page_assets/suhawmdyttxpzfbaj49v.jpg",
     quote:
-      "We appreciate ATHRATECH for their innovative ideas and prompt service. Their team delivered outstanding results with great coordination.",
+      "ATHRATECH delivered innovative digital solutions with quick execution, smooth coordination, and dependable service.",
     name: "Deepak Kumar Jha",
     role: "Director, Chugen Hatcheries",
   },
@@ -161,7 +161,7 @@ function TestimonialCard({
               src={item.avatar}
               alt={item.name}
               fill
-              className="object-cover"
+              className={`${['Krishna Mishra', "Heera Lal"].includes(item.name) &&  '!h-auto'} object-cover`}
             />
           ) : (
             <div
