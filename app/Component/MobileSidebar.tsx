@@ -106,7 +106,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
             { label: "Services", slug: "/services" },
             { label: "Testimonials", slug: "#testimonial" },
             { label: "Blogs", slug: "/Blog" },
-            { label: "Projects", slug: "/Projects" },
+            { label: "Projects", slug: "/projects" },
             { label: "FAQ", slug: "#Faq" },
           ].map((item, index) => (
             <button
@@ -139,7 +139,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
             Have a project for us?
           </p>
 
-          <Link href="/ContactForm" onClick={onClose}>
+          <Link href="/contact-us" onClick={onClose}>
             <div
               className="
                 flex items-center gap-3

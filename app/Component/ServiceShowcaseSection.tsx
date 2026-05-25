@@ -21,7 +21,7 @@ const defaultAvatars = [
 
 function ContactPillButton({
   text = "Let’s Talk",
-  href = "/ContactForm",
+  href = "/contact-us",
   avatars = defaultAvatars,
 }: {
   text?: string;
@@ -70,7 +70,7 @@ export default function ServiceShowcaseSection({
   slug,
   sectionId,
   buttonText = "Let’s Talk",
-  buttonHref = "/ContactForm",
+  buttonHref = "/contact-us",
   avatars = defaultAvatars,
   className = "",
 }: ServiceShowcaseSectionProps) {

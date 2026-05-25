@@ -147,7 +147,7 @@ export default function StackedProjects() {
                           href={
                             project.websiteUrl
                               ? project.websiteUrl
-                              : `/Projects/${project.slug}`
+                              : `/projects/${project.slug}`
                           }
                           target={project.websiteUrl ? "_blank" : "_self"}
                           rel={project.websiteUrl ? "noopener noreferrer" : undefined}

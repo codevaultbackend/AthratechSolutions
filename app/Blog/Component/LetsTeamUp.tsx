@@ -57,7 +57,7 @@ export default function LetsTeamUp() {
           Let’s Team up!
         </h2>
 
-        <Link href="/ContactForm" className="inline-block w-full max-w-fit max-md:w-full">
+        <Link href="/contact-us" className="inline-block w-full max-w-fit max-md:w-full">
           <div className="flex items-center justify-center pb-[34px] max-md:pb-[16px]">
             <div
               className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]

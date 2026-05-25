@@ -29,7 +29,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/ContactForm"
+              href="/contact-us"
               className="inline-flex min-h-[54px] items-center justify-center rounded-full border border-[#D9D9D9] bg-white px-8 py-3 font-inter text-[15px] font-[500] text-[#111111] transition-all duration-300 hover:bg-[#F7F7F7]"
             >
               Contact Us

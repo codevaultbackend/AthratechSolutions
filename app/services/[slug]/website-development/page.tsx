@@ -5,7 +5,7 @@ import DevHero from "../../../Component/development/DevHero";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import Uiux from "@/app/Component/landing/Uiux";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
-import VideoSection from "@/app/Home/Component/VideoSection";
+import VideoSection from "@/app/home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import OfferingSection from "@/app/Component/OfferingSection";
 import WebsiteDemo from "@/app/Component/development/WebsiteDemo";
@@ -90,7 +90,7 @@ const platformsData = {
   cta: {
     text: "Need a website design or redesign? We can help!",
     buttonText: "Let’s Connect",
-    href: "/ContactForm",
+    href: "/contact-us",
     ariaLabel: "Contact Athratech",
   },
 };

@@ -56,7 +56,7 @@ export default function TopNavigation() {
           <div className="flex items-center gap-4">
             {/* Book a Call */}
             <a
-              href="tel:+917303835369"
+              href="tel:+91 92666 88954"
               className="fixed right-[96px] top-6 z-[99996] max-[600px]:hidden"
             >
               <div className="flex items-center justify-center">

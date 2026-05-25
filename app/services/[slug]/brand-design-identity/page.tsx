@@ -6,7 +6,7 @@ import BrandGallery from "../../../Component/brand/BrandGallery";
 import BrandApproach from "../../../Component/brand/BrandApproach";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
-import VideoSection from "@/app/Home/Component/VideoSection";
+import VideoSection from "@/app/home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import Platforms from "@/app/Component/Platforms";
 import ProcessBanner from "@/app/Component/brand/ProcessBanner";
@@ -95,7 +95,7 @@ const platformsData = {
   cta: {
     text: "Need a strong brand identity or redesign? We can help!",
     buttonText: "Let’s Connect",
-    href: "/ContactForm",
+    href: "/contact-us",
     ariaLabel: "Contact Athratech",
   },
 };

@@ -8,7 +8,7 @@ import Platforms from "../../../Component/Platforms";
 import Process from "../../../Component/Process";
 
 import MarketingCTA from "@/app/Component/MarketingCTA";
-import VideoSection from "@/app/Home/Component/VideoSection";
+import VideoSection from "@/app/home/Component/VideoSection";
 import ConversionPerformance from "@/app/Component/landing/ConversionPerformance";
 import Banner2 from "@/app/Component/landing/Banner2";
 import Uiux from "@/app/Component/landing/Uiux";
@@ -97,7 +97,7 @@ const platformsData = {
   cta: {
     text: "Need a website design or redesign? We can help!",
     buttonText: "Let’s Connect",
-    href: "/ContactForm",
+    href: "/contact-us",
     ariaLabel: "Contact Athratech",
   },
 };

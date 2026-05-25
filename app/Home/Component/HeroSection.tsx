@@ -306,7 +306,7 @@ export default function HeroSection() {
             ${showAnim ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          <Link href="/ContactForm" className="max-[768px]:w-full">
+          <Link href="/contact-us" className="max-[768px]:w-full">
             <div className="flex justify-center max-[768px]:w-full">
               <div
                 className="

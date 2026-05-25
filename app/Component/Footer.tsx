@@ -71,7 +71,7 @@ export default function Footer() {
           </h2>
 
           {/* CTA Button */}
-          <Link href="/ContactForm">
+          <Link href="/contact-us">
             <div className="flex justify-center">
               <div className="relative rounded-full 
                 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] 
