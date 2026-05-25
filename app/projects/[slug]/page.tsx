@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { projectsData } from "@/app/context/projects";
 import LetsTallk from "@/app/svgIcons/LetsTallk";
 import ProjectGrid from "../Component/ProjectGrid";
-import LetsTeamUp from "@/app/Blog/Component/LetsTeamUp";
+import LetsTeamUp from "@/app/blog/Component/LetsTeamUp";
 
 type Props = {
     params: Promise<{

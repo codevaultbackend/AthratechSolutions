@@ -100,7 +100,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
             <div className="mt-10">
               <Link
-                href="/Blog"
+                href="/blog"
                 className="inline-flex h-[46px] items-center justify-center rounded-full bg-black px-6 text-[14px] font-medium text-white shadow-[0_8px_25px_rgba(0,0,0,0.18)] transition-all duration-300 hover:scale-[1.02]"
               >
                 Back to Blogs

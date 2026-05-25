@@ -77,7 +77,7 @@ function FeaturedBlogCard({ blog }: { blog: Blog }) {
                     </div>
 
                     <Link
-                        href={`/Blog/${blog.slug}`}
+                        href={`/blog/${blog.slug}`}
                         aria-label={`Open blog: ${blog.title}`}
                         className="inline-flex h-[32px] w-[64px] items-center justify-center rounded-full border border-[#DCDCDC] bg-[#F4F4F4] text-black transition-all duration-300 hover:scale-[1.04] hover:bg-[#EFEFEF]"
                     >
@@ -149,7 +149,7 @@ function SideBlogCard({ blog }: { blog: Blog }) {
                         </div>
 
                         <Link
-                            href={`/Blog/${blog.slug}`}
+                            href={`/blog/${blog.slug}`}
                             aria-label={`Open blog: ${blog.title}`}
                             className="inline-flex h-[32px] w-[64px] items-center justify-center rounded-full border border-[#DCDCDC] bg-[#F4F4F4] text-black transition-all duration-300 hover:scale-[1.04] hover:bg-[#EFEFEF]"
                         >

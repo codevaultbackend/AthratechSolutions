@@ -35,7 +35,7 @@ export const blogsData: BlogItem[] = [
         shortTitle: "Glassmorphism in 2026: How to Use Frosted Glass...",
         image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Glassmorphism_DDWuIzHvq.jpg",
         heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/GlassMorphismBlog1_VudcwtmJd.jpg",
-        href: "/Blog/glassmorphism-in-2026",
+        href: "/blog/glassmorphism-in-2026",
         intro:
             "Glassmorphism has become one of the most recognizable UI trends in modern digital design. With its frosted glass backgrounds, soft transparency, and layered depth, it creates visually appealing interfaces that feel modern and premium. However, if implemented poorly, glassmorphism can reduce readability, create visual clutter, and negatively impact user experience. In 2026, the key is not just using the trend, but using it strategically and responsibly.",
         content: [
@@ -126,7 +126,7 @@ export const blogsData: BlogItem[] = [
         shortTitle: "How AI can change the future of Coding",
         image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Ai_JfGmO1aGA.jpg",
         heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/AiChange1_ABdRC8MOn.jpg",
-        href: "/Blog/ai-future-of-coding",
+        href: "/blog/ai-future-of-coding",
         intro:
             "Artificial intelligence is reshaping how developers write, test, and maintain software. From code suggestions to automated debugging, AI is becoming a practical partner in day-to-day development workflows.",
         content: [
@@ -183,7 +183,7 @@ export const blogsData: BlogItem[] = [
         shortTitle: "AI will replace 70% of marketers in 2026..unless....",
         image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Aireplace_MZOyTSSRr.jpg",
         heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/AiReplace__2__1hFe8wIGp.jpg",
-        href: "/Blog/ai-marketers-2026",
+        href: "/blog/ai-marketers-2026",
         intro:
             "Marketing teams are rapidly adopting AI for content generation, campaign optimization, and customer targeting. That shift is changing what marketers need to be valuable.",
         content: [
@@ -241,7 +241,7 @@ export const blogsData: BlogItem[] = [
   shortTitle: "SEO in 2026: What Modern Brands Need to Win Organic Search",
   image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/seo_6Xt2kuBQ7.jpg",
   heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/seo_AWp1nLmSj.jpg",
-  href: "/Blog/seo-glassmorphism",
+  href: "/blog/seo-glassmorphism",
   intro:
     "SEO in 2026 is no longer just about keywords. Search performance now depends on content quality, technical speed, trust signals, user intent alignment, and a brand’s ability to create pages that genuinely help people.",
   content: [
@@ -334,7 +334,7 @@ export const blogsData: BlogItem[] = [
   shortTitle: "Paid Ads in 2026: How to Spend Smarter, Not Just More",
   image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Adds_Uzdu51LcR.jpg",
   heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/ads2_Hf_8Lljs8.jpg",
-  href: "/Blog/ads-glassmorphism",
+  href: "/blog/ads-glassmorphism",
   intro:
     "Paid advertising in 2026 rewards brands that test quickly, build stronger creatives, optimize landing pages, and measure the metrics that actually impact growth.",
   content: [
@@ -422,7 +422,7 @@ export const blogsData: BlogItem[] = [
   shortTitle: "UI/UX in 2026: Designing Digital Products People Actually Enjoy",
   image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/uiux_vbF--CV8b.jpg",
   heroImage: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/UIux1_xqcNWXr9_.jpg",
-  href: "/Blog/uiux-glassmorphism",
+  href: "/blog/uiux-glassmorphism",
   intro:
     "Great UI/UX in 2026 is about more than visual polish. It is about creating interfaces that feel intuitive, fast, inclusive, and genuinely helpful from the very first interaction.",
   content: [

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getServiceBySlug, services } from "@/app/context/services";
-import LetsTeamUp from "@/app/Blog/Component/LetsTeamUp";
+import LetsTeamUp from "@/app/blog/Component/LetsTeamUp";
 import CardGrid from "@/app/Component/services/CardGrid";
 
 
