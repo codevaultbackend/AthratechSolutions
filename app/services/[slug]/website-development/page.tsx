@@ -10,7 +10,6 @@ import Strategy from "@/app/Component/Strategy";
 import OfferingSection from "@/app/Component/OfferingSection";
 import WebsiteDemo from "@/app/Component/development/WebsiteDemo";
 import Process from "@/app/Component/Process";
-
 import Shapes from "@/app/svgIcons/Shapes";
 import Browser from "@/app/svgIcons/Browser";
 import Sidebarsimple from "@/app/svgIcons/Sidebarsimple";
