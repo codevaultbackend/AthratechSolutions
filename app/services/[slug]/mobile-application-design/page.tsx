@@ -5,7 +5,7 @@ import MobileHero from "../../../Component/mobile/MobileHero";
 import Strategy from "../../../Component/Strategy";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
-import VideoSection from "@/app/home/Component/VideoSection";
+import VideoSection from "@/app/Home/Component/VideoSection";
 import Platforms from "@/app/Component/Platforms";
 import Process from "@/app/Component/Process";
 import Uiux from "@/app/Component/landing/Uiux";

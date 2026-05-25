@@ -6,7 +6,7 @@ import DesignSystemPreview from "../../../Component/design-system/DesignSystemPr
 import DesignSystemDeviceShowcase from "../../../Component/design-system/DesignSystemDeviceShowcase";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
-import VideoSection from "@/app/home/Component/VideoSection";
+import VideoSection from "@/app/Home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import Platforms from "@/app/Component/Platforms";
 import Uiux from "@/app/Component/landing/Uiux";

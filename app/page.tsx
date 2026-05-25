@@ -1,4 +1,4 @@
-import HomeContent from "./home/Page";
+import HomeContent from "./Home/Page";
 import './globals.css';
 
 export default function Home() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { services } from "@/app/context/services";
 import CardGrid from "../Component/services/CardGrid";
-import WhatWeExcelAtSection from "../home/Component/Whatweexcel";
+import WhatWeExcelAtSection from "../Home/Component/Whatweexcel";
 
 export const metadata = {
   title: "Services | Athratech",

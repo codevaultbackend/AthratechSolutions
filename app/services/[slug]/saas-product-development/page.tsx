@@ -3,7 +3,7 @@ import SaasHero from "../../../Component/saas/SaasHero";
 import SaasOfferings from "../../../Component/saas/SaasOfferings";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
-import VideoSection from "@/app/home/Component/VideoSection";
+import VideoSection from "@/app/Home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import Uiux from "@/app/Component/landing/Uiux";
 
