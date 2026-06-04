@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+
 import "./globals.css";
 
 import TopNavigation from "./Component/topNavigation";
@@ -6,12 +8,12 @@ import Footer from "./Component/Footer";
 
 import { inter, calligraffitti, bricolage } from "./fonts";
 
-import Script from "next/script";
 
 import { BlogsProvider } from "./context/BlogsContext";
 import { ServicesProvider } from "./context/ServicesContext";
 
 export const metadata: Metadata = {
+  
   title: "Athratech Tech",
   description: "Provides various tech solutions",
 
@@ -42,33 +44,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html
       lang="en"
       className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable}`}
     >
       <head>
+
+      
+
+
         {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-6ZH5Y1C6Z4"
+       <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
         />
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-
-              function gtag(){
-                dataLayer.push(arguments);
-              }
-
-              gtag('js', new Date());
-
-              gtag('config', 'G-6ZH5Y1C6Z4');
-            `,
-          }}
-        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
 
         <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25"/>
 
