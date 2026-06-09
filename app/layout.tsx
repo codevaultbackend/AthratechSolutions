@@ -14,8 +14,10 @@ import { ServicesProvider } from "./context/ServicesContext";
 
 export const metadata: Metadata = {
   
-  title: "Athratech Tech",
-  description: "Provides various tech solutions",
+  title: "Athratech | Information Technology Company",
+
+  description:
+    "Explore Athratech, a fast-growing IT services company helping businesses grow through website development, mobile app development, SEO, digital marketing, and custom software solutions.",
 
   icons: {
     icon: [
