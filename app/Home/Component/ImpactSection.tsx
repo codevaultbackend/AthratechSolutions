@@ -25,7 +25,7 @@ const stats: StatItem[] = [
         label: "Purpose-built digital experiences that elevate brands and increase conversion rates at every touchpoint.",
     },
     {
-        value: 100,
+        value: 10,
         prefix: "$",
         suffix: "M+",
         title: "Revenue Generated",
