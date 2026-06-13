@@ -29,7 +29,7 @@ const stats: StatItem[] = [
         prefix: "$",
         suffix: "M+",
         title: "Revenue Generated",
-        label: "“We create high-impact digital experiences that help startups and enterprises accelerate growth and maximize revenue.”",
+        label: "We create high-impact digital experiences that help startups and enterprises accelerate growth and maximize revenue.",
     },
 ];
 
