@@ -13,7 +13,7 @@ import { BlogsProvider } from "./context/BlogsContext";
 import { ServicesProvider } from "./context/ServicesContext";
 
 export const metadata: Metadata = {
-  
+
   title: "Athratech | Information Technology Company",
 
   description:
@@ -55,11 +55,25 @@ export default function RootLayout({
     >
       <head>
 
-      
+
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
+          {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NHP7QT3L');
+          `}
+        </Script>
+
+
 
 
         {/* Google Analytics */}
-       <Script
+        <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
         />
@@ -74,7 +88,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25"/>
+        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -126,6 +140,16 @@ export default function RootLayout({
       </head>
 
       <body className="relative bg-white antialiased">
+
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NHP7QT3L"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {/* PROVIDERS FIX */}
         <ServicesProvider>
           <BlogsProvider>
