@@ -152,6 +152,12 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+          <div className="social-icons flex gap-3.5 mb-4  justify-end">
+            <Link href='https://www.instagram.com/athratech_official/'><i className="fa-brands fa-instagram text-[22px]"></i></Link>
+            <Link href='https://www.facebook.com/profile.php?id=61584218076871'><i className="fa-brands fa-facebook text-[22px]"></i></Link>
+            <Link href='https://www.linkedin.com/company/athratech-private-limited/'><i className="fa-brands fa-linkedin text-[22px]"></i></Link>
+            <Link href='https://x.com/AthraTech'><i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+          </div>
 
           {/* ===== Bottom Bar ===== */}
           <div className="border-t border-white/30 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -159,12 +165,15 @@ export default function Footer() {
               Copyright 2026 © Athratech Pvt. Ltd.
             </p>
 
-            <div className="social-icons flex gap-3.5">
-              <Link href='https://www.instagram.com/athratech_official/'><i className="fa-brands fa-instagram text-[22px]"></i></Link>
-              <Link href='https://www.facebook.com/profile.php?id=61584218076871'><i className="fa-brands fa-facebook text-[22px]"></i></Link>
-              <Link href='https://www.linkedin.com/company/athratech-private-limited/'><i className="fa-brands fa-linkedin text-[22px]"></i></Link>
-              <Link href='https://x.com/AthraTech'><i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+            <div className="flex gap-3">
+              <Link href='/privacy-policy' className="text-[16px] font-[400] leading-[150%] text-[#FFFFFF] tracking-[-2%]">
+                <p>Privacy Policy</p></Link>
+              <Link href='/privacy-policy' className="text-[16px] font-[400] leading-[150%] text-[#FFFFFF] tracking-[-2%]">
+                <p>Terms Of Use</p></Link>
+
             </div>
+
+
           </div>
 
         </div>
