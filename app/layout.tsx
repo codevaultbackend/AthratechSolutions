@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
+
 import "./globals.css";
 
 import TopNavigation from "./Component/topNavigation";
@@ -47,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const GA_ID = "G-L80EQW5H77";
   return (
     <html
       lang="en"
@@ -56,7 +57,22 @@ export default function RootLayout({
       <head>
 
 
-        <Script
+        
+
+        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
+
+        {/* Font Awesome */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
+
+      <body className="relative bg-white antialiased">
+         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
         >
@@ -80,15 +96,16 @@ export default function RootLayout({
 
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}
-        </Script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
 
-        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
+    gtag('js', new Date());
+    gtag('config', '${GA_ID}', {
+      page_path: window.location.pathname,
+    });
+  `}
+        </Script>
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -128,18 +145,6 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-
-        {/* Font Awesome */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
-
-      <body className="relative bg-white antialiased">
 
 
         <noscript>
