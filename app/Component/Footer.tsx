@@ -156,7 +156,7 @@ export default function Footer() {
             <Link href='https://www.instagram.com/athratech_official/'><i className="fa-brands fa-instagram text-[22px]"></i></Link>
             <Link href='https://www.facebook.com/profile.php?id=61584218076871'><i className="fa-brands fa-facebook text-[22px]"></i></Link>
             <Link href='https://www.linkedin.com/company/athratech-private-limited/'><i className="fa-brands fa-linkedin text-[22px]"></i></Link>
-            <Link href='https://x.com/AthraTech'><i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+            <Link href='https://x.com/Athratech_IT'><i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
           </div>
 
           {/* ===== Bottom Bar ===== */}

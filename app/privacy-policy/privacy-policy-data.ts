@@ -37,15 +37,7 @@ export const privacyPolicyData = {
     title: "PRIVACY POLICY",
 
     intro: [
-        'This Privacy Policy ("Policy") describes how AthraTech Pvt. Ltd., a company incorporated under the laws of India with its registered office at [Your Registered Address] ("Company", "we", "us", or "our"), collects, uses, processes, discloses, transfers, and protects personal information in connection with our website [www.athratech.com](http://www.athratech.com) (the "Website") and our services comprising web development, mobile application development, UI/UX design, digital marketing, paid advertising campaign management, website hosting, and maintenance (collectively, the "Services").',
-
-        'This Policy applies to visitors of our Website, prospective clients, current clients, employees of clients, end-users of applications we build on behalf of clients, job applicants, and vendors or contractors (collectively, "you" or "Data Subject"). This Policy is designed to comply with the Digital Personal Data Protection Act, 2023 ("DPDPA"), the Information Technology Act, 2000 and its associated rules, the General Data Protection Regulation (EU) 2016/679 ("GDPR"), and the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), where applicable.',
-
-        'By accessing the Website or engaging our Services, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy. If you do not agree with this Policy, you should discontinue use of the Website and refrain from using our Services.',
-
-        'This Privacy Policy applies to Website visitors, prospective customers, existing clients, client representatives, application end-users, job applicants, vendors, contractors, and other individuals whose personal information may be processed by us in the course of our business activities.',
-
-        'We are committed to protecting your privacy and processing personal information in a transparent, lawful, and secure manner. This Policy explains the types of information we collect, how we use and share that information, the safeguards we apply, and the rights available to you under applicable privacy and data protection laws.'
+        'This Privacy Policy ("Policy") describes how AthraTech Pvt. Ltd., a company incorporated under the laws of India with its registered office at [Unit No. 244 A, Tower B2, Spaze I Tech Park, Tower, Sohna - Gurgaon Rd, Block S, Sector 49, Gurugram, Haryana 122018] ("Company", "we", "us", or "our"), collects, uses, processes, discloses, transfers, and protects personal information in connection with our website [www.athratech.com](http://www.athratech.com) (the "Website") and our services comprising web development, mobile application development, UI/UX design, digital marketing, paid advertising campaign management, website hosting, and maintenance (collectively, the "Services"). This Policy applies to visitors of our Website, prospective clients, current clients, employees of clients, end-users of applications we build on behalf of clients, job applicants, and vendors or contractors (collectively, "you" or "Data Subject"). This Policy is designed to comply with the Digital Personal Data Protection Act, 2023 ("DPDPA"), the Information Technology Act, 2000 and its associated rules, the General Data Protection Regulation (EU) 2016/679 ("GDPR"), and the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), where applicable. By accessing the Website or engaging our Services, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy. If you do not agree with this Policy, you should discontinue use of the Website and refrain from using our Services. This Privacy Policy applies to Website visitors, prospective customers, existing clients, client representatives, application end-users, job applicants, vendors, contractors, and other individuals whose personal information may be processed by us in the course of our business activities.We are committed to protecting your privacy and processing personal information in a transparent, lawful, and secure manner. This Policy explains the types of information we collect, how we use and share that information, the safeguards we apply, and the rights available to you under applicable privacy and data protection laws.'
     ],
 
 
@@ -67,13 +59,13 @@ export const privacyPolicyData = {
                         "Operating the Website, including contact forms, newsletter sign-ups, and live chat widgets",
 
 
-                        "Delivering contracted Services to Clients, including handling client-provided data, end-user data within applications we develop, and project-related credentials",
+                        "Delivering contracted Services to Clients, including handling Client-provided data, end-user data within applications we develop, and project-related credentials",
 
                         "Managing digital marketing and paid advertising campaigns on behalf of Clients, including audience data processed through advertising platforms",
 
-                        "Providing hosting and maintenance services, including server logs, access credentials, database administration, and infrastructure monitoring",
+                        "Providing hosting and maintenance services, including server logs, access credentials, and database administration",
 
-                        "Recruitment activities, vendor onboarding, partnership discussions, and other business communications"
+                        "Recruitment, vendor onboarding, and B2B partnership communications"
 
 
                     ]
@@ -82,14 +74,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        'Where the Company acts as a "Data Processor" or "Service Provider" (processing personal data on behalf of a Client who determines the purposes and means of processing), a separate Data Processing Agreement ("DPA") between the Company and the Client shall govern such processing. In such cases, this Privacy Policy applies supplementally. Where the Company acts as a "Data Controller" (for example, in relation to Website visitors, marketing activities, recruitment processes, and direct business communications), this Privacy Policy applies directly.'
+                        "Where the Company acts as a 'Data Processor' or 'Service Provider' (processing personal data on behalf of a Client who determines the purpose and means of processing, e.g. end-user data within a Client's mobile app), a separate Data Processing Agreement (DPA') between the Company and the Client shall govern such processing, and this Policy applies supplementally. Where the Company acts as a 'Data Controller' (e.g., for Website visitors and our own marketing), this Policy applies directly."
                 },
-
-                {
-                    type: "text",
-                    value:
-                        "Where the Company acts as a Data Processor, a separate Data Processing Agreement governs such processing."
-                }
             ]
         },
 
@@ -107,11 +93,11 @@ export const privacyPolicyData = {
                     type: "bullet",
                     items: [
                         "Identity Data: Full name, job title, company name, government-issued identifiers (PAN, GSTIN, Aadhaar masked reference) where required for invoicing or compliance",
-                        "• Contact Data: Email address, phone number, WhatsApp number, billing and shipping address",
-                        "• Financial Data: Bank account details, UPI ID, payment card tokens (processed via PCI-DSS compliant gateways — we do not store full card numbers), billing history, GST registration details",
-                        "• Project Data: Business requirements, brand assets, source code, API keys, login credentials, server access tokens, design files, and other materials shared for the purpose of delivering Services",
-                        "• Communications Data: Emails, call recordings (where consented), meeting notes, chat transcripts, and support tickets",
-                        "• Recruitment Data: Resume/CV, work history, educational qualifications, and interview notes, for individuals applying to work with us"
+                        "Contact Data: Email address, phone number, WhatsApp number, billing and shipping address",
+                        "Financial Data: Bank account details, UPI ID, payment card tokens (processed via PCI-DSS compliant gateways — we do not store full card numbers), billing history, GST registration details",
+                        "Project Data: Business requirements, brand assets, source code, API keys, login credentials, server access tokens, design files, and other materials shared for the purpose of delivering Services",
+                        "Communications Data: Emails, call recordings (where consented), meeting notes, chat transcripts, and support tickets",
+                        "Recruitment Data: Resume/CV, work history, educational qualifications, and interview notes, for individuals applying to work with us"
                     ]
                 },
 
@@ -125,7 +111,7 @@ export const privacyPolicyData = {
                     items: [
                         "Device and Technical Data: IP address, browser type and version, operating system, device identifiers, screen resolution",
                         "Usage Data: Pages visited, time spent, click patterns, scroll depth, referral source, exit pages",
-                        " Location Data: Approximate geographic location derived from IP address (country/city level only, not precise GPS unless separately consented)",
+                        "Location Data: Approximate geographic location derived from IP address (country/city level only, not precise GPS unless separately consented)",
                         "Cookies and Tracking Technologies: As detailed in our separate Cookie Policy",
                     ]
                 },
@@ -144,9 +130,9 @@ export const privacyPolicyData = {
                 {
                     type: "bullet",
                     items: [
-                        "• Financial information (bank details, transaction history, credit information) for fintech-related projects",
-                        "• Health-related data for healthcare or wellness application projects",
-                        "• Biometric data (e.g., fingerprint or facial recognition data) where a Client's application requires such functionality"
+                        "Financial information (bank details, transaction history, credit information) for fintech-related projects",
+                        "Health-related data for healthcare or wellness application projects",
+                        "Biometric data (e.g., fingerprint or facial recognition data) where a Client's application requires such functionality"
                     ]
                 },
 
@@ -187,7 +173,7 @@ export const privacyPolicyData = {
                     title: "SERVICE DELIVERY",
 
                     items: [
-                        "D• To design, develop, test, deploy, host, and maintain websites and mobile applications as contracted",
+                        "• To design, develop, test, deploy, host, and maintain websites and mobile applications as contracted",
                         "• To plan, execute, monitor, and report on digital marketing and paid advertising campaigns",
                         "• To provide technical support, bug fixes, and ongoing maintenance"
                     ]
@@ -248,75 +234,63 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "We do not sell personal information. However, we may disclose personal data in the following circumstances where necessary to provide Services, comply with legal obligations, protect our rights, or operate our business."
+                        "We do not sell personal information for monetary consideration. We may disclose personal information to the following categories of recipients, under appropriate confidentiality and data protection obligations:"
                 },
 
                 {
                     type: "group",
-                    title: "SERVICE PROVIDERS",
+                    title: "SUB - PROCESSORS AND SERVICE PROVIDERS",
 
                     items: [
-                        "Cloud hosting and infrastructure providers",
-                        "Email delivery and communication platforms",
-                        "Analytics and performance monitoring providers",
-                        "Payment processing partners",
-                        "Customer support and CRM systems"
+                        "Cloud infrastructure and hosting providers (e.g., AWS, Google Cloud, Render, Hostinger)",
+                        "Database and backend-as-a-service providers (e.g., Supabase)",
+                        "Payment processors (e.g., Razorpay, PayU, Stripe, PayPal)",
+                        "Analytics providers (e.g., Google Analytics, Microsoft Clarity)",
+                        "Email and communication platforms (e.g., Google Workspace, Zoho Mail, WhatsApp Business API)"
                     ]
                 },
 
                 {
-                    type: "group",
-                    title: "BUSINESS TRANSFERS",
-
-                    items: [
-                        "Merger, acquisition, restructuring, or sale of assets",
-                        "Corporate due diligence activities",
-                        "Transfer of business operations",
-                        "Investor and transaction-related reviews"
-                    ]
+                    type: "subTitle",
+                    value: "SUB-CONTRACTORS AND FREELANCERS"
                 },
-
                 {
-                    type: "group",
-                    title: "LEGAL AUTHORITIES",
-
-                    items: [
-                        "Compliance with applicable laws and regulations",
-                        "Court orders, subpoenas, and legal requests",
-                        "Law enforcement investigations",
-                        "Protection of legal rights and fraud prevention"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "PROFESSIONAL ADVISERS",
-
-                    items: [
-                        "Lawyers and legal consultants",
-                        "Auditors and accounting professionals",
-                        "Tax advisers",
-                        "Compliance and risk management consultants"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "CLIENT INSTRUCTIONS",
-
-                    items: [
-                        "Where we act as a Data Processor",
-                        "Processing performed only under Client instructions",
-                        "Disclosure governed by applicable Data Processing Agreements",
-                        "Support and maintenance activities authorized by Clients"
-                    ]
-                },
-
-                {
-                    type: "important",
+                    type: "text",
                     value:
-                        "All third-party recipients are contractually required to implement appropriate security measures and process personal information only for authorized purposes."
-                }
+                        "We may engage freelance developers, designers, or specialist contractors to deliver specific aspects of a Project. Such individuals are bound by confidentiality agreements and granted access strictly on a need-to-know basis."
+                },
+
+                {
+                    type: "subTitle",
+                    value: "CORPORATE TRANSACTIONS"
+                },
+                {
+                    type: "text",
+                    value:
+                        "In connection with a merger, acquisition, restructuring, or sale of business assets, personal information may be transferred to the acquiring entity, subject to equivalent confidentiality protections."
+                },
+
+                {
+                    type: "subTitle",
+                    value: "LEGAL AND REGULATORY DISCLOSURES"
+                },
+                {
+                    type: "text",
+                    value:
+                        "We may disclose personal information where required by law, regulation, legal process, or governmental request, including to tax authorities, law enforcement agencies, or courts of competent jurisdiction."
+                },
+
+                {
+                    type: "subTitle",
+                    value: "MAINTAINING A LIST OF SUB-PROCESSORS"
+                },
+                {
+                    type: "text",
+                    value:
+                        "A current list of key third-party sub-processors used in connection with our Services is available upon written request to our Data Protection contact (see Section 16)."
+                },
+
+
             ]
         },
 
@@ -410,45 +384,45 @@ export const privacyPolicyData = {
 
                     rows: [
                         [
-                            "Client Contracts & Project Documentation",
-                            "7 Years",
-                            "Legal, contractual and audit requirements"
+                            "Client project data (source code, credentials, assets)",
+                            "Duration of engagement + 3 years post-completion",
+                            "Warranty support, legal defence, contractual obligations"
                         ],
 
                         [
-                            "Financial & Accounting Records",
+                            "Billing, invoicing, and tax records",
                             "8 Years",
-                            "Tax, accounting and statutory compliance"
+                            "Indian Income Tax Act & GST record-keeping requirements"
                         ],
 
                         [
-                            "Marketing Communications Data",
-                            "Until Consent Withdrawal",
-                            "Marketing and business communications"
+                            "Website analytics data",
+                            "26 months (Google Analytics default) or until deletion requested",
+                            "Service improvement, legitimate interest"
                         ],
 
                         [
-                            "Support Tickets & Customer Communications",
-                            "3 Years",
-                            "Customer support and dispute resolution"
+                            "Marketing/newsletter data",
+                            "Until consent withdrawn or 3 years of inactivity",
+                            "Consent-based processing"
                         ],
 
                         [
-                            "Website Analytics Data",
-                            "24 Months",
-                            "Performance monitoring and service improvement"
+                            "Recruitment data (unsuccessful applicants)",
+                            "1 year from application date",
+                            "Legitimate interest, future opportunities"
                         ],
 
                         [
-                            "Server Logs & Security Records",
-                            "12 Months",
-                            "Security monitoring and fraud prevention"
+                            "Cookies and tracking identifiers",
+                            "As specified in Cookie Policy (typically 6–24 months)",
+                            "Consent-based, browser-session dependent"
                         ],
 
                         [
-                            "Recruitment Records",
-                            "12 Months After Recruitment Process",
-                            "Talent acquisition and compliance purposes"
+                            "End-user data within Client applications",
+                            "As instructed by the Client (Data Controller) per the DPA",
+                            "Processor obligations under DPA"
                         ]
                     ]
                 },
@@ -456,14 +430,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "Upon expiry of the applicable retention period, personal information will be securely deleted, anonymised, archived, or otherwise disposed of in accordance with applicable legal, regulatory, and contractual requirements."
+                        "Upon expiry of the applicable retention period, personal data will be securely deleted or anonymised, unless a longer retention period is required by law or necessary to establish, exercise, or defend legal claims."
                 },
-
-                {
-                    type: "important",
-                    value:
-                        "Where litigation, regulatory investigations, legal holds, or contractual obligations require longer retention, relevant information may be retained until such obligations have been fully satisfied."
-                }
             ]
         },
 
@@ -475,7 +443,7 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "We implement appropriate technical, organisational, and administrative safeguards designed to protect personal information against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, access, or misuse."
+                        "We implement a layered, risk-based security framework appropriate to the sensitivity of the data processed, including"
                 },
 
                 {
@@ -483,12 +451,12 @@ export const privacyPolicyData = {
                     title: "TECHNICAL SAFEGUARDS",
 
                     items: [
-                        "Encryption of data in transit using secure communication protocols",
-                        "Encryption of sensitive information at rest where appropriate",
-                        "Role-based access controls and least-privilege access principles",
-                        "Multi-factor authentication for administrative systems",
-                        "Secure cloud infrastructure and network security controls",
-                        "Regular security patching and vulnerability management"
+                        "TLS 1.2+ encryption for all data in transit across our Website and applications",
+                        "AES-256 encryption for sensitive data at rest, where supported by our infrastructure providers",
+                        "Role-based access control (RBAC) restricting data access strictly on a need-to-know basis",
+                        "Multi-factor authentication (MFA) for administrative and production system access",
+                        "Regular vulnerability assessments and dependency security scanning",
+                        "Secure secrets management for API keys, credentials, and tokens (never committed to source control)"
                     ]
                 },
 
@@ -497,32 +465,26 @@ export const privacyPolicyData = {
                     title: "ORGANISATIONAL SAFEGUARDS",
 
                     items: [
-                        "Employee security awareness and privacy training",
-                        "Confidentiality obligations for employees and contractors",
-                        "Internal information security policies and procedures",
-                        "Access reviews and user permission management",
-                        "Vendor security assessments and contractual controls",
-                        "Documented incident response and escalation procedures"
+                        "Mandatory confidentiality and data protection agreements for all employees, contractors, and freelancers",
+                        "Periodic data protection awareness training for personnel handling Client or end-user data",
+                        "Documented incident response and breach notification procedures",
+                        "Vendor due diligence prior to onboarding new sub-processors",
                     ]
                 },
-
                 {
-                    type: "group",
-                    title: "MONITORING AND INCIDENT RESPONSE",
-
-                    items: [
-                        "Continuous monitoring of critical systems",
-                        "Security logging and audit trails",
-                        "Investigation of suspicious activities and events",
-                        "Incident response processes for security events",
-                        "Business continuity and disaster recovery measures"
-                    ]
+                    type: "subTitle",
+                    value: "ENHANCED CONTROLS FOR SENSITIVE DATA"
+                },
+                {
+                    type: "text",
+                    value:
+                        "For engagements involving financial, health, or biometric data categories, we apply additional controls including data minimisation, pseudonymisation where feasible, restricted environment access, and enhanced audit logging."
                 },
 
                 {
                     type: "important",
                     value:
-                        "While we employ commercially reasonable security measures, no method of transmission over the Internet or electronic storage system can be guaranteed to be completely secure. Accordingly, we cannot guarantee absolute security of personal information."
+                        "Disclaimer:  While we apply industry-standard security measures, no system can guarantee absolute security. In the unlikely event of a data breach materially affecting your personal information, we will notify affected individuals and relevant regulatory authorities within the timeframes prescribed by applicable law (72 hours under GDPR; as prescribed under DPDPA rules)."
                 }
             ]
         },
@@ -535,52 +497,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "We use cookies, pixels, tags, web beacons, and similar tracking technologies to enhance the functionality, performance, security, and user experience of our Website."
+                        "Our Website uses cookies, web beacons, and similar tracking technologies. Full details, including the categories of cookies used, their purpose, duration, and how to manage your preferences, are set out in our separate Cookie Policy, which forms part of this Privacy Policy by reference."
                 },
-
-                {
-                    type: "text",
-                    value:
-                        "Cookies are small text files stored on your device that help us recognise users, remember preferences, understand Website usage patterns, and improve our Services."
-                },
-
-                {
-                    type: "group",
-                    title: "TYPES OF COOKIES WE USE",
-
-                    items: [
-                        "Essential Cookies – Required for core Website functionality and security",
-                        "Performance Cookies – Help us understand Website usage and improve performance",
-                        "Analytics Cookies – Collect aggregated information about visitor behaviour",
-                        "Functional Cookies – Remember preferences and enhance user experience",
-                        "Marketing Cookies – Support advertising, remarketing, and campaign measurement activities"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "ANALYTICS AND TRACKING TECHNOLOGIES",
-
-                    items: [
-                        "Website traffic and visitor analytics",
-                        "Performance monitoring and troubleshooting",
-                        "User experience optimisation",
-                        "Campaign effectiveness measurement",
-                        "Fraud detection and security monitoring"
-                    ]
-                },
-
-                {
-                    type: "text",
-                    value:
-                        "Most web browsers allow you to manage, disable, or delete cookies through browser settings. However, disabling certain cookies may impact the functionality and performance of the Website."
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "Where required by applicable law, we obtain your consent before placing non-essential cookies or similar tracking technologies on your device. You may withdraw or modify your cookie preferences at any time."
-                }
             ]
         },
 
@@ -592,44 +510,47 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "Our Website and Services are not directed toward, intended for, or knowingly offered to children under the age of 18 years, unless otherwise expressly stated for a specific service."
+                        "Our Website and Services are intended for business use by individuals who are at least 18 years of age. We do not knowingly collect personal data from children. Where our Clients build applications intended for use by minors (e.g., EdTech platforms), the Client, as Data Controller, is responsible for ensuring compliance with applicable children's privacy laws (such as COPPA in the US, or relevant provisions under DPDPA and GDPR), and we will implement technical measures as instructed by the Client's DPA to support such compliance."
                 },
-
+                {
+                    type: "title",
+                    value: "YOUR RIGHTS"
+                },
+                {
+                    type: "subTitle",
+                    value: "RIGHTS UNDER DPDPA (INDIA)"
+                },
+                {
+                    type: "bullet",
+                    items: [
+                        "Right to access information about personal data processed and the processing activities",
+                        "Right to correction and completion of inaccurate or incomplete personal data",
+                        "Right to erasure of personal data once the purpose of processing is no longer being served",
+                        "Right to grievance redressal through our designated Grievance Officer",
+                        "Right to nominate another individual to exercise rights on your behalf in case of death or incapacity"
+                    ]
+                },
+                {
+                    type: "subTitle",
+                    value: "RIGHTS UNDER GDPR (EEA DATA SUBJECTS)"
+                },
+                {
+                    type: "bullet",
+                    items: [
+                        "Right of access to your personal data (Article 15)",
+                        "Right to rectification of inaccurate data (Article 16)",
+                        "Right to erasure / 'right to be forgotten' (Article 17)",
+                        "Right to restriction of processing (Article 18)",
+                        "Right to data portability (Article 20)",
+                        "Right to object to processing based on legitimate interests or for direct marketing (Article 21)",
+                        "Right to withdraw consent at any time, without affecting the lawfulness of processing prior to withdrawal",
+                        "Right to lodge a complaint with your local Data Protection Authority"
+                    ]
+                },
                 {
                     type: "text",
                     value:
-                        "We do not knowingly collect, use, process, or disclose personal information from children without appropriate parental or legal guardian consent where required by applicable law."
-                },
-
-                {
-                    type: "group",
-                    title: "IF INFORMATION IS COLLECTED INADVERTENTLY",
-
-                    items: [
-                        "We will take reasonable steps to verify and investigate the situation",
-                        "Personal information will be deleted or anonymised where legally permissible",
-                        "Further processing will cease unless a lawful basis exists",
-                        "Appropriate corrective measures will be implemented to prevent recurrence"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "PARENT OR GUARDIAN RIGHTS",
-
-                    items: [
-                        "Request access to a child's personal information",
-                        "Request correction of inaccurate information",
-                        "Request deletion of personal information",
-                        "Withdraw previously provided consent where applicable",
-                        "Raise privacy concerns regarding a child's information"
-                    ]
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "If you believe that a child has provided personal information to us without appropriate consent, please contact us immediately. We will take prompt steps to investigate and remove such information where required by applicable law."
+                        "To exercise any of the above rights, please submit a verifiable request via the contact details in Section 16. We will respond within the timeframe required under applicable law (30 days under DPDPA/GDPR in most cases; 45 days under CCPA, extendable as permitted)."
                 }
 
             ]
@@ -637,84 +558,27 @@ export const privacyPolicyData = {
         ,
 
         {
-            id: "rights",
-            title: "YOUR RIGHTS",
-
-            content: [
-                {
-                    type: "bullet",
-                    items: [
-                        "Right to Access",
-                        "Right to Rectification",
-                        "Right to Erasure",
-                        "Right to Restrict Processing",
-                        "Right to Data Portability",
-                        "Right to Object",
-                        "Right to Withdraw Consent"
-                    ]
-                }
-            ]
-        },
-
-        {
             id: "automated",
-            title: "AUTOMATED DECISION-MAKING AND PROFILING",
+            title: "AUTOMATED DECISION - MAKING AND PROFILING",
 
             content: [
                 {
                     type: "text",
                     value:
-                        "We do not currently engage in automated decision-making, profiling, or similar processing activities that produce legal effects or similarly significant consequences for individuals without meaningful human involvement."
+                        "We do not use your personal data for automated decision-making that produces legal or similarly significant effects concerning you, except where explicitly required for fraud detection in payment processing, which is conducted by our payment gateway partners under their own published policies."
                 },
-
-                {
-                    type: "text",
-                    value:
-                        "Any automated tools, analytics systems, machine learning technologies, or artificial intelligence solutions used by us are intended to support operational efficiency, security monitoring, fraud prevention, performance analysis, service improvement, and customer support activities."
-                },
-
-                {
-                    type: "group",
-                    title: "HOW AUTOMATED SYSTEMS MAY BE USED",
-
-                    items: [
-                        "Website performance and usage analytics",
-                        "Security monitoring and threat detection",
-                        "Fraud prevention and risk assessment",
-                        "Service optimisation and operational reporting",
-                        "Marketing and campaign performance measurement"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "NO SIGNIFICANT AUTOMATED DECISIONS",
-
-                    items: [
-                        "No automated decisions are made regarding eligibility for services",
-                        "No automated decisions are made regarding employment opportunities",
-                        "No automated decisions are made that create legal obligations for individuals",
-                        "Human review remains involved in material business decisions affecting individuals"
-                    ]
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "If we introduce automated decision-making or profiling activities that materially affect individuals in the future, we will implement appropriate safeguards, update this Privacy Policy, and provide any notices or rights required under applicable data protection laws."
-                }
 
             ]
         },
 
         {
             id: "third-party",
-            title: "THIRD-PARTY LINKS AND INTEGRATIONS",
+            title: "THIRD - PARTY LINKS AND INTEGRATIONS",
             content: [
                 {
                     type: "text",
                     value:
-                        "Our Website may contain links to third-party services."
+                        "Our Website and the applications we develop for Clients may contain links to, or integrations with, third-party websites, plugins, or services (e.g., social media login, payment gateways, map services). We are not responsible for the privacy practices of such third parties, and we encourage you to review their respective privacy policies."
                 }
             ]
         },
@@ -727,55 +591,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "Where required by applicable data protection laws, we conduct Data Protection Impact Assessments (DPIAs) or similar privacy risk assessments before undertaking processing activities that are likely to result in a high risk to the rights and freedoms of individuals."
+                        "For engagements involving high-risk processing activities (e.g., large-scale processing of sensitive categories of data, systematic monitoring, or new technologies), we support Clients, where contracted to do so, in conducting Data Protection Impact Assessments (DPIAs) as required under GDPR Article 35 or equivalent provisions under applicable law."
                 },
-
-                {
-                    type: "text",
-                    value:
-                        "DPIAs help us identify, evaluate, document, and mitigate privacy risks associated with new technologies, products, services, systems, business processes, or large-scale processing activities involving personal information."
-                },
-
-                {
-                    type: "group",
-                    title: "WHEN DPIAS MAY BE CONDUCTED",
-
-                    items: [
-                        "Implementation of new technologies or platforms",
-                        "Large-scale processing of personal information",
-                        "Processing of sensitive or special category data",
-                        "Cross-border data transfer arrangements",
-                        "Automated processing or profiling activities",
-                        "High-risk client projects involving personal data"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "DPIA ASSESSMENT AREAS",
-
-                    items: [
-                        "Nature, scope, context, and purpose of processing",
-                        "Potential impact on individual privacy rights",
-                        "Technical and organisational security measures",
-                        "Data minimisation and retention requirements",
-                        "Third-party and vendor involvement",
-                        "Risk mitigation and compliance controls"
-                    ]
-                },
-
-                {
-                    type: "text",
-                    value:
-                        "Where a DPIA identifies residual high risks that cannot be adequately mitigated, we will consider additional safeguards, modify the processing activity, or seek guidance from relevant supervisory authorities where required by law."
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "DPIAs form part of our broader privacy governance framework and support our commitment to accountability, privacy-by-design principles, and compliance with applicable data protection regulations."
-                }
-
             ]
         },
 
@@ -786,26 +603,20 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "We may update this Policy periodically."
+                        "We may update this Policy periodically to reflect changes in our practices, technologies, legal, or regulatory requirements. Material changes will be notified via email (where we hold your contact details) or through a prominent notice on our Website at least 15 days prior to the change taking effect, except where immediate change is required by law. The 'Last Updated' date at the top of this Policy reflects the most recent revision."
                 }
             ]
         },
 
         {
             id: "grievance",
-            title: "GRIEVANCE OFFICER / DATA PROTECTION CONTACT",
+            title: "GRIEVANCE OFFICER / DATA PROTECTION CONTENT",
 
             content: [
                 {
                     type: "text",
                     value:
-                        "If you have any questions, concerns, complaints, or requests regarding this Privacy Policy, our privacy practices, or the processing of your personal information, you may contact our Grievance Officer or Data Protection Contact using the details provided below."
-                },
-
-                {
-                    type: "text",
-                    value:
-                        "We are committed to addressing privacy-related enquiries promptly, fairly, and in accordance with applicable data protection laws."
+                        "In accordance with the Information Technology Act, 2000, the DPDPA, and as a contact point for GDPR/CCPA-related queries, we have designated the following Grievance Officer / Data Protection Contact:"
                 },
 
                 {
@@ -813,39 +624,17 @@ export const privacyPolicyData = {
                     title: "CONTACT DETAILS",
 
                     items: [
-                        "Designation: Grievance Officer / Data Protection Officer",
+                        "Name: Shivanshi Gupta",
+                        "Designation: HR Manager",
                         "Organisation: AthraTech Pvt. Ltd.",
-                        "Email: privacy@athratech.com",
-                        "Support Email: support@athratech.com",
-                        "Phone: +91 XXXXX XXXXX",
-                        "Website: www.athratech.com"
+                        "Address: Tower B1, Unit No. - 470B Spaze Itech Park, Sector 49, Sohna Road, Gurugram, Haryana 122018",
+                        "Email: office.athratech@gmail.com",
+                        "Phone: +91 9266688954",
+                        "Website: www.athratech.com",
+                        "Response Timeline: We aim to acknowledge grievances within 48 hours and resolve them within 30 days, in accordance with applicable law."
+
                     ]
                 },
-
-                {
-                    type: "group",
-                    title: "HOW WE HANDLE REQUESTS",
-
-                    items: [
-                        "Review and acknowledge privacy-related requests",
-                        "Verify identity where necessary",
-                        "Investigate complaints and concerns",
-                        "Provide updates regarding request status",
-                        "Respond within timelines required by applicable law"
-                    ]
-                },
-
-                {
-                    type: "text",
-                    value:
-                        "Where applicable under the DPDPA, GDPR, CCPA/CPRA, or other relevant privacy laws, individuals may also have the right to lodge a complaint with a competent regulatory or supervisory authority if they are dissatisfied with our response."
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "When submitting a privacy request, please provide sufficient information to help us verify your identity and understand the nature of your request. This enables us to process and respond efficiently while protecting personal information from unauthorised disclosure."
-                }
 
             ]
         },
@@ -858,52 +647,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "If you are located in the European Economic Area (EEA), United Kingdom, or another jurisdiction that grants similar privacy rights, you have the right to lodge a complaint with a competent data protection supervisory authority if you believe that the processing of your personal information violates applicable data protection laws."
+                        "If you are based in the EEA and believe your data protection rights have been violated, you have the right to lodge a complaint with your local Data Protection Authority, in addition to contacting us directly."
                 },
-
-                {
-                    type: "text",
-                    value:
-                        "We encourage individuals to contact us first so that we have an opportunity to investigate and address concerns directly. However, you are not required to do so before contacting a supervisory authority."
-                },
-
-                {
-                    type: "group",
-                    title: "YOUR RIGHTS",
-
-                    items: [
-                        "Submit a complaint to your local supervisory authority",
-                        "Seek information regarding how your personal information is processed",
-                        "Request investigation of potential privacy law violations",
-                        "Exercise rights granted under applicable data protection regulations",
-                        "Pursue available legal remedies where permitted by law"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "EEA SUPERVISORY AUTHORITIES",
-
-                    items: [
-                        "Complaints may generally be submitted to the authority in your country of residence",
-                        "Complaints may be submitted where you work",
-                        "Complaints may be submitted where an alleged infringement occurred",
-                        "Additional guidance is available through official data protection authority websites"
-                    ]
-                },
-
-                {
-                    type: "text",
-                    value:
-                        "The exercise of this right does not affect any other administrative, judicial, contractual, or statutory remedies that may be available to you under applicable law."
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "We remain committed to cooperating with relevant supervisory authorities and responding promptly to lawful enquiries, investigations, and regulatory requests relating to the protection of personal information."
-                }
-
             ]
         },
 
@@ -915,47 +660,8 @@ export const privacyPolicyData = {
                 {
                     type: "text",
                     value:
-                        "This Privacy Policy shall be governed by, construed, and enforced in accordance with the laws of India, without regard to its conflict of law principles."
+                        "This Privacy Policy shall be governed by and interpreted in accordance with the laws of India, without prejudice to any mandatory rights you may have under the GDPR (if you are located in the EEA) or the CCPA/CPRA (if you are a California resident), which shall apply concurrently to the extent legally required."
                 },
-
-
-                {
-                    type: "text",
-                    value:
-                        "Any dispute, claim, controversy, or proceeding arising out of or relating to this Privacy Policy, the processing of personal information, or the use of our Website and Services shall be subject to the applicable laws and regulations of India."
-                },
-
-                {
-                    type: "group",
-                    title: "JURISDICTION",
-
-                    items: [
-                        "Courts located in India shall have jurisdiction over matters relating to this Privacy Policy",
-                        "Parties agree to submit to the jurisdiction of competent courts where required by applicable law",
-                        "Nothing in this Policy limits statutory rights available under mandatory consumer or data protection laws",
-                        "Applicable regulatory authorities may exercise powers granted under relevant legislation"
-                    ]
-                },
-
-                {
-                    type: "group",
-                    title: "INTERNATIONAL USERS",
-
-                    items: [
-                        "Users accessing the Website from outside India acknowledge that personal information may be processed in India and other jurisdictions",
-                        "Applicable local privacy rights remain subject to relevant data protection laws",
-                        "Cross-border processing will be conducted in accordance with applicable legal requirements and safeguards",
-                        "International transfers are governed by the provisions set out in this Privacy Policy"
-                    ]
-                },
-
-                {
-                    type: "important",
-                    value:
-                        "If any provision of this Privacy Policy is found to be invalid, unlawful, or unenforceable under applicable law, the remaining provisions shall remain in full force and effect to the maximum extent permitted by law."
-                }
-
-
             ]
         }
 
