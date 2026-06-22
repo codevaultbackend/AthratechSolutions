@@ -221,56 +221,42 @@ export default function PrivacyPolicyPage() {
                   return (
                     <div
                       key={index}
-                      className="overflow-hidden rounded-2xl border border-[#E5E7EB]"
+                      className="overflow-x-auto"
                     >
-                      <div className="overflow-x-auto">
-                        <table className="w-full min-w-[700px] border-collapse">
-                          <thead>
-                            <tr className="bg-[#F3F4F6]">
-                              {block.headers.map(
-                                (header) => (
-                                  <th
-                                    key={header}
-                                    className="border border-[#E5E7EB] px-4 py-4 text-left text-sm font-semibold uppercase text-black"
-                                  >
-                                    {header}
-                                  </th>
-                                )
-                              )}
-                            </tr>
-                          </thead>
+                      <table className="w-full min-w-[1000px] border-collapse border-[3px] border-black">
+                        <thead>
+                          <tr className="bg-[#0B3D67]">
+                            {block.headers.map((header, headerIndex) => (
+                              <th
+                                key={header}
+                                className={`border-[3px] border-black px-6 py-4 text-center font-bold text-white font-serif text-[22px] leading-tight ${headerIndex === 0
+                                    ? "w-[34%]"
+                                    : headerIndex === 1
+                                      ? "w-[23%]"
+                                      : "w-[43%]"
+                                  }`}
+                              >
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
 
-                          <tbody>
-                            {block.rows.map(
-                              (
-                                row,
-                                rowIndex
-                              ) => (
-                                <tr
-                                  key={rowIndex}
-                                  className="odd:bg-white even:bg-[#FAFAFA]"
+                        <tbody>
+                          {block.rows.map((row, rowIndex) => (
+                            <tr key={rowIndex} className="bg-white">
+                              {row.map((cell, cellIndex) => (
+                                <td
+                                  key={cellIndex}
+                                  className="border-[3px] border-black px-5 py-4 align-middle font-serif text-[18px] leading-[1.25] text-black"
                                 >
-                                  {row.map(
-                                    (
-                                      cell,
-                                      cellIndex
-                                    ) => (
-                                      <td
-                                        key={
-                                          cellIndex
-                                        }
-                                        className="border border-[#E5E7EB] px-4 py-4 text-sm leading-[170%] text-[#404040]"
-                                      >
-                                        {cell}
-                                      </td>
-                                    )
-                                  )}
-                                </tr>
-                              )
-                            )}
-                          </tbody>
-                        </table>
-                      </div>
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   );
 
