@@ -168,7 +168,7 @@ export default function Footer() {
             <div className="flex gap-3">
               <Link href='/privacy-policy' className="text-[16px] font-[400] leading-[150%] text-[#FFFFFF] tracking-[-2%]">
                 <p>Privacy Policy</p></Link>
-              <Link href='/privacy-policy' className="text-[16px] font-[400] leading-[150%] text-[#FFFFFF] tracking-[-2%]">
+              <Link href='/terms-conditions' className="text-[16px] font-[400] leading-[150%] text-[#FFFFFF] tracking-[-2%]">
                 <p>Terms Of Use</p></Link>
 
             </div>
