@@ -147,7 +147,7 @@ export default function Footer() {
                 <a href="tel:+91 92666 88954"><li className="!mb-4">+91 92666 88954</li></a>
                 <a href="mailto:office.athratech@gmail.com"><li className="!mb-4">office.athratech@gmail.com</li></a>
                 <li className="!mb-4">
-                  Address : Unit No. 244 A, Tower B2, Spaze I tech park, Tower, Sohna - Gurgaon Rd, Block S, Sector 49, Gurugram, Haryana 122018
+                  Address : Office - Tower B2, Unit 244A, Spaze ITech Park, Sector 49, Gurugram, Haryana - 122018
                 </li>
               </ul>
             </div>
