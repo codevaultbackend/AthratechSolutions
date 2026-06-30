@@ -42,6 +42,12 @@ export default function ContactForm() {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", "generate_lead", {
           form_name: "Contact Form",
+          lead_source: "Website",
+        });
+
+        window.gtag("event", "qualify_lead", {
+          form_name: "Contact Form",
+          lead_source: "Website",
         });
       }
 
