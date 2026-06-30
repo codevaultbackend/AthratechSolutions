@@ -39,6 +39,12 @@ export default function ContactForm() {
         throw new Error("Failed to submit");
       }
 
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "generate_lead", {
+          form_name: "Contact Form",
+        });
+      }
+
       setSuccess(true);
       form.reset();
     } catch {
@@ -50,10 +56,10 @@ export default function ContactForm() {
 
   return (
     <section className="relative overflow-hidden  ">
-      
+
 
       <div className="relative mx-auto max-w-[1080px] px-4 sm:px-6 lg:px-8 z-[999]">
-       
+
 
         {/* header */}
         <div className="mx-auto max-w-[760px] max-[600px]:mt-[42px] pb-10 pt-10 text-center md:pb-14 md:pt-[84px]">
@@ -132,21 +138,21 @@ export default function ContactForm() {
 
             <div className="md:col-span-2 flex justify-stretch md:justify-end">
               <div className="md:col-span-2 flex justify-center ">
-              <button
-                type="submit"
-                disabled={loading}
-                className="group relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] disabled:opacity-60 ml-auto"
-              >
-                <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
-                  <div className="flex items-center gap-4 px-8 py-3 rounded-full bg-black border border-white/80 text-white text-[15px] font-[500]">
-                    {loading ? "Sending..." : "Continue"}
-                    <span className="transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="group relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595] disabled:opacity-60 ml-auto"
+                >
+                  <div className="rounded-full p-[6px] bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]">
+                    <div className="flex items-center gap-4 px-8 py-3 rounded-full bg-black border border-white/80 text-white text-[15px] font-[500]">
+                      {loading ? "Sending..." : "Continue"}
+                      <span className="transition-transform group-hover:translate-x-1">
+                        →
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </button>
-            </div>
+                </button>
+              </div>
             </div>
 
             <div className="md:col-span-2 min-h-[22px]">

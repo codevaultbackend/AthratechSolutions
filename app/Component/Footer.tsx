@@ -150,6 +150,7 @@ export default function Footer() {
                   Address : Office - Tower B2, Unit 244A, Spaze ITech Park, Sector 49, Gurugram, Haryana - 122018
                 </li>
               </ul>
+              
             </div>
           </div>
           <div className="social-icons flex gap-3.5 mb-4  justify-end">
