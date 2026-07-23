@@ -4,123 +4,432 @@ import LetsTallk from "@/app/svgIcons/LetsTallk";
 import Image from "next/image";
 import Link from "next/link";
 
+const avatars = [
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg",
+  "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg",
+];
+
 export default function LetsTeamUp() {
   return (
     <section
       id="contactcta"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FFFFFF] px-4 sm:px-6 md:px-8
-                 max-md:min-h-[70vh] max-sm:min-h-[620px]"
+      className="
+        bg-white
+        px-4
+        py-8
+
+        sm:px-6
+        md:px-8
+
+        lg:px-8
+        lg:py-5
+      "
     >
-      {/* Arch only */}
+      {/* Main Container */}
+
       <div
-        className="pointer-events-none absolute left-1/2 top-[15%] z-0 -translate-x-1/2
-                   max-lg:top-[12%]
-                   max-md:top-[10%]
-                   max-[768px]:!top-[20%]"
+        className="
+          relative
+          mx-auto
+          mb-16
+
+          flex
+          w-full
+          max-w-[1280px]
+          flex-col
+          items-center
+          justify-center
+          overflow-hidden
+
+          rounded-[28px]
+
+          bg-[#09031B]
+
+          px-6
+          py-14
+
+          sm:rounded-[36px]
+          sm:px-8
+          sm:py-16
+
+          md:rounded-[44px]
+          md:px-10
+          md:py-20
+
+          lg:mb-[100px]
+          lg:rounded-[56px]
+          lg:px-12
+          lg:pt-[109px]
+          lg:pb-[109px]
+        "
       >
-        <Image
-          src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775198143/Ellipse_13_1_jmp0p0.png"
-          alt="arch background"
-          width={559}
-          height={980}
-          priority
-          className="h-auto max-w-none opacity-100
-                     w-[980px]
-                     min-[1400px]:w-[559px]
-                     max-[1280px]:w-[559px]
-                     max-[1024px]:w-[559px]
-                     max-md:w-[460px]
-                     max-sm:w-[360px]
-                     max-[380px]:w-[300px]"
-        />
-      </div>
+        {/* Background Glow */}
 
-      {/* Main Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[720px] px-2 text-center sm:px-4">
-        <p
-          className="mb-[22px] text-[30px] font-[500] text-[#000000]
-                     max-lg:text-[24px]
-                     max-md:mb-[18px] max-md:text-[16px]
-                     max-sm:mb-[14px] max-sm:text-[12px] max-sm:leading-[150%]"
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            opacity-70
+          "
         >
-          WHY SLEEP ON A GREAT IDEA?
-        </p>
+          <div
+            className="
+              absolute
+              left-1/2
+              top-[28%]
 
-        <h2
-          className="mb-[44px] font-bricolage text-[88px] font-[600] leading-[100%] text-[#000000]
-                     max-xl:text-[76px]
-                     max-lg:text-[60px]
-                     max-md:mb-[28px] max-md:text-[42px]
-                     max-sm:mb-[22px] max-sm:text-[30px]
-                     max-[380px]:text-[26px]"
+              h-[260px]
+              w-[260px]
+
+              -translate-x-1/2
+
+              rounded-full
+
+              bg-[radial-gradient(circle,rgba(131,104,255,.16)_0%,rgba(131,104,255,.05)_45%,transparent_75%)]
+
+              blur-3xl
+
+              sm:h-[340px]
+              sm:w-[340px]
+
+              md:h-[420px]
+              md:w-[420px]
+
+              lg:h-[520px]
+              lg:w-[520px]
+            "
+          />
+        </div>
+
+        {/* Content */}
+
+        <div
+          className="
+            relative
+            z-10
+            mx-auto
+
+            flex
+            w-full
+            max-w-[1180px]
+            flex-col
+            items-center
+
+            text-center
+          "
         >
-          Let’s Team up!
-        </h2>
+          {/* Heading */}
 
-        <Link href="/contact-us" className="inline-block w-full max-w-fit max-md:w-full">
-          <div className="flex items-center justify-center pb-[34px] max-md:pb-[16px]">
-            <div
-              className="relative rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)] shadow-[0px_4px_14.6px_0_#959595]
-                         max-md:w-full"
+          <h2
+            className="
+              font-bricolage
+              font-normal
+
+              leading-[1.08]
+
+              tracking-[-0.04em]
+
+              text-white
+
+              text-[30px]
+
+              sm:text-[38px]
+
+              md:text-[42px]
+
+              lg:text-[48px]
+
+              xl:text-[48px]
+            "
+          >
+            Unlimited{" "}
+
+            <span
+              className="
+                bg-[linear-gradient(180deg,#BCA9FF_0%,#8A77D9_100%)]
+
+                bg-clip-text
+
+                text-transparent
+              "
             >
-              <div className="rounded-full bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)] p-[6px] shadow-[0_0_40px_rgba(180,180,180,0.5)]">
+              high-quality
+            </span>{" "}
+
+            design support
+
+            <br />
+
+            with quick and consistent delivery.
+          </h2>
+
+          {/* Subtitle */}
+
+          <p
+            className="
+              mt-6
+
+              max-w-[920px]
+
+              font-bricolage
+              font-normal
+
+              leading-[1.35]
+
+              text-[#F0F0F0]
+
+              text-[16px]
+
+              sm:text-[18px]
+
+              md:text-[22px]
+
+              lg:mt-[56px]
+              lg:text-[28px]
+            "
+          >
+            at an affordable rate to help scale your business
+          </p>
+
+          {/* CTA */}
+
+          <div
+            className="
+              mt-10
+
+              flex
+              w-full
+              flex-col
+              items-center
+
+              lg:mt-16
+            "
+          >
+            <Link
+              href="/contact-us"
+              className="inline-flex w-full justify-center sm:w-auto"
+            >
+                            <div className="flex items-center justify-center">
+
+                {/* OUTER GLOW */}
+
                 <div
-                  className="flex items-center justify-center gap-4 rounded-full border-[0.5px] border-[#fff] bg-black px-4 py-2 shadow-inner
-                             max-md:h-[56px] max-md:w-full max-md:gap-3 max-md:px-4 max-md:py-1.5
-                             max-sm:h-[52px] max-sm:px-3"
+                  className="
+                    relative
+
+                    rounded-full
+
+                    bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.35),_rgba(180,180,180,0.25),_rgba(120,120,120,0.15),_transparent_70%)]
+
+                    shadow-[0_4px_14.6px_rgba(149,149,149,.9)]
+
+                    transition-all
+                    duration-300
+
+                    hover:scale-[1.03]
+                  "
                 >
-                  <h3 className="text-[16px] font-[500] tracking-tight text-white max-md:text-[14px] max-sm:text-[13px]">
-                    Let’s Talk
-                  </h3>
-                 
 
-                  <div className="flex shrink-0 -space-x-3 max-sm:-space-x-2.5">
-                    {["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg"].map(
-                      (src, i) => (
-                        <div
-                          key={i}
-                          className="h-[26px] w-[26px] overflow-hidden rounded-full
-                                     max-md:h-[22px] max-md:w-[22px]
-                                     max-sm:h-[20px] max-sm:w-[20px]"
-                        >
-                          <Image
-                            src={src}
-                            alt={`avatar-${i + 1}`}
-                            width={56}
-                            height={56}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                      )
-                    )}
+                  {/* Metallic Ring */}
+
+                  <div
+                    className="
+                      rounded-full
+
+                      bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)]
+
+                      p-[5px]
+
+                      sm:p-[6px]
+
+                      shadow-[0_0_40px_rgba(180,180,180,.45)]
+                    "
+                  >
+
+                    {/* Button */}
+
+                    <div
+                      className="
+                        flex
+                        items-center
+                        justify-center
+
+                        gap-3
+                        sm:gap-4
+
+                        rounded-full
+
+                        border
+                        border-white/80
+
+                        bg-black
+
+                        px-5
+                        py-3
+
+                        sm:px-6
+
+                        lg:px-8
+                        lg:py-[14px]
+
+                        shadow-inner
+                      "
+                    >
+
+                      <h3
+                        className="
+                          whitespace-nowrap
+
+                          font-medium
+
+                          tracking-tight
+
+                          text-white
+
+                          text-[15px]
+
+                          sm:text-[16px]
+                        "
+                      >
+                        Contact Us
+                      </h3>
+
+                      {/* Avatar Stack */}
+
+                      <div
+                        className="
+                          flex
+
+                          -space-x-2
+
+                          sm:-space-x-3
+                        "
+                      >
+
+                        {avatars.map((src, index) => (
+
+                          <div
+                            key={index}
+                            className="
+                              h-7
+                              w-7
+
+                              overflow-hidden
+
+                              rounded-full
+
+                              border-2
+                              border-black
+
+                              sm:h-[28px]
+                              sm:w-[28px]
+
+                              lg:h-[30px]
+                              lg:w-[30px]
+                            "
+                          >
+
+                            <Image
+                              src={src}
+                              alt={`Team member ${index + 1}`}
+                              width={60}
+                              height={60}
+                              className="h-full w-full object-cover"
+                            />
+
+                          </div>
+
+                        ))}
+
+                      </div>
+
+                    </div>
+
                   </div>
+
                 </div>
+
               </div>
-            </div>
+
+            </Link>
+
+            {/* Reply Text */}
+
+            <p
+              className="
+                mt-5
+
+                text-center
+
+                font-bricolage
+
+                font-normal
+
+                text-[#ADADAD]
+
+                text-[14px]
+
+                sm:text-[15px]
+
+                lg:mt-6
+
+                lg:text-[20px]
+              "
+            >
+              We'll reply in 24 hrs
+            </p>
+
           </div>
-        </Link>
+
+        </div>
+                {/* Bottom Glow */}
+
+        <div
+          aria-hidden
+          className="
+            pointer-events-none
+
+            absolute
+
+            left-1/2
+
+            bottom-[-100px]
+
+            h-[260px]
+            w-[340px]
+
+            -translate-x-1/2
+
+            rounded-full
+
+            bg-[radial-gradient(circle,rgba(120,98,255,0.10)_0%,transparent_72%)]
+
+            blur-[80px]
+
+            sm:bottom-[-130px]
+
+            sm:h-[320px]
+            sm:w-[520px]
+
+            md:bottom-[-170px]
+
+            md:h-[420px]
+            md:w-[700px]
+
+            lg:bottom-[-220px]
+
+            lg:h-[520px]
+            lg:w-[900px]
+
+            lg:blur-[120px]
+          "
+        />
+
       </div>
 
-      {/* Right Side Note - desktop only exactly like existing */}
-      <div className="absolute left-[64%] top-[55%] hidden lg:block">
-        <p className="font-calligraffitti text-[24px] font-[400] italic leading-relaxed text-[#888888]">
-          We get booked fast 🚀 <br />
-          contact us now
-        </p>
-
-        <LetsTallk className="!absolute !left-[-57%] top-[60px]" />
-      </div>
-
-      {/* Mobile / tablet note */}
-      <div className="absolute bottom-[8%] left-1/2 z-10 -translate-x-1/2 px-4 text-center lg:hidden">
-        <p
-          className="font-calligraffitti text-[18px] italic leading-relaxed text-[#888888]
-                     max-sm:text-[15px]"
-        >
-          We get booked fast 🚀 <br />
-          contact us now
-        </p>
-      </div>
     </section>
   );
 }

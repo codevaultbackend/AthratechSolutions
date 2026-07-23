@@ -24,7 +24,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   }
 
   return (
-    <main className="w-full bg-[#fff]">
+    <main className="w-full bg-[#fff] mt-[86px]">
       <section className="px-4 pb-0 pt-[40px] sm:px-6 md:pt-[60px]">
         <div className="mx-auto max-w-[900px]">
           <div className="mx-auto w-full max-w-[783px]">

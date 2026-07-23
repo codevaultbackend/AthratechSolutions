@@ -14,6 +14,8 @@ module.exports = {
 
         calligraffitti: ["var(--font-calligraffitti)"],
 
+        geist: ["var(--font-geist)"],
+
         sfpro: [
           "-apple-system",
           "BlinkMacSystemFont",

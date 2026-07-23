@@ -11,6 +11,7 @@ import Process from "@/app/Component/Process";
 import Uiux from "@/app/Component/landing/Uiux";
 import Execution from "@/app/Component/mobile/Execution";
 import MobilePhoneShowcase from "@/app/Component/mobile/MobilePhoneShowcase";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -182,9 +183,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="w-full px-4 pb-[70px] pt-[40px] sm:px-6 sm:pb-[90px] lg:px-8 lg:pb-[120px]">
+      <section className="w-full ">
         <div className="mx-auto w-full max-w-[1440px]">
-          <MarketingCTA />
+          <ContactCTA image="/mockup.jpg" />
         </div>
       </section>
     </main>

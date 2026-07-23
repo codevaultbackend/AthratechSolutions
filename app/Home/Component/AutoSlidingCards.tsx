@@ -45,9 +45,7 @@ function GalleryCard({
         ${outerRoundedClass}
         bg-[#EEECEA]
         shadow-[1px_2px_4px_2px_#7573730F]
-        w-[124px] h-[124px]
-        sm:w-[150px] sm:h-[150px]
-        md:w-[180px] md:h-[180px]
+        max-[768px]:w-[200px] max-[768px]:h-[200px]
         lg:w-[230px] lg:h-[230px]
         xl:w-[260px] xl:h-[260px]
         !p-[20px]
@@ -187,7 +185,7 @@ export default function HeroGalleryCarousel() {
     <section className="relative w-full overflow-hidden">
       <div className="border-[#FFFFFF] border-t-2 h-[32px] bg-[#EEECEA] shadow-[inset_-2px_6px_5px_-3px_gray] border-b-[3px] border-[#fff]" />
 
-      <div className="mx-auto w-full max-w-[1600px] border-[#EEECEA]">
+      <div className="mx-auto w-full max-w-[1600px]  border-[#EEECEA]">
         <div className="rounded-[10px] bg-white">
           <div className="space-y-3 sm:space-y-4 md:space-y-5">
             <SlidingRow items={topRow} direction="left" rowType="top" />

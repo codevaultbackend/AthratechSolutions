@@ -21,6 +21,7 @@ import Option from "@/app/svgIcons/Option";
 import Sidebarsimple from "@/app/svgIcons/Sidebarsimple";
 import Browser from "@/app/svgIcons/Browser";
 import Shapes from "@/app/svgIcons/Shapes";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -363,7 +364,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <MarketingCTA />
+      <ContactCTA image="/mockup5.jpg" /> 
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { Inter, Calligraffitti, Bricolage_Grotesque } from "next/font/google";
+import { Inter, Calligraffitti, Bricolage_Grotesque, Geist, } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -17,4 +17,9 @@ export const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
   display: "swap",
+});
+
+export const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
 });

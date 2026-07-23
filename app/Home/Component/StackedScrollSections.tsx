@@ -23,8 +23,8 @@ export default function StackedProjects() {
   }, []);
 
   return (
-    <section className="bg-[#EFEFEF] pt-[120px] pb-[48px] sm:pt-[130px] sm:pb-[64px] md:pt-[140px] md:pb-[80px] lg:pt-[170px] lg:pb-[120px]">
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-6 lg:px-6">
+    <section className="bg-[#EFEFEF] pt-[120px] pb-[48px] sm:pt-[130px] max-[768px]:pb-[0px] md:pt-[140px] md:pb-[80px] lg:pt-[170px] lg:pb-[120px]">
+      <div className="mx-auto w-full max-w-[1280px] ">
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
           <p
@@ -69,7 +69,7 @@ export default function StackedProjects() {
                   }}
                 >
                   <div
-                    className={`grid min-h-[420px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
+                    className={`grid min-h-[459px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
                         ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
                         : ""
                       }`}

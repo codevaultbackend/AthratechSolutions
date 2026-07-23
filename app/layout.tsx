@@ -7,7 +7,12 @@ import "./globals.css";
 import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
 
-import { inter, calligraffitti, bricolage } from "./fonts";
+import {
+  inter,
+  calligraffitti,
+  bricolage,
+  geist,
+} from "./fonts";
 
 
 import { BlogsProvider } from "./context/BlogsContext";
@@ -52,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable}`}
+      className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable}`}
     >
       <head>
 
@@ -71,7 +76,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="relative bg-white antialiased">
+      <body className="relative bg-white antialiased mt-[88px]">
          <Script
           id="google-tag-manager"
           strategy="afterInteractive"

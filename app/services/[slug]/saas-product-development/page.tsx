@@ -6,6 +6,7 @@ import CommonHeroHeader from "@/app/Component/CommonHeroHead";
 import VideoSection from "@/app/Home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import Uiux from "@/app/Component/landing/Uiux";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -157,7 +158,7 @@ export default function HomePage() {
       <Strategy StrategyData={strategyData} />
       <SaasOfferings />
       <Uiux slug="frontend-backend-development" />
-      <MarketingCTA />
+      <ContactCTA image="/mockup6.jpg" />
     </main>
   );
 }

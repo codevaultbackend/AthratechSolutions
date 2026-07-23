@@ -16,6 +16,7 @@ import Sidebarsimple from "@/app/svgIcons/Sidebarsimple";
 import Option from "@/app/svgIcons/Option";
 import CodaLogo from "@/app/svgIcons/CodaLogo";
 import LifeBouy from "@/app/svgIcons/LifeBouy";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -259,9 +260,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="w-full px-4 pb-[70px] pt-[40px] sm:px-6 sm:pb-[90px] lg:px-8 lg:pb-[120px]">
+      <section className="w-full">
         <div className="mx-auto w-full max-w-[1440px]">
-          <MarketingCTA />
+          <ContactCTA image="/mockup7.jpg" />
         </div>
       </section>
     </main>

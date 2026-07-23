@@ -6,6 +6,7 @@ import MarketingOfferings from "../../Component/marketing/MarketingOfferings";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
 import Strategy from "@/app/Component/Strategy";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 
 export const metadata: Metadata = {
@@ -86,8 +87,8 @@ export default function HomePage() {
   const strategyData = {
     heading: (
       <>
-      App UI/UX that <span className="text-[#999999]">Grows</span> your business
-        
+        App UI/UX that <span className="text-[#999999]">Grows</span> your business
+
       </>
     ),
     para: "We design applications from the ground up, starting with understanding your users, product vision, andfunctionality requirements. From structuring flows to crafting final UI, every step is focused on clarity,usability, and performance.We ensure that your application not only looks modern but also solves real problems efficiently, keeping users engaged at every stage.",
@@ -105,7 +106,7 @@ export default function HomePage() {
       <MarketingHero />
       <Strategy StrategyData={strategyData} />
       <MarketingOfferings />
-      <MarketingCTA />
+      <ContactCTA image="/mockup8.jpg" />
 
     </main>
   );

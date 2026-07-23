@@ -13,6 +13,7 @@ import ConversionPerformance from "@/app/Component/landing/ConversionPerformance
 import Banner2 from "@/app/Component/landing/Banner2";
 import Uiux from "@/app/Component/landing/Uiux";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   title: "Landing Page & Website Design | Athratech",
@@ -156,7 +157,7 @@ export default function HomePage() {
         <Banner2 />
         <Process content={landingProcessData} />
         <Uiux />
-        <MarketingCTA />
+        <ContactCTA image="/mockup10.jpg" />
     </main>
   );
 }

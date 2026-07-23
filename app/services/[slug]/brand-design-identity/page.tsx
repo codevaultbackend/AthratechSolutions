@@ -12,6 +12,7 @@ import Platforms from "@/app/Component/Platforms";
 import ProcessBanner from "@/app/Component/brand/ProcessBanner";
 import Process from "@/app/Component/Process";
 import Uiux from "@/app/Component/landing/Uiux";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -180,7 +181,7 @@ export default function BrandPage() {
       <Uiux />
 
 
-      <MarketingCTA />
+      <ContactCTA image="/mockup9.jpg" />
     </main>
   );
 }

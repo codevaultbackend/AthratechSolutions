@@ -10,6 +10,7 @@ import VideoSection from "@/app/Home/Component/VideoSection";
 import Strategy from "@/app/Component/Strategy";
 import Platforms from "@/app/Component/Platforms";
 import Uiux from "@/app/Component/landing/Uiux";
+import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -127,7 +128,7 @@ export default function HomePage() {
       <DesignSystemDeviceShowcase />
       <Strategy StrategyData={strategy2Data} />
       <Uiux />
-      <MarketingCTA />
+      <ContactCTA image="/mockup9.jpg" />
     </main>
   );
 }

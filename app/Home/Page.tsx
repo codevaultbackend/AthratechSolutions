@@ -12,18 +12,20 @@ import BlogsSection from "./Component/BlogsSection";
 import WhyAthraTechSection from "./Component/WhyAthraTechSection";
 import WhatWeExcelAtSection from "./Component/Whatweexcel";
 import StepsSection from "./Component/StepsSection";
+import Hero from "../Component/Hero/Hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F5F7FB]">
-      <HeroSection />
+      <Hero />
+      {/* <HeroSection /> */}
       <AutoSlidingCards />
       <VideoSection />
-      <WhyAthraTechSection />
+      {/* <WhyAthraTechSection /> */}
       <WhatWeExcelAtSection/>
       <StepsSection />
       <StackedProjectsSection />
-      <ContactCTA />
+      <ContactCTA image="/contact.png" />
       <ImpactSection />
       <BlogsSection />
       <TestimonialsSection />
