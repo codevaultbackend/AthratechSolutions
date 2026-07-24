@@ -8,82 +8,153 @@ export default function HeroImage() {
       id="hero-image-wrapper"
       className="
         relative
+        isolate
         flex
-        h-full
-        w-full
         items-end
         justify-center
+        w-full
+        max-[768px]:min-h-fit
+        min-h-[650px]
+        lg:min-h-[850px]
         overflow-visible
       "
     >
-      {/* =========================
-          Background Glow
-      ========================== */}
 
+
+      
+
+
+      {/* =====================================
+          Back Cloud Layer
+      ===================================== */}
       <div
         className="
-          pointer-events-none
           absolute
+
           left-1/2
-          top-[75%]
-          -z-10
-          h-[900px]
-          w-[900px]
+          bottom-[-60px]
+
           -translate-x-1/2
-          -translate-y-1/2
-          rounded-full
-          bg-[#F8F8F8]
-          opacity-90
-          blur-[140px]
+
+          z-[666666]
+
+          pointer-events-none
+
+          w-full
+
+          max-w-[140vw]
         "
-      />
+      >
+        <Image
+          src="/herocloude.png"
+          alt="cloud background"
 
-      {/* =========================
+          width={1400}
+          height={350}
+
+          className="
+            w-full
+            h-auto
+            object-contain
+            select-none
+          "
+        />
+      </div>
+
+
+
+      {/* =====================================
+          Front Cloud Layer
+      ===================================== */}
+      <div
+        className="
+          absolute
+
+          left-1/2
+          bottom-[-40px]
+
+          -translate-x-1/2
+
+          z-[9999999]
+
+          pointer-events-none
+
+          w-[100%]
+
+        "
+      >
+        <Image
+          src="/cloude2.png"
+          alt="cloud foreground"
+
+          width={1200}
+          height={300}
+
+          className="
+            w-full
+            h-auto
+            object-contain
+            select-none
+          "
+        />
+      </div>
+
+
+
+      {/* =====================================
           Hero Image
-      ========================== */}
-
+      ===================================== */}
       <div
         id="hero-image"
         className="
           relative
+
+          z-20
+
           flex
-          w-full
           items-end
           justify-center
+
           will-change-transform
+
           transform-gpu
         "
       >
+
         <Image
           src="/Hero.png"
           alt="Hero"
-          width={1024}
-          height={833}
+
           priority
+
           draggable={false}
+
+          width={1400}
+          height={1100}
+
           sizes="
-            (min-width: 1800px) 1024px,
-            (min-width: 1536px) 900px,
-            (min-width: 1280px) 820px,
-            (min-width: 1024px) 720px,
+            (min-width:2560px) 1000px,
+            (min-width:1920px) 900px,
+            (min-width:1536px) 820px,
+            (min-width:1280px) 720px,
             90vw
           "
+
           className="
-block
-w-full
-h-auto
+            block
 
-max-w-[560px]
-md:max-w-[660px]
-lg:max-w-[760px]
-xl:max-w-[920px]
-2xl:max-w-[1080px]
-min-[2200px]:max-w-[1200px]
+            w-[clamp(520px,42vw,900px)]
 
-object-contain
-"
+            h-auto
+
+            object-contain
+
+            select-none
+          "
         />
+
       </div>
+
     </div>
   );
 }

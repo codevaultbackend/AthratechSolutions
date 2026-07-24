@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#EFEFEF]  px-4 h-fit  pb-[225px] pt-[165px] max-[768px]:pt-[45px] max-[768px]:pb-[125px] " id="Faq">
+    <section className=" scroll-mt-32 px-4 h-fit  pb-[225px] pt-[165px] max-[768px]:pt-[45px] max-[768px]:px-0 max-[768px]:pb-[125px] " id="faq">
       {/* ===== Header ===== */}
       <div className="mb-12 text-center sm:mb-14 lg:mb-16">
         <p
@@ -51,7 +51,7 @@ export default function FAQSection() {
       </div>
 
       {/* ===== FAQ Grid ===== */}
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
         {faqs.map((item, index) => {
           const isOpen = open === index;
 

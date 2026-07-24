@@ -80,7 +80,7 @@ function AppDevMockVisual({ type }: { type: string }) {
 export default function AppDevFeatureGrid() {
   return (
     <section className="bg-[#f7f7f7] py-16 sm:py-24">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-8">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
             <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-black/35">

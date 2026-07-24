@@ -167,8 +167,8 @@ export default function BlogsSection() {
     const sideBlogs = blogsContent.slice(1);
 
     return (
-        <section className="w-full bg-[#EFEFEF] px-4 py-20 sm:px-6 md:px-8 lg:px-10 lg:py-28">
-            <div className="mx-auto max-w-[1280px]">
+        <section className="w-full  px-4 py-20 max-[768px]:px-0 md:px-8 lg:px-10 lg:py-28">
+            <div className="mx-auto max-w-[1440px]">
                 <div className="mb-12 text-center sm:mb-14 lg:mb-16">
                     <p
                         className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"

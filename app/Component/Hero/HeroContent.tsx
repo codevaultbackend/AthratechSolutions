@@ -1,73 +1,56 @@
 "use client";
 
-import HeroButtons from "./HeroButtons";
-
 export default function HeroContent() {
   return (
     <div
       className="
-      flex
-      w-full
-      flex-col
+        flex
+        w-full
+        flex-col
+        items-start
       "
     >
-
+      {/* ========================= */}
       {/* Heading */}
+      {/* ========================= */}
+
       <h1
         className="
           w-full
-          max-w-[600px]
+          max-w-[clamp(600px,42vw,900px)]
 
           font-bricolage
-          font-[500]
+          font-medium
 
-          text-[38px]
-          leading-[1.08]
-          tracking-[-2%]
-
-          sm:text-[44px]
-          md:text-[50px]
-          lg:text-[53px]
+          text-[clamp(42px,4vw,82px)]
+          leading-[0.98]
+          tracking-[-0.05em]
 
           text-[#878787]
         "
       >
-
-        <span className="text-black">
+        <span className="text-[#202020]">
           Building{" "}
         </span>
 
-        <span className="text-[#878787]">
-          Digital Experiences
+        <span>
+          Digital Experiences{" "}
         </span>
 
-
-   
-
-
-        <span className="text-black max-[768px]:mx-[6px] px-[10px]">
-          That <br/> Move
+        <span className="text-[#202020]">
+          That
+          <br />
+          Move{" "}
         </span>
 
-
-
-
-        <span className="text-black">
+        <span className="text-[#202020]">
           Your Brand Forward
         </span>
-
       </h1>
 
+      {/* Desktop spacing */}
 
-      {/* Responsive spacing */}
-      <div
-        className="
-        h-8
-        sm:h-10
-        md:h-14
-        max-[768px]:hidden
-        "
-      />
+      <div className="hidden h-12 xl:block 2xl:h-16" />
     </div>
   );
 }

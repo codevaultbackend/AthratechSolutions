@@ -120,7 +120,7 @@ bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
             </div>
 
             {/* ===== Timeline ===== */}
-            <div className="relative max-w-[1200px] mx-auto z-10">
+            <div className="relative max-w-[1440px] mx-auto z-10">
 
 
 

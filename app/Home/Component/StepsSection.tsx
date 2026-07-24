@@ -25,9 +25,7 @@ export default function StepsSection() {
                     mx-auto
                     w-full
                     max-w-[1440px]
-                    px-4
-                    sm:px-6
-                    lg:px-8
+                   
                 "
             >
 
@@ -140,7 +138,7 @@ export default function StepsSection() {
                         hidden
                         h-[390px]
                         w-full
-                        max-w-[1288px]
+                        max-w-[1440px]
                         md:block
 
                         lg:mt-[86px]

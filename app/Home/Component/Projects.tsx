@@ -79,7 +79,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="relative bg-[#EFEFEF] py-[120px]" id="projects">
+    <section className="relative  py-[120px]" id="projects">
 
       {/* ===== Heading ===== */}
 
@@ -97,7 +97,7 @@ export default function Projects() {
 
       {/* ===== Grid ===== */}
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px] px-4">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px] px-4">
         {projects.map((item, index) => (
           <a
             key={index}

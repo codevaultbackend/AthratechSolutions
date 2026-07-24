@@ -30,7 +30,7 @@ export default function Performance() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto max-w-[1280px] px-0 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-0 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-[28px]">
             <Image
               src="/landing/laptop-dark.png"

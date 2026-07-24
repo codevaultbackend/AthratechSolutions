@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden  bg-[#EFEFEF] ">
+    <footer className="relative overflow-hidden   ">
 
       <div className="relative overflow-hidden rounded-tl-[28px] rounded-tr-[28px]  z-[9]">
 

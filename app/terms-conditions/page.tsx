@@ -72,7 +72,7 @@ export default function TermsAndConditions() {
 
   return (
     <main className="bg-white">
-      <div className="max-w-[1200px] mx-auto px-5 lg:px-8 py-12 lg:py-20">
+      <div className="max-w-[1440px] mx-auto px-5 lg:px-8 py-12 lg:py-20">
         {/* HEADER */}
         <header className="mb-14">
           <h1 className="text-[56px] font-bricolage font-semibold uppercase tracking-[-0.02em] text-black">

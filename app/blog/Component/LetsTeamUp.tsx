@@ -136,7 +136,7 @@ export default function LetsTeamUp() {
 
               text-[30px]
 
-              sm:text-[38px]
+              max-[768px]:text-[28px]
 
               md:text-[42px]
 

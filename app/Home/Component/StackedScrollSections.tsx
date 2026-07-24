@@ -23,8 +23,8 @@ export default function StackedProjects() {
   }, []);
 
   return (
-    <section className="bg-[#EFEFEF] pt-[120px] pb-[48px] sm:pt-[130px] max-[768px]:pb-[0px] md:pt-[140px] md:pb-[80px] lg:pt-[170px] lg:pb-[120px]">
-      <div className="mx-auto w-full max-w-[1280px] ">
+    <section className=" pt-[120px] pb-[48px] max-[768px]:pt-[50px] max-[768px]:pb-[0px] md:pt-[140px] max-[768px]:pb-[50px] lg:pt-[170px] lg:pb-[120px]">
+      <div className="mx-auto w-full max-w-[1440px] ">
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
           <p
@@ -69,7 +69,7 @@ export default function StackedProjects() {
                   }}
                 >
                   <div
-                    className={`grid min-h-[459px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
+                    className={`grid min-h-[529px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
                         ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
                         : ""
                       }`}
@@ -117,24 +117,24 @@ export default function StackedProjects() {
                     {/* Content */}
                     <div className="flex flex-col justify-between px-5 py-6 sm:px-7 sm:py-7 md:px-10 md:py-9">
                       <div>
-                        <h3 className="mb-4 line-clamp-1 font-bricolage text-[38px] font-[500] leading-[100%] text-[#000000] md:text-[30px]">
+                        <h3 className="mb-4 line-clamp-1 font-bricolage text-[36px] font-[500] leading-[100%] text-[#000000] ">
                           {project.title}
                         </h3>
 
-                        <p className="mb-4  max-w-[460px] text-[14px] font-[400] leading-[100%] text-[#797979] md:text-[15px]">
+                        <p className="mb-4  max-w-[460px] text-[18px] font-[400] leading-[100%] text-[#797979] ">
                           {project.description}
                         </p>
 
-                        <div className="space-y-3">
+                        <div className="space-y-5">
                           {project.details.map((detail, detailIndex) => (
                             <div
                               key={`${project.slug}-${detailIndex}`}
                               className=""
                             >
-                              <h4 className="text-[14px] font-[500] tracking-[0] text-[#0E0E0E]">
+                              <h4 className="text-[16px] font-[500] tracking-[0] text-[#0E0E0E]">
                                 {detail.title}
                               </h4>
-                              <p className=" max-w-[460px] text-[14px] font-[400] leading-[100%] text-[#797979] ">
+                              <p className=" max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] ">
                                 {detail.description}
                               </p>
                             </div>

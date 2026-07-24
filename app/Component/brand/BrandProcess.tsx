@@ -20,7 +20,7 @@ const steps = [
 export default function BrandProcess() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-0 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-0 sm:px-6 lg:px-8">
         <div className="relative min-h-[560px] overflow-hidden rounded-[4px] bg-[#eee8e4] px-5 py-14 sm:rounded-[14px] sm:px-10 lg:px-16">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(85,25,65,0.35),transparent_30%),radial-gradient(circle_at_78%_14%,rgba(255,255,255,0.9),transparent_28%),linear-gradient(135deg,#764967,#f6f1ed)]" />
 

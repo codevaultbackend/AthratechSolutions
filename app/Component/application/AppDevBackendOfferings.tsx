@@ -28,7 +28,7 @@ const backendOfferings = [
 export default function AppDevBackendOfferings() {
   return (
     <section className="bg-white py-10 sm:py-16">
-      <div className="mx-auto max-w-[1280px] px-0 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-0 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-[8px] bg-[#1c0b27] px-5 py-16 text-white sm:rounded-[16px] sm:px-10 sm:py-20 lg:px-16">
           <div className="mx-auto max-w-[760px] text-center">
             <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.22em] text-white/40">

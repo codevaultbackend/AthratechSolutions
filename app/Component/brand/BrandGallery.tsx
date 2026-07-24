@@ -64,7 +64,7 @@ const galleryCards: GalleryCard[] = [
 export default function BrandGallery() {
   return (
     <section className="bg-white py-10 sm:py-14 lg:py-[113px]">
-      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-0">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-0">
 
         <div
           className="

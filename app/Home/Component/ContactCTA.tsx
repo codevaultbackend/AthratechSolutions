@@ -19,9 +19,7 @@ export default function ContactCTA({
                 flex
                 items-center
                 justify-center
-                bg-[#EDEDED]
                 overflow-hidden
-                px-4
                 py-10
             "
         >
@@ -29,7 +27,7 @@ export default function ContactCTA({
             <div
                 className="
                     w-full
-                    max-w-[1200px]
+                    max-w-[1440px]
                     lg:h-[470px]
                     border
                     border-[#CDCDCD]

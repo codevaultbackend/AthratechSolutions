@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
 
   };
 
-  return (<main className="bg-white"> <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-8 py-12 md:py-20"> <div className="max-w-[1140px]">
+  return (<main className="bg-white"> <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-8 py-12 md:py-20"> <div className="max-w-[1140px]">
     {/* Header */} <header> <h1 className="font-bricolage text-[34px] sm:text-[42px] md:text-[52px] font-semibold uppercase tracking-[-0.02em] leading-[110%] text-black">
       {privacyPolicyData.title} </h1>
 

@@ -1,7 +1,7 @@
 export default function MobileDarkShowcase() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-0 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-0 sm:px-6 lg:px-8">
         <div className="relative min-h-[430px] overflow-hidden rounded-[8px] bg-[#9a9a9a] px-5 py-16 sm:min-h-[620px] sm:rounded-[16px]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.9),transparent_22%),linear-gradient(135deg,#d9d9d9,#767676)]" />
 

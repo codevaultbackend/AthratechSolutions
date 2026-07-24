@@ -48,7 +48,7 @@ const approach = [
 export default function BrandApproach() {
   return (
     <section className="bg-white py-14 sm:py-20 lg:py-28">
-      <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-0">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-0">
 
         {/* Heading */}
         <div className="text-center">

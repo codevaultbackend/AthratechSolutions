@@ -72,7 +72,7 @@ const initialsBg = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#EFEFEF] px-4 py-[70px] sm:px-6 md:px-8 lg:py-[90px] xl:px-0">
+    <section className=" px-4 py-[70px] max-[768px]:px-0 md:px-8 lg:py-[90px] xl:px-0 scroll-mt-32" id="testimonial">
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
           <p
@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
             className="mx-auto max-w-[320px] text-[28px] font-normal leading-[1.05] tracking-[-0.04em] text-black sm:max-w-[500px] sm:text-[36px] md:max-w-[650px] md:text-[42px] lg:max-w-[760px] lg:text-[48px]"
             style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
           >
-            Client testimonials on web <br /> design, development.
+            Where Great Ideas Meet <br /> Great Results
           </h2>
 
           

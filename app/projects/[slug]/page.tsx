@@ -166,7 +166,7 @@ function FastResponseHero({
     caseStudy: ProjectCaseStudy;
 }) {
     return (
-        <SectionContainer narrow className="pt-[28px] pb-[14px] sm:pt-[40px] lg:pt-[54px] lg:pb-[18px]">
+        <SectionContainer narrow className="pt-[28px] max-[768px]:mt-[120px] pb-[14px] sm:pt-[40px] lg:pt-[54px] lg:pb-[18px]">
             <div className="max-w-[870px]">
                 <p className="max-w-[880px] text-[20px] font-normal leading-[110%] tracking-[-0.005em] text-[#0E0E0E] sm:text-[32px] lg:text-[42px]">
                     {splitHighlightedText(
@@ -339,10 +339,10 @@ function MarkDayHero({
     const platform = caseStudy.meta?.[1];
 
     return (
-        <SectionContainer className="pt-[20px] pb-[12px] sm:pt-[30px] lg:pt-[46px] lg:pb-[18px]">
+        <SectionContainer className="max-[768px]:mt-[130px] pt-[20px] pb-[12px] sm:pt-[30px] lg:pt-[46px] lg:pb-[18px]">
             {/* top description */}
             <div className="max-w-[920px]">
-                <p className="max-w-[1073px]  font-normal leading-[100%] tracking-[0%] text-[#0E0E0E] max-[768px]:text-[32px] lg:text-[50px]">
+                <p className="max-w-[1073px]  font-normal leading-[100%] tracking-[0%] text-[#0E0E0E] max-[768px]:text-[28px] lg:text-[50px]">
                     {splitHighlightedText(
                         caseStudy.heroDescription,
                         caseStudy.heroHighlight

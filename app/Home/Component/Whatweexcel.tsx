@@ -13,8 +13,8 @@ export default function WhatWeExcelAtSection() {
   if (!mainService || !wideService || !smallService) return null;
 
   return (
-    <section className="w-full bg-white px-4 py-[55px] sm:px-6 md:px-8 lg:px-10 ">
-      <div className="mx-auto w-full max-w-[1390px]">
+    <section className="w-full bg-white  py-[55px]  ">
+      <div className="mx-auto w-full max-w-[1440px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
           <p
@@ -57,6 +57,7 @@ export default function WhatWeExcelAtSection() {
               lg:min-h-[560px]
             "
           >
+            <div className="overlay bg-[#000] absolute z-10 h-full w-full opacity-50"/>
             <Image
               src={mainService.image}
               alt={mainService.alt}
@@ -70,7 +71,7 @@ export default function WhatWeExcelAtSection() {
 
             <div
               className="
-                absolute left-5 top-5 z-10
+                absolute left-5 top-5 z-20
                 max-w-[85%]
                 sm:left-8 sm:top-8
                 lg:left-10 lg:top-10
@@ -90,6 +91,7 @@ export default function WhatWeExcelAtSection() {
               <p
                 className="
                   mt-3 max-w-[420px]
+                  
                   font-inter text-[14px]
                   leading-[1.5] text-[#DCDCDC]
                   sm:text-[16px]
@@ -124,7 +126,7 @@ export default function WhatWeExcelAtSection() {
                   xs:h-[170px] xs:w-[300px]
                       width: 100%;
     max-width: 100%;
-    max-[768px]:!h-[85%]
+    max-[768px]:!h-[114%]
     height: 60%;
     top: -2px;
     left: 132px;
@@ -153,7 +155,7 @@ export default function WhatWeExcelAtSection() {
               {/* MOBILE OVERLAY */}
               <div
                 className="
-                  absolute inset-x-0 top-0 z-[2] h-[60%]
+                  absolute inset-x-0 top-0 z-[2] h-[100%]
                   bg-gradient-to-b from-[#4E641F]/0 via-[#4E641F]/10 to-[#4E641F]
                   lg:hidden
                 "

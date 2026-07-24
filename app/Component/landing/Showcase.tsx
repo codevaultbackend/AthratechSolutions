@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Showcase() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1280px] px-0 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-0 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[26px] bg-[#f8f2ff] px-5 py-12 sm:grid-cols-2 sm:gap-12 sm:px-10 lg:px-16">
           <article className="flex min-h-[310px] flex-col justify-between">
             <div>

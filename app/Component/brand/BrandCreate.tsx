@@ -9,7 +9,7 @@ const createItems = [
 export default function BrandCreate() {
   return (
     <section className="bg-white py-12 sm:py-20">
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-8">
         <h2 className="text-[32px] font-semibold leading-[1] tracking-[-0.08em] sm:text-[48px]">
           What we Create
         </h2>
