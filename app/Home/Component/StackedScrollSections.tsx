@@ -23,7 +23,7 @@ export default function StackedProjects() {
   }, []);
 
   return (
-    <section className=" pt-[120px] pb-[48px] max-[768px]:pt-[50px] max-[768px]:pb-[0px] md:pt-[140px] max-[768px]:pb-[50px] lg:pt-[170px] lg:pb-[120px]">
+    <section className=" pt-[120px] pb-[48px] max-[768px]:pt-[50px] max-[768px]:pb-[0px] md:pt-[140px] max-[768px]:pb-[50px] lg:pt-[170px] lg:pb-[120px]" id="projects">
       <div className="mx-auto w-full max-w-[1440px] ">
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">

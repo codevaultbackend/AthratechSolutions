@@ -104,10 +104,10 @@ export default function MobileSidebar({ open, onClose }: Props) {
           {[
             { label: "Home", slug: "/" },
             { label: "Services", slug: "/services" },
-            { label: "Testimonials", slug: "#testimonial" },
+            { label: "Testimonials", slug: "/#testimonial" },
             { label: "Blogs", slug: "/blog" },
             { label: "Projects", slug: "/projects" },
-            { label: "FAQ", slug: "#Faq" },
+            { label: "FAQ", slug: "/#faq" },
           ].map((item, index) => (
             <button
               key={index}
@@ -129,7 +129,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
         {/* CTA */}
         <div
           className="
-            mb-[70px]
+            mb-[0px]
             flex flex-col items-center gap-6
             pb-[48px]
             md:mb-0
@@ -138,6 +138,40 @@ export default function MobileSidebar({ open, onClose }: Props) {
           <p className="font-bricolage text-[16px] font-[400] text-white">
             Have a project for us?
           </p>
+
+          <a
+            href="tel:+919266688954"
+            className="block"
+          >
+            <div
+              className="
+                    flex
+                    items-center
+                    justify-center
+
+                    rounded-full
+
+                    bg-white
+
+                    font-medium
+
+                    text-black
+
+                    transition-all
+                    duration-700
+                    ease-[cubic-bezier(.22,1,.36,1)]
+
+                    hover:scale-[1.03]
+                          mt-2
+                          h-[48px]
+                          px-8
+                          text-[15px] "
+                   
+            >
+              Book A Call
+            </div>
+          </a>
+
 
           <Link href="/contact-us" onClick={onClose}>
             <div

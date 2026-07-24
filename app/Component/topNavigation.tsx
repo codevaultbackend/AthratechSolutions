@@ -99,8 +99,8 @@ export default function TopNavigation() {
 
               ${
                 compactHero
-                  ? "justify-start px-7"
-                  : "justify-between px-8"
+                  ? "justify-start px-3 pl-5"
+                  : "justify-between px-4 pl-6"
               }
             `}
           >

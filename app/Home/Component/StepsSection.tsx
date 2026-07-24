@@ -18,6 +18,7 @@ export default function StepsSection() {
                 pb-[120px]
                 lg:pb-[224px]
             "
+            id="steps"
         >
 
             <div
