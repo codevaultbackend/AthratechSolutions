@@ -130,6 +130,7 @@ export default function MobileSidebar({ open, onClose }: Props) {
         <div
           className="
             mb-[0px]
+            max-[768px]:mb-[40px]
             flex flex-col items-center gap-6
             pb-[48px]
             md:mb-0
