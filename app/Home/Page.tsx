@@ -18,42 +18,42 @@ import Hero from "../Component/Hero/Hero";
 import { useEffect } from "react";
 
 export default function Home() {
-  
+
   useEffect(() => {
-  if (!window.location.hash) return;
+    if (!window.location.hash) return;
 
-  const id = window.location.hash.substring(1);
+    const id = window.location.hash.substring(1);
 
-  const scrollToSection = () => {
-    const element = document.getElementById(id);
+    const scrollToSection = () => {
+      const element = document.getElementById(id);
 
-    if (!element) return false;
+      if (!element) return false;
 
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
 
-    // Remove #testimonial or #faq from the URL
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname
-    );
+      // Remove #testimonial or #faq from the URL
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname
+      );
 
-    return true;
-  };
+      return true;
+    };
 
-  if (scrollToSection()) return;
+    if (scrollToSection()) return;
 
-  const interval = setInterval(() => {
-    if (scrollToSection()) {
-      clearInterval(interval);
-    }
-  }, 100);
+    const interval = setInterval(() => {
+      if (scrollToSection()) {
+        clearInterval(interval);
+      }
+    }, 100);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <main className="min-h-screen ">
       <Hero />
@@ -63,7 +63,7 @@ export default function Home() {
       <div className="px-[80px] max-[768px]:px-[16px]">
 
         {/* <WhyAthraTechSection /> */}
-        <WhatWeExcelAtSection />
+        <WhatWeExcelAtSection removeHorizontalPadding />
         <StepsSection />
         <StackedProjectsSection />
         <ContactCTA image="/contact.png" />

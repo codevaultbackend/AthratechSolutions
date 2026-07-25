@@ -30,7 +30,7 @@ export default function HeroImage() {
       <div
         className="
           absolute
-
+          max-[768px]:hidden
           left-1/2
           bottom-[-120px]
 
@@ -69,6 +69,7 @@ export default function HeroImage() {
       <div
         className="
           absolute
+          max-[768px]:hidden
 
           left-1/2
           bottom-[-100px]

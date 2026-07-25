@@ -5,7 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/app/context/services";
 
-export default function WhatWeExcelAtSection() {
+type WhatWeExcelAtSectionProps = {
+  removeHorizontalPadding?: boolean;
+};
+
+export default function WhatWeExcelAtSection({
+  removeHorizontalPadding = false,
+}: WhatWeExcelAtSectionProps) {
   const mainService = services.find((service) => service.cardType === "large");
   const wideService = services.find((service) => service.cardType === "wide");
   const smallService = services.find((service) => service.cardType === "small");
@@ -13,7 +19,10 @@ export default function WhatWeExcelAtSection() {
   if (!mainService || !wideService || !smallService) return null;
 
   return (
-    <section className="w-full bg-white  py-[55px] px-20 max-[768px]:px-4 ">
+    <section
+      className={`w-full bg-white py-[55px] ${removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
+        }`}
+    >
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
@@ -57,7 +66,7 @@ export default function WhatWeExcelAtSection() {
               lg:min-h-[560px]
             "
           >
-           
+
             <Image
               src={mainService.image}
               alt={mainService.alt}
