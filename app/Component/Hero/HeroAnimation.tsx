@@ -22,7 +22,17 @@ export default function HeroAnimation() {
       // Responsive Values
       // --------------------------------------------------
 
-      const riseDistance = vh * 0.34;
+      const centerImage = document.querySelector("#centerImage") as HTMLElement;
+
+      const imageRect = centerImage.getBoundingClientRect();
+
+      const imageCenter = imageRect.top + imageRect.height / 2;
+
+      const viewportCenter = vh / 2;
+
+      const topGap = 90; 
+
+      const riseDistance = imageCenter - viewportCenter - topGap;
 
       const moveLeft = Math.min(vw * 0.18, 430);
 
@@ -30,14 +40,21 @@ export default function HeroAnimation() {
 
       const secondContentEnter = Math.min(vw * 0.28, 520);
 
-      let centerScale = 0.92;
+      let initialScale = 2.85;
+      let centerScale = 1.5;
 
       if (vw >= 2560) {
-        centerScale = 0.78;
+        initialScale = 1.35;
+        centerScale = 1;
       } else if (vw >= 1920) {
-        centerScale = 0.84;
+        initialScale = 1.35;
+        centerScale = 0.9;
       } else if (vw >= 1536) {
-        centerScale = 0.88;
+        initialScale = 1.35;
+        centerScale = 0.9;
+      } else {
+        initialScale = 1.35;
+        centerScale = 0.9;
       }
 
       // --------------------------------------------------
@@ -52,7 +69,7 @@ export default function HeroAnimation() {
       });
 
       gsap.set("#hero-image", {
-        scale: 1,
+        scale: initialScale,
         transformOrigin: "center center",
         force3D: true,
       });
@@ -86,11 +103,11 @@ export default function HeroAnimation() {
 
           start: "top top",
 
-          end: () => "+=" + window.innerHeight * 2.5,
+          end: () => "+=" + window.innerHeight * 0.8,
 
           pin: "#hero-pin",
 
-          scrub: 0.45,
+          scrub: 0.1,
 
           anticipatePin: 1,
 
@@ -108,7 +125,7 @@ export default function HeroAnimation() {
         {
           x: -textExit,
           opacity: 0,
-          duration: 1,
+          duration: 0.5,
         },
         0
       );
@@ -118,7 +135,7 @@ export default function HeroAnimation() {
         {
           x: textExit,
           opacity: 0,
-          duration: 1,
+          duration: 0.5,
         },
         0
       );
@@ -132,9 +149,7 @@ export default function HeroAnimation() {
         "#centerImage",
         {
           y: -riseDistance,
-
-          duration: 1.6,
-
+          duration: 0.7,
           ease: "power3.out",
         },
         0
@@ -145,14 +160,14 @@ export default function HeroAnimation() {
         {
           scale: centerScale,
 
-          duration: 1.6,
+          duration: 0.7,
 
           ease: "power2.out",
         },
         "<"
       );
 
-            // ==================================================
+      // ==================================================
       // PHASE 3
       // Pause briefly after image reaches center
       // ==================================================
@@ -160,7 +175,7 @@ export default function HeroAnimation() {
       tl.to(
         {},
         {
-          duration: 0.25,
+          duration: 0.6,
         }
       );
 
@@ -173,7 +188,7 @@ export default function HeroAnimation() {
         "#centerImage",
         {
           x: -moveLeft,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power2.inOut",
         }
       );
@@ -182,7 +197,7 @@ export default function HeroAnimation() {
         "#hero-image",
         {
           scale: centerScale + 0.05,
-          duration: 1.2,
+          duration: 0.8,
           ease: "power2.inOut",
         },
         "<"
@@ -198,7 +213,7 @@ export default function HeroAnimation() {
         {
           x: 0,
           opacity: 1,
-          duration: 1,
+          duration: 0.8,
           ease: "power3.out",
         },
         "-=0.7"

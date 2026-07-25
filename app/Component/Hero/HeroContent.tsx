@@ -14,39 +14,29 @@ export default function HeroContent() {
       {/* Heading */}
       {/* ========================= */}
 
-      <h1
-        className="
-          w-full
-          max-w-[clamp(600px,42vw,900px)]
+     <h1
+  className="
+    max-w-[960px]
+    font-bricolage
+    font-medium
+    text-[clamp(48px,3vw,76px)]
+    leading-[0.98]
+    tracking-[-0.05em]
+    text-[#878787]
+  "
+>
+  <span className="text-[#202020]">Building </span>
+  <span>Digital</span>
 
-          font-bricolage
-          font-medium
+  <br />
 
-          text-[clamp(42px,4vw,82px)]
-          leading-[0.98]
-          tracking-[-0.05em]
+  <span>Experiences </span>
+  <span className="text-[#202020]">That Move</span>
 
-          text-[#878787]
-        "
-      >
-        <span className="text-[#202020]">
-          Building{" "}
-        </span>
+  <br />
 
-        <span>
-          Digital Experiences{" "}
-        </span>
-
-        <span className="text-[#202020]">
-          That
-          <br />
-          Move{" "}
-        </span>
-
-        <span className="text-[#202020]">
-          Your Brand Forward
-        </span>
-      </h1>
+  <span className="text-[#202020]">Your Brand Forward</span>
+</h1>
 
       {/* Desktop spacing */}
 

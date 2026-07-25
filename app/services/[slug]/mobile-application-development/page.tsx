@@ -353,18 +353,18 @@ export default function HomePage() {
       {/* UI UX */}
       <section
         className="
-          pb-[80px]
+          pb-[40px]
 
-          sm:pb-[110px]
+          max-[768px]:pb-[50px]
 
-          lg:pb-[150px]
+          lg:pb-[80px]
         "
       >
         <Uiux slug="frontend-backend-development" />
       </section>
 
       {/* CTA */}
-      <ContactCTA image="/mockup5.jpg" /> 
+      <ContactCTA image="/contactMockup.jpeg" /> 
     </main>
   );
 }

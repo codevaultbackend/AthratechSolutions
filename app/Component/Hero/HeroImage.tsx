@@ -32,7 +32,7 @@ export default function HeroImage() {
           absolute
 
           left-1/2
-          bottom-[-60px]
+          bottom-[-120px]
 
           -translate-x-1/2
 
@@ -71,7 +71,7 @@ export default function HeroImage() {
           absolute
 
           left-1/2
-          bottom-[-40px]
+          bottom-[-100px]
 
           -translate-x-1/2
 
@@ -143,7 +143,7 @@ export default function HeroImage() {
           className="
             block
 
-            w-[clamp(520px,42vw,900px)]
+            w-[clamp(720px,55vw,1300px)]
 
             h-auto
 

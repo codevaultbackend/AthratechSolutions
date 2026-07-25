@@ -8,17 +8,15 @@ export default function HeroSecondContent() {
     <div
       id="second-content"
       className="
-        absolute
-        right-[72px]
-        top-1/2
-        z-30
-        w-[520px]
-        -translate-y-1/2
-
-        opacity-0
-
-        will-change-transform
-      "
+  absolute
+  right-[clamp(20px,6vw,120px)]
+  top-1/2
+  z-30
+  w-[560px]
+  -translate-y-1/2
+  opacity-0
+  will-change-transform
+"
     >
       <h2
         className="

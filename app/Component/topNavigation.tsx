@@ -99,7 +99,7 @@ export default function TopNavigation() {
 
               ${
                 compactHero
-                  ? "justify-start px-3 pl-5"
+                  ? "justify-start px-4 pl-5"
                   : "justify-between px-4 pl-6"
               }
             `}

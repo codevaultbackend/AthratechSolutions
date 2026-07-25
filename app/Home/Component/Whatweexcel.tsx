@@ -13,7 +13,7 @@ export default function WhatWeExcelAtSection() {
   if (!mainService || !wideService || !smallService) return null;
 
   return (
-    <section className="w-full bg-white  py-[55px]  ">
+    <section className="w-full bg-white  py-[55px] lg:px-20  ">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
@@ -57,7 +57,7 @@ export default function WhatWeExcelAtSection() {
               lg:min-h-[560px]
             "
           >
-            <div className="overlay bg-[#000] absolute z-10 h-full w-full opacity-50"/>
+           
             <Image
               src={mainService.image}
               alt={mainService.alt}
@@ -65,7 +65,7 @@ export default function WhatWeExcelAtSection() {
               priority
               className="
                 object-cover transition duration-700 ease-out
-                group-hover:scale-[1.035] max-[768px]:!h-[67%] max-[768px]:!left-0 max-[768px]:!top-auto bottom-0
+                group-hover:scale-[1.035] max-[768px]:!h-[67%]  max-[768px]:!left-0 max-[768px]:!top-auto bottom-0
               "
             />
 
@@ -173,12 +173,12 @@ export default function WhatWeExcelAtSection() {
               {/* CONTENT */}
               <div
                 className="
-                  absolute bottom-7 left-5 right-5 z-[4]
+                  absolute !bottom-4 left-5 right-5 z-[4] top-0
 
                   max-[768px]:!bottom-auto max-[768px]:!top-[40px] max-[768px]:!w-[40%] max-[768px]:!right-[30px] max-[768px]:!left-auto
 
-                  lg:left-auto lg:right-10 lg:top-1/2
-                  lg:w-[48%] lg:-translate-y-1/2
+                  lg:left-auto lg:right-10 lg:!top-[15%]
+                  lg:w-[48%] 
                 "
               >
                 <h3

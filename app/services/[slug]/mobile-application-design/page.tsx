@@ -185,7 +185,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="w-full ">
         <div className="mx-auto w-full max-w-[1440px]">
-          <ContactCTA image="/mockup.jpg" />
+          <ContactCTA image="/contactMockup3.jpeg" />
         </div>
       </section>
     </main>

@@ -157,7 +157,7 @@ export default function HomePage() {
         <Banner2 />
         <Process content={landingProcessData} />
         <Uiux />
-        <ContactCTA image="/mockup10.jpg" />
+        <ContactCTA image="/contactMockup2.jpeg" />
     </main>
   );
 }

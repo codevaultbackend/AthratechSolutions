@@ -20,7 +20,7 @@ const stats: StatItem[] = [
     },
     {
         value: 240,
-        suffix: "+",
+        suffix: "%+",
         title: "Increase in Conversion Rate",
         label: "Purpose-built digital experiences that elevate brands and increase conversion rates at every touchpoint.",
     },

@@ -50,7 +50,7 @@ export const services: ServiceCard[] = [
     slug: "ui-ux-design",
     description:
       "Where design meets motion and performance. Thoughtfully crafted to engage, impress, and convert.",
-    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255606/website-images/ggr6qpqd3u7yoynlacon.png",
+    image: "/service1.png",
     alt: "UI UX Design",
     cardType: "large",
     detailPage: {

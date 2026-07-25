@@ -94,13 +94,8 @@ export default function Hero() {
                       leading-[150%]
                       text-[#717171]
                     "
-                  >
-                    Athratech delivers modern IT, web, app, branding and
-                    marketing solutions that help businesses grow faster
-                    online.
-                  </p>
-
-                  <HeroButtons />
+                  >Athratech delivers modern IT, web, app, branding and  marketing solutions that help businesses grow faster  online.
+                  </p><HeroButtons />
                 </div>
               </div>
             </div>
@@ -112,22 +107,17 @@ export default function Hero() {
             <div
               id="centerImage"
               className="
-                absolute
-                left-1/2
-                bottom-[-26vh]
-
-                -translate-x-1/2
-
-                z-10
-
-                flex
-                items-end
-                justify-center
-
-                pointer-events-none
-
-                will-change-transform
-              "
+    absolute
+    left-1/2
+    bottom-[-22vh]
+    -translate-x-1/2
+    z-10
+    flex
+    items-end
+    justify-center
+    pointer-events-none
+    will-change-transform
+  "
             >
               <HeroImage />
             </div>

@@ -21,13 +21,16 @@ export default function ContactCTA({
                 justify-center
                 overflow-hidden
                 py-10
+                mb-[80px]
+                
             "
         >
 
             <div
                 className="
                     w-full
-                    max-w-[1440px]
+                    max-w-[1240px]
+                    mx-auto
                     lg:h-[470px]
                     border
                     border-[#CDCDCD]
@@ -44,6 +47,7 @@ export default function ContactCTA({
                     justify-between
                     gap-8
                     lg:gap-12
+                  
                 "
             >
 
