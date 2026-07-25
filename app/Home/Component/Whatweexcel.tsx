@@ -13,7 +13,7 @@ export default function WhatWeExcelAtSection() {
   if (!mainService || !wideService || !smallService) return null;
 
   return (
-    <section className="w-full bg-white  py-[55px] lg:px-20  ">
+    <section className="w-full bg-white  py-[55px] px-20 max-[768px]:px-4 ">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
