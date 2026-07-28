@@ -23,7 +23,7 @@ export default function WhatWeExcelAtSection({
       className={`w-full bg-white py-[55px] ${removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
         }`}
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="mx-auto w-full max-w-[1440px] mt-[40px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
           <p

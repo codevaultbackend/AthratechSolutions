@@ -341,7 +341,7 @@ function MarkDayHero({
     return (
         <SectionContainer className="max-[768px]:mt-[130px] pt-[20px] pb-[12px] sm:pt-[30px] lg:pt-[46px] lg:pb-[18px]">
             {/* top description */}
-            <div className="max-w-[920px]">
+            <div className="max-w-full">
                 <p className="max-w-[1073px]  font-normal leading-[100%] tracking-[0%] text-[#0E0E0E] max-[768px]:text-[28px] lg:text-[50px]">
                     {splitHighlightedText(
                         caseStudy.heroDescription,

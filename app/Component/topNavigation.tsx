@@ -53,6 +53,7 @@ export default function TopNavigation() {
           ease-[cubic-bezier(.22,1,.36,1)]
           px-[20px]
           
+          
 
           ${compactHero ? "top-10" : "top-6"}
         `}

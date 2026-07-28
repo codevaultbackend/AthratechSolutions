@@ -9,108 +9,269 @@ type ProjectCard = {
   title: string;
   description: string;
   image: string;
-  imgLayout: string;
   href: string;
   external?: boolean;
-  cardBg: string;
+
+  bg: string;
+  objectFit?: "cover" | "contain";
+  objectPosition?: string;
 };
 
 const projectCards: ProjectCard[] = [
   {
     id: 1,
+    title: "ERP System",
+    description:
+      "A complete enterprise resource planning platform that streamlines procurement, inventory, finance, sales, HR, and operations into one centralized ecosystem for growing businesses.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
+    href: "/projects/erp-system",
+    bg: "bg-[#0B0B0B]",
+    objectFit: "cover",
+    objectPosition: "center",
+  },
+
+  {
+    id: 2,
+    title: "Inventory Management",
+    description:
+      "A role-based inventory management platform with procurement, stock tracking, warehouse management, billing, reporting, and complete transaction visibility.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
+    href: "/projects/inventory-management",
+    bg: "bg-[#EFEFEF]",
+    objectFit: "contain",
+    objectPosition: "center",
+  },
+
+  {
+    id: 3,
     title: "Mark Day",
     description:
-      "A smart attendance and leave management system enabling seamless check-ins, leave requests, and history tracking—built to simplify workforce management and boost organizational efficiency.",
-    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
-    imgLayout: '',
+      "A smart attendance and leave management system enabling seamless check-ins, leave requests, approvals, and employee history tracking.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
     href: "/projects/markday",
-    external: false,
-    cardBg: "bg-[#010A37]",
+    bg: "bg-[#020B39]",
+    objectFit: "cover",
+    objectPosition: "center",
   },
+
   {
     id: 4,
-    title: "SankalPSetu Foundation",
-    description:
-      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
-    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255599/website-images/f6rytrr2w2pua0cu0hza.png",
-    imgLayout: '!h-[389px] !w-[403px] max-[768px]:!w-[246px] max-[768px]:!h-[247px] max-[768px]:!left-[12%] ',
-    href: "https://www.sankalpsetufoundation.org/",
-    external: true,
-    cardBg: "bg-[#EDEDED]",
-  },
-   {
-    id: 3,
     title: "Fast Response",
     description:
-      "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
-    image: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
-    imgLayout: '',
+      "Book trusted electricians, plumbers, cleaners, carpenters, and more through a modern service platform with instant response and real-time scheduling.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
     href: "/projects/fastresponse",
-    external: false,
-    cardBg: "bg-[#010A37]",
+    bg: "bg-[#020B39]",
+    objectFit: "cover",
+    objectPosition: "center",
+  },
+
+  {
+    id: 5,
+    title: "SankalpSetu Foundation",
+    description:
+      "Empowering underserved communities through education, healthcare, and sustainable development initiatives with an accessible digital experience.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255599/website-images/f6rytrr2w2pua0cu0hza.png",
+    href: "https://www.sankalpsetufoundation.org/",
+    external: true,
+    bg: "bg-[#F2F2F2]",
+    objectFit: "contain",
+    objectPosition: "center",
+  },
+
+  {
+    id: 6,
+    title: "Chugen",
+    description:
+      "A clean corporate website crafted to present company services, achievements, and digital identity with a modern visual experience.",
+    image:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
+    href: "/projects/chugen",
+    bg: "bg-[#F7F7F7]",
+    objectFit: "contain",
+    objectPosition: "center",
   },
 ];
 
 export default function ProjectGrid() {
   return (
-    <main className="w-full bg-[#FDFDFD] text-[#111111]">
-      <section className="mx-auto w-full max-w-[1728px] px-4 pb-[110px] sm:px-6 lg:px-8 xl:px-12 xl:pb-[140px]">
-        <div className="grid grid-cols-1 gap-x-[58px] gap-y-[54px] sm:grid-cols-2 lg:grid-cols-3 xl:gap-y-[68px]">
-          {projectCards.map((item) => {
-            const cardContent = (
-              <article className="w-full">
+    <section className="w-full bg-white">
+      <div
+        className="
+          mx-auto
+          w-full
+          max-w-[1728px]
+          px-5
+          sm:px-8
+          lg:px-10
+          xl:px-12
+          pb-24
+          md:pb-32
+        "
+      >
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-10
+            sm:grid-cols-2
+            lg:grid-cols-3
+            lg:gap-x-10
+            lg:gap-y-16
+          "
+        >
+          {projectCards.map((project) => {
+            const card = (
+              <article
+                className="
+        group
+        flex
+        h-full
+        flex-col
+      "
+              >
+                {/* ================= Image Card ================= */}
+
                 <div
-                  className={`relative h-[250px] w-full overflow-hidden rounded-[28px] ${item.cardBg} sm:h-[280px] lg:h-[320px] xl:h-[392px]`}
+                  className={`
+          relative
+          overflow-hidden
+          rounded-[28px]
+          ${project.bg}
+
+          h-[260px]
+          sm:h-[300px]
+          lg:h-[360px]
+          xl:h-[392px]
+
+          transition-all
+          duration-500
+        `}
                 >
                   <Image
-                    src={item.image}
-                    alt={item.title}
+                    src={project.image}
+                    alt={project.title}
                     fill
-                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    className={`object-cover transition-transform duration-500 group-hover:scale-[1.03] ${item.imgLayout}`}
-                    priority={item.id === 1}
+                    priority={project.id <= 2}
+                    sizes="
+            (max-width:768px) 100vw,
+            (max-width:1200px) 50vw,
+            33vw
+          "
+                    className={`
+            transition-transform
+            duration-700
+            group-hover:scale-[1.04]
+
+            ${project.objectFit === "contain"
+                        ? "object-contain p-8 md:p-10"
+                        : "object-cover"
+                      }
+          `}
+                    style={{
+                      objectPosition: project.objectPosition,
+                    }}
                   />
                 </div>
 
-                <div className="pt-[18px]">
-                  <h3 className="font-inter text-[26px] font-[500] leading-[1.02] tracking-[-0.05em] text-[#181818] sm:text-[30px] xl:text-[32px]">
-                    {item.title}
+                {/* ================= Content ================= */}
+
+                <div
+                  className="
+          mt-6
+          flex
+          flex-1
+          flex-col
+        "
+                >
+                  <h3
+                    className="
+            text-[#171717]
+            text-[26px]
+            md:text-[30px]
+            xl:text-[34px]
+
+            font-medium
+
+            tracking-[-0.04em]
+            leading-[1.05]
+          "
+                  >
+                    {project.title}
                   </h3>
 
-                  <p className="mt-[8px] max-w-[96%] font-inter text-[13px] font-[400] leading-[1.28] tracking-[-0.01em] text-[#717171] sm:text-[14px] xl:text-[15px]">
-                    {item.description}
+                  <p
+                    className="
+            mt-3
+            flex-1
+
+            text-[#6D6D6D]
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-7
+          "
+                  >
+                    {project.description}
                   </p>
 
-                  <div className="mt-[14px] inline-flex items-center gap-[7px] text-[14px] font-[500] text-[#4F74FF]">
-                    <span>{item.external ? "View site" : "View Project"}</span>
-                    <ArrowRight size={14} />
+                  <div
+                    className="
+            mt-7
+
+            inline-flex
+            items-center
+            gap-2
+
+            text-[#4F74FF]
+            font-medium
+
+            transition-all
+            duration-300
+
+            group-hover:gap-3
+          "
+                  >
+                    <span>
+                      {project.external ? "Visit Website" : "View Project"}
+                    </span>
+
+                    <ArrowRight
+                      size={18}
+                      strokeWidth={2}
+                    />
                   </div>
                 </div>
               </article>
             );
 
-            if (item.external) {
-              return (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block"
-                >
-                  {cardContent}
-                </a>
-              );
-            }
-
-            return (
-              <Link key={item.id} href={item.href} className="group block">
-                {cardContent}
+            return project.external ? (
+              <a
+                key={project.id}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                {card}
+              </a>
+            ) : (
+              <Link
+                key={project.id}
+                href={project.href}
+                className="block h-full"
+              >
+                {card}
               </Link>
             );
-          })}
-        </div>
-      </section>
-    </main>
+          })}        </div>
+      </div>
+    </section>
   );
 }

@@ -76,7 +76,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="relative bg-[#FFFFFF] antialiased mt-[88px] ">
+      <body className="relative bg-[#FFFFFF] antialiased mt-[107px] ">
          <Script
           id="google-tag-manager"
           strategy="afterInteractive"
