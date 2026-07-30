@@ -1,6 +1,4 @@
 import Overview from "../quick-cargo/compoents/Overview";
-import RoleSection from "./components/RoleSection";
-import Behance from "./components/Behance";
 
 import LetsTeamUp from "@/app/blog/Component/LetsTeamUp";
 import ProjectGrid from "../Component/ProjectGrid";
