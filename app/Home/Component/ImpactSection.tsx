@@ -123,7 +123,7 @@ export default function ImpactSection() {
             ref={sectionRef}
             className="relative overflow-hidden  px-4 py-16 max-[768px]:px-2 sm:py-20 md:px-8 lg:px-10 xl:px-12"
         >
-            <div className="mx-auto w-full max-w-[1440px]">
+            <div className="mx-auto w-full max-w-full">
 
                 <div className="mb-12 text-center sm:mb-14 lg:mb-16">
                     <p

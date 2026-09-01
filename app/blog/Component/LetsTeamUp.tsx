@@ -17,13 +17,8 @@ export default function LetsTeamUp() {
       id="contactcta"
       className="
         bg-white
-        px-4
         py-8
-
-        sm:px-6
-        md:px-8
-
-        lg:px-8
+        min-[767px]:px-[82px]
         lg:py-5
       "
     >
@@ -37,7 +32,7 @@ export default function LetsTeamUp() {
 
           flex
           w-full
-          max-w-[1280px]
+          max-w-full
           flex-col
           items-center
           justify-center

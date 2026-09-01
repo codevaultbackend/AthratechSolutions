@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hero Image Slider</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HERO SLIDER
+========================================================= */
+
+.hero-slider {
+    position: relative;
+
+    width: 100%;
+    height: 669px;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: 669px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   SLIDES VIEWPORT
+========================================================= */
+
+.slides-viewport {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SLIDES TRACK
+========================================================= */
+
+.slides-track {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: none;
+    max-height: 100%;
+
+    transform: translate3d(0, 0, 0);
+
+    transition:
+        transform 800ms cubic-bezier(0.77, 0, 0.18, 1);
+
+    will-change: transform;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SLIDE
+========================================================= */
+
+.slide {
+    position: relative;
+
+    flex: 0 0 100%;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 100%;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE
+   IMPORTANT:
+   IMAGE IS COMPLETELY CONSTRAINED TO THE SLIDE
+========================================================= */
+
+.slide-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    /*
+       cover = fills the entire container
+       without overflowing outside it.
+    */
+    object-fit: cover;
+
+    object-position: center center;
+
+    user-select: none;
+    pointer-events: none;
+
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.slide-overlay {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.20) 0%,
+            rgba(0, 0, 0, 0.05) 70%,
+            rgba(0, 0, 0, 0.00) 100%
+        );
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 20;
+
+    width: 62px;
+    height: 62px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    background: rgba(80, 70, 80, 0.55);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slider-arrow:hover {
+    background: rgba(80, 70, 80, 0.78);
+}
+
+.slider-arrow:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+.slider-arrow.prev {
+    left: 20px;
+}
+
+.slider-arrow.next {
+    right: 20px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.slider-dots {
+    position: absolute;
+
+    left: 50%;
+    bottom: 28px;
+
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    transform: translateX(-50%);
+
+    height: 12px;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slider-dot.active {
+    width: 32px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.slider-progress {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 30;
+
+    width: 100%;
+    height: 3px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    pointer-events: none;
+}
+
+.slider-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background: #ffffff;
+
+    transform-origin: left center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-slider {
+        width: 100%;
+
+        height: 620px;
+        min-height: 620px;
+        max-height: 620px;
+
+        overflow: hidden;
+    }
+
+    .slides-viewport {
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+    }
+
+    .slides-track {
+        height: 100%;
+    }
+
+    .slide {
+        height: 100%;
+        max-height: 100%;
+
+        overflow: hidden;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .slider-arrow {
+        width: 52px;
+        height: 52px;
+
+        font-size: 32px;
+    }
+
+    .slider-arrow.prev {
+        left: 18px;
+    }
+
+    .slider-arrow.next {
+        right: 18px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-slider {
+        width: 100%;
+
+        height: 620px;
+        min-height: 620px;
+        max-height: 620px;
+
+        overflow: hidden;
+    }
+
+    .slides-viewport {
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+    }
+
+    .slides-track {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 100%;
+        min-height: 0;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        overflow: hidden;
+    }
+
+    .slide-image {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 0;
+        min-height: 0;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .slide-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.05) 0%,
+                rgba(0, 0, 0, 0.08) 50%,
+                rgba(0, 0, 0, 0.25) 100%
+            );
+    }
+
+    /* Hide arrows on mobile */
+    .slider-arrow {
+        display: none;
+    }
+
+    .slider-dots {
+        bottom: 24px;
+
+        gap: 8px;
+    }
+
+    .slider-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .slider-dot.active {
+        width: 28px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-slider {
+        width: 100%;
+
+        height: 580px;
+        min-height: 580px;
+        max-height: 580px;
+
+        overflow: hidden;
+    }
+
+    .slides-viewport,
+    .slides-track,
+    .slide {
+        width: 100%;
+        height: 100%;
+
+        max-height: 100%;
+
+        overflow: hidden;
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .slider-dots {
+        bottom: 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero-slider {
+        height: 540px;
+        min-height: 540px;
+        max-height: 540px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .slides-track {
+        transition: none !important;
+    }
+
+    .slider-dot,
+    .slider-arrow {
+        transition: none !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HERO SLIDER
+========================================================= -->
+
+<section
+    class="hero-slider"
+    id="heroSlider"
+    aria-label="Hero image slider"
+>
+
+
+    <!-- =====================================================
+         VIEWPORT
+    ====================================================== -->
+
+    <div class="slides-viewport">
+
+
+        <!-- =================================================
+             TRACK
+        ================================================== -->
+
+        <div
+            class="slides-track"
+            id="slidesTrack"
+        >
+
+
+            <!-- =============================================
+                 SLIDE 1
+            ============================================== -->
+
+            <article class="slide">
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_c4d9938153ab42d4952c2a1a8e010fd7~mv2.png"
+                    alt="Slide 1"
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+            <!-- =============================================
+                 SLIDE 2
+            ============================================== -->
+
+            <article class="slide">
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_a325027109834d099e274fa975f8fbbf~mv2.jpeg"
+                    alt="Slide 2"
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+            <!-- =============================================
+                 SLIDE 3
+            ============================================== -->
+
+            <article class="slide">
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_a325027109834d099e274fa975f8fbbf~mv2.jpeg"
+                    alt="Slide 3"
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+            <!-- =============================================
+                 SLIDE 4
+            ============================================== -->
+
+            <article class="slide">
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_60f41620fc944e24a9a804f2fa8a2eba~mv2.jpeg"
+                    alt="Slide 4"
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+            <!-- =============================================
+                 SLIDE 5
+            ============================================== -->
+
+            <article class="slide">
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_8b9b31bd820a437ea5fa73f72c2bfb93~mv2.jpeg"
+                    alt="Slide 5"
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+            <!-- =============================================
+                 CLONE OF SLIDE 1
+
+                 Used for seamless:
+                 1 → 2 → 3 → 4 → 5 → 1
+
+                 This prevents the animation from visually
+                 travelling backward from slide 5 to slide 1.
+            ============================================== -->
+
+            <article
+                class="slide slide-clone"
+                aria-hidden="true"
+            >
+
+                <img
+                    class="slide-image"
+                    src="https://static.wixstatic.com/media/920cce_c4d9938153ab42d4952c2a1a8e010fd7~mv2.png"
+                    alt=""
+                    draggable="false"
+                >
+
+                <div class="slide-overlay"></div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PREVIOUS
+    ====================================================== -->
+
+    <button
+        class="slider-arrow prev"
+        id="prevButton"
+        type="button"
+        aria-label="Previous slide"
+    >
+        &#10094;
+    </button>
+
+
+    <!-- =====================================================
+         NEXT
+    ====================================================== -->
+
+    <button
+        class="slider-arrow next"
+        id="nextButton"
+        type="button"
+        aria-label="Next slide"
+    >
+        &#10095;
+    </button>
+
+
+    <!-- =====================================================
+         DOTS
+    ====================================================== -->
+
+    <div
+        class="slider-dots"
+        id="sliderDots"
+        aria-label="Slider navigation"
+    ></div>
+
+
+    <!-- =====================================================
+         PROGRESS
+    ====================================================== -->
+
+    <div class="slider-progress">
+
+        <div
+            class="slider-progress-bar"
+            id="progressBar"
+        ></div>
+
+    </div>
+
+
+</section>
+
+
+<script>
+
+/* =========================================================
+   CONFIGURATION
+========================================================= */
+
+const CONFIG = {
+
+    /* Time each slide stays visible */
+    autoplayDelay: 5000,
+
+    /* Slide movement speed */
+    transitionDuration: 800,
+
+    /* Autoplay */
+    autoplay: true
+
+};
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const slider =
+    document.getElementById("heroSlider");
+
+const track =
+    document.getElementById("slidesTrack");
+
+const allSlides =
+    Array.from(
+        track.querySelectorAll(".slide")
+    );
+
+const realSlides =
+    allSlides.filter(
+        slide =>
+            !slide.classList.contains("slide-clone")
+    );
+
+const nextButton =
+    document.getElementById("nextButton");
+
+const prevButton =
+    document.getElementById("prevButton");
+
+const dotsContainer =
+    document.getElementById("sliderDots");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+/*
+    Real slides:
+
+    0 = Slide 1
+    1 = Slide 2
+    2 = Slide 3
+    3 = Slide 4
+    4 = Slide 5
+    5 = Clone of Slide 1
+*/
+
+const realSlideCount =
+    realSlides.length;
+
+let currentIndex = 0;
+
+let isAnimating = false;
+
+let autoplayTimer = null;
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+/* =========================================================
+   CREATE DOTS
+========================================================= */
+
+realSlides.forEach(
+    (_, index) => {
+
+        const dot =
+            document.createElement("button");
+
+        dot.type = "button";
+
+        dot.className =
+            "slider-dot";
+
+        dot.setAttribute(
+            "aria-label",
+            `Go to slide ${index + 1}`
+        );
+
+        dot.addEventListener(
+            "click",
+            () => {
+
+                goToSlide(index);
+
+            }
+        );
+
+        dotsContainer.appendChild(dot);
+
+    }
+);
+
+
+const dots =
+    Array.from(
+        dotsContainer.querySelectorAll(
+            ".slider-dot"
+        )
+    );
+
+
+/* =========================================================
+   UPDATE DOTS
+========================================================= */
+
+function updateDots() {
+
+    let dotIndex =
+        currentIndex;
+
+    /*
+        When we are on the cloned Slide 1,
+        show the first dot as active.
+    */
+
+    if (
+        currentIndex >= realSlideCount
+    ) {
+
+        dotIndex = 0;
+
+    }
+
+    dots.forEach(
+        (dot, index) => {
+
+            dot.classList.toggle(
+                "active",
+                index === dotIndex
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   MOVE SLIDER
+========================================================= */
+
+function moveSlider(
+    index,
+    animate = true
+) {
+
+    if (!animate) {
+
+        track.style.transition =
+            "none";
+
+    } else {
+
+        track.style.transition =
+            `transform ${CONFIG.transitionDuration}ms cubic-bezier(0.77, 0, 0.18, 1)`;
+
+    }
+
+
+    const offset =
+        index * 100;
+
+
+    track.style.transform =
+        `translate3d(-${offset}%, 0, 0)`;
+
+
+    updateDots();
+
+}
+
+
+/* =========================================================
+   GO TO SLIDE
+========================================================= */
+
+function goToSlide(index) {
+
+    if (isAnimating) {
+        return;
+    }
+
+
+    isAnimating = true;
+
+    currentIndex = index;
+
+
+    moveSlider(
+        currentIndex,
+        true
+    );
+
+
+    restartAutoplay();
+
+
+    setTimeout(
+        () => {
+
+            isAnimating = false;
+
+        },
+        CONFIG.transitionDuration
+    );
+
+}
+
+
+/* =========================================================
+   NEXT SLIDE
+========================================================= */
+
+function nextSlide() {
+
+    if (isAnimating) {
+        return;
+    }
+
+
+    isAnimating = true;
+
+
+    /*
+        Normal sequence:
+
+        1 → 2
+        2 → 3
+        3 → 4
+        4 → 5
+        5 → CLONE OF 1
+    */
+
+    currentIndex++;
+
+
+    moveSlider(
+        currentIndex,
+        true
+    );
+
+
+    /*
+        Once the clone has finished sliding into
+        position, instantly reset to the real Slide 1.
+
+        Because the clone and Slide 1 are identical,
+        the user sees no jump.
+    */
+
+    if (
+        currentIndex === realSlideCount
+    ) {
+
+        setTimeout(
+            () => {
+
+                track.style.transition =
+                    "none";
+
+                currentIndex = 0;
+
+                track.style.transform =
+                    "translate3d(0, 0, 0)";
+
+                updateDots();
+
+
+                /*
+                    Force browser to apply the
+                    non-animated position before
+                    allowing another transition.
+                */
+
+                requestAnimationFrame(
+                    () => {
+
+                        requestAnimationFrame(
+                            () => {
+
+                                isAnimating =
+                                    false;
+
+                            }
+                        );
+
+                    }
+                );
+
+            },
+            CONFIG.transitionDuration
+        );
+
+    } else {
+
+        setTimeout(
+            () => {
+
+                isAnimating = false;
+
+            },
+            CONFIG.transitionDuration
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   PREVIOUS SLIDE
+========================================================= */
+
+function previousSlide() {
+
+    if (isAnimating) {
+        return;
+    }
+
+
+    isAnimating = true;
+
+
+    /*
+        Manual previous button only.
+    */
+
+    if (currentIndex <= 0) {
+
+        /*
+            Move to Slide 5 instantly first,
+            then animate backwards to Slide 5.
+
+            This is only for manual previous action.
+        */
+
+        currentIndex =
+            realSlideCount;
+
+        track.style.transition =
+            "none";
+
+        track.style.transform =
+            `translate3d(-${currentIndex * 100}%, 0, 0)`;
+
+
+        requestAnimationFrame(
+            () => {
+
+                requestAnimationFrame(
+                    () => {
+
+                        currentIndex =
+                            realSlideCount - 1;
+
+                        moveSlider(
+                            currentIndex,
+                            true
+                        );
+
+                        setTimeout(
+                            () => {
+
+                                isAnimating =
+                                    false;
+
+                            },
+                            CONFIG.transitionDuration
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    } else {
+
+        currentIndex--;
+
+        moveSlider(
+            currentIndex,
+            true
+        );
+
+
+        setTimeout(
+            () => {
+
+                isAnimating =
+                    false;
+
+            },
+            CONFIG.transitionDuration
+        );
+
+    }
+
+
+    restartAutoplay();
+
+}
+
+
+/* =========================================================
+   AUTOPLAY
+========================================================= */
+
+function startAutoplay() {
+
+    if (!CONFIG.autoplay) {
+        return;
+    }
+
+
+    stopAutoplay();
+
+
+    autoplayTimer =
+        setInterval(
+            () => {
+
+                nextSlide();
+
+            },
+            CONFIG.autoplayDelay
+        );
+
+
+    startProgress();
+
+}
+
+
+/* =========================================================
+   STOP AUTOPLAY
+========================================================= */
+
+function stopAutoplay() {
+
+    if (
+        autoplayTimer !== null
+    ) {
+
+        clearInterval(
+            autoplayTimer
+        );
+
+        autoplayTimer = null;
+
+    }
+
+
+    progressBar.style.transition =
+        "none";
+
+}
+
+
+/* =========================================================
+   RESTART AUTOPLAY
+========================================================= */
+
+function restartAutoplay() {
+
+    stopAutoplay();
+
+    startAutoplay();
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+function startProgress() {
+
+    if (!CONFIG.autoplay) {
+        return;
+    }
+
+
+    progressBar.style.transition =
+        "none";
+
+    progressBar.style.width =
+        "0%";
+
+
+    requestAnimationFrame(
+        () => {
+
+            requestAnimationFrame(
+                () => {
+
+                    progressBar.style.transition =
+                        `width ${CONFIG.autoplayDelay}ms linear`;
+
+                    progressBar.style.width =
+                        "100%";
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+========================================================= */
+
+nextButton.addEventListener(
+    "click",
+    () => {
+
+        nextSlide();
+
+        restartAutoplay();
+
+    }
+);
+
+
+/* =========================================================
+   PREVIOUS BUTTON
+========================================================= */
+
+prevButton.addEventListener(
+    "click",
+    () => {
+
+        previousSlide();
+
+        restartAutoplay();
+
+    }
+);
+
+
+/* =========================================================
+   PAUSE ON HOVER
+========================================================= */
+
+slider.addEventListener(
+    "mouseenter",
+    () => {
+
+        stopAutoplay();
+
+    }
+);
+
+
+slider.addEventListener(
+    "mouseleave",
+    () => {
+
+        startAutoplay();
+
+    }
+);
+
+
+/* =========================================================
+   TOUCH START
+========================================================= */
+
+slider.addEventListener(
+    "touchstart",
+    event => {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+        stopAutoplay();
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =========================================================
+   TOUCH END
+========================================================= */
+
+slider.addEventListener(
+    "touchend",
+    event => {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        handleSwipe();
+
+        startAutoplay();
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =========================================================
+   SWIPE
+========================================================= */
+
+function handleSwipe() {
+
+    const distance =
+        touchStartX - touchEndX;
+
+    const minimumDistance =
+        50;
+
+
+    if (
+        Math.abs(distance) <
+        minimumDistance
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+        Swipe left
+        = next
+    */
+
+    if (distance > 0) {
+
+        nextSlide();
+
+    }
+
+
+    /*
+        Swipe right
+        = previous
+    */
+
+    else {
+
+        previousSlide();
+
+    }
+
+}
+
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            nextSlide();
+
+            restartAutoplay();
+
+        }
+
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            previousSlide();
+
+            restartAutoplay();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+track.style.transition =
+    "none";
+
+currentIndex = 0;
+
+track.style.transform =
+    "translate3d(0, 0, 0)";
+
+updateDots();
+
+
+/*
+    Start autoplay after a short delay
+    so Wix has time to render the iframe.
+*/
+
+setTimeout(
+    () => {
+
+        startAutoplay();
+
+    },
+    300
+);
+
+</script>
+
+</body>
+</html>

@@ -65,7 +65,7 @@ export default function OfferingSection({
         className="
           mx-auto
           w-full
-          max-w-[1440px]
+          max-w-full
           rounded-[24px]
           bg-[linear-gradient(90deg,#23232B_0%,#808080_50%,#020220_100%)]
           p-px

@@ -11,7 +11,7 @@ export default function DesignSystemPreview() {
       alt="designAccordian"
       height={854}
       width={1440}
-      className="max-w-[1440px] mx-auto w-full object-cover"
+      className="max-w-full mx-auto w-full object-cover"
       priority />
     </section>
   );

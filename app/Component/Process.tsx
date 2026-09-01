@@ -70,7 +70,7 @@ export default function Process({
       id={sectionId}
       className={`relative overflow-hidden  font-sans ${className}`}
     >
-      <div className="mx-auto w-full max-w-[1440px] px-[34px] py-[112px] max-[768px]:px-4 max-[768px]:py-[60px] max-[768px]:pb-[10px] md:px-10 md:py-[88px] lg:px-14 lg:py-[92px] xl:px-[72px] xl:py-[96px] 2xl:px-[84px]">
+      <div className="mx-auto w-full max-w-full px-[34px] py-[112px] max-[768px]:px-4 max-[768px]:py-[60px] max-[768px]:pb-[10px] md:px-10 md:py-[88px] lg:px-14 lg:py-[92px] xl:px-[72px] xl:py-[96px] 2xl:px-[84px]">
         <div className="grid items-start md:grid-cols-[0.95fr_1.05fr]">
           <h2 className="max-w-[720px] font-bricolage text-[64px] font-semibold leading-[1.03] tracking-[-0.065em] text-[#111111] max-[768px]:text-[32px] sm:text-[54px] lg:text-[64px]">
             {content.title}

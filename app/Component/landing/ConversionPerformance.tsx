@@ -11,7 +11,7 @@ const performancePoints = [
 export default function ConversionPerformance() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-[50px] px-4 sm:px-6 md:grid-cols-2 md:gap-[60px] lg:px-8">
+      <div className="mx-auto grid w-full max-w-full grid-cols-1 items-center gap-[50px] px-4 sm:px-6 md:grid-cols-2 md:gap-[60px] lg:px-8">
         
         {/* LEFT VISUAL */}
         <div className="relative flex items-center justify-center">

@@ -6,7 +6,7 @@ export default function RoleSection() {
   return (
     <section className="relative bg-white py-28 lg:py-40">
 
-      <div className="mx-auto w-full max-w-[1440px] px-5 md:px-8 lg:px-12 xl:px-16">
+      <div className="mx-auto w-full max-w-full px-5 md:px-8 lg:px-12 xl:px-16">
 
         <div className="mx-auto max-w-[1220px]">
 

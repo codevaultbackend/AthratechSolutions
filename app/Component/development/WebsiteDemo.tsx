@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function WebsiteDemo() {
   return (
     <section className="w-full overflow-hidden bg-white py-[40px] sm:py-[70px] lg:py-[100px]">
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8">
         <div
           className="
             relative

@@ -50,11 +50,8 @@ export default function TopNavigation() {
 
           transition-all
           duration-700
+          max-[768px]:px-[16px]
           ease-[cubic-bezier(.22,1,.36,1)]
-          px-[20px]
-          
-          
-
           ${compactHero ? "top-10" : "top-6"}
         `}
       >

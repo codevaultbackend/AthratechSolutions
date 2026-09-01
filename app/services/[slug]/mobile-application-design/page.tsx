@@ -139,13 +139,13 @@ export default function HomePage() {
 
       {/* VIDEO */}
       <section className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1440px] overflow-hidden rounded-[20px] sm:rounded-[28px] lg:rounded-[40px]">
+        <div className="mx-auto w-full max-w-full overflow-hidden rounded-[20px] sm:rounded-[28px] lg:rounded-[40px]">
           <VideoSection />
         </div>
       </section>
 
 
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8">
         <Strategy StrategyData={strategyData} />
       </div>
 
@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
     
-        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8">
           <Platforms
             badge={platformsData.badge}
             heading={platformsData.heading}
@@ -173,7 +173,7 @@ export default function HomePage() {
       </section>
 
       {/* PROCESS */}
-        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8">
           <Process content={landingProcessData} />
         </div>
 
@@ -184,7 +184,7 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="w-full ">
-        <div className="mx-auto w-full max-w-[1440px]">
+        <div className="mx-auto w-full max-w-full">
           <ContactCTA image="/contactMockup3.jpeg" />
         </div>
       </section>

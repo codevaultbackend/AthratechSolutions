@@ -150,11 +150,12 @@ const landingProcessContent: ProcessContent = {
 export default function BrandPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+      <div className="">
       <CommonHeroHeader headData={headData} />
 
       <BrandHero />
 
-      <div className="max-w-[1440px] mx-auto lg:mb-[95px]">
+      <div className="max-w-full mx-auto lg:mb-[95px]">
         <VideoSection />
       </div>
 
@@ -178,6 +179,8 @@ export default function BrandPage() {
       <div className="">
         <Strategy StrategyData={appExperienceStrategyData} />
       </div>
+</div>
+
       <Uiux />
 
 

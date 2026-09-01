@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative pt-[12px] sm:pt-[30px]">
       
 
-      <div className="relative mx-auto mt-12 w-full max-w-[1440px] px-0 sm:px-6 lg:px-8">
+      <div className="relative mx-auto mt-12 w-full max-w-full px-0 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-t-[28px] bg-[#f5f0ff]  sm:rounded-[34px] ">
          
 

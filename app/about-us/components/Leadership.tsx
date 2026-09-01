@@ -13,27 +13,21 @@ interface Leader {
 const leaders: Leader[] = [
   {
     id: 1,
-    name: "Siddharth Jha",
-    role: "CTO & Founder",
-    image: "/sidhharth.jpeg",
-  },
-  {
-    id: 2,
     name: "Vishal Gupta",
     role: "Co-founder & Operations Head",
     image: "/vishal.jpeg",
   },
   {
-    id: 3,
+    id: 2,
     name: "Shivanshi Gupta",
     role: "Management & Business Head",
     image: "/shivanshi.jpeg",
   },
   {
-    id: 4,
+    id: 3,
     name: "Ankit Das",
     role: "Co-founder & Project Manager",
-    image: "/boss3.png",
+    image: "/ankit.jpeg",
   },
 ];
 

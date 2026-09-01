@@ -152,7 +152,7 @@ export default function HomePage() {
       />
       <CommonHeroHeader headData={headData} />
       <SaasHero />
-      <div className="logo-section max-w-[1440px] mx-auto">
+      <div className="logo-section max-w-full mx-auto">
         <VideoSection />
       </div>
       <Strategy StrategyData={strategyData} />

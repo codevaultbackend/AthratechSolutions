@@ -8,7 +8,7 @@ export default function BrandHero() {
           mx-auto
           flex
           w-full
-          max-w-[1440px]
+          max-w-full
           items-center
           justify-center
           rounded-[24px]

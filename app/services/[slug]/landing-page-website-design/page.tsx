@@ -136,7 +136,7 @@ export default function HomePage() {
 
         <Hero />
 
-        <div className="mx-auto max-w-[1440px] overflow-clip">
+        <div className="mx-auto max-w-full overflow-clip">
           <VideoSection />
         </div>
 

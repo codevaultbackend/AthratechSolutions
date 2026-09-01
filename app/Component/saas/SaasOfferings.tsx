@@ -35,7 +35,7 @@ const offeringCards = [
 export default function SaasOfferings() {
   return (
     <section className="w-full bg-white py-[56px] sm:py-[80px] lg:py-[100px]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-full flex-col gap-6 px-4 sm:px-6 lg:px-8">
         {offeringCards.map((card, index) => (
           <article
             key={card.title}

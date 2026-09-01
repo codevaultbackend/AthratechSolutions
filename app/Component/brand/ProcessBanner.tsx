@@ -8,7 +8,7 @@ export default function ProcessBanner() {
         relative
         mx-auto
         w-full
-        max-w-[1440px]
+        max-w-full
 
         overflow-hidden
         rounded-[24px]

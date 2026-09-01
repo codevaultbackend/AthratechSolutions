@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+/* =========================================================
+   TYPES
+========================================================= */
+
 type ProjectCard = {
   id: number;
   title: string;
@@ -11,267 +15,361 @@ type ProjectCard = {
   image: string;
   href: string;
   external?: boolean;
-
-  bg: string;
+  bg?: string;
   objectFit?: "cover" | "contain";
   objectPosition?: string;
 };
 
+/* =========================================================
+   PROJECT DATA
+========================================================= */
+
 const projectCards: ProjectCard[] = [
   {
     id: 1,
-    title: "ERP System",
+    title: "Mark Day",
     description:
-      "A complete enterprise resource planning platform that streamlines procurement, inventory, finance, sales, HR, and operations into one centralized ecosystem for growing businesses.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
-    href: "/projects/erp-system",
-    bg: "bg-[#0B0B0B]",
-    objectFit: "cover",
-    objectPosition: "center",
+      "A smart attendance and leave management system enabling seamless check-ins, leave requests, and history tracking—built to simplify workforce management and boost organizational efficiency.",
+    image: "/markdaymock.png",
+    href: "/projects/markday",
+    objectFit: "contain",
   },
 
   {
     id: 2,
-    title: "Inventory Management",
+    title: "Star 154 Foundations",
     description:
-      "A role-based inventory management platform with procurement, stock tracking, warehouse management, billing, reporting, and complete transaction visibility.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
-    href: "/projects/inventory-management",
-    bg: "bg-[#EFEFEF]",
+      "A poultry farm focused on efficient livestock management, ensuring healthy bird production, quality output, and sustainable practices to meet growing food and supply demands.",
+    image: "/starfoundationmock.png",
+    href: "https://www.star154foundation.org",
+    external: true,
     objectFit: "contain",
-    objectPosition: "center",
   },
 
   {
     id: 3,
-    title: "Mark Day",
+    title: "Fast Response",
     description:
-      "A smart attendance and leave management system enabling seamless check-ins, leave requests, approvals, and employee history tracking.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
-    href: "/projects/markday",
-    bg: "bg-[#020B39]",
-    objectFit: "cover",
-    objectPosition: "center",
+      "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
+    image: "/fastresmock.png",
+    href: "/projects/fastresponse",
+    bg: "#060302",
+    objectFit: "contain",
   },
 
   {
     id: 4,
-    title: "Fast Response",
+    title: "SankalPSetu Foundation",
     description:
-      "Book trusted electricians, plumbers, cleaners, carpenters, and more through a modern service platform with instant response and real-time scheduling.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255545/website-images/huwkjxzwoghicynh3evn.png",
-    href: "/projects/fastresponse",
-    bg: "bg-[#020B39]",
-    objectFit: "cover",
-    objectPosition: "center",
+      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
+    image: "/sankalsetumock.png",
+    href: "https://sankalpsetufoundation.org/",
+    external: true,
+    objectFit: "contain",
   },
 
   {
     id: 5,
-    title: "SankalpSetu Foundation",
+    title: "ERP Ecosystem",
     description:
-      "Empowering underserved communities through education, healthcare, and sustainable development initiatives with an accessible digital experience.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255599/website-images/f6rytrr2w2pua0cu0hza.png",
-    href: "https://www.sankalpsetufoundation.org/",
-    external: true,
-    bg: "bg-[#F2F2F2]",
-    objectFit: "contain",
-    objectPosition: "center",
+      "The Vibhushanam ERP Ecosystem is a centralized business management platform designed to streamline and digitize the core operations of a jewellery business.",
+    image: "/erpmock.png",
+    href: "/projects/erp-system",
+    bg: "linear-gradient(180deg, #4E4E4E 0%, #272222 100%)",
+    objectFit: "cover",
   },
 
   {
     id: 6,
-    title: "Chugen",
+    title: "Quick Cargo",
     description:
-      "A clean corporate website crafted to present company services, achievements, and digital identity with a modern visual experience.",
-    image:
-      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255491/website-images/v4devfvpwskmbgvrhcep.png",
-    href: "/projects/chugen",
-    bg: "bg-[#F7F7F7]",
+      "Quick Cargo connects customers, agency owners, and drivers through one intuitive platform for truck bookings, route management, and real-time shipment tracking.",
+    image: "/quickcargomock.png",
+    href: "/projects/quick-cargo",
+    bg: "linear-gradient(180deg, #4E4E4E 0%, #272222 100%)",
     objectFit: "contain",
-    objectPosition: "center",
   },
 ];
 
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
 export default function ProjectGrid() {
   return (
-    <section className="w-full bg-white">
+    <section
+      aria-label="Our projects"
+      className="
+        w-full
+        overflow-hidden
+        bg-white
+      "
+    >
       <div
         className="
           mx-auto
           w-full
           max-w-[1728px]
+
           px-5
           sm:px-8
-          lg:px-10
-          xl:px-12
-          pb-24
-          md:pb-32
+          md:px-10
+          lg:px-[82px]
+          xl:px-[82px]
+
+          pb-[80px]
+          sm:pb-[100px]
+          md:pb-[120px]
         "
       >
         <div
           className="
             grid
+            w-full
+
             grid-cols-1
-            gap-10
+
+            gap-x-6
+            gap-y-12
+
             sm:grid-cols-2
+            sm:gap-x-8
+            sm:gap-y-14
+
             lg:grid-cols-3
             lg:gap-x-10
             lg:gap-y-16
+
+            xl:gap-x-[64px]
+            xl:gap-y-[75px]
           "
         >
           {projectCards.map((project) => {
             const card = (
               <article
                 className="
-        group
-        flex
-        h-full
-        flex-col
-      "
+                  group
+                  flex
+                  h-full
+                  min-w-0
+                  w-full
+                  flex-col
+                "
               >
-                {/* ================= Image Card ================= */}
+                {/* =================================================
+                    IMAGE
+                ================================================= */}
 
                 <div
-                  className={`
-          relative
-          overflow-hidden
-          rounded-[28px]
-          ${project.bg}
+                  className="
+                    relative
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    overflow-hidden
 
-          h-[260px]
-          sm:h-[300px]
-          lg:h-[360px]
-          xl:h-[392px]
+                    rounded-[24px]
 
-          transition-all
-          duration-500
-        `}
+                    h-[260px]
+
+                    max-[768px]:h-[350px]
+                    sm:rounded-[28px]
+
+                  
+
+                    lg:h-[330px]
+                    lg:rounded-[32px]
+
+                    xl:h-[362px]
+                  "
+                  style={{
+                    background: project.bg ?? "#F7F7F7",
+                  }}
                 >
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} project mockup`}
                     fill
                     priority={project.id <= 2}
-                    sizes="
-            (max-width:768px) 100vw,
-            (max-width:1200px) 50vw,
-            33vw
-          "
+                   
                     className={`
-            transition-transform
-            duration-700
-            group-hover:scale-[1.04]
+                      transition-transform
+                      duration-500
+                      ease-out
+                      
 
-            ${project.objectFit === "contain"
-                        ? "object-contain p-8 md:p-10"
-                        : "object-cover"
+                      ${
+                        project.objectFit === "contain"
+                          ? "object-cover"
+                          : "object-cover"
                       }
-          `}
+                    `}
                     style={{
-                      objectPosition: project.objectPosition,
+                      objectPosition:
+                        project.objectPosition ?? "center",
                     }}
                   />
                 </div>
 
-                {/* ================= Content ================= */}
+                {/* =================================================
+                    CONTENT
+                ================================================= */}
 
                 <div
                   className="
-          mt-6
-          flex
-          flex-1
-          flex-col
-        "
+                    flex
+                    flex-1
+                    flex-col
+
+                    pt-[20px]
+
+                    sm:pt-[22px]
+                  "
                 >
+                  {/* TITLE */}
+
                   <h3
                     className="
-            text-[#171717]
-            text-[26px]
-            md:text-[30px]
-            xl:text-[34px]
+                      font-bricolage
+                      font-medium
+                      text-[#171717]
 
-            font-medium
+                      text-[24px]
+                      leading-[1.05]
+                      tracking-[-0.04em]
 
-            tracking-[-0.04em]
-            leading-[1.05]
-          "
+                      sm:text-[26px]
+
+                      md:text-[30px]
+
+                      xl:text-[34px]
+                    "
                   >
                     {project.title}
                   </h3>
 
+                  {/* DESCRIPTION */}
+
                   <p
                     className="
-            mt-3
-            flex-1
+                      mt-[14px]
 
-            text-[#6D6D6D]
+                      max-w-[500px]
 
-            text-[15px]
-            md:text-[16px]
+                      font-inter
+                      text-[#6D6D6D]
 
-            leading-7
-          "
+                      text-[14px]
+                      leading-[1.55]
+
+                      sm:mt-[16px]
+                      sm:text-[15px]
+
+                      md:text-[16px]
+                      md:leading-[1.65]
+                    "
                   >
                     {project.description}
                   </p>
 
-                  <div
+                  {/* CTA */}
+
+                  <span
                     className="
-            mt-7
+                      mt-[20px]
 
-            inline-flex
-            items-center
-            gap-2
+                      inline-flex
+                      w-fit
+                      items-center
+                      gap-2
 
-            text-[#4F74FF]
-            font-medium
+                      font-geist
+                      text-[14px]
+                      font-medium
 
-            transition-all
-            duration-300
+                      text-[#4F74FF]
 
-            group-hover:gap-3
-          "
+                      transition-all
+                      duration-300
+
+                      sm:mt-[24px]
+                      sm:text-[15px]
+
+                      group-hover:gap-3
+                    "
                   >
                     <span>
-                      {project.external ? "Visit Website" : "View Project"}
+                      {project.external
+                        ? "Visit Website"
+                        : "View Project"}
                     </span>
 
                     <ArrowRight
                       size={18}
                       strokeWidth={2}
+                      className="
+                        shrink-0
+
+                        transition-transform
+                        duration-300
+                        ease-out
+
+                        group-hover:translate-x-0.5
+                      "
                     />
-                  </div>
+                  </span>
                 </div>
               </article>
             );
 
-            return project.external ? (
-              <a
-                key={project.id}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-full"
-              >
-                {card}
-              </a>
-            ) : (
+            /* =====================================================
+               EXTERNAL LINK
+            ===================================================== */
+
+            if (project.external) {
+              return (
+                <a
+                  key={project.id}
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${project.title} website`}
+                  className="
+                    block
+                    min-w-0
+                    w-full
+                    h-full
+                  "
+                >
+                  {card}
+                </a>
+              );
+            }
+
+            /* =====================================================
+               INTERNAL LINK
+            ===================================================== */
+
+            return (
               <Link
                 key={project.id}
                 href={project.href}
-                className="block h-full"
+                aria-label={`View ${project.title} project`}
+                className="
+                  block
+                  min-w-0
+                  w-full
+                  h-full
+                "
               >
                 {card}
               </Link>
             );
-          })}        </div>
+          })}
+        </div>
       </div>
     </section>
   );
 }
+

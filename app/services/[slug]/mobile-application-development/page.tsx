@@ -306,7 +306,7 @@ export default function HomePage() {
       <AppDevHero />
 
       {/* VIDEO */}
-      <div className="mx-auto w-full max-w-[1440px] overflow-hidden">
+      <div className="mx-auto w-full max-w-full overflow-hidden">
         <VideoSection />
       </div>
 

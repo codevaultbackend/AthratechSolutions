@@ -51,7 +51,7 @@ export default function FAQSection() {
       </div>
 
       {/* ===== FAQ Grid ===== */}
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
+      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2  gap-x-[32px] gap-y-[20px]">
         {faqs.map((item, index) => {
           const isOpen = open === index;
 

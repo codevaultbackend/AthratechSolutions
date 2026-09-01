@@ -6,7 +6,7 @@ export default function Behance() {
   return (
     <section className="relative overflow-hidden bg-white py-24 lg:py-36">
 
-      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-12 xl:px-16">
+      <div className="mx-auto max-w-full px-5 md:px-8 lg:px-12 xl:px-16">
 
         <div
           className="

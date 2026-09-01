@@ -22,7 +22,7 @@ export default function DevHero() {
           relative
           mx-auto
           w-full
-          max-w-[1440px]
+          max-w-full
 
           overflow-hidden
 
