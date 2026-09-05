@@ -60,7 +60,7 @@ const headData: HeadDataItem = {
   ),
   para: "A well-designed landing page builds instant trust, keeps users engaged, and turns visits into meaningful actions. It creates a smooth journey, making every click feel natural.",
   buttonText: "Contact Us",
-  buttonHref: "#contact",
+  buttonHref: "/contact-us",
 };
 
 const strategyData = {

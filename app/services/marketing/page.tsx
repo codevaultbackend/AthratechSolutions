@@ -81,7 +81,7 @@ export default function HomePage() {
     title: "Digital Marketing Services",
     para: "We help your business grow online by combining strategy, creativity, and data-driven decisions. From increasing visibility to driving conversions, our digital marketing services are designed to deliver real results.",
     buttonText: "Contact Us",
-    buttonHref: "#contact",
+    buttonHref: "/contact-us",
   };
 
   const strategyData = {

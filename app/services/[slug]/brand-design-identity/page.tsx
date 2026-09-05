@@ -49,7 +49,7 @@ const headData: HeadDataItem = {
   title: "Brand and Identity",
   para: "A brand is more than how your business looks—it’s how it feels, communicates, and stays in people’s minds. It’s the perception that remains long after the first interaction. We create brand identities built on clarity, purpose, and meaning.",
   buttonText: "Contact Us",
-  buttonHref: "#contact",
+  buttonHref: "/contact-us",
 };
 
 const appStrategyData = {

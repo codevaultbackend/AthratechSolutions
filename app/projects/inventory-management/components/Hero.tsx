@@ -57,6 +57,7 @@ export default function Hero({
               sm:text-[36px]
               md:text-[48px]
               lg:text-[56px]
+              lg:text-[56px]
             "
           >
             {heroDescription}

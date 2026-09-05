@@ -16,7 +16,7 @@ export default function BrandCTA() {
         </p>
 
         <Link
-          href="#contact"
+          href="/contact-us"
           className="mt-7 inline-flex h-9 items-center rounded-full bg-black px-5 text-[11px] font-semibold text-white shadow-[0_16px_35px_rgba(0,0,0,0.18)]"
         >
           Get started

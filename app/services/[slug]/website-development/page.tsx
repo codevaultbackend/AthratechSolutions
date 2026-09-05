@@ -56,7 +56,7 @@ const headData: HeadDataItem = {
   para:
     "From first impression to final click, we build landing pages that perform at every step. Focused on clarity, speed, and user experience.",
   buttonText: "Contact Us",
-  buttonHref: "#contact",
+  buttonHref: "/contact-us",
 };
 
 const strategyData = {

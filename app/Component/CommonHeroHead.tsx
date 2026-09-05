@@ -32,7 +32,7 @@ export default function CommonHeroHeader({ headData }: CommonHeroHeaderProps) {
       </p>
 
       <a
-        href={headData.buttonHref ?? "#contact"}
+        href={headData.buttonHref ?? "/contact-us"}
         className="mx-auto mb-[22px] mt-[52px] block w-full max-w-full rounded-full bg-[linear-gradient(175deg,#F5F5F5,#BDBDBD,#8F8F8F,#666666)] p-[6px] shadow-[0_0_40px_rgba(180,180,180,0.5)] sm:max-w-[217px]"
       >
         <div className="flex h-[52px] w-full items-center justify-center gap-3 rounded-full border-[0.5px] border-white bg-black px-3 py-1.5 shadow-inner sm:h-auto sm:gap-4 sm:px-4 sm:py-2">

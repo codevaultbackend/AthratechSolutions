@@ -85,7 +85,7 @@ const headData: HeadDataItem = {
     "Your app isn’t just a digital product—it’s a direct connection between your business and your users. We build fast, scalable, and user-friendly mobile applications designed to deliver smooth performance and real value.",
 
   buttonText: "Contact Us",
-  buttonHref: "#contact",
+  buttonHref: "/contact-us",
 };
 
 const strategyData = {

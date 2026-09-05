@@ -95,6 +95,16 @@ const projects: Project[] = [
     imageClassName:
       "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] rounded-[32px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+  {
+    title: "IMS Dashboard",
+    description:
+      "A powerful and intuitive inventory management platform that helps businesses track stock, manage products, monitor inventory levels, and streamline daily operations in one centralized system.",
+    image: "/caseHero2.png",
+    href: "/projects/inventory-management",
+    imageClassName:
+      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,*#4E4E4E_0%,*#272222_100%)] rounded-[32px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+  },
+
 ];
 
 /* =========================================================

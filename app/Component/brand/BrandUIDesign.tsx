@@ -90,7 +90,7 @@ export default function BrandUIDesign() {
           </div>
 
           <Link
-            href="#contact"
+            href="/contact-us"
             className="hidden rounded-full bg-black px-5 py-2.5 text-[11px] font-semibold text-white sm:inline-flex"
           >
             Start now

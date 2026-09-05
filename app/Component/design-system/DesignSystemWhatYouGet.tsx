@@ -31,7 +31,7 @@ export default function DesignSystemWhatYouGet() {
           </p>
 
           <a
-            href="#contact"
+            href="/contact-us"
             className="shrink-0 rounded-full bg-black px-4 py-2 text-[11px] font-semibold text-white"
           >
             Contact
