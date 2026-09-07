@@ -76,26 +76,25 @@ export default function Gallery({
           <p
             className="
               mx-auto
-              max-w-[760px]
+              max-w-[1112px]
 
               text-center
 
-              text-[28px]
-              sm:text-[32px]
-              md:text-[40px]
+              text-[40px]
+              
 
-              leading-[1.15]
+              leading-[100%]
               md:leading-[100%]
 
-              font-[400]
+              font-[274]
               text-[#8E8E8E]
 
-              font-sfpro
+              !font-[family-name:var(--font-sf-pro)]
 
-              tracking-[-0.03em]
+              tracking-[0%]
             "
           >
-            <span className="font-medium text-[#111]">
+            <span className="font-normal text-[#000000]">
               And that's not all
             </span>
 
@@ -103,7 +102,7 @@ export default function Gallery({
 
             <span
               className="
-                font-semibold
+              font-normal
                 text-[#000000]
                 transition
               "
@@ -115,9 +114,9 @@ export default function Gallery({
 
             <span
               className="
-                font-[400]
+                font-[274]
                 text-[#8E8E8E]
-                font-sfpro
+              
               "
             >
               Behance

@@ -20,6 +20,16 @@
   font-family: var(--font-calligraffitti);
 }
 
+.font-sfpro {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    sans-serif;
+}
+
 /* Optional: default font for the whole page */
 html {
   font-family: var(--font-inter);

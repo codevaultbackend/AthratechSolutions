@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import localFont from "next/font/local";
 
 
 import "./globals.css";
@@ -12,6 +13,7 @@ import {
   calligraffitti,
   bricolage,
   geist,
+  sfPro,
 } from "./fonts";
 
 
@@ -56,9 +58,9 @@ export default function RootLayout({
   const GA_ID = "G-L80EQW5H77";
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable}`}
-    >
+  lang="en"
+  className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable} ${sfPro.variable}`}
+>
       <head>
 
 

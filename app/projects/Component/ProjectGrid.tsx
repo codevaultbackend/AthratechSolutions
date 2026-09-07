@@ -15,9 +15,7 @@ type ProjectCard = {
   image: string;
   href: string;
   external?: boolean;
-  bg?: string;
-  objectFit?: "cover" | "contain";
-  objectPosition?: string;
+  imageClassName: string;
 };
 
 /* =========================================================
@@ -32,7 +30,7 @@ const projectCards: ProjectCard[] = [
       "A smart attendance and leave management system enabling seamless check-ins, leave requests, and history tracking—built to simplify workforce management and boost organizational efficiency.",
     image: "/markdaymock.png",
     href: "/projects/markday",
-    objectFit: "contain",
+    imageClassName: "object-contain",
   },
 
   {
@@ -43,7 +41,7 @@ const projectCards: ProjectCard[] = [
     image: "/starfoundationmock.png",
     href: "https://www.star154foundation.org",
     external: true,
-    objectFit: "contain",
+    imageClassName: "object-contain",
   },
 
   {
@@ -53,8 +51,7 @@ const projectCards: ProjectCard[] = [
       "A fast-response platform to quickly book trusted professionals for electrical, plumbing, cleaning, carpentry, and other household services—ensuring reliable and hassle-free service.",
     image: "/fastresmock.png",
     href: "/projects/fastresponse",
-    bg: "#060302",
-    objectFit: "contain",
+    imageClassName: "object-contain bg-[#060302]",
   },
 
   {
@@ -65,7 +62,7 @@ const projectCards: ProjectCard[] = [
     image: "/sankalsetumock.png",
     href: "https://sankalpsetufoundation.org/",
     external: true,
-    objectFit: "contain",
+    imageClassName: "object-contain",
   },
 
   {
@@ -75,8 +72,8 @@ const projectCards: ProjectCard[] = [
       "The Vibhushanam ERP Ecosystem is a centralized business management platform designed to streamline and digitize the core operations of a jewellery business.",
     image: "/erpmock.png",
     href: "/projects/erp-system",
-    bg: "linear-gradient(180deg, #4E4E4E 0%, #272222 100%)",
-    objectFit: "contain",
+    imageClassName:
+      "object-cover bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)]",
   },
 
   {
@@ -86,13 +83,35 @@ const projectCards: ProjectCard[] = [
       "Quick Cargo connects customers, agency owners, and drivers through one intuitive platform for truck bookings, route management, and real-time shipment tracking.",
     image: "/quickcargomock.png",
     href: "/projects/quick-cargo",
-    bg: "linear-gradient(180deg, #4E4E4E 0%, #272222 100%)",
-    objectFit: "contain",
+    imageClassName:
+      "object-contain bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)]",
+  },
+
+  {
+    id: 7,
+    title: "Inventory Management System",
+    description:
+      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
+    image: "/inventory-management.png",
+    href: "/projects/inventory-management",
+    imageClassName:
+      "object-cover bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)]",
+  },
+
+  {
+    id: 8,
+    title: "G. Harmannssons Travel Agency",
+    description:
+      "G. Harmannsson crafts unforgettable Icelandic journeys with curated tours and authentic local experiences.",
+    image: "/G-Harmannssons.png",
+    href: "#",
+    imageClassName:
+      "object-cover bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)]",
   },
 ];
 
 /* =========================================================
-   PROJECT CARD
+   PROJECT CARD CONTENT
 ========================================================= */
 
 function ProjectCardContent({
@@ -108,6 +127,7 @@ function ProjectCardContent({
         h-full
         min-h-0
         w-full
+        min-w-0
         flex-col
       "
     >
@@ -120,27 +140,33 @@ function ProjectCardContent({
           relative
           isolate
           flex
-          h-[260px]
           w-full
           shrink-0
           items-center
           justify-center
-
           overflow-hidden
           rounded-[32px]
 
-          max-[768px]:h-[350px]
+          /* Mobile: constant image container height */
+          h-[300px]
+
+          /* Tablet */
+          md:h-[320px]
+
+          /* Desktop: existing sizes preserved */
           lg:h-[330px]
           xl:h-[362px]
         "
-        style={{
-          background: project.bg ?? "#F7F7F7",
-        }}
       >
         <Image
           src={project.image}
           alt={`${project.title} project mockup`}
           fill
+          sizes="
+            (max-width: 767px) 100vw,
+            (max-width: 1023px) 50vw,
+            33vw
+          "
           priority={project.id <= 2}
           className={`
             block
@@ -155,15 +181,8 @@ function ProjectCardContent({
 
             group-hover:scale-[1.02]
 
-            ${
-              project.objectFit === "contain"
-                ? "object-contain"
-                : "object-cover"
-            }
+            ${project.imageClassName}
           `}
-          style={{
-            objectPosition: project.objectPosition ?? "center",
-          }}
         />
       </div>
 
@@ -209,29 +228,23 @@ function ProjectCardContent({
         <p
           className="
             mt-[14px]
-
             max-w-[500px]
 
             font-inter
             text-[#6D6D6D]
 
             text-[16px]
-            font-[400]
-            leading-[100%]
+            font-normal
+            leading-[1.2]
 
-            
-           
+            sm:text-[16px]
+            lg:text-[16px]
           "
         >
           {project.description}
         </p>
 
-        {/* =================================================
-            CTA
-
-            mt-auto ensures that the CTA is pushed to the
-            bottom of every card, regardless of paragraph length.
-        ================================================= */}
+        {/* CTA */}
 
         <span
           className="
@@ -259,9 +272,7 @@ function ProjectCardContent({
           "
         >
           <span>
-            {project.external
-              ? "Visit Website"
-              : "View Project"}
+            {project.external ? "Visit Website" : "View Project"}
           </span>
 
           <ArrowRight
@@ -269,11 +280,9 @@ function ProjectCardContent({
             strokeWidth={2}
             className="
               shrink-0
-
               transition-transform
               duration-300
               ease-out
-
               group-hover:translate-x-0.5
             "
           />
@@ -342,9 +351,7 @@ export default function ProjectGrid() {
               <ProjectCardContent project={project} />
             );
 
-            /* =================================================
-               EXTERNAL PROJECT
-            ================================================= */
+            /* EXTERNAL PROJECT */
 
             if (project.external) {
               return (
@@ -359,6 +366,7 @@ export default function ProjectGrid() {
                     h-full
                     min-h-0
                     w-full
+                    min-w-0
                     flex-col
                     self-stretch
                   "
@@ -368,9 +376,7 @@ export default function ProjectGrid() {
               );
             }
 
-            /* =================================================
-               INTERNAL PROJECT
-            ================================================= */
+            /* INTERNAL PROJECT */
 
             return (
               <Link
@@ -382,6 +388,7 @@ export default function ProjectGrid() {
                   h-full
                   min-h-0
                   w-full
+                  min-w-0
                   flex-col
                   self-stretch
                 "
