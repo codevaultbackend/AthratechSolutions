@@ -37,7 +37,7 @@ export default function InventoryManagementPage() {
         <Overview
           title="Built to become the most trusted inventory platform for businesses that mean business."
           description="A fast, reliable platform that gives every business one real-time inventory system—from procurement to sales—making stock management, order tracking, and financial visibility seamless and traceable."
-          image="/caseHero2.png"
+          image="https://res.cloudinary.com/ddcy9noqo/image/upload/v1788774432/WhatsApp_Image_2026-09-07_at_15.15.36_gcsv9d.jpg"
           imageAlt="Overview Dashboard"
         />
 
