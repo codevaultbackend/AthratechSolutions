@@ -86,45 +86,23 @@ export default function Ecosystem() {
 
         {/* Heading */}
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.7,
-          }}
+        <div
+          
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+          <h2 className="text-[56px] font-[400] leading-[48px] tracking-[-3%] font-bricolage text-[#0F0F0F] ">
             Technological Ecosystem
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+        <div
           className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
 
           {ecosystemItems.map((card) => (
-            <motion.div
+            <div
               key={card.id}
-              variants={item}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
+             
               className="group relative overflow-hidden rounded-[28px] border border-neutral-200 bg-neutral-50 p-8 transition-all duration-500 hover:border-black/10 hover:bg-white hover:shadow-2xl"
             >
 
@@ -134,7 +112,7 @@ export default function Ecosystem() {
 
               {/* Icon */}
 
-              <div className="relative mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-black text-white shadow-lg transition duration-500 group-hover:rotate-6 group-hover:scale-110">
+              <div className="relative mb-8 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-black text-white shadow-lg transition duration-500 group-hover:rotate-6 group-hover:scale-110">
 
                 {card.icon}
 
@@ -151,10 +129,10 @@ export default function Ecosystem() {
               <p className="relative leading-7 text-neutral-500">
                 {card.description}
               </p>
-                          </motion.div>
+                          </div>
           ))}
 
-        </motion.div>
+        </div>
       </div>
 
       {/* Decorative Background Blur */}

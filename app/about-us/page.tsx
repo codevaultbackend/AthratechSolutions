@@ -3,6 +3,9 @@ import Mission from "./components/Mission";
 import Vision from "./components/Vision";
 import Ecosystem from "./components/Ecosystem";
 import Leadership from "./components/Leadership";
+import MobileProductShowcase from "../projects/erp-system/components/MobileProductShowcase";
+import ContactCTA from "../Home/Component/ContactCTA";
+
 
 export const metadata = {
   title: "About Us | Athratech",
@@ -16,6 +19,7 @@ export default function AboutUsPage() {
       <Hero />
       <Mission />
       <Leadership />
+      <ContactCTA image="/weraplymoch.png" />
     </main>
   );
 }

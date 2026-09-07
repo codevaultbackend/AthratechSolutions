@@ -9,6 +9,7 @@ import Hamburgure from "../svgIcons/Hamburgure";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Testimonials", href: "/#testimonial" },
   { label: "Projects", href: "/projects" },

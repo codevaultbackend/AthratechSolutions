@@ -11,15 +11,15 @@ export default function Footer() {
 
         {/* ===== Background vignette (ENHANCED) ===== */}
         <div className="absolute inset-0 z-[0] 
-        lg:bg-[radial-gradient(ellipse_at_center,_#7a7a7a_0%,_#5f5f5f_35%,_#2a2a2a_65%,_#111111_100%)] max-[768px]:!bg-[#0F0F0F]"  />
+        lg:bg-[radial-gradient(ellipse_at_center,_#7a7a7a_0%,_#5f5f5f_35%,_#2a2a2a_65%,_#111111_100%)] max-[768px]:!bg-[#0F0F0F] min-[750px]:max-[980px]:hidden"  />
 
         {/* ===== DARK EDGE OVERLAY (to match corners) ===== */}
         <div className="absolute inset-0 z-[0] 
-        bg-[radial-gradient(circle_at_center,_transparent_40%,_rgba(0,0,0,0.65)_100%)]" />
+        bg-[radial-gradient(circle_at_center,_transparent_40%,_rgba(0,0,0,0.65)_100%)] min-[750px]:max-[980px]:bg-black" />
 
         {/* ===== BOTTOM LIGHT FADE (important for watermark blend) ===== */}
         <div className="absolute bottom-0 left-0 w-full h-[220px] z-[1]
-        bg-gradient-to-t from-[#9a9a9a]/40 via-[#9a9a9a]/20 to-transparent" />
+        bg-gradient-to-t from-[#9a9a9a]/40 via-[#9a9a9a]/20 to-transparent min-[750px]:max-[980px]:hidden" />
 
         {/* ===== Watermark (PIXEL PERFECT FADE) ===== */}
         <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 

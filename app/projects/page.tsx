@@ -13,6 +13,7 @@ type Project = {
   image: string;
   href: string;
   imageClassName: string;
+  external?: boolean;
 };
 
 /* =========================================================
@@ -29,15 +30,6 @@ const trustedAvatars = [
 
 /* =========================================================
    PROJECT DATA
-
-   Order intentionally matches the Figma:
-
-   1. Mark Day
-   2. Star Foundation
-   3. Fast Response
-   4. Sankalp Setu
-   5. ERP / Manpower Solutions
-   6. Quick Cargo
 ========================================================= */
 
 const projects: Project[] = [
@@ -50,15 +42,18 @@ const projects: Project[] = [
     imageClassName:
       "h-[280px] w-full max-w-[430px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+
   {
     title: "Star 154 Foundations",
     description:
       "A poultry farm focused on efficient livestock management, ensuring healthy bird production, quality output, and sustainable practices to meet growing food and supply demands.",
     image: "/starfoundationmock.png",
     href: "https://www.star154foundation.org",
+    external: true,
     imageClassName:
       "h-[280px] w-full max-w-[430px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+
   {
     title: "Fast Response",
     description:
@@ -66,17 +61,20 @@ const projects: Project[] = [
     image: "/fastresmock.png",
     href: "/projects/fastresponse",
     imageClassName:
-      "h-[280px] w-full max-w-[430px] object-contain bg-[#060302] rounded-[32px] sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+      "h-[280px] w-full max-w-[430px] object-contain bg-[#060302] sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+
   {
     title: "SankalPSetu Foundation",
     description:
       "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
     image: "/sankalsetumock.png",
     href: "https://sankalpsetufoundation.org/",
+    external: true,
     imageClassName:
       "h-[280px] w-full max-w-[430px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+
   {
     title: "ERP Ecosystem",
     description:
@@ -84,8 +82,9 @@ const projects: Project[] = [
     image: "/erpmock.png",
     href: "/projects/erp-system",
     imageClassName:
-      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] rounded-[32px] object-cover sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] object-cover sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
+
   {
     title: "Quick Cargo",
     description:
@@ -93,18 +92,28 @@ const projects: Project[] = [
     image: "/quickcargomock.png",
     href: "/projects/quick-cargo",
     imageClassName:
-      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] rounded-[32px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
-  },
-  {
-    title: "IMS Dashboard",
-    description:
-      "A powerful and intuitive inventory management platform that helps businesses track stock, manage products, monitor inventory levels, and streamline daily operations in one centralized system.",
-    image: "/caseHero2.png",
-    href: "/projects/inventory-management",
-    imageClassName:
-      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,*#4E4E4E_0%,*#272222_100%)] rounded-[32px] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] object-contain sm:h-[300px] lg:h-[310px] xl:h-[330px]",
   },
 
+  {
+    title: "Inventory Management System",
+    description:
+      "Empowering underserved communities through education, healthcare, and skill development—bridging hope with opportunity.",
+    image: "/inventory-management.png",
+    href: "/projects/inventory-management",
+    imageClassName:
+      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] object-cover sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+  },
+
+  {
+    title: "G. Harmannssons Travel Agency",
+    description:
+      "G. Harmannsson crafts unforgettable Icelandic journeys with curated tours and authentic local experiences.",
+    image: "/G-Harmannssons.png",
+    href: "#",
+    imageClassName:
+      "h-[280px] w-full max-w-[430px] bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)] object-cover sm:h-[300px] lg:h-[310px] xl:h-[330px]",
+  },
 ];
 
 /* =========================================================
@@ -119,7 +128,13 @@ function ArrowIcon() {
       height="18"
       viewBox="0 0 18 18"
       fill="none"
-      className="shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1"
+      className="
+        shrink-0
+        transition-transform
+        duration-300
+        ease-out
+        group-hover:translate-x-1
+      "
     >
       <path
         d="M3.5 9H14.5"
@@ -127,6 +142,7 @@ function ArrowIcon() {
         strokeWidth="1.7"
         strokeLinecap="round"
       />
+
       <path
         d="M9.75 4.25L14.5 9L9.75 13.75"
         stroke="currentColor"
@@ -155,7 +171,8 @@ function TrustedAvatars() {
             "relative h-[26px] w-[26px] shrink-0 overflow-hidden rounded-full",
             "border border-black",
             index > 0 ? "-ml-[7px]" : "",
-            "max-[767px]:h-[22px] max-[767px]:w-[22px]",
+            "max-[767px]:h-[22px]",
+            "max-[767px]:w-[22px]",
           ].join(" ")}
         >
           <img
@@ -179,14 +196,27 @@ function LetsTalkButton() {
     <Link
       href="/contact-us"
       aria-label="Let's Talk - contact us"
-      className="group inline-flex shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#737373] focus-visible:ring-offset-4"
+      className="
+        group
+        inline-flex
+        shrink-0
+        rounded-full
+        focus-visible:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-[#737373]
+        focus-visible:ring-offset-4
+      "
     >
       <span
         className="
-          relative inline-flex rounded-full
+          relative
+          inline-flex
+          rounded-full
           bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.35),rgba(180,180,180,0.25),rgba(120,120,120,0.15),transparent_70%)]
           shadow-[0_4px_14.6px_0_#959595]
-          transition-transform duration-300 ease-out
+          transition-transform
+          duration-300
+          ease-out
           group-hover:-translate-y-0.5
           group-active:translate-y-0
         "
@@ -201,9 +231,13 @@ function LetsTalkButton() {
         >
           <span
             className="
-              flex h-[56px] items-center gap-4
+              flex
+              h-[56px]
+              items-center
+              gap-4
               rounded-full
-              border-[0.5px] border-white
+              border-[0.5px]
+              border-white
               bg-black
               px-4
               shadow-inner
@@ -212,7 +246,14 @@ function LetsTalkButton() {
               max-[767px]:px-4
             "
           >
-            <span className="text-[16px] font-[500] tracking-[-0.02em] text-white">
+            <span
+              className="
+                text-[16px]
+                font-[500]
+                tracking-[-0.02em]
+                text-white
+              "
+            >
               Let’s Talk
             </span>
 
@@ -234,9 +275,13 @@ function BookingNote() {
       <svg
         aria-hidden="true"
         className="
-          pointer-events-none absolute
-          -left-[86px] top-[69px] rotate-[-10deg]
-          hidden sm:block
+          pointer-events-none
+          absolute
+          -left-[86px]
+          top-[69px]
+          hidden
+          rotate-[-10deg]
+          sm:block
         "
         width="98"
         height="44"
@@ -274,24 +319,89 @@ function BookingNote() {
 }
 
 /* =========================================================
+   PROJECT CTA
+========================================================= */
+
+function ProjectCTA({ project }: { project: Project }) {
+  const className = `
+    group
+    inline-flex
+    w-fit
+    shrink-0
+    items-center
+    gap-[8px]
+    text-[16px]
+    font-[600]
+    font-geist
+    tracking-[0%]
+    text-[#4D7EF0]
+  `;
+
+  const content = (
+    <>
+      <span>View Project</span>
+      <ArrowIcon />
+    </>
+  );
+
+  if (project.external) {
+    return (
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        aria-label={`Visit ${project.title} project`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      href={project.href}
+      className={className}
+      aria-label={`View ${project.title} project`}
+    >
+      {content}
+    </Link>
+  );
+}
+
+/* =========================================================
    PROJECT CARD
 ========================================================= */
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group min-w-0 max-w-[362px]">
+    <article
+      className="
+        group
+        flex
+        h-full
+        min-h-0
+        min-w-0
+        max-w-[362px]
+        flex-col
+      "
+    >
       {/* ---------------------------------------------------
           IMAGE
       --------------------------------------------------- */}
 
       <div
         className="
-          relative flex
+          relative
+          flex
           h-[300px]
           w-full
+          shrink-0
           items-center
           justify-center
           overflow-hidden
+          rounded-[32px]
+
           sm:h-[320px]
           lg:h-[340px]
           xl:h-[360px]
@@ -306,7 +416,10 @@ function ProjectCard({ project }: { project: Project }) {
           className={[
             project.imageClassName,
             "block",
-            "transition-transform duration-500 ease-out",
+            "rounded-[32px]",
+            "transition-transform",
+            "duration-500",
+            "ease-out",
             "group-hover:scale-[1.015]",
           ].join(" ")}
         />
@@ -316,18 +429,48 @@ function ProjectCard({ project }: { project: Project }) {
           CONTENT
       --------------------------------------------------- */}
 
-      <div className="">
-        <h3 className="text-[28px] font-medium text-[#000000] font-bricolage leading-[100%] tracking-[0%]">{project.title}</h3>
+      <div
+        className="
+          flex
+          flex-1
+          flex-col
+          pt-[20px]
+        "
+      >
+        {/* TITLE
+            Fixed minimum height prevents one-line titles
+            from creating inconsistent spacing.
+        */}
+
+        <div className="min-h-[56px]">
+          <h3
+            className="
+              text-[28px]
+              font-medium
+              text-[#000000]
+              font-bricolage
+              leading-[100%]
+              tracking-[0%]
+            "
+          >
+            {project.title}
+          </h3>
+        </div>
+
+        {/* DESCRIPTION */}
+
         <p
           className="
+            mt-[14px]
             max-w-[430px]
-            !mt-[22px]
+
             font-inter
             text-[16px]
             font-[400]
             leading-[100%]
             tracking-[0%]
             text-[#797979]
+
             sm:text-[17px]
             lg:text-[17px]
             xl:text-[18px]
@@ -336,28 +479,34 @@ function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
+        {/* CTA */}
+
         <Link
           href={project.href}
           className="
-            mt-[20px]
-            !h-fit
+            mt-auto
+            pt-[20px]
+
             inline-flex
+            w-fit
+            shrink-0
             items-center
             gap-[8px]
+
             text-[16px]
             font-[600]
             font-geist
             tracking-[0%]
             text-[#4D7EF0]
-            
+
+            transition-all
+            duration-300
           "
           aria-label={`View ${project.title} project`}
         >
-          <span className="!h-fit ">View Project</span>
+          <span>View Project</span>
 
-          <span className="!h-fit ">
-            <ArrowIcon />
-          </span>
+          <ArrowIcon />
         </Link>
       </div>
     </article>
@@ -375,16 +524,21 @@ function ProjectsGrid() {
       className="
         w-full
         overflow-hidden
-       
+
         px-4
         pb-[80px]
         pt-[12px]
-        max-[768px]:px-6
+
+        max-[767px]:px-5
+
+        sm:px-6
         sm:pb-[100px]
-       min-[768px]:px-[80px]
+
+        md:px-10
         md:pb-[120px]
-        
-        
+
+        lg:px-[80px]
+        xl:px-[80px]
       "
     >
       <div
@@ -393,14 +547,19 @@ function ProjectsGrid() {
           grid
           w-full
           max-w-[1728px]
+
           grid-cols-1
+
           gap-x-8
+          gap-y-[60px]
+
           sm:grid-cols-2
           sm:gap-x-8
+          sm:gap-y-[70px]
+
           lg:grid-cols-3
           lg:gap-x-[64px]
-          min-[768px]:gap-y-[75px]
-          
+          lg:gap-y-[75px]
         "
       >
         {projects.map((project) => (
@@ -427,28 +586,35 @@ export default function Projects() {
           grid
           w-full
           max-w-[1728px]
+
           grid-cols-1
           gap-y-10
+
           px-4
           pb-[72px]
           pt-[72px]
+
           sm:px-6
           sm:pb-[88px]
           sm:pt-[88px]
+
           md:gap-y-12
           md:px-8
           md:pb-[100px]
           md:pt-[100px]
+
           lg:grid-cols-[minmax(420px,540px)_minmax(0,1fr)]
           lg:gap-x-[72px]
           lg:px-10
           lg:pb-[112px]
           lg:pt-[108px]
+
           xl:grid-cols-[600px_minmax(0,1fr)]
           xl:gap-x-[120px]
           xl:px-12
           xl:pb-[118px]
           xl:pt-[118px]
+
           2xl:px-16
         "
       >
@@ -465,6 +631,7 @@ export default function Projects() {
               leading-[0.9]
               tracking-[-0.075em]
               text-[#000000]
+
               sm:text-[76px]
               md:text-[90px]
               lg:text-[104px]
@@ -485,18 +652,21 @@ export default function Projects() {
           className="
             min-w-0
             max-w-[690px]
+
             lg:pt-[8px]
           "
         >
           <p
             className="
               max-w-[635px]
+
               font-inter
               text-[20px]
               font-[600]
               leading-[1.12]
               tracking-[-0.03em]
               text-[#373737]
+
               sm:text-[23px]
               md:text-[25px]
               lg:text-[20px]
@@ -512,16 +682,20 @@ export default function Projects() {
             className="
               mt-[32px]
               max-w-[620px]
+
               font-inter
               text-[16px]
               font-[400]
               leading-[1.22]
               tracking-[-0.025em]
               text-[#373737]
+
               sm:mt-[36px]
               sm:text-[18px]
+
               lg:mt-[38px]
               lg:text-[18px]
+
               xl:text-[18px]
             "
           >
@@ -538,10 +712,12 @@ export default function Projects() {
           <div
             className="
               mt-[30px]
+
               flex
               flex-col
               items-start
               gap-[18px]
+
               sm:mt-[34px]
               sm:flex-row
               sm:items-center
@@ -556,7 +732,7 @@ export default function Projects() {
       </section>
 
       {/* ===================================================
-          PROJECTS
+          PROJECT GRID
       =================================================== */}
 
       <ProjectsGrid />

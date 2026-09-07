@@ -76,7 +76,7 @@ const projectCards: ProjectCard[] = [
     image: "/erpmock.png",
     href: "/projects/erp-system",
     bg: "linear-gradient(180deg, #4E4E4E 0%, #272222 100%)",
-    objectFit: "cover",
+    objectFit: "contain",
   },
 
   {
@@ -90,6 +90,198 @@ const projectCards: ProjectCard[] = [
     objectFit: "contain",
   },
 ];
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+function ProjectCardContent({
+  project,
+}: {
+  project: ProjectCard;
+}) {
+  return (
+    <article
+      className="
+        group
+        flex
+        h-full
+        min-h-0
+        w-full
+        flex-col
+      "
+    >
+      {/* =================================================
+          IMAGE
+      ================================================= */}
+
+      <div
+        className="
+          relative
+          isolate
+          flex
+          h-[260px]
+          w-full
+          shrink-0
+          items-center
+          justify-center
+
+          overflow-hidden
+          rounded-[32px]
+
+          max-[768px]:h-[350px]
+          lg:h-[330px]
+          xl:h-[362px]
+        "
+        style={{
+          background: project.bg ?? "#F7F7F7",
+        }}
+      >
+        <Image
+          src={project.image}
+          alt={`${project.title} project mockup`}
+          fill
+          priority={project.id <= 2}
+          className={`
+            block
+            h-full
+            w-full
+            max-w-none
+            rounded-[32px]
+
+            transition-transform
+            duration-500
+            ease-out
+
+            group-hover:scale-[1.02]
+
+            ${
+              project.objectFit === "contain"
+                ? "object-contain"
+                : "object-cover"
+            }
+          `}
+          style={{
+            objectPosition: project.objectPosition ?? "center",
+          }}
+        />
+      </div>
+
+      {/* =================================================
+          CONTENT
+      ================================================= */}
+
+      <div
+        className="
+          flex
+          min-h-0
+          flex-1
+          flex-col
+
+          pt-[20px]
+          sm:pt-[22px]
+        "
+      >
+        {/* TITLE */}
+
+        <h3
+          className="
+            shrink-0
+
+            font-bricolage
+            font-medium
+            text-[#171717]
+
+            text-[24px]
+            leading-[1.05]
+            tracking-[-0.04em]
+
+            sm:text-[26px]
+            md:text-[30px]
+            xl:text-[34px]
+          "
+        >
+          {project.title}
+        </h3>
+
+        {/* DESCRIPTION */}
+
+        <p
+          className="
+            mt-[14px]
+
+            max-w-[500px]
+
+            font-inter
+            text-[#6D6D6D]
+
+            text-[16px]
+            font-[400]
+            leading-[100%]
+
+            
+           
+          "
+        >
+          {project.description}
+        </p>
+
+        {/* =================================================
+            CTA
+
+            mt-auto ensures that the CTA is pushed to the
+            bottom of every card, regardless of paragraph length.
+        ================================================= */}
+
+        <span
+          className="
+            mt-auto
+            inline-flex
+            w-fit
+            shrink-0
+            items-center
+            gap-2
+
+            pt-[20px]
+
+            font-geist
+            text-[14px]
+            font-medium
+            text-[#4F74FF]
+
+            transition-all
+            duration-300
+
+            sm:pt-[24px]
+            sm:text-[15px]
+
+            group-hover:gap-3
+          "
+        >
+          <span>
+            {project.external
+              ? "Visit Website"
+              : "View Project"}
+          </span>
+
+          <ArrowRight
+            size={18}
+            strokeWidth={2}
+            className="
+              shrink-0
+
+              transition-transform
+              duration-300
+              ease-out
+
+              group-hover:translate-x-0.5
+            "
+          />
+        </span>
+      </div>
+    </article>
+  );
+}
 
 /* =========================================================
    PROJECT GRID
@@ -126,6 +318,7 @@ export default function ProjectGrid() {
           className="
             grid
             w-full
+            items-stretch
 
             grid-cols-1
 
@@ -145,187 +338,13 @@ export default function ProjectGrid() {
           "
         >
           {projectCards.map((project) => {
-            const card = (
-              <article
-                className="
-                  group
-                  flex
-                  h-full
-                  min-w-0
-                  w-full
-                  flex-col
-                "
-              >
-                {/* =================================================
-                    IMAGE
-                ================================================= */}
-
-                <div
-                  className="
-                    relative
-                    flex
-                    w-full
-                    items-center
-                    justify-center
-                    overflow-hidden
-
-                    rounded-[24px]
-
-                    h-[260px]
-
-                    max-[768px]:h-[350px]
-                    sm:rounded-[28px]
-
-                  
-
-                    lg:h-[330px]
-                    lg:rounded-[32px]
-
-                    xl:h-[362px]
-                  "
-                  style={{
-                    background: project.bg ?? "#F7F7F7",
-                  }}
-                >
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} project mockup`}
-                    fill
-                    priority={project.id <= 2}
-                   
-                    className={`
-                      transition-transform
-                      duration-500
-                      ease-out
-                      
-
-                      ${
-                        project.objectFit === "contain"
-                          ? "object-cover"
-                          : "object-cover"
-                      }
-                    `}
-                    style={{
-                      objectPosition:
-                        project.objectPosition ?? "center",
-                    }}
-                  />
-                </div>
-
-                {/* =================================================
-                    CONTENT
-                ================================================= */}
-
-                <div
-                  className="
-                    flex
-                    flex-1
-                    flex-col
-
-                    pt-[20px]
-
-                    sm:pt-[22px]
-                  "
-                >
-                  {/* TITLE */}
-
-                  <h3
-                    className="
-                      font-bricolage
-                      font-medium
-                      text-[#171717]
-
-                      text-[24px]
-                      leading-[1.05]
-                      tracking-[-0.04em]
-
-                      sm:text-[26px]
-
-                      md:text-[30px]
-
-                      xl:text-[34px]
-                    "
-                  >
-                    {project.title}
-                  </h3>
-
-                  {/* DESCRIPTION */}
-
-                  <p
-                    className="
-                      mt-[14px]
-
-                      max-w-[500px]
-
-                      font-inter
-                      text-[#6D6D6D]
-
-                      text-[14px]
-                      leading-[1.55]
-
-                      sm:mt-[16px]
-                      sm:text-[15px]
-
-                      md:text-[16px]
-                      md:leading-[1.65]
-                    "
-                  >
-                    {project.description}
-                  </p>
-
-                  {/* CTA */}
-
-                  <span
-                    className="
-                      mt-[20px]
-
-                      inline-flex
-                      w-fit
-                      items-center
-                      gap-2
-
-                      font-geist
-                      text-[14px]
-                      font-medium
-
-                      text-[#4F74FF]
-
-                      transition-all
-                      duration-300
-
-                      sm:mt-[24px]
-                      sm:text-[15px]
-
-                      group-hover:gap-3
-                    "
-                  >
-                    <span>
-                      {project.external
-                        ? "Visit Website"
-                        : "View Project"}
-                    </span>
-
-                    <ArrowRight
-                      size={18}
-                      strokeWidth={2}
-                      className="
-                        shrink-0
-
-                        transition-transform
-                        duration-300
-                        ease-out
-
-                        group-hover:translate-x-0.5
-                      "
-                    />
-                  </span>
-                </div>
-              </article>
+            const cardContent = (
+              <ProjectCardContent project={project} />
             );
 
-            /* =====================================================
-               EXTERNAL LINK
-            ===================================================== */
+            /* =================================================
+               EXTERNAL PROJECT
+            ================================================= */
 
             if (project.external) {
               return (
@@ -336,20 +355,22 @@ export default function ProjectGrid() {
                   rel="noopener noreferrer"
                   aria-label={`Visit ${project.title} website`}
                   className="
-                    block
-                    min-w-0
-                    w-full
+                    flex
                     h-full
+                    min-h-0
+                    w-full
+                    flex-col
+                    self-stretch
                   "
                 >
-                  {card}
+                  {cardContent}
                 </a>
               );
             }
 
-            /* =====================================================
-               INTERNAL LINK
-            ===================================================== */
+            /* =================================================
+               INTERNAL PROJECT
+            ================================================= */
 
             return (
               <Link
@@ -357,13 +378,15 @@ export default function ProjectGrid() {
                 href={project.href}
                 aria-label={`View ${project.title} project`}
                 className="
-                  block
-                  min-w-0
-                  w-full
+                  flex
                   h-full
+                  min-h-0
+                  w-full
+                  flex-col
+                  self-stretch
                 "
               >
-                {card}
+                {cardContent}
               </Link>
             );
           })}
@@ -372,4 +395,3 @@ export default function ProjectGrid() {
     </section>
   );
 }
-
