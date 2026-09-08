@@ -25,7 +25,7 @@ image: "/shivanshi.jpeg",
 {
 id: 3,
 name: "Ankit Das",
-role: "Co-founder & Project Manager",
+role: "Co-founder & Head of Project Management",
 image: "/ankit.jpeg",
 },
 ];
