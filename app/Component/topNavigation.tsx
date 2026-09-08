@@ -252,7 +252,7 @@ export default function TopNavigation() {
               {/* BOOK CALL */}
 
               <a
-                href="tel:+919266688954"
+                href="/contact-us"
                 className="hidden md:block"
               >
                 <div
