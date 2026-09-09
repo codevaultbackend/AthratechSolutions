@@ -28,7 +28,7 @@ export default function StackedProjects() {
         {/* Header */}
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
           <p
-            className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
+            className="mb-3 flex items-center justify-center gap-4 text-[18px] font-semibold text-[#626262] sm:text-[22px] lg:text-[24px]"
             style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
           >
             <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />

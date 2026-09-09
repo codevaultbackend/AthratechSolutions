@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import SectionLabel from "./SectionLabel";
 
 type ProjectItem = {
   img: string;
@@ -84,11 +85,7 @@ export default function Projects() {
       {/* ===== Heading ===== */}
 
       <div className="text-center mb-[80px] max-md:mb-[48px] px-4">
-        <p className="font-calligraffitti text-[#7A7A7A] mb-2 flex gap-4 items-center justify-center text-[24px] max-md:text-[16px] font-[400]">
-          <span className="inline-block w-[124px] max-md:w-[60px] h-[1px] bg-[linear-gradient(231deg,#9C9C9C_42%,#DFDFDF)]" />
-          Projects
-          <span className="inline-block w-[124px] max-md:w-[60px] h-[1px] bg-[linear-gradient(152deg,#9C9C9C_42%,#DFDFDF)]" />
-        </p>
+        <SectionLabel label="Projects" />
 
         <h2 className="text-[56px] font-[400] leading-[100%] text-black font-bricolage max-md:text-[26px] max-md:font-[500]">
           Work Booming in the Market

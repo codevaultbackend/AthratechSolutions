@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SectionLabel from "./SectionLabel";
 
 const faqs = [
   {
@@ -32,14 +33,8 @@ export default function FAQSection() {
     <section className=" scroll-mt-32 px-4 h-fit  pb-[225px] pt-[165px] max-[768px]:pt-[45px] max-[768px]:px-0 max-[768px]:pb-[125px] " id="faq">
       {/* ===== Header ===== */}
       <div className="mb-12 text-center sm:mb-14 lg:mb-16">
-        <p
-          className="mb-3 flex items-center justify-center gap-4 text-[18px] font-normal text-[#7A7A7A] sm:text-[22px] lg:text-[24px]"
-          style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
-        >
-          <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
-          FAQs
-          <span className="inline-block h-[1px] w-[124px] bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
-        </p>
+      
+         <SectionLabel label="FAQs" />
 
         <h2
           className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"

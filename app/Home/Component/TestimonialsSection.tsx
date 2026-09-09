@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import SectionLabel from "./SectionLabel";
 
 type Testimonial = {
   id: number;
@@ -75,14 +76,7 @@ export default function TestimonialsSection() {
     <section className=" px-4 py-[70px] max-[768px]:px-0 md:px-8 lg:py-[90px] xl:px-0 scroll-mt-32" id="testimonial">
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
-          <p
-            className="mx-auto mb-3 flex w-full max-w-[430px] items-center justify-center text-[18px] font-normal text-[#7A7A7A] sm:max-w-[470px] sm:text-[22px] lg:max-w-[520px] lg:text-[24px]"
-            style={{ fontFamily: "var(--font-calligraffitti), cursive" }}
-          >
-            <span className="h-[1px] flex-1 bg-[linear-gradient(-90deg,#9C9C9C_0%,#3A3A3A_18%,#707070_32%,#A3A3A3_58%,#D9D9D9_80%,#F3F3F3_100%)]" />
-            <span className="shrink-0 px-4">Testimonials</span>
-            <span className="h-[1px] flex-1 bg-[linear-gradient(-270deg,#9C9C9C_0%,#3A3A3A_18%,#707070_42%,#A3A3A3_68%,#D9D9D9_88%,#F3F3F3_100%)]" />
-          </p>
+          <SectionLabel label="Testimonials" />
 
           <h2
             className="mx-auto max-w-[320px] text-[28px] font-normal leading-[1.05] tracking-[-0.04em] text-black sm:max-w-[500px] sm:text-[36px] md:max-w-[650px] md:text-[42px] lg:max-w-[760px] lg:text-[48px]"

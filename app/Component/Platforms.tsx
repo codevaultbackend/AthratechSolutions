@@ -46,11 +46,11 @@ export default function Platforms({
   return (
     <section
       id={sectionId}
-      className={`relative  bg-white py-[72px] sm:py-[96px] lg:py-[118px] ${className}`}
+      className={`relative  bg-white !pt-0 py-[72px] sm:py-[96px] lg:py-[118px] ${className}`}
     >
       <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-[0.82fr_1fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1fr] lg:items-start mt-[148px] max-[768px]:mt-[48px]">
           <div>
             <h2 className="max-w-[540px] font-bricolage text-[34px] font-semibold leading-[0.96] tracking-[-0.075em] text-black sm:text-[46px] md:text-[54px] lg:text-[58px]">
               {heading}

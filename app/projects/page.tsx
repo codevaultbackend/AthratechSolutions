@@ -465,10 +465,10 @@ function ProjectCard({ project }: { project: Project }) {
             max-w-[430px]
 
             font-inter
-            text-[16px]
+            text-[14px]
             font-[400]
-            leading-[100%]
-            tracking-[0%]
+            leading-[120%]
+            tracking-[-2%]
             text-[#797979]
 
             sm:text-[17px]
@@ -494,7 +494,7 @@ function ProjectCard({ project }: { project: Project }) {
             gap-[8px]
 
             text-[16px]
-            font-[600]
+            font-[500]
             font-geist
             tracking-[0%]
             text-[#4D7EF0]

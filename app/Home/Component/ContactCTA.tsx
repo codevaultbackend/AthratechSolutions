@@ -282,7 +282,7 @@ overflow-hidden
           md:max-h-[320px]
           md:rounded-[28px]
 
-          lg:max-h-[430px]
+          lg:max-h-[400px]
           lg:max-w-[620px]
           lg:rounded-[28px]
         "

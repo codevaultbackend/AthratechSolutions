@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/app/context/services";
+import SectionLabel from "./SectionLabel";
 
 type WhatWeExcelAtSectionProps = {
   removeHorizontalPadding?: boolean;
@@ -26,18 +27,8 @@ export default function WhatWeExcelAtSection({
       <div className="mx-auto w-full max-w-full mt-[40px]">
         {/* Heading */}
         <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
-          <p
-            className="
-              mx-auto mb-4 flex w-full max-w-[320px] items-center justify-center
-              font-calligraffitti text-[18px] text-[#7A7A7A]
-              sm:max-w-[380px] sm:text-[20px]
-              md:max-w-[460px] md:text-[24px]
-            "
-          >
-            <span className="h-[1px] flex-1 bg-gradient-to-r from-[#9C9C9C] to-[#DFDFDF]" />
-            <span className="shrink-0 px-3 sm:px-4">Our Services</span>
-            <span className="h-[1px] flex-1 bg-gradient-to-l from-[#9C9C9C] to-[#DFDFDF]" />
-          </p>
+          
+          <SectionLabel label="Our Services" />
 
           <h2
             className="
