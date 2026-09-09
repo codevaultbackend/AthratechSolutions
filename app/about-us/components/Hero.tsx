@@ -48,8 +48,8 @@ export default function Hero() {
             <span
               className="
                 block
-                text-[#8A8A8A]
-                font-normal
+                text-[#626262]
+                !font-[600]
                 font-calligraffitti
 
                 text-[18px]
