@@ -14,7 +14,8 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/adck0mq8ewiejntqq6si.jpg",
+    avatar:
+      "https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/adck0mq8ewiejntqq6si.jpg",
     quote:
       "ATHRATECH delivered seamless digital solutions with strong technical expertise and reliable support throughout the project.",
     name: "Nihal Kumar Gupta",
@@ -22,7 +23,8 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    avatar :"https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518706/website-images/inwcmkfwygfkokaxgjj4.png",
+    avatar:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518706/website-images/inwcmkfwygfkokaxgjj4.png",
     quote:
       "ATHRATECH combined creativity and timely execution to strengthen our digital presence and user experience.",
     name: "Heera Lal",
@@ -30,15 +32,17 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168057/ss_page_assets/g0iebuslpunmn0fidvz8.jpg",
+    avatar:
+      "https://res.cloudinary.com/ddcy9noqo/image/upload/v1789454931/WhatsApp_Image_2026-09-15_at_12.17.19_t44c07.jpg",
     quote:
-      "Their team delivered a smooth experience through creative thinking, technical expertise, and professional execution.",
-    name: "Sangita Kumari",
-    role: "Director, Fast Response",
+      "The project was a great success, with strong collaboration and steady progress throughout. We’re very pleased with the final result and how effectively it represents our organization and mission.",
+    name: "Jacob Perkins",
+    role: "Board member",
   },
   {
     id: 4,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168059/ss_page_assets/idrhtutsykug6jajedxy.png",
+    avatar:
+      "https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168059/ss_page_assets/idrhtutsykug6jajedxy.png",
     quote:
       "ATHRATECH provided scalable and reliable solutions tailored to our business needs with excellent communication.",
     name: "Raman Kumar",
@@ -46,7 +50,8 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 5,
-    avatar :"https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518067/website-images/f552c4djelk2amskqp5a.png",
+    avatar:
+      "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779518067/website-images/f552c4djelk2amskqp5a.png",
     quote:
       "The team helped us build a modern brand presence with high-quality design and attention to every detail.",
     name: "Krishna Mishra",
@@ -54,7 +59,8 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 6,
-    avatar :"https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168056/ss_page_assets/suhawmdyttxpzfbaj49v.jpg",
+    avatar:
+      "https://res.cloudinary.com/ddcy9noqo/image/upload/v1769168056/ss_page_assets/suhawmdyttxpzfbaj49v.jpg",
     quote:
       "ATHRATECH delivered innovative digital solutions with quick execution, smooth coordination, and dependable service.",
     name: "Deepak Kumar Jha",
@@ -73,7 +79,10 @@ const initialsBg = [
 
 export default function TestimonialsSection() {
   return (
-    <section className=" px-4 py-[70px] max-[768px]:px-0 md:px-8 lg:py-[90px] xl:px-0 scroll-mt-32" id="testimonial">
+    <section
+      className="px-4 py-[70px] max-[768px]:px-0 md:px-8 lg:py-[90px] xl:px-0 scroll-mt-32"
+      id="testimonial"
+    >
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="mb-12 text-center sm:mb-14 lg:mb-16">
           <SectionLabel label="Testimonials" />
@@ -84,8 +93,6 @@ export default function TestimonialsSection() {
           >
             Where Great Ideas Meet <br /> Great Results
           </h2>
-
-          
         </div>
 
         {/* mobile */}
@@ -114,12 +121,41 @@ export default function TestimonialsSection() {
 
         {/* desktop */}
         <div className="hidden xl:grid xl:grid-cols-3 xl:gap-x-[34px] xl:gap-y-[24px]">
-          <TestimonialCard item={testimonials[0]} index={0} className="min-h-[290px]" />
-          <TestimonialCard item={testimonials[1]} index={1} className="min-h-[330px]" />
-          <TestimonialCard item={testimonials[2]} index={2} className="min-h-[290px]" />
-          <TestimonialCard item={testimonials[3]} index={3} className="min-h-[330px]" />
-          <TestimonialCard item={testimonials[4]} index={4} className="min-h-[290px]" />
-          <TestimonialCard item={testimonials[5]} index={5} className="min-h-[330px]" />
+          <TestimonialCard
+            item={testimonials[0]}
+            index={0}
+            className="min-h-[290px]"
+          />
+
+          <TestimonialCard
+            item={testimonials[1]}
+            index={1}
+            className="min-h-[330px]"
+          />
+
+          <TestimonialCard
+            item={testimonials[2]}
+            index={2}
+            className="min-h-[290px]"
+          />
+
+          <TestimonialCard
+            item={testimonials[3]}
+            index={3}
+            className="min-h-[330px]"
+          />
+
+          <TestimonialCard
+            item={testimonials[4]}
+            index={4}
+            className="min-h-[290px]"
+          />
+
+          <TestimonialCard
+            item={testimonials[5]}
+            index={5}
+            className="min-h-[330px]"
+          />
         </div>
       </div>
     </section>
@@ -155,7 +191,11 @@ function TestimonialCard({
               src={item.avatar}
               alt={item.name}
               fill
-              className={`${['Krishna Mishra', "Heera Lal"].includes(item.name) &&  '!h-auto'} object-cover`}
+              className={
+                item.name === "Jacob Perkins"
+                  ? "object-contain"
+                  : `${["Krishna Mishra", "Heera Lal"].includes(item.name) && "!h-auto"} object-cover`
+              }
             />
           ) : (
             <div
@@ -167,10 +207,11 @@ function TestimonialCard({
         </div>
 
         <div className="min-w-0">
-          <h3 className="truncate font-bricolage text-[20px] font-[500] leading-[1.05] text-[#000000] sm:text-[22px] lg:text-[24px]">
+          <h3 className="truncate font-bricolage text-[24px] font-[500] leading-[100%] tracking-[-4%] text-[#000000] ">
             {item.name}
           </h3>
-          <p className="mt-[6px] line-clamp-2 font-bricolage text-[14px] font-[500] leading-[1.35] text-[#8B8B8B] sm:text-[15px] lg:mt-[8px] lg:text-[17px]">
+
+          <p className="mt-[6px] line-clamp-2 font-bricolage text-[18px] font-[500] leading-[100%] text-[#8B8B8B] tracking-[-4%]">
             {item.role}
           </p>
         </div>
@@ -180,12 +221,20 @@ function TestimonialCard({
 }
 
 /* ===== Stat Component ===== */
-function Stat({ value, label }: { value: string; label: string }) {
+
+function Stat({
+  value,
+  label,
+}: {
+  value: string;
+  label: string;
+}) {
   return (
     <div className="mb-[44px]">
       <p className="font-bricolage text-[72px] font-[700] leading-[100%] text-[#FFFFFF] max-[768px]:text-[60px]">
         {value}
       </p>
+
       <p className="font-bricolage text-[16px] font-[400] text-[#FFFFFF]">
         {label}
       </p>
