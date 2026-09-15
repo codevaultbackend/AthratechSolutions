@@ -53,11 +53,24 @@ export default function MobileSidebar({ open, onClose }: Props) {
     router.push(slug);
   };
 
+  const navigationItems = [
+    { label: "Home", slug: "/" },
+    { label: "About US", slug: "/about-us" },
+    { label: "Services", slug: "/services" },
+    { label: "Testimonials", slug: "/#testimonial" },
+    { label: "Blogs", slug: "/blog" },
+    { label: "Projects", slug: "/projects" },
+    { label: "FAQ", slug: "/#faq" },
+  ];
+
   return (
     <>
-      {/* Backdrop */}
+      {/* =========================================================
+          BACKDROP
+      ========================================================= */}
       <div
         onClick={onClose}
+        aria-hidden="true"
         className={`
           fixed inset-0 z-[99998]
           bg-black/50
@@ -66,129 +79,296 @@ export default function MobileSidebar({ open, onClose }: Props) {
         `}
       />
 
-      {/* Sidebar */}
+      {/* =========================================================
+          SIDEBAR
+      ========================================================= */}
       <aside
+        aria-hidden={!open}
         className={`
-          fixed top-0 right-0 z-[99999]
-          flex h-screen w-full max-w-[420px] flex-col
+          fixed right-0 top-0 z-[99999]
+
+          flex
+          h-screen
+          h-[100dvh]
+          w-full
+          max-w-[420px]
+          flex-col
+
+          overflow-hidden
+
           rounded-l-[32px]
-          bg-[#262626] text-white
-          transition-transform duration-500
+
+          bg-[#262626]
+          text-white
+
+          transition-transform
+          duration-500
           ease-[cubic-bezier(0.4,0,0.2,1)]
+
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        {/* Close Button */}
+        {/* =======================================================
+            CLOSE BUTTON
+        ======================================================== */}
         <button
+          type="button"
           onClick={onClose}
           aria-label="Close sidebar"
           className="
-            absolute right-6 top-6
-            flex h-[48px] w-[48px]
-            items-center justify-center
-            rounded-full bg-white
+            absolute
+            right-6
+            top-6
+            z-20
+
+            flex
+            h-[48px]
+            w-[48px]
+            shrink-0
+
+            items-center
+            justify-center
+
+            rounded-full
+            bg-white
+
+            transition-transform
+            duration-300
+
+            hover:scale-[1.03]
+
+            max-[380px]:right-4
+            max-[380px]:top-4
+            max-[380px]:h-[44px]
+            max-[380px]:w-[44px]
           "
         >
-          <span className="text-[28px] leading-none text-black">×</span>
+          <span
+            className="
+              text-[28px]
+              leading-none
+              text-black
+
+              max-[380px]:text-[25px]
+            "
+          >
+            ×
+          </span>
         </button>
 
-        {/* Navigation */}
-        <nav
-          className="
-            flex flex-1 flex-col
-            items-center justify-center
-            gap-[36px]
-            px-6
-          "
-        >
-          {[
-            { label: "Home", slug: "/" },
-            { label: "Services", slug: "/services" },
-            { label: "Testimonials", slug: "/#testimonial" },
-            { label: "Blogs", slug: "/blog" },
-            { label: "Projects", slug: "/projects" },
-            { label: "FAQ", slug: "/#faq" },
-          ].map((item, index) => (
-            <button
-              key={index}
-              onClick={() => handleNavigation(item.slug)}
-              className="
-                text-[24px]
-                font-[400]
-                leading-[100%]
-                text-[#BEBEBE]
-                transition-colors duration-300
-                hover:text-white
-              "
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
+        {/* =======================================================
+            SCROLLABLE CONTENT
 
-        {/* CTA */}
+            This prevents the CTA/navigation from being cut off
+            on short mobile screens.
+        ======================================================== */}
         <div
           className="
-            mb-[0px]
-            max-[768px]:mb-[40px]
-            flex flex-col items-center gap-6
-            pb-[48px]
-            md:mb-0
+            flex
+            min-h-0
+            flex-1
+            flex-col
+
+            overflow-y-auto
+            overflow-x-hidden
+
+            overscroll-contain
+
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
           "
         >
-          <p className="font-bricolage text-[16px] font-[400] text-white">
-            Have a project for us?
-          </p>
+          {/* =====================================================
+              NAVIGATION
+          ====================================================== */}
+          <nav
+            className="
+              flex
+              min-h-0
+              flex-1
+              flex-col
 
-          <a
-            href="tel:+919266688954"
-            className="block"
+              items-center
+              justify-center
+
+              gap-[36px]
+
+              px-6
+              py-[100px]
+
+              max-[500px]:gap-[30px]
+              max-[500px]:px-5
+
+              max-[380px]:gap-[24px]
+              max-[380px]:px-4
+              max-[380px]:py-[90px]
+            "
           >
-            <div
+            {navigationItems.map((item) => (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => handleNavigation(item.slug)}
+                className="
+                  shrink-0
+
+                  text-[24px]
+                  font-[400]
+                  leading-[100%]
+                  text-[#BEBEBE]
+
+                  transition-colors
+                  duration-300
+
+                  hover:text-white
+
+                  max-[500px]:text-[22px]
+
+                  max-[380px]:text-[20px]
+                "
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* =====================================================
+              CTA
+          ====================================================== */}
+          <div
+            className="
+              flex
+              shrink-0
+              flex-col
+              items-center
+              gap-6
+
+              px-6
+              pb-[48px]
+
+              max-[768px]:mb-0
+
+              max-[500px]:gap-5
+              max-[500px]:px-5
+              max-[500px]:pb-[36px]
+
+              max-[380px]:gap-4
+              max-[380px]:px-4
+              max-[380px]:pb-[28px]
+            "
+          >
+            {/* Project text */}
+            <p
               className="
-                    flex
-                    items-center
-                    justify-center
+                font-bricolage
+                text-[16px]
+                font-[400]
+                text-white
 
-                    rounded-full
-
-                    bg-white
-
-                    font-medium
-
-                    text-black
-
-                    transition-all
-                    duration-700
-                    ease-[cubic-bezier(.22,1,.36,1)]
-
-                    hover:scale-[1.03]
-                          mt-2
-                          h-[48px]
-                          px-8
-                          text-[15px] "
-                   
-            >
-              Book A Call
-            </div>
-          </a>
-
-
-          <Link href="/contact-us" onClick={onClose}>
-            <div
-              className="
-                flex items-center gap-3
-                rounded-full bg-white
-                px-[36px] py-[14px]
-                text-[18px] font-[500] text-black
-                transition-transform duration-300
-                hover:scale-[1.03]
+                max-[380px]:text-[15px]
               "
             >
-              Let’s Talk
-              <span className="text-[20px]">→</span>
-            </div>
-          </Link>
+              Have a project for us?
+            </p>
+
+            {/* ===================================================
+                BOOK A CALL
+            ==================================================== */}
+            <a
+              href="tel:+919266688954"
+              className="block w-auto max-w-full"
+            >
+              <div
+                className="
+                  mt-2
+
+                  flex
+                  h-[48px]
+                  items-center
+                  justify-center
+
+                  rounded-full
+
+                  bg-white
+
+                  px-8
+
+                  text-[15px]
+                  font-medium
+                  text-black
+
+                  whitespace-nowrap
+
+                  transition-all
+                  duration-700
+                  ease-[cubic-bezier(.22,1,.36,1)]
+
+                  hover:scale-[1.03]
+
+                  max-[500px]:px-7
+
+                  max-[380px]:h-[46px]
+                  max-[380px]:px-6
+                  max-[380px]:text-[14px]
+                "
+              >
+                Book A Call
+              </div>
+            </a>
+
+            {/* ===================================================
+                LET'S TALK
+            ==================================================== */}
+            <Link
+              href="/contact-us"
+              onClick={onClose}
+              className="block max-w-full"
+            >
+              <div
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  gap-3
+
+                  rounded-full
+                  bg-white
+
+                  px-[36px]
+                  py-[14px]
+
+                  text-[18px]
+                  font-[500]
+                  text-black
+
+                  whitespace-nowrap
+
+                  transition-transform
+                  duration-300
+
+                  hover:scale-[1.03]
+
+                  max-[500px]:px-[32px]
+
+                  max-[380px]:px-[28px]
+                  max-[380px]:py-[13px]
+                  max-[380px]:text-[17px]
+                "
+              >
+                Let’s Talk
+
+                <span
+                  className="
+                    text-[20px]
+
+                    max-[380px]:text-[18px]
+                  "
+                >
+                  →
+                </span>
+              </div>
+            </Link>
+          </div>
         </div>
       </aside>
     </>
