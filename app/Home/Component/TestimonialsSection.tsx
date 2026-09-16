@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     quote:
       "The project was a great success, with strong collaboration and steady progress throughout. We’re very pleased with the final result and how effectively it represents our organization and mission.",
     name: "Jacob Perkins",
-    role: "Board member",
+    role: "Board member, Star 154 Foundation",
   },
   {
     id: 4,
