@@ -28,23 +28,6 @@ export default function Projects() {
       `,
     },
     {
-      img: "/decovistamockup.png",
-      alt: "Desktop Website Mockup",
-      slug: "https://decovista.in/",
-      scale: 1.04,
-      wrapperClass: `
-        top-[1.4%]
-        left-[-17%]
-        w-[150%]
-        max-[768px]:top-[-46%]
-        max-[768px]:w-[148%]
-        max-[768px]:h-[200%]
-        max-[768px]:left-[-16%]
-        
-
-      `,
-    },
-    {
       img: "/chugenmockup.png",
       alt: "Desktop Website Mockup",
       slug: "https://www.chugenhatcheries.com/",

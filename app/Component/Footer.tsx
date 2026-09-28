@@ -130,7 +130,6 @@ export default function Footer() {
                 Success Stories
               </h4>
               <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                <a href="https://decovista.in/"><li className="!mb-4">Decovista</li></a>
                 <a href="https://sankalpsetufoundation.org/"><li className="!mb-4">Sankalp Setu</li></a>
                 <a href="https://fiscoriseconsultants.com/"><li className="!mb-4">Fiscorise</li></a>
                 <a href="https://www.chugenhatcheries.com/"><li className="!mb-4">Chugen</li></a>
