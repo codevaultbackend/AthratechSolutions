@@ -14,7 +14,7 @@ type StatItem = {
 
 const stats: StatItem[] = [
     {
-        value: 26,
+        value: 50,
         suffix: "+",
         title: "Successful Projects",
         label: "We build high-impact websites and digital experiences for startups and enterprises to scale fast",

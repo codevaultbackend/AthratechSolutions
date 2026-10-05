@@ -24,6 +24,17 @@ export const metadata: Metadata = {
 
   title: "Athratech | Information Technology Company",
 
+  keywords: [
+    "website development company",
+    "website development services",
+    "mobile app development company",
+    "SEO services",
+    "digital marketing agency",
+    "ERP software development",
+    "CRM development company",
+    "cybersecurity solutions",
+  ],
+
   description:
     "Explore Athratech, a fast-growing IT services company helping businesses grow through website development, mobile app development, SEO, digital marketing, and custom software solutions.",
 
@@ -61,12 +72,41 @@ export default function RootLayout({
   lang="en"
   className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable} ${sfPro.variable}`}
 >
-      <head>
 
+        <head>
+  <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
 
-        
+  {/* Open Graph */}
 
-        <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
+<meta
+  property="og:title"
+  content="Athratech | Digital Solutions & IT Services"
+/>
+
+<meta
+  property="og:description"
+  content="Build, grow and scale your business with website, mobile app, UI/UX, software, ERP, CRM, SEO and digital marketing solutions."
+/>
+
+<meta
+  property="og:image"
+  content="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
+/>
+
+<meta
+  property="og:url"
+  content="https://www.athratech.com/"
+/>
+
+<meta
+  property="og:type"
+  content="website"
+/>
+
+<meta
+  property="og:site_name"
+  content="Athratech"
+/>
 
         {/* Font Awesome */}
         <link
@@ -113,6 +153,28 @@ export default function RootLayout({
     });
   `}
         </Script>
+
+
+        {/* Athratech schema */}
+
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.athratech.com/#organization",
+      name: "Athratech",
+      url: "https://www.athratech.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png",
+      },
+      description:
+        "Athratech is an IT services company providing website development, mobile app development, SEO, digital marketing, UI/UX design, and custom software solutions.",
+    }),
+  }}
+/>
 
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">

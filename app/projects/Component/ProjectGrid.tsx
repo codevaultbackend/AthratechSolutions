@@ -104,7 +104,7 @@ const projectCards: ProjectCard[] = [
     description:
       "G. Harmannsson crafts unforgettable Icelandic journeys with curated tours and authentic local experiences.",
     image: "/G-Harmannssons.png",
-    href: "#",
+    href: "https://www.4x4sprinticetravel.is",
     imageClassName:
       "object-cover bg-[linear-gradient(180deg,_#4E4E4E_0%,_#272222_100%)]",
   },
