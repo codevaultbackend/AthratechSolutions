@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Define font classes using your CSS variables */
 :root {
   --font-inter: "Inter", sans-serif;

@@ -88,9 +88,9 @@ export default function ContactForm() {
             Need a reply fast? 🚀
           </p>
 
-          <h2 className="font-bricolage mt-2 text-[56px] font-semibold leading-[0.92] tracking-[-0.055em] text-[#111111] md:mt-3 md:text-[108px] lg:text-[118px] max-[600px]:mt-[22px]">
+          <h1 className="font-bricolage mt-2 text-[56px] font-semibold leading-[0.92] tracking-[-0.055em] text-[#111111] md:mt-3 md:text-[108px] lg:text-[118px] max-[600px]:mt-[22px]">
             Let’s Talk!
-          </h2>
+          </h1>
 
           <p className="mx-auto mt-4 max-w-[570px] text-[24px] leading-[150%] font-[400] text-[#4A4A4A] md:mt-6 md:text-[18px] md:leading-[1.5] font-inter max-[600px]:mt-[22px] max-[768px]:mb-[68px]">
             Share your requirements here or send us an email and we will follow up in 24 hrs

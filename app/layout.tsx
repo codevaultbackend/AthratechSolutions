@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 
 
 import "./globals.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
@@ -107,15 +108,6 @@ export default function RootLayout({
   property="og:site_name"
   content="Athratech"
 />
-
-        {/* Font Awesome */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
       </head>
 
       <body className="relative bg-[#FFFFFF] antialiased mt-[107px] ">

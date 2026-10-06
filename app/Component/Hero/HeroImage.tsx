@@ -127,6 +127,7 @@ export default function HeroImage() {
           alt="Hero"
 
           priority
+          preload
 
           draggable={false}
 

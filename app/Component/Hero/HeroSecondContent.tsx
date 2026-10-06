@@ -25,7 +25,7 @@ export default function HeroSecondContent() {
           font-bricolage
           font-[500]
 
-          text-[42px]
+          text-[48px]
           leading-[1.02]
           tracking-[-0.05em]
 

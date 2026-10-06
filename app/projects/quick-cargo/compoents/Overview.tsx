@@ -27,7 +27,7 @@ export default function Overview() {
           {/* Description */}
 
           <div className="max-w-full">
-            <h1
+            <p
               className="
                 font-inter
                 text-[50px]
@@ -51,7 +51,7 @@ export default function Overview() {
               <span className="font-semibold">
                 real-time shipment tracking.
               </span>
-            </h1>
+            </p>
           </div>
 
           {/* Project Details */}
@@ -69,7 +69,7 @@ export default function Overview() {
           >
             {/* Title */}
 
-            <h2
+            <h1
               className="
                 font-bricolage
                 text-[64px]
@@ -82,7 +82,7 @@ export default function Overview() {
               "
             >
               Quick Cargo
-            </h2>
+            </h1>
 
             {/* Meta */}
 
@@ -166,28 +166,7 @@ export default function Overview() {
 
           {/* Left Title */}
 
-          <h2
-            className="
-              absolute
-              left-0
-              top-0
-              z-20
-
-              font-sfpro
-              font-[510]
-              tracking-[-0.05em]
-
-              text-[88px]
-              
-              leading-[0.92]
-
-              text-[#202020]
-            "
-          >
-            Problem &
-            <br />
-            Solution
-          </h2>
+          
 
         </section>
 

@@ -16,6 +16,7 @@ import WhatWeExcelAtSection from "./Component/Whatweexcel";
 import StepsSection from "./Component/StepsSection";
 import Hero from "../Component/Hero/Hero";
 import { useEffect } from "react";
+import WhatWeExcelLabel from "./Component/WhatWeExcelLabel";
 
 export default function Home() {
 
@@ -63,6 +64,7 @@ export default function Home() {
       <div className="px-[80px] max-[768px]:px-[16px]">
 
         {/* <WhyAthraTechSection /> */}
+        <WhatWeExcelLabel />
         <WhatWeExcelAtSection removeHorizontalPadding />
         <StepsSection />
         <StackedProjectsSection />

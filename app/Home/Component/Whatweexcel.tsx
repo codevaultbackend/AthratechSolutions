@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/app/context/services";
 import SectionLabel from "./SectionLabel";
+import WhatWeExcelLabel from "./WhatWeExcelLabel";
 
 type WhatWeExcelAtSectionProps = {
   removeHorizontalPadding?: boolean;
@@ -21,28 +22,13 @@ export default function WhatWeExcelAtSection({
 
   return (
     <section
-      className={`w-full bg-white py-[55px] ${removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
+      className={`w-full bg-white pb-[55px]  ${removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
         }`}
     >
       <div className="mx-auto w-full max-w-full mt-[40px]">
         {/* Heading */}
-        <div className="relative z-10 mb-12 text-center sm:mb-16 md:mb-20 lg:mb-24">
-          
-          <SectionLabel label="Our Services" />
-
-          <h2
-            className="
-              mx-auto max-w-[320px]
-              text-center font-bricolage font-[400]
-              text-[28px] leading-[1.1]
-              sm:max-w-[450px] sm:text-[38px]
-              md:max-w-[600px] md:text-[48px]
-              lg:max-w-[720px] lg:text-[56px]
-            "
-          >
-            What we <span className="text-[#8A8A8A]">excel </span> at ?
-          </h2>
-        </div>
+        
+        
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">

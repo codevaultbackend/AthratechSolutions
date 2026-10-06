@@ -203,7 +203,7 @@ function ProjectCardContent({
       >
         {/* TITLE */}
 
-        <h3
+        <h2
           className="
             shrink-0
 
@@ -221,7 +221,7 @@ function ProjectCardContent({
           "
         >
           {project.title}
-        </h3>
+        </h2>
 
         {/* DESCRIPTION */}
 

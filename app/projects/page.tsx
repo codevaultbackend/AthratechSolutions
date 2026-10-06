@@ -443,7 +443,7 @@ function ProjectCard({ project }: { project: Project }) {
         */}
 
         <div className="min-h-[56px]">
-          <h3
+          <h2
             className="
               text-[28px]
               font-medium
@@ -454,7 +454,7 @@ function ProjectCard({ project }: { project: Project }) {
             "
           >
             {project.title}
-          </h3>
+          </h2>
         </div>
 
         {/* DESCRIPTION */}
@@ -623,7 +623,7 @@ export default function Projects() {
         ================================================= */}
 
         <div className="flex items-start">
-          <h2
+          <h1
             className="
               font-bricolage
               text-[58px]
@@ -641,7 +641,7 @@ export default function Projects() {
             Our
             <br />
             Projects
-          </h2>
+          </h1>
         </div>
 
         {/* =================================================

@@ -62,7 +62,7 @@ export default function Hero() {
               About Us
             </span>
 
-            <h2
+            <h1
               className="
                 mt-3
                 sm:mt-4
@@ -79,15 +79,15 @@ export default function Hero() {
                 min-[480px]:text-[36px]
                 sm:text-[42px]
                 md:text-[46px]
-                lg:text-[50px]
-                xl:text-[54px]
+                lg:text-[48px]
+                xl:text-[48px]
               "
             >
               We’re Here to Make
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
               a Difference
-            </h2>
+            </h1>
 
             <p
               className="
@@ -146,6 +146,7 @@ export default function Hero() {
               src="/about-us.png"
               alt="About Image"
               fill
+              preload
               priority
               className="object-cover"
               sizes="

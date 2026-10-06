@@ -102,7 +102,7 @@ bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
       text-[24px] leading-[1.15]
       sm:max-w-[420px] sm:text-[34px]
       md:max-w-[540px] md:text-[44px]
-      lg:max-w-[620px] lg:text-[56px]
+      lg:max-w-[620px] lg:text-[48px]
     "
                 >
                     Take the first step 🚶

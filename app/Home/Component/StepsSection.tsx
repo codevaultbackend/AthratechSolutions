@@ -64,7 +64,7 @@ export default function StepsSection() {
                             md:text-[44px]
 
                             lg:max-w-[620px]
-                            lg:text-[56px]
+                            lg:text-[48px]
                         "
                     >
 
