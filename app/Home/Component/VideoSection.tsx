@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function VideoSection() {
     const AllLogos = [
         "https://res.cloudinary.com/ddcy9noqo/image/upload/v1769605214/SSA_Logo_png_qrzh36.png",
@@ -23,11 +25,12 @@ export default function VideoSection() {
                             key={index}
                             className="flex items-center justify-center min-w-[160px]"
                         >
-                            <img
-                                src={logo}
-                                alt="Client Logo"
-                                className="h-12 object-contain  opacity-70 hover:opacity-100  transition"
-                            />
+                            <Image
+                            src={logo}
+                            priority
+                            preload
+                            alt="Client Logo"
+                                className="h-12 object-contain  opacity-70 hover:opacity-100  transition" />
                         </div>
                     ))}
                 </div>

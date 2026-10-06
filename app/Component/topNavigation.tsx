@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 import MobileSidebar from "./MobileSidebar";
 import Hamburgure from "../svgIcons/Hamburgure";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -123,21 +124,24 @@ export default function TopNavigation() {
                 }
               `}
             >
-              <img
-                src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
+             
+              <Image 
+              src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
                 alt="Athratech"
-                className="
+                 className="
+                 preload
                   hidden
                   h-[38px]
                   w-auto
                   object-contain
                   md:block
-                "
-              />
+                " />
 
-              <img
+
+              <Image 
                 src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
                 alt="Athratech"
+                preload
                 className="
                   h-8
                   w-[114px]

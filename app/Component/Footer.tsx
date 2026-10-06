@@ -58,6 +58,7 @@ export default function Footer() {
               width={146}
               height={42}
               priority
+              
               unoptimized
             />
           </div>
