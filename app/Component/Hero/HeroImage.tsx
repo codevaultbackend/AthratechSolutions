@@ -125,10 +125,8 @@ export default function HeroImage() {
         <Image
           src="/Hero.png"
           alt="Hero"
-
-          priority
           preload
-
+          fetchPriority="high"
           draggable={false}
 
           width={1400}

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import MobileSidebar from "./MobileSidebar";
 import Hamburgure from "../svgIcons/Hamburgure";
@@ -20,11 +20,20 @@ const navItems = [
 
 export default function TopNavigation() {
   const pathname = usePathname();
+  const router = useRouter();
 
   const [open, setOpen] = useState(false);
 
   const [compactHero, setCompactHero] = useState(true);
 
+  // Track current URL hash
+  const [currentHash, setCurrentHash] = useState("");
+
+  /*
+   * ============================================
+   * HEADER SCROLL STATE
+   * ============================================
+   */
   useEffect(() => {
     const handleScroll = () => {
       setCompactHero(window.scrollY < 120);
@@ -39,6 +48,153 @@ export default function TopNavigation() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  /*
+   * ============================================
+   * HASH STATE
+   * ============================================
+   */
+  useEffect(() => {
+    const updateHash = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    // Initial hash
+    updateHash();
+
+    // Browser back/forward/hash changes
+    window.addEventListener("hashchange", updateHash);
+    window.addEventListener("popstate", updateHash);
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+      window.removeEventListener("popstate", updateHash);
+    };
+  }, []);
+
+  /*
+   * ============================================
+   * HASH ROUTING / SCROLL
+   *
+   * Handles:
+   * /#faq
+   * /#testimonial
+   *
+   * Especially when coming from another page.
+   * ============================================
+   */
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const hash = window.location.hash;
+
+    if (!hash) return;
+
+    const targetId = hash.substring(1);
+
+    if (!targetId) return;
+
+    let attempts = 0;
+    const maxAttempts = 30;
+
+    const scrollToTarget = () => {
+      const element = document.getElementById(targetId);
+
+      if (element) {
+        const headerOffset = 110;
+
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top: Math.max(0, elementPosition - headerOffset),
+          behavior: "smooth",
+        });
+
+        return;
+      }
+
+      attempts++;
+
+      if (attempts < maxAttempts) {
+        requestAnimationFrame(scrollToTarget);
+      }
+    };
+
+    requestAnimationFrame(scrollToTarget);
+  }, [pathname]);
+
+  /*
+   * ============================================
+   * NAVIGATION HANDLER
+   * ============================================
+   */
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    // Normal navigation
+    if (!href.includes("#")) {
+      return;
+    }
+
+    e.preventDefault();
+
+    const [path, hash] = href.split("#");
+
+    if (!hash) return;
+
+    /*
+     * ==========================================
+     * ALREADY ON HOME PAGE
+     * ==========================================
+     */
+    if (pathname === path || (path === "/" && pathname === "/")) {
+      const element = document.getElementById(hash);
+
+      // Update active navigation immediately
+      setCurrentHash(`#${hash}`);
+
+      if (element) {
+        const headerOffset = 110;
+
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+
+        window.history.pushState(
+          null,
+          "",
+          `/#${hash}`
+        );
+
+        window.scrollTo({
+          top: Math.max(0, elementPosition - headerOffset),
+          behavior: "smooth",
+        });
+
+        return;
+      }
+
+      /*
+       * Target doesn't exist yet.
+       * Keep hash in URL.
+       */
+      window.history.pushState(
+        null,
+        "",
+        `/#${hash}`
+      );
+
+      return;
+    }
+
+    /*
+     * ==========================================
+     * COMING FROM ANOTHER PAGE
+     * ==========================================
+     */
+    router.push(`${path}#${hash}`);
+  };
 
   return (
     <>
@@ -78,7 +234,6 @@ export default function TopNavigation() {
             transition-all
             duration-700
             ease-[cubic-bezier(.22,1,.36,1)]
-            
 
             ${
               compactHero
@@ -117,30 +272,28 @@ export default function TopNavigation() {
                 transition-all
                 duration-700
 
-                ${
-                  compactHero
-                    ? ""
-                    : "relative"
-                }
+                ${compactHero ? "" : "relative"}
               `}
             >
-             
-              <Image 
-              src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
+              <Image
+                src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
+                height={229}
+                width={129}
                 alt="Athratech"
-                 className="
-                 preload
+                className="
                   hidden
                   h-[38px]
                   w-auto
                   object-contain
                   md:block
-                " />
+                "
+              />
 
-
-              <Image 
+              <Image
                 src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
                 alt="Athratech"
+                height={229}
+                width={129}
                 preload
                 className="
                   h-8
@@ -150,7 +303,8 @@ export default function TopNavigation() {
                 "
               />
             </Link>
-                        {/* ================================= */}
+
+            {/* ================================= */}
             {/* DESKTOP NAVIGATION */}
             {/* ================================= */}
 
@@ -176,15 +330,45 @@ export default function TopNavigation() {
               `}
             >
               {navItems.map((item) => {
-                const active =
-                  item.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(item.href);
+                const isHashLink = item.href.includes("#");
+
+                let active = false;
+
+                if (isHashLink) {
+                  /*
+                   * Testimonials / FAQ
+                   *
+                   * Only active when their exact hash
+                   * is currently selected.
+                   */
+                  const hash = item.href.split("#")[1];
+
+                  active =
+                    pathname === "/" &&
+                    currentHash === `#${hash}`;
+                } else if (item.href === "/") {
+                  /*
+                   * Home is active only when:
+                   * - We are on /
+                   * - There is NO active hash
+                   */
+                  active =
+                    pathname === "/" &&
+                    currentHash === "";
+                } else {
+                  /*
+                   * Normal pages
+                   */
+                  active = pathname.startsWith(item.href);
+                }
 
                 return (
                   <Link
                     key={item.label}
                     href={item.href}
+                    onClick={(e) =>
+                      handleNavigation(e, item.href)
+                    }
                     className="
                       group
                       relative
@@ -335,7 +519,7 @@ export default function TopNavigation() {
                 <Hamburgure className="h-5 w-5 !text-[#000000]" />
               </button>
             </div>
-                      </div>
+          </div>
         </nav>
       </header>
 

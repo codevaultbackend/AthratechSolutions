@@ -1,34 +1,22 @@
 @import "tailwindcss";
 
-/* Define font classes using your CSS variables */
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
+
 :root {
   --font-inter: "Inter", sans-serif;
   --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-calligraffitti: "Calligraffitti", cursive;
+
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
+/* =========================================================
+   GLOBAL FONT UTILITIES
+   ========================================================= */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img,
-video,
-canvas,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Font utility classes */
 .font-inter {
   font-family: var(--font-inter);
 }
@@ -41,22 +29,41 @@ svg {
   font-family: var(--font-calligraffitti);
 }
 
-/* Optional: default font for the whole page */
+.font-sfpro {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY & BODY
+   ========================================================= */
+
 html {
   font-family: var(--font-inter);
 }
 
-/* Smooth font rendering */
 body {
+  background: var(--background);
+  color: var(--foreground);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Logo scroll animation */
+/* =========================================================
+   LOGO SCROLL ANIMATION
+   ========================================================= */
+
 @keyframes logo-scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -65,13 +72,20 @@ body {
 .animate-logo-scroll {
   animation: logo-scroll 30s linear infinite;
 }
+
+/* =========================================================
+   FLOATING ANIMATIONS
+   ========================================================= */
+
 @keyframes floatSoft {
   0% {
     transform: translateY(0) rotate(-8deg);
   }
+
   50% {
     transform: translateY(-14px) rotate(-6deg);
   }
+
   100% {
     transform: translateY(0) rotate(-8deg);
   }
@@ -81,9 +95,11 @@ body {
   0% {
     transform: translateY(0) rotate(6deg);
   }
+
   50% {
     transform: translateY(-18px) rotate(8deg);
   }
+
   100% {
     transform: translateY(0) rotate(6deg);
   }
@@ -93,9 +109,11 @@ body {
   0% {
     transform: translateY(0) rotate(6deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(8deg);
   }
+
   100% {
     transform: translateY(0) rotate(6deg);
   }
@@ -115,23 +133,16 @@ body {
   animation: floatMobile 5s ease-in-out infinite;
   will-change: transform;
 }
-@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =========================================================
+   MARQUEE ANIMATIONS
+   ========================================================= */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-}
-
-/* marquee animations */
 @keyframes marquee-left {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -141,6 +152,7 @@ body {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -161,11 +173,15 @@ body {
   animation: marquee-right 24s linear infinite;
 }
 
-/* slow down on hover */
+/* Slow down marquee on hover */
 .marquee-wrapper:hover .marquee-left,
 .marquee-wrapper:hover .marquee-right {
   animation-duration: 60s;
 }
+
+/* =========================================================
+   HIDE SCROLLBAR
+   ========================================================= */
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -176,10 +192,15 @@ body {
   scrollbar-width: none;
 }
 
+/* =========================================================
+   GALLERY ANIMATIONS
+   ========================================================= */
+
 @keyframes galleryMoveLeft {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(calc(-50% - 10px), 0, 0);
   }
@@ -189,6 +210,7 @@ body {
   0% {
     transform: translate3d(calc(-50% - 10px), 0, 0);
   }
+
   100% {
     transform: translate3d(0, 0, 0);
   }
@@ -214,10 +236,15 @@ body {
   animation: galleryMoveRight 28s linear infinite;
 }
 
+/* Slow down gallery on hover */
 .gallery-row:hover .gallery-move-left,
 .gallery-row:hover .gallery-move-right {
   animation-duration: 65s;
 }
+
+/* =========================================================
+   GALLERY RESPONSIVE SETTINGS
+   ========================================================= */
 
 @media (min-width: 640px) {
   .gallery-track {
@@ -247,243 +274,21 @@ body {
   }
 }
 
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
   .gallery-move-left,
   .gallery-move-right {
     animation: none !important;
   }
 }
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero-heading {
-  text-wrap: balance;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-wrap: normal;
-  word-break: keep-all;
-  hyphens: none;
-  will-change: transform, opacity;
-}
-
-.hero-image {
-  transform-origin: center bottom;
-  will-change: transform;
-}
-
-.hero-image img {
-  display: block;
-  pointer-events: none;
-  user-select: none;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
 
 /* =========================================================
-   CTA BUTTONS
-========================================================= */
+   DETAILS / SUMMARY
+   ========================================================= */
 
-.cta-btn {
-  position: relative;
-  overflow: hidden;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    transform .45s cubic-bezier(.22,1,.36,1),
-    box-shadow .45s cubic-bezier(.22,1,.36,1),
-    background-color .45s cubic-bezier(.22,1,.36,1),
-    border-color .45s cubic-bezier(.22,1,.36,1),
-    color .45s cubic-bezier(.22,1,.36,1);
-
-  will-change: transform;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-}
-
-.cta-btn:active {
-  transform: translateY(0) scale(.98);
-}
-
-.cta-btn:focus-visible {
-  outline: none;
-  box-shadow:
-    0 0 0 3px rgba(17,17,17,.12);
-}
-
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
-
-.cta-primary {
-  background: #111;
-  color: white;
-}
-
-.cta-primary::before {
-
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background: white;
-
-  opacity: 0;
-
-  transition: opacity .45s cubic-bezier(.22,1,.36,1);
-
-  z-index: 0;
-}
-
-.cta-primary:hover::before {
-  opacity: 1;
-}
-
-.cta-primary>* {
-  position: relative;
-  z-index: 1;
-}
-
-.cta-primary:hover {
-  color: #111;
-  box-shadow:
-    0 22px 55px rgba(0,0,0,.18);
-}
-
-/* =========================================================
-   SECONDARY BUTTON
-========================================================= */
-
-.cta-secondary {
-  background: white;
-  border: 1px solid #E7E7E9;
-  color: #111;
-}
-
-.cta-secondary:hover {
-
-  background: #111;
-  border-color: #111;
-  color: white;
-
-  box-shadow:
-    0 22px 55px rgba(0,0,0,.12);
-}
-
-/* =========================================================
-   ICON ANIMATION
-========================================================= */
-
-.cta-icon {
-
-  transition:
-    transform .45s cubic-bezier(.22,1,.36,1);
-}
-
-.cta-secondary:hover .cta-icon {
-  transform:
-    translate(4px,-4px)
-    rotate(8deg);
-}
-
-/* =========================================================
-   IMAGE FLOAT
-========================================================= */
-
-@keyframes heroFloat {
-
-  0% {
-    transform:
-      translateY(0px);
-  }
-
-  50% {
-    transform:
-      translateY(-10px);
-  }
-
-  100% {
-    transform:
-      translateY(0px);
-  }
-
-}
-
-.hero-image-float {
-  animation:
-    heroFloat 7s ease-in-out infinite;
-}
-
-/* =========================================================
-   GLOW PULSE
-========================================================= */
-
-@keyframes glowPulse {
-
-  0% {
-    opacity: .65;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  100% {
-    opacity: .65;
-    transform: scale(1);
-  }
-
-}
-
-.hero-glow {
-  animation:
-    glowPulse 8s ease-in-out infinite;
-}
-
-/* =========================================================
-   SMOOTH IMAGE
-========================================================= */
-
-.hero-image img{
-
-  transition:
-    transform .8s cubic-bezier(.22,1,.36,1);
-}
-
-/* =========================================================
-   LINKS
-========================================================= */
-
-a{
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* =========================================================
-   REDUCE MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce){
-
-  *,
-  *::before,
-  *::after{
-
-    animation-duration:.01ms !important;
-
-    animation-iteration-count:1 !important;
-
-    transition-duration:.01ms !important;
-
-    scroll-behavior:auto !important;
-  }
-
+summary::-webkit-details-marker {
+  display: none;
 }

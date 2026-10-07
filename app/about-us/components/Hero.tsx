@@ -144,10 +144,10 @@ export default function Hero() {
           >
             <Image
               src="/about-us.png"
+              height={467}
+              width={620}
               alt="About Image"
-              fill
               preload
-              priority
               className="object-cover"
               sizes="
                 (max-width: 479px) 100vw,

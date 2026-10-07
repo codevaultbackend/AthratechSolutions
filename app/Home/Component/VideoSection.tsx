@@ -27,7 +27,8 @@ export default function VideoSection() {
                         >
                             <Image
                             src={logo}
-                            priority
+                            height={36}
+                            width={160}
                             preload
                             alt="Client Logo"
                                 className="h-12 object-contain  opacity-70 hover:opacity-100  transition" />

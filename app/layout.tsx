@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import localFont from "next/font/local";
 
 
-import "./globals.css";
+import "./global.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import TopNavigation from "./Component/topNavigation";
@@ -169,7 +168,7 @@ export default function RootLayout({
 />
 
         {/* Meta Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        <Script id="facebook-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {
