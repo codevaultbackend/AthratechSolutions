@@ -48,9 +48,8 @@ export default function WhatWeExcelAtSection({
               src={mainService.image}
               alt={mainService.alt}
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition duration-700 ease-out group-hover:scale-[1.035] max-[768px]:!h-[67%]  max-[768px]:!left-0 max-[768px]:!top-auto bottom-0
-              "
+              sizes="(min-width: 1024px) 430px, 100vw"
+              className="object-cover transition duration-700 ease-out group-hover:scale-[1.035] max-[768px]:!h-[67%] max-[768px]:!left-0 max-[768px]:!top-auto bottom-0"
             />
 
             <div
@@ -104,38 +103,51 @@ export default function WhatWeExcelAtSection({
               {/* IMAGE */}
               <div
                 className="
-                  pointer-events-none absolute left-1/2 top-6 z-[1]
-                  h-[150px] w-[260px] -translate-x-1/2
+    pointer-events-none
+    absolute
+    left-1/2
+    top-6
+    z-[1]
+    h-[150px]
+    w-[260px]
+    -translate-x-1/2
 
-                  xs:h-[170px] xs:w-[300px]
-                      width: 100%;
-    max-width: 100%;
-    max-[768px]:!h-[114%]
-    height: 60%;
-    top: -2px;
-    left: 132px;
-                  max-[768px]:top-[-2px] max-[768px]:h-[85%] max-[768px]:left-[30px] max-[768px]:max-w-[100%]
+    xs:h-[170px]
+    xs:w-[300px]
 
-                  md:h-[260px] md:w-[460px]
+    max-[768px]:top-[-2px]
+    max-[768px]:h-[85%]
+    max-[768px]:left-[30px]
+    max-[768px]:max-w-[100%]
 
-                  lg:left-[-25px] lg:bottom-[-25px] lg:top-auto
-                  lg:h-[260px] lg:w-[400px]
-                  lg:translate-x-0
-                "
+    md:h-[260px]
+    md:w-[460px]
+
+    lg:left-[-25px]
+    lg:bottom-[-25px]
+    lg:top-auto
+    lg:h-[260px]
+    lg:w-[400px]
+    lg:translate-x-0
+  "
               >
                 <Image
                   src={wideService.image}
                   alt={wideService.alt}
                   fill
                   sizes="
-                  (min-width: 1024px) 400px,
-                  (min-width: 768px) 460px,
-                  100vw"
+    (min-width: 1024px) 400px,
+    (min-width: 768px) 460px,
+    100vw
+  "
                   className="
-                    object-contain transition-transform duration-700 ease-out
-                    group-hover:scale-[1.035]
-                    lg:object-left-bottom
-                  "
+    object-contain
+    transition-transform
+    duration-700
+    ease-out
+    group-hover:scale-[1.035]
+    lg:object-left-bottom
+  "
                 />
               </div>
 
@@ -211,19 +223,22 @@ export default function WhatWeExcelAtSection({
                 lg:min-h-[255px]
               "
             >
-              <Image
-                src={smallService.image}
-                alt={smallService.alt}
-                fill
-                sizes="
-                   (min-width: 1024px) 50vw,
-                      100vw"             
-                  className="
-                  object-cover transition duration-700 ease-out
-                  group-hover:scale-[1.035]
-                "
-              />
-
+             <Image
+  src={smallService.image}
+  alt={smallService.alt}
+  fill
+  sizes="
+  (min-width: 1024px) 430px,
+  100vw
+  "
+  className="
+    object-cover
+    transition
+    duration-700
+    ease-out
+    group-hover:scale-[1.035]
+  "
+/>
               <div className="absolute inset-0 bg-black/20" />
 
               <div
