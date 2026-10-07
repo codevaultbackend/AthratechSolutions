@@ -235,10 +235,9 @@ export default function TopNavigation() {
             duration-700
             ease-[cubic-bezier(.22,1,.36,1)]
 
-            ${
-              compactHero
-                ? "h-[74px] !w-[410px] w-full"
-                : "h-[72px] w-full max-w-[1296px]"
+            ${compactHero
+              ? "h-[74px] !w-[410px] w-full"
+              : "h-[72px] w-full max-w-[1296px]"
             }
           `}
         >
@@ -252,10 +251,9 @@ export default function TopNavigation() {
               transition-all
               duration-700
 
-              ${
-                compactHero
-                  ? "justify-start px-4 pl-5"
-                  : "justify-between px-4 pl-6"
+              ${compactHero
+                ? "justify-start px-4 pl-5"
+                : "justify-between px-4 pl-6"
               }
             `}
           >
@@ -276,31 +274,32 @@ export default function TopNavigation() {
               `}
             >
               <Image
-                src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
-                height={229}
-                width={129}
+                src="https://res.cloudinary.com/ddcy9noqo/image/upload/w_160,q_auto,f_auto/v1775279365/AthraWhiteLogo_n1xlnv.png"
+                width={160}
+                height={72}
+                sizes="160px"
                 alt="Athratech"
                 className="
-                  hidden
-                  h-[38px]
-                  w-auto
-                  object-contain
-                  md:block
-                "
+    hidden
+    h-[38px]
+    w-auto
+    object-contain
+    md:block
+  "
               />
 
               <Image
-                src="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
+                src="https://res.cloudinary.com/ddcy9noqo/image/upload/w_140,q_auto,f_auto/v1775279365/AthraWhiteLogo_n1xlnv.png"
                 alt="Athratech"
-                height={229}
-                width={129}
-                preload
+                width={140}
+                height={63}
+                sizes="140px"
                 className="
-                  h-8
-                  w-[114px]
-                  object-contain
-                  md:hidden
-                "
+    h-8
+    w-[114px]
+    object-contain
+    md:hidden
+  "
               />
             </Link>
 
@@ -322,10 +321,9 @@ export default function TopNavigation() {
                 transition-all
                 duration-500
 
-                ${
-                  compactHero
-                    ? "opacity-0 scale-95 pointer-events-none"
-                    : "opacity-100 scale-100 delay-150"
+                ${compactHero
+                  ? "opacity-0 scale-95 pointer-events-none"
+                  : "opacity-100 scale-100 delay-150"
                 }
               `}
             >
@@ -401,10 +399,9 @@ export default function TopNavigation() {
                         transition-all
                         duration-300
 
-                        ${
-                          active
-                            ? "w-full"
-                            : "w-0 group-hover:w-full"
+                        ${active
+                          ? "w-full"
+                          : "w-0 group-hover:w-full"
                         }
                       `}
                     />
@@ -425,13 +422,12 @@ export default function TopNavigation() {
                 transition-all
                 duration-700
 
-                ${
-                  compactHero
-                    ? `
+                ${compactHero
+                  ? `
                       absolute
                       right-5
                     `
-                    : `
+                  : `
                       relative
                     `
                 }
@@ -463,14 +459,13 @@ export default function TopNavigation() {
 
                     hover:scale-[1.03]
 
-                    ${
-                      compactHero
-                        ? `
+                    ${compactHero
+                      ? `
                           h-[58px]
                           px-10
                           text-[18px]
                         `
-                        : `
+                      : `
                           h-[48px]
                           px-8
                           text-[15px]
@@ -509,10 +504,9 @@ export default function TopNavigation() {
 
                   md:hidden
 
-                  ${
-                    compactHero
-                      ? "ml-auto"
-                      : ""
+                  ${compactHero
+                    ? "ml-auto"
+                    : ""
                   }
                 `}
               >

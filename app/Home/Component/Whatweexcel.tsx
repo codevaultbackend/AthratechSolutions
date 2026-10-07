@@ -27,8 +27,8 @@ export default function WhatWeExcelAtSection({
     >
       <div className="mx-auto w-full max-w-full mt-[40px]">
         {/* Heading */}
-        
-        
+
+
 
         {/* Cards */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
@@ -48,10 +48,8 @@ export default function WhatWeExcelAtSection({
               src={mainService.image}
               alt={mainService.alt}
               fill
-              priority
-              className="
-                object-cover transition duration-700 ease-out
-                group-hover:scale-[1.035] max-[768px]:!h-[67%]  max-[768px]:!left-0 max-[768px]:!top-auto bottom-0
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover transition duration-700 ease-out group-hover:scale-[1.035] max-[768px]:!h-[67%]  max-[768px]:!left-0 max-[768px]:!top-auto bottom-0
               "
             />
 
@@ -129,7 +127,10 @@ export default function WhatWeExcelAtSection({
                   src={wideService.image}
                   alt={wideService.alt}
                   fill
-                  priority
+                  sizes="
+                  (min-width: 1024px) 400px,
+                  (min-width: 768px) 460px,
+                  100vw"
                   className="
                     object-contain transition-transform duration-700 ease-out
                     group-hover:scale-[1.035]
@@ -214,8 +215,10 @@ export default function WhatWeExcelAtSection({
                 src={smallService.image}
                 alt={smallService.alt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="
+                sizes="
+                   (min-width: 1024px) 50vw,
+                      100vw"             
+                  className="
                   object-cover transition duration-700 ease-out
                   group-hover:scale-[1.035]
                 "

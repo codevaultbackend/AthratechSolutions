@@ -15,23 +15,39 @@ export default function VideoSection() {
     ];
 
     return (
-        <section className="w-full  relative  z-[9]    ">
+        <section className="relative z-[9] w-full">
             {/* Logo Carousel */}
-            <div className="relative bg-[#fff] pb-[32px] overflow-hidden rounded-bl-[32px] rounded-br-[32px] ">
-                <h3 className="text-center text-[#626262] text-[18px] leading-[31px] tracking-[-3%] font-[400] mt-[38px] font-calligraffitti max-[768px]:mt-[21px] ">Trusted by Companies</h3>
-                <div className="flex my-8 w-max animate-logo-scroll gap-16 max-[768px]:mb-1 ">
+            <div className="relative overflow-hidden rounded-bl-[32px] rounded-br-[32px] bg-[#fff] pb-[32px]">
+                <h3
+                    className="
+            mt-[38px]
+            text-center
+            text-[18px]
+            font-[400]
+            leading-[31px]
+            tracking-[-3%]
+            text-[#626262]
+            font-calligraffitti
+            max-[768px]:mt-[21px]
+          "
+                >
+                    Trusted by Companies
+                </h3>
+
+                <div className="my-8 flex w-max animate-logo-scroll gap-16 max-[768px]:mb-1">
                     {[...AllLogos, ...AllLogos].map((logo, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-center min-w-[160px]"
+                            className="flex min-w-[160px] items-center justify-center"
                         >
                             <Image
-                            src={logo}
-                            height={36}
-                            width={160}
-                            preload
-                            alt="Client Logo"
-                                className="h-12 object-contain  opacity-70 hover:opacity-100  transition" />
+                                src={logo}
+                                width={160}
+                                height={48}
+                                sizes="160px"
+                                alt="Client Logo"
+                                className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition"
+                            />
                         </div>
                     ))}
                 </div>

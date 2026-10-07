@@ -123,35 +123,28 @@ export default function HeroImage() {
       >
 
         <Image
-          src="/Hero.png"
-          alt="Hero"
-          preload
-          fetchPriority="high"
-          draggable={false}
-
-          width={1400}
-          height={1100}
-
-          sizes="
-            (min-width:2560px) 1000px,
-            (min-width:1920px) 900px,
-            (min-width:1536px) 820px,
-            (min-width:1280px) 720px,
-            90vw
-          "
-
-          className="
-            block
-
-            w-[clamp(720px,55vw,1300px)]
-
-            h-auto
-
-            object-contain
-
-            select-none
-          "
-        />
+  src="/Hero.png"
+  alt="Hero"
+  preload
+  fetchPriority="high"
+  draggable={false}
+  width={1400}
+  height={1100}
+  sizes="
+    (min-width: 2560px) 1000px,
+    (min-width: 1920px) 900px,
+    (min-width: 1536px) 820px,
+    (min-width: 1280px) 720px,
+    90vw
+  "
+  className="
+    block
+    w-[clamp(720px,55vw,1300px)]
+    h-auto
+    object-contain
+    select-none
+  "
+/>
 
       </div>
 

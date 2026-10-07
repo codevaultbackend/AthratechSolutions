@@ -1,5 +1,7 @@
 "use client";
 
+import { px } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 const avatars = ["https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero1_CpKdYK8kd.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero_NaRzEsvqk.jpg", "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/contactHero2_eKVVHgfGm.jpg"];
@@ -75,8 +77,11 @@ export default function ContactForm() {
                 key={i}
                 className="h-8 w-8 overflow-hidden rounded-[80px] border-2 border-[#F3F3F3] shadow-sm md:h-[51px] md:w-[48px]"
               >
-                <img
+                <Image
                   src={src}
+                  height={32}
+                  width={32}
+                  preload
                   alt={`Contact avatar ${i + 1}`}
                   className="h-full w-full object-cover"
                 />
