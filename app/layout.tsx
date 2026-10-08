@@ -3,7 +3,9 @@ import Script from "next/script";
 
 
 import "./global.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
+import "@fortawesome/fontawesome-free/css/brands.min.css";
 
 import TopNavigation from "./Component/topNavigation";
 import Footer from "./Component/Footer";
@@ -13,7 +15,6 @@ import {
   calligraffitti,
   bricolage,
   geist,
-  sfPro,
 } from "./fonts";
 
 
@@ -70,7 +71,7 @@ export default function RootLayout({
   return (
     <html
   lang="en"
-  className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable} ${sfPro.variable}`}
+  className={`${inter.variable} ${bricolage.variable} ${calligraffitti.variable} ${geist.variable}`}
 >
 
         <head>

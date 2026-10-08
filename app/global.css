@@ -2,7 +2,7 @@
 
 /* =========================================================
    GLOBAL VARIABLES
-   ========================================================= */
+========================================================= */
 
 :root {
   --font-inter: "Inter", sans-serif;
@@ -15,7 +15,7 @@
 
 /* =========================================================
    GLOBAL FONT UTILITIES
-   ========================================================= */
+========================================================= */
 
 .font-inter {
   font-family: var(--font-inter);
@@ -29,19 +29,9 @@
   font-family: var(--font-calligraffitti);
 }
 
-.font-sfpro {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "SF Pro Text",
-    "Segoe UI",
-    sans-serif;
-}
-
 /* =========================================================
    GLOBAL TYPOGRAPHY & BODY
-   ========================================================= */
+========================================================= */
 
 html {
   font-family: var(--font-inter);
@@ -50,14 +40,13 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* =========================================================
    LOGO SCROLL ANIMATION
-   ========================================================= */
+========================================================= */
 
 @keyframes logo-scroll {
   0% {
@@ -75,7 +64,7 @@ body {
 
 /* =========================================================
    FLOATING ANIMATIONS
-   ========================================================= */
+========================================================= */
 
 @keyframes floatSoft {
   0% {
@@ -136,7 +125,7 @@ body {
 
 /* =========================================================
    MARQUEE ANIMATIONS
-   ========================================================= */
+========================================================= */
 
 @keyframes marquee-left {
   0% {
@@ -159,8 +148,8 @@ body {
 }
 
 .marquee-track {
-  width: max-content;
   display: flex;
+  width: max-content;
   gap: 1rem;
   will-change: transform;
 }
@@ -181,7 +170,7 @@ body {
 
 /* =========================================================
    HIDE SCROLLBAR
-   ========================================================= */
+========================================================= */
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -194,7 +183,7 @@ body {
 
 /* =========================================================
    GALLERY ANIMATIONS
-   ========================================================= */
+========================================================= */
 
 @keyframes galleryMoveLeft {
   0% {
@@ -221,8 +210,8 @@ body {
 }
 
 .gallery-track {
-  width: max-content;
   display: flex;
+  width: max-content;
   align-items: center;
   gap: 10px;
   will-change: transform;
@@ -244,17 +233,14 @@ body {
 
 /* =========================================================
    GALLERY RESPONSIVE SETTINGS
-   ========================================================= */
+========================================================= */
 
 @media (min-width: 640px) {
   .gallery-track {
     gap: 12px;
   }
 
-  .gallery-move-left {
-    animation-duration: 30s;
-  }
-
+  .gallery-move-left,
   .gallery-move-right {
     animation-duration: 30s;
   }
@@ -265,10 +251,7 @@ body {
     gap: 14px;
   }
 
-  .gallery-move-left {
-    animation-duration: 34s;
-  }
-
+  .gallery-move-left,
   .gallery-move-right {
     animation-duration: 34s;
   }
@@ -276,9 +259,15 @@ body {
 
 /* =========================================================
    ACCESSIBILITY — REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+  .animate-logo-scroll,
+  .animate-float-soft,
+  .animate-float-black,
+  .animate-float-mobile,
+  .marquee-left,
+  .marquee-right,
   .gallery-move-left,
   .gallery-move-right {
     animation: none !important;
@@ -287,7 +276,7 @@ body {
 
 /* =========================================================
    DETAILS / SUMMARY
-   ========================================================= */
+========================================================= */
 
 summary::-webkit-details-marker {
   display: none;
