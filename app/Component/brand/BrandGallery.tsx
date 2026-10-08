@@ -11,12 +11,12 @@ type GalleryCard = {
 
 const galleryCards: GalleryCard[] = [
   {
-    src: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255507/website-images/aeyazhosu7aszfru4ztu.png",
+    src: "/sankal-rep.jpg",
     alt: "Sankalp Setu app icon preview",
     className: "lg:col-[1/4]",
     bg: "bg-[#003d3f]",
     imageClassName:
-      "lg:scale-[0.9] max-lg:scale-[0.85] !left-auto !top-[-13px] !bottom-auto !right-[-16px] lg:!w-[86%] max-[768px]:!top-[-21px] max-[768px]:!right-[-75px]",
+      "lg:!scale-[1.6] !left-auto !top-[-13px] !bottom-auto !right-[-16px] lg:!w-[86%] max-[768px]:!top-[-21px] max-[768px]:!right-[-75px] !rounded-[32px]",
        objectPosition: "object-contain",
   },
   {
@@ -44,7 +44,7 @@ const galleryCards: GalleryCard[] = [
     objectPosition: "object-cover",
   },
   {
-    src: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255517/website-images/xwqawhbrouke4qg2uzoi.png",
+    src: "/ngo-doenload.jpg",
     alt: "Children running together",
     className: "lg:col-[6/9]",
     bg: "bg-[#b98e66]",
