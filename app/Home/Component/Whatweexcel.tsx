@@ -1,11 +1,6 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/app/context/services";
-import SectionLabel from "./SectionLabel";
-import WhatWeExcelLabel from "./WhatWeExcelLabel";
 
 type WhatWeExcelAtSectionProps = {
   removeHorizontalPadding?: boolean;
@@ -14,25 +9,78 @@ type WhatWeExcelAtSectionProps = {
 export default function WhatWeExcelAtSection({
   removeHorizontalPadding = false,
 }: WhatWeExcelAtSectionProps) {
-  const mainService = services.find((service) => service.cardType === "large");
-  const wideService = services.find((service) => service.cardType === "wide");
-  const smallService = services.find((service) => service.cardType === "small");
+  const mainService = services.find(
+    (service) => service.cardType === "large"
+  );
 
-  if (!mainService || !wideService || !smallService) return null;
+  const wideService = services.find(
+    (service) => service.cardType === "wide"
+  );
+
+  const smallService = services.find(
+    (service) => service.cardType === "small"
+  );
+
+  if (!mainService || !wideService || !smallService) {
+    return null;
+  }
+
+  /*
+   * The section has two possible horizontal layouts:
+   *
+   * 1. Normal:
+   *    mobile  -> px-4
+   *    desktop -> px-20
+   *
+   * 2. removeHorizontalPadding:
+   *    full viewport width
+   *
+   * The sizes below describe the actual rendered image width
+   * instead of incorrectly telling the browser that every image
+   * occupies 100vw.
+   */
+
+  const cardImageSizes = removeHorizontalPadding
+    ? `
+        (max-width: 1023px) 100vw,
+        calc((100vw - 40px) / 2)
+      `
+    : `
+        (max-width: 767px) calc(100vw - 32px),
+        (max-width: 1023px) calc(100vw - 160px),
+        calc((100vw - 200px) / 2)
+      `;
+
+  const wideImageSizes = removeHorizontalPadding
+    ? `
+        (max-width: 639px) 260px,
+        (max-width: 767px) 300px,
+        (max-width: 1023px) 460px,
+        400px
+      `
+    : `
+        (max-width: 639px) min(260px, calc(100vw - 32px)),
+        (max-width: 767px) min(300px, calc(100vw - 32px)),
+        (max-width: 1023px) 460px,
+        400px
+      `;
 
   return (
     <section
-      className={`w-full bg-white pb-[55px]  ${removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
-        }`}
+      className={`w-full bg-white pb-[55px] ${
+        removeHorizontalPadding ? "" : "px-20 max-[768px]:px-4"
+      }`}
     >
-      <div className="mx-auto w-full max-w-full mt-[40px]">
-        {/* Heading */}
+      <div className="mx-auto mt-[40px] w-full max-w-full">
+        {/* =====================================================
+            CARDS
+        ===================================================== */}
 
-
-
-        {/* Cards */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
-          {/* LEFT LARGE CARD */}
+          {/* ===================================================
+              LEFT LARGE CARD
+          =================================================== */}
+
           <Link
             href={`/services/${mainService.slug}`}
             className="
@@ -43,13 +91,22 @@ export default function WhatWeExcelAtSection({
               lg:min-h-[560px]
             "
           >
-
             <Image
               src={mainService.image}
               alt={mainService.alt}
               fill
-              sizes="(min-width: 1024px) 430px, 100vw"
-              className="object-cover transition duration-700 ease-out group-hover:scale-[1.035] max-[768px]:!h-[67%] max-[768px]:!left-0 max-[768px]:!top-auto bottom-0"
+              sizes={cardImageSizes}
+              className="
+                object-cover
+                transition
+                duration-700
+                ease-out
+                group-hover:scale-[1.035]
+                max-[768px]:!h-[67%]
+                max-[768px]:!left-0
+                max-[768px]:!top-auto
+                bottom-0
+              "
             />
 
             <div
@@ -62,8 +119,10 @@ export default function WhatWeExcelAtSection({
             >
               <h3
                 className="
-                  font-bricolage font-[500]
-                  text-[28px] leading-[1]
+                  font-bricolage
+                  font-[500]
+                  text-[28px]
+                  leading-[1]
                   text-white
                   sm:text-[34px]
                 "
@@ -73,10 +132,12 @@ export default function WhatWeExcelAtSection({
 
               <p
                 className="
-                  mt-3 max-w-[420px]
-                  
-                  font-inter text-[14px]
-                  leading-[1.5] text-[#DCDCDC]
+                  mt-3
+                  max-w-[420px]
+                  font-inter
+                  text-[14px]
+                  leading-[1.5]
+                  text-[#DCDCDC]
                   sm:text-[16px]
                 "
               >
@@ -85,9 +146,15 @@ export default function WhatWeExcelAtSection({
             </div>
           </Link>
 
-          {/* RIGHT SIDE */}
+          {/* ===================================================
+              RIGHT SIDE
+          =================================================== */}
+
           <div className="grid grid-cols-1 gap-5 lg:gap-10">
-            {/* FRONTEND & BACKEND */}
+            {/* =================================================
+                FRONTEND & BACKEND
+            ================================================= */}
+
             <Link
               href={`/services/${wideService.slug}`}
               className="
@@ -101,88 +168,115 @@ export default function WhatWeExcelAtSection({
               "
             >
               {/* IMAGE */}
+
               <div
                 className="
-    pointer-events-none
-    absolute
-    left-1/2
-    top-6
-    z-[1]
-    h-[150px]
-    w-[260px]
-    -translate-x-1/2
+                  pointer-events-none
+                  absolute
+                  left-1/2
+                  top-6
+                  z-[1]
+                  h-[150px]
+                  w-[260px]
+                  -translate-x-1/2
 
-    xs:h-[170px]
-    xs:w-[300px]
+                  xs:h-[170px]
+                  xs:w-[300px]
 
-    max-[768px]:top-[-2px]
-    max-[768px]:h-[85%]
-    max-[768px]:left-[30px]
-    max-[768px]:max-w-[100%]
+                  max-[768px]:top-[-2px]
+                  max-[768px]:h-[85%]
+                  max-[768px]:left-[30px]
+                  max-[768px]:max-w-[100%]
 
-    md:h-[260px]
-    md:w-[460px]
+                  md:h-[260px]
+                  md:w-[460px]
 
-    lg:left-[-25px]
-    lg:bottom-[-25px]
-    lg:top-auto
-    lg:h-[260px]
-    lg:w-[400px]
-    lg:translate-x-0
-  "
+                  lg:left-[-25px]
+                  lg:bottom-[-25px]
+                  lg:top-auto
+                  lg:h-[260px]
+                  lg:w-[400px]
+                  lg:translate-x-0
+                "
               >
                 <Image
                   src={wideService.image}
                   alt={wideService.alt}
                   fill
-                  sizes="
-    (min-width: 1024px) 400px,
-    (min-width: 768px) 460px,
-    100vw
-  "
+                  sizes={wideImageSizes}
                   className="
-    object-contain
-    transition-transform
-    duration-700
-    ease-out
-    group-hover:scale-[1.035]
-    lg:object-left-bottom
-  "
+                    object-contain
+                    transition-transform
+                    duration-700
+                    ease-out
+                    group-hover:scale-[1.035]
+                    lg:object-left-bottom
+                  "
                 />
               </div>
 
               {/* MOBILE OVERLAY */}
+
               <div
                 className="
-                  absolute inset-x-0 top-0 z-[2] h-[100%]
-                  bg-gradient-to-b from-[#4E641F]/0 via-[#4E641F]/10 to-[#4E641F]
+                  absolute
+                  inset-x-0
+                  top-0
+                  z-[2]
+                  h-[100%]
+                  bg-gradient-to-b
+                  from-[#4E641F]/0
+                  via-[#4E641F]/10
+                  to-[#4E641F]
                   lg:hidden
                 "
               />
 
               {/* DESKTOP OVERLAY */}
+
               <div
                 className="
-                  absolute inset-y-0 right-0 z-[2] hidden w-[65%]
-                  bg-gradient-to-l from-[#4E641F] via-[#4E641F]/95 to-transparent
+                  absolute
+                  inset-y-0
+                  right-0
+                  z-[2]
+                  hidden
+                  w-[65%]
+                  bg-gradient-to-l
+                  from-[#4E641F]
+                  via-[#4E641F]/95
+                  to-transparent
                   lg:block
                 "
               />
 
               {/* CONTENT */}
+
               <div
                 className="
-                  absolute !bottom-4 left-5 right-5 z-[4] top-0
+                  absolute
+                  !bottom-4
+                  left-5
+                  right-5
+                  top-0
+                  z-[4]
 
-                  max-[768px]:!bottom-auto max-[768px]:!top-[40px] max-[768px]:!w-[40%] max-[768px]:!right-[30px] max-[768px]:!left-auto
+                  max-[768px]:!bottom-auto
+                  max-[768px]:!top-[40px]
+                  max-[768px]:!w-[40%]
+                  max-[768px]:!right-[30px]
+                  max-[768px]:!left-auto
 
-                  lg:left-auto lg:right-10 lg:!top-[15%]
-                  lg:w-[48%] 
+                  lg:left-auto
+                  lg:right-10
+                  lg:!top-[15%]
+                  lg:w-[48%]
                 "
               >
                 <h3
                   className="
-                    font-bricolage font-[500]
+                    font-bricolage
+                    font-[500]
                     text-[24px]
                     leading-[1.05]
                     tracking-[-0.03em]
@@ -198,9 +292,12 @@ export default function WhatWeExcelAtSection({
 
                 <p
                   className="
-                    mt-4 max-w-[520px]
-                    font-inter text-[14px]
-                    leading-[1.5] text-white/80
+                    mt-4
+                    max-w-[520px]
+                    font-inter
+                    text-[14px]
+                    leading-[1.5]
+                    text-white/80
 
                     sm:text-[16px]
                     lg:text-[15px]
@@ -211,7 +308,10 @@ export default function WhatWeExcelAtSection({
               </div>
             </Link>
 
-            {/* MARKETING */}
+            {/* =================================================
+                MARKETING
+            ================================================= */}
+
             <Link
               href={`/services/${smallService.slug}`}
               className="
@@ -223,48 +323,68 @@ export default function WhatWeExcelAtSection({
                 lg:min-h-[255px]
               "
             >
-             <Image
-  src={smallService.image}
-  alt={smallService.alt}
-  fill
-  sizes="
-  (min-width: 1024px) 430px,
-  100vw
-  "
-  className="
-    object-cover
-    transition
-    duration-700
-    ease-out
-    group-hover:scale-[1.035]
-  "
-/>
+              <Image
+                src={smallService.image}
+                alt={smallService.alt}
+                fill
+                sizes={cardImageSizes}
+                className="
+                  object-cover
+                  transition
+                  duration-700
+                  ease-out
+                  group-hover:scale-[1.035]
+                "
+              />
+
               <div className="absolute inset-0 bg-black/20" />
 
               <div
                 className="
-                  absolute inset-x-0 bottom-0 h-[70%]
-                  bg-gradient-to-t from-black/85 via-black/50 to-transparent
+                  absolute
+                  inset-x-0
+                  bottom-0
+                  h-[70%]
+                  bg-gradient-to-t
+                  from-black/85
+                  via-black/50
+                  to-transparent
 
-                  lg:inset-y-0 lg:right-0 lg:left-auto
-                  lg:h-auto lg:w-[62%]
-                  lg:bg-gradient-to-l lg:from-black/80 lg:via-black/45 lg:to-transparent
+                  lg:inset-y-0
+                  lg:right-0
+                  lg:left-auto
+                  lg:h-auto
+                  lg:w-[62%]
+                  lg:bg-gradient-to-l
+                  lg:from-black/80
+                  lg:via-black/45
+                  lg:to-transparent
                 "
               />
 
               <div
                 className="
-                  absolute bottom-6 left-6 right-6 z-10
+                  absolute
+                  bottom-6
+                  left-6
+                  right-6
+                  z-10
 
-                  sm:bottom-8 sm:left-8 sm:right-8
+                  sm:bottom-8
+                  sm:left-8
+                  sm:right-8
 
-                  lg:left-auto lg:right-10 lg:top-1/2
-                  lg:w-[45%] lg:-translate-y-1/2
+                  lg:left-auto
+                  lg:right-10
+                  lg:top-1/2
+                  lg:w-[45%]
+                  lg:-translate-y-1/2
                 "
               >
                 <h3
                   className="
-                    font-bricolage font-[500]
+                    font-bricolage
+                    font-[500]
                     text-[28px]
                     leading-[1.05]
                     tracking-[-0.04em]
@@ -279,9 +399,12 @@ export default function WhatWeExcelAtSection({
 
                 <p
                   className="
-                    mt-4 max-w-[420px]
-                    font-inter text-[14px]
-                    leading-[1.5] text-white/85
+                    mt-4
+                    max-w-[420px]
+                    font-inter
+                    text-[14px]
+                    leading-[1.5]
+                    text-white/85
 
                     sm:text-[16px]
                     lg:text-[14px]

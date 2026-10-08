@@ -19,11 +19,6 @@ export default function HeroImage() {
         overflow-visible
       "
     >
-
-
-      
-
-
       {/* =====================================
           Back Cloud Layer
       ===================================== */}
@@ -48,16 +43,14 @@ export default function HeroImage() {
         <Image
           src="/herocloude.png"
           alt="cloud background"
-
           width={1400}
           height={350}
-
+          sizes="621px"
           className="
-            w-full
-            h-auto
-            object-contain
-            select-none
-          "
+    w-full
+    h-auto
+    object-contain
+    select-none"
         />
       </div>
 
@@ -85,19 +78,17 @@ export default function HeroImage() {
         "
       >
         <Image
-          src="/cloude2.png"
-          alt="cloud foreground"
-
-          width={1200}
-          height={300}
-
-          className="
-            w-full
-            h-auto
-            object-contain
-            select-none
-          "
-        />
+  src="/cloude2.png"
+  alt="cloud foreground"
+  width={1200}
+  height={300}
+  sizes="100vw"
+  className="
+    w-full
+    h-auto
+    object-contain
+    select-none"
+/>
       </div>
 
 
@@ -123,28 +114,30 @@ export default function HeroImage() {
       >
 
         <Image
-  src="/Hero.png"
-  alt="Hero"
-  preload
-  fetchPriority="high"
-  draggable={false}
-  width={1400}
-  height={1100}
-  sizes="
-    (min-width: 2560px) 1000px,
-    (min-width: 1920px) 900px,
-    (min-width: 1536px) 820px,
-    (min-width: 1280px) 720px,
-    90vw
-  "
-  className="
+          src="/Hero.png"
+          alt="Hero"
+          preload
+          fetchPriority="high"
+          draggable={false}
+          width={1400}
+          height={1100}
+          sizes="
+  (max-width: 767px) 90vw,
+  (min-width: 2560px) 1000px,
+  (min-width: 1920px) 900px,
+  (min-width: 1536px) 820px,
+  (min-width: 1280px) 720px,
+  90vw
+"
+          className="
     block
-    w-[clamp(720px,55vw,1300px)]
+    max-[767px]:w-[90vw]
+md:w-[clamp(720px,55vw,1300px)]
     h-auto
     object-contain
     select-none
   "
-/>
+        />
 
       </div>
 

@@ -43,7 +43,7 @@ export default function StepsSection() {
                     "
                 >
 
-                  <SectionLabel label="Process" />
+                    <SectionLabel label="Process" />
 
 
 
@@ -202,6 +202,7 @@ export default function StepsSection() {
                         <Image
                             src="/step3.png"
                             alt="Conversation"
+                            sizes="426px"
                             fill
                             className="
                                 object-cover
@@ -262,7 +263,7 @@ export default function StepsSection() {
                         </div>
 
                     </article>
-                                        {/* CARD 2 */}
+                    {/* CARD 2 */}
                     <article
                         className="
                             absolute
@@ -293,6 +294,7 @@ export default function StepsSection() {
                         <Image
                             src="/step2.png"
                             alt="Analysis"
+                            sizes="426px"
                             fill
                             className="
                                 object-cover
@@ -393,6 +395,7 @@ export default function StepsSection() {
 
                         <Image
                             src="/step1.png"
+                            sizes="426px"
                             alt="Get Your Work Done"
                             fill
                             className="
@@ -466,7 +469,7 @@ export default function StepsSection() {
 
 
                 </div>
-                                {/* MOBILE CARDS */}
+                {/* MOBILE CARDS */}
                 <div
                     className="
                         mx-auto
@@ -506,9 +509,10 @@ export default function StepsSection() {
                             src="/step3.png"
                             alt="Conversation"
                             fill
+                            sizes="min(390px, 100vw)"
                             className="
-                                object-cover
-                            "
+                            object-cover
+                            rounded-[20px]"
                         />
 
 
@@ -589,6 +593,7 @@ export default function StepsSection() {
                         <Image
                             src="/step2.png"
                             alt="Analysis"
+                            sizes="min(390px, 100vw)"
                             fill
                             className="
                                 object-cover
@@ -679,6 +684,7 @@ export default function StepsSection() {
                         <Image
                             src="/step1.png"
                             alt="Get Your Work Done"
+                            sizes="min(390px, 100vw)"
                             fill
                             className="
                                 object-cover
