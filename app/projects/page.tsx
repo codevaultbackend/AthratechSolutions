@@ -408,21 +408,27 @@ function ProjectCard({ project }: { project: Project }) {
         "
       >
         <Image
-          src={project.image}
-          alt={`${project.title} project mockup`}
-          width={700}
-          height={500}
-          priority={false}
-          className={[
-            project.imageClassName,
-            "block",
-            "rounded-[32px]",
-            "transition-transform",
-            "duration-500",
-            "ease-out",
-            "group-hover:scale-[1.015]",
-          ].join(" ")}
-        />
+  src={project.image}
+  alt={`${project.title} project mockup`}
+  width={700}
+  height={500}
+  sizes="
+    (max-width: 767px) min(430px, calc(100vw - 40px)),
+    (max-width: 1023px) min(430px, calc((100vw - 112px) / 2)),
+    (max-width: 1279px) min(430px, calc((100vw - 288px) / 3)),
+    min(430px, calc((1728px - 288px) / 3))
+  "
+  priority={false}
+  className={[
+    project.imageClassName,
+    "block",
+    "rounded-[32px]",
+    "transition-transform",
+    "duration-500",
+    "ease-out",
+    "group-hover:scale-[1.015]",
+  ].join(" ")}
+/>
       </div>
 
       {/* ---------------------------------------------------

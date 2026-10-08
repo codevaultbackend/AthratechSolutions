@@ -45,12 +45,17 @@ export default function HeroImage() {
           alt="cloud background"
           width={1400}
           height={350}
-          sizes="621px"
+          sizes="
+    (min-width: 1920px) 100vw,
+    (min-width: 1280px) 75vw,
+    621px
+  "
           className="
     w-full
     h-auto
     object-contain
-    select-none"
+    select-none
+  "
         />
       </div>
 
@@ -82,12 +87,17 @@ export default function HeroImage() {
   alt="cloud foreground"
   width={1200}
   height={300}
-  sizes="100vw"
+  sizes="
+    (min-width: 1920px) 100vw,
+    (min-width: 1280px) 75vw,
+    621px
+  "
   className="
     w-full
     h-auto
     object-contain
-    select-none"
+    select-none
+  "
 />
       </div>
 

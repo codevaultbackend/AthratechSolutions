@@ -45,7 +45,7 @@ export default function ServicesPage() {
         </h1>
       </div>
 
-      <div className="my-[40px] grid grid-cols-1 gap-5 px-[80px] lg:grid-cols-2 lg:gap-10">
+      <div className="my-[40px] grid grid-cols-1 gap-5 px-[80px] max-[768px]:px-[20px] lg:grid-cols-2 lg:gap-10">
         {/* LEFT LARGE CARD */}
         <Link
           href={`/services/${mainService.slug}`}
@@ -147,11 +147,11 @@ export default function ServicesPage() {
                 alt={wideService.alt}
                 fill
                 sizes="
-                  (max-width: 639px) min(260px, calc(100vw - 160px)),
-                  (max-width: 767px) min(300px, calc(100vw - 160px)),
-                  (max-width: 1023px) 460px,
-                  400px
-                "
+  (max-width: 639px) 260px,
+  (max-width: 767px) 40vw,
+  (max-width: 1023px) 460px,
+  400px
+"
                 className="
                   object-contain transition-transform duration-700 ease-out
                   group-hover:scale-[1.035]

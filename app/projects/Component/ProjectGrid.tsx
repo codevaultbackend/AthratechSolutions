@@ -163,10 +163,11 @@ function ProjectCardContent({
           alt={`${project.title} project mockup`}
           fill
           sizes="
-            (max-width: 767px) 100vw,
-            (max-width: 1023px) 50vw,
-            33vw
-          "
+  (max-width: 767px) min(390px, calc(100vw - 40px)),
+  (max-width: 1023px) calc((100vw - 112px) / 2),
+  (max-width: 1279px) calc((100vw - 244px) / 3),
+  calc((min(100vw, 1728px) - 292px) / 3)
+"
           priority={project.id <= 2}
           className={`
             block
