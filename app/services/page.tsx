@@ -147,16 +147,16 @@ export default function ServicesPage() {
                 alt={wideService.alt}
                 fill
                 sizes="
-  (max-width: 639px) 260px,
-  (max-width: 767px) 40vw,
-  (max-width: 1023px) 460px,
-  400px
-"
+    (max-width: 639px) 260px,
+    (max-width: 767px) 300px,
+    (max-width: 1023px) 460px,
+    400px
+  "
                 className="
-                  object-contain transition-transform duration-700 ease-out
-                  group-hover:scale-[1.035]
-                  lg:object-left-bottom
-                "
+    object-contain transition-transform duration-700 ease-out
+    group-hover:scale-[1.035]
+    lg:object-left-bottom
+  "
               />
             </div>
 

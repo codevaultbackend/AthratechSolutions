@@ -37,9 +37,8 @@ export default function HeroImage() {
           width={1400}
           height={350}
           sizes="
-            (min-width: 1920px) 100vw,
-            (min-width: 1280px) 75vw,
-            621px
+            (min-width: 1280px) 100vw,
+            100vw
           "
           className="
             w-full
@@ -68,11 +67,7 @@ export default function HeroImage() {
           alt=""
           width={1200}
           height={300}
-          sizes="
-            (min-width: 1920px) 100vw,
-            (min-width: 1280px) 75vw,
-            621px
-          "
+          sizes="100vw"
           className="
             w-full
             h-auto
@@ -102,7 +97,7 @@ export default function HeroImage() {
           width={1400}
           height={1100}
           sizes="
-            (max-width: 767px) 90vw,
+            (max-width: 767px) min(90vw,640px),
             (max-width: 1279px) 55vw,
             (max-width: 1535px) 820px,
             (max-width: 1919px) 900px,
@@ -110,14 +105,14 @@ export default function HeroImage() {
             1100px
           "
           className="
-  block
-  w-[min(90vw,640px)]
-  md:w-[clamp(560px,55vw,1300px)]
-  xl:w-[clamp(720px,55vw,1300px)]
-  h-auto
-  object-contain
-  select-none
-"
+            block
+            w-[min(90vw,640px)]
+            md:w-[clamp(560px,55vw,1300px)]
+            xl:w-[clamp(720px,55vw,1300px)]
+            h-auto
+            object-contain
+            select-none
+          "
         />
       </div>
     </div>
