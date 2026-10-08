@@ -83,22 +83,17 @@ export default function HeroImage() {
         "
       >
         <Image
-  src="/cloude2.png"
-  alt="cloud foreground"
-  width={1200}
-  height={300}
-  sizes="
-    (min-width: 1920px) 100vw,
-    (min-width: 1280px) 75vw,
-    621px
-  "
-  className="
+          src="/cloude2.png"
+          alt="cloud foreground"
+          width={1200}
+          height={300}
+          sizes="100vw"
+          className="
     w-full
     h-auto
     object-contain
-    select-none
-  "
-/>
+    select-none"
+        />
       </div>
 
 
