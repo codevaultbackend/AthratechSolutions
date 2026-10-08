@@ -480,7 +480,11 @@ export default function TopNavigation() {
               {/* MOBILE MENU */}
 
               <button
+                type="button"
                 onClick={() => setOpen(true)}
+                aria-label="Open navigation menu"
+                aria-expanded={open}
+                aria-controls="mobile-navigation"
                 className={`
                   flex
                   h-11

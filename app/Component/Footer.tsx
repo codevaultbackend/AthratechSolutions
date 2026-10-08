@@ -58,7 +58,7 @@ export default function Footer() {
               width={146}
               height={42}
               priority
-              
+
               unoptimized
             />
           </div>
@@ -150,15 +150,65 @@ export default function Footer() {
                   Address : Office - Tower B2, Unit 244A, Spaze ITech Park, Sector 49, Gurugram, Haryana - 122018
                 </li>
               </ul>
-              
+
             </div>
           </div>
-          <div className="social-icons flex gap-3.5 mb-4  justify-end">
-            <Link href='https://www.instagram.com/athratech_official/'><i className="fa-brands fa-instagram text-[22px]"></i></Link>
-            <Link href='https://www.facebook.com/profile.php?id=61584218076871'><i className="fa-brands fa-facebook text-[22px]"></i></Link>
-            <Link href='https://www.linkedin.com/company/athratech-private-limited/'><i className="fa-brands fa-linkedin text-[22px]"></i></Link>
-            <Link href='https://x.com/Athratech_IT'><i className="fa-brands fa-x-twitter text-[22px]"></i></Link>
+
+          {/* ===== Social Links ===== */}
+          <div className="social-icons flex gap-3.5 mb-4 justify-end">
+            {/* Instagram */}
+            <Link
+              href="https://www.instagram.com/athratech_official/"
+              aria-label="Athratech on Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa-brands fa-instagram text-[22px]"
+                aria-hidden="true"
+              />
+            </Link>
+
+            {/* Facebook */}
+            <Link
+              href="https://www.facebook.com/profile.php?id=61584218076871"
+              aria-label="Athratech on Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa-brands fa-facebook text-[22px]"
+                aria-hidden="true"
+              />
+            </Link>
+
+            {/* LinkedIn */}
+            <Link
+              href="https://www.linkedin.com/company/athratech-private-limited/"
+              aria-label="Athratech on LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa-brands fa-linkedin text-[22px]"
+                aria-hidden="true"
+              />
+            </Link>
+
+            {/* X / Twitter */}
+            <Link
+              href="https://x.com/Athratech_IT"
+              aria-label="Athratech on X"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i
+                className="fa-brands fa-x-twitter text-[22px]"
+                aria-hidden="true"
+              />
+            </Link>
           </div>
+
 
           {/* ===== Bottom Bar ===== */}
           <div className="border-t border-white/30 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
