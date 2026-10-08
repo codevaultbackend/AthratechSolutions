@@ -127,7 +127,7 @@ export default function HeroImage() {
           width={1400}
           height={1100}
           sizes="
-  (max-width: 767px) 90vw,
+  (max-width: 767px) 649px,
   (min-width: 2560px) 1000px,
   (min-width: 1920px) 900px,
   (min-width: 1536px) 820px,
