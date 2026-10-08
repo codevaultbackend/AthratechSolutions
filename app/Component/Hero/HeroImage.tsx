@@ -97,6 +97,7 @@ export default function HeroImage() {
           src="/Hero.png"
           alt="Athratech digital solutions"
           preload
+          fetchPriority="high"
           draggable={false}
           width={1400}
           height={1100}
@@ -109,14 +110,14 @@ export default function HeroImage() {
             1100px
           "
           className="
-            block
-            w-[90vw]
-            md:w-[clamp(560px,55vw,1300px)]
-            xl:w-[clamp(720px,55vw,1300px)]
-            h-auto
-            object-contain
-            select-none
-          "
+  block
+  w-[min(90vw,640px)]
+  md:w-[clamp(560px,55vw,1300px)]
+  xl:w-[clamp(720px,55vw,1300px)]
+  h-auto
+  object-contain
+  select-none
+"
         />
       </div>
     </div>
