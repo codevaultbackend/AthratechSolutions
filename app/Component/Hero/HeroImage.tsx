@@ -104,13 +104,20 @@ export default function HeroImage() {
       <div
         id="hero-image"
         className="
-    relative
-    z-20
-    flex
-    items-end
-    justify-center
-  "
+          relative
+
+          z-20
+
+          flex
+          items-end
+          justify-center
+
+          will-change-transform
+
+          transform-gpu
+        "
       >
+
         <Image
           src="/Hero.png"
           alt="Hero"
@@ -120,22 +127,23 @@ export default function HeroImage() {
           width={1400}
           height={1100}
           sizes="
-      (max-width: 767px) 80vw,
-      (min-width: 2560px) 1000px,
-      (min-width: 1920px) 900px,
-      (min-width: 1536px) 820px,
-      (min-width: 1280px) 720px,
-      720px
-    "
+  (max-width: 767px) 90vw,
+  (min-width: 2560px) 1000px,
+  (min-width: 1920px) 900px,
+  (min-width: 1536px) 820px,
+  (min-width: 1280px) 720px,
+  649px
+"
           className="
-      block
-      max-[767px]:w-[80vw]
-      md:w-[clamp(720px,55vw,1300px)]
-      h-auto
-      object-contain
-      select-none
-    "
+    block
+    max-[767px]:w-[90vw]
+md:w-[clamp(720px,55vw,1300px)]
+    h-auto
+    object-contain
+    select-none
+  "
         />
+
       </div>
 
     </div>
