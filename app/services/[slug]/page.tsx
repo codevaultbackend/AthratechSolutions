@@ -58,7 +58,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   }
 
   return (
-    <main className="w-full overflow-hidden bg-white text-black">
+    <div className="w-full overflow-hidden bg-white text-black">
       {/* HERO */}
       <section className="px-5 pt-[86px] sm:px-6 md:px-8 lg:px-10 lg:pt-[86px]">
         <div className="mx-auto flex w-full max-w-[900px] flex-col items-center text-center">
@@ -122,6 +122,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       
 
       <LetsTeamUp />
-    </main>
+    </div>
   );
 }

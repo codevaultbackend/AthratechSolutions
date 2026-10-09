@@ -290,7 +290,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
@@ -365,6 +365,6 @@ export default function HomePage() {
 
       {/* CTA */}
       <ContactCTA image="/contactMockup.jpeg" /> 
-    </main>
+    </div>
   );
 }

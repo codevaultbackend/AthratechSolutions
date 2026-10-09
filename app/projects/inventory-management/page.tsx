@@ -9,7 +9,7 @@ import ProjectGrid from "../Component/ProjectGrid";
 
 export default function InventoryManagementPage() {
   return (
-    <main className=" w-full overflow-hidden bg-white">
+    <div className=" w-full overflow-hidden bg-white">
       <div className="max-w-[1071px] mx-auto">
         <Hero
           heroDescription={
@@ -62,6 +62,6 @@ export default function InventoryManagementPage() {
       <LetsTeamUp />
 
       <ProjectGrid />
-    </main>
+    </div>
   );
 }

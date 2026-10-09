@@ -131,7 +131,7 @@ const landingProcessData = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
         <CommonHeroHeader headData={headData} />
 
         <Hero />
@@ -158,6 +158,6 @@ export default function HomePage() {
         <Process content={landingProcessData} />
         <Uiux />
         <ContactCTA image="/contactMockup2.jpeg" />
-    </main>
+    </div>
   );
 }

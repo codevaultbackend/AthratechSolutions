@@ -552,7 +552,7 @@ export default async function ProjectPage({ params }: Props) {
 
     return (
         <>
-            <main className="min-h-screen bg-white max-[768px]:mt-[40px]">
+            <div className="min-h-screen bg-white max-[768px]:mt-[40px]">
                 <HeroBlock title={project.title} caseStudy={caseStudy} />
 
                 {caseStudy.layoutVariant === "markday" ? (
@@ -583,7 +583,7 @@ export default async function ProjectPage({ params }: Props) {
                         />
                     </>
                 ) : null}
-            </main>
+            </div>
             <LetsTeamUp />
             <ProjectGrid />
         </>

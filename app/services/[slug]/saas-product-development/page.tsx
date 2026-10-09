@@ -143,7 +143,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -159,6 +159,6 @@ export default function HomePage() {
       <SaasOfferings />
       <Uiux slug="frontend-backend-development" />
       <ContactCTA image="/mockup6.jpg" />
-    </main>
+    </div>
   );
 }

@@ -12,7 +12,7 @@ import ProjectGrid from "../Component/ProjectGrid";
 
 export default function ErpSystem() {
   return (
-    <main className="   bg-white text-[#111111] mt-[150px]">
+    <div className="   bg-white text-[#111111] mt-[150px]">
       <div className="max-w-[1072px] w-full mx-auto overflow-x-clip">
         <StoryIntro />
 
@@ -30,6 +30,6 @@ export default function ErpSystem() {
 
       <ProjectGrid />
 
-    </main>
+    </div>
   );
 }

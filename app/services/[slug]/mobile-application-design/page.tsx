@@ -128,7 +128,7 @@ const landingProcessData = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       {/* HERO */}
       <CommonHeroHeader headData={headData} />
 

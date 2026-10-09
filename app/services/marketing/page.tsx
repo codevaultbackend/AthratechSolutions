@@ -95,7 +95,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -108,6 +108,6 @@ export default function HomePage() {
       <MarketingOfferings />
       <ContactCTA image="/mockup8.jpg" />
 
-    </main>
+    </div>
   );
 }

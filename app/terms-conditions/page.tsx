@@ -71,7 +71,7 @@ export default function TermsAndConditions() {
   };
 
   return (
-    <main className="w-full bg-white overflow-x-hidden">
+    <div className="w-full bg-white overflow-x-hidden">
       <div
         className="
           w-full
@@ -508,6 +508,6 @@ export default function TermsAndConditions() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

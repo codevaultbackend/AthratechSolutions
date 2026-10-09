@@ -102,7 +102,7 @@ const platformsData = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       <CommonHeroHeader headData={headData} />
 
       <DesignSystemHero />
@@ -129,6 +129,6 @@ export default function HomePage() {
       <Strategy StrategyData={strategy2Data} />
       <Uiux />
       <ContactCTA image="/mockup9.jpg" />
-    </main>
+    </div>
   );
 }

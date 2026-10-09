@@ -149,7 +149,7 @@ const landingProcessContent: ProcessContent = {
 
 export default function BrandPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
+    <div className="min-h-screen overflow-x-hidden bg-white text-[#101010]">
       <div className="">
       <CommonHeroHeader headData={headData} />
 
@@ -185,6 +185,6 @@ export default function BrandPage() {
 
 
       <ContactCTA image="/mockup9.jpg" />
-    </main>
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export default function ServicesPage() {
   }
 
   return (
-    <main className="w-full bg-white">
+    <div className="w-full bg-white">
       <div className="relative z-10 px-[80px] pt-20 pb-[55px] text-center">
         <SectionLabel label="Our Services" />
 
@@ -306,6 +306,6 @@ export default function ServicesPage() {
       </div>
 
       <LetsTeamUp />
-    </main>
+    </div>
   );
 }

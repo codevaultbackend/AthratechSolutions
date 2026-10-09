@@ -11,11 +11,11 @@ export const metadata = {
 
 export default function AboutUsPage() {
   return (
-    <main className="overflow-x-hidden bg-white">
+    <div className="overflow-x-hidden bg-white">
       <Hero />
       <Mission />
       <Leadership />
       <ContactCTA image="/weraplymoch.png" />
-    </main>
+    </div>
   );
 }

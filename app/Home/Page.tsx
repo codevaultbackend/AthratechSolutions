@@ -51,7 +51,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <main className="min-h-screen ">
+    <div className="min-h-screen ">
       <Hero />
       {/* <HeroSection /> */}
       <AutoSlidingCards />
@@ -70,6 +70,6 @@ export default function Home() {
         <FAQSection />
       </div>
 
-    </main>
+    </div>
   );
 }
