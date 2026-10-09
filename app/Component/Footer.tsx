@@ -103,11 +103,36 @@ export default function Footer() {
               <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                 Services
               </h4>
+
               <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                <Link href='/services/ui-ux-design'><li className="!mb-4">UI/UX</li></Link>
-                <Link href='/services/frontend-backend-development'><li className="!mb-4">Development</li></Link>
-                <Link href='/services/marketing'><li className="!mb-4">Marketing</li></Link>
+                <li className="!mb-4">
+                  <Link
+                    href="/services/ui-ux-design"
+                    className="block"
+                  >
+                    UI/UX
+                  </Link>
+                </li>
+
+                <li className="!mb-4">
+                  <Link
+                    href="/services/frontend-backend-development"
+                    className="block"
+                  >
+                    Development
+                  </Link>
+                </li>
+
+                <li className="!mb-4">
+                  <Link
+                    href="/services/marketing"
+                    className="block"
+                  >
+                    Marketing
+                  </Link>
+                </li>
               </ul>
+
 
             </div>
 
@@ -116,13 +141,39 @@ export default function Footer() {
               <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                 Navigation
               </h4>
+
               <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                <a href="/"><li className="!mb-4">Home</li></a>
-                <a href="/#steps"><li className="!mb-4">Process</li></a>
-                <a href="/projects"><li className="!mb-4">Projects</li></a>
-                <a href="/#testimonial"><li className="!mb-4">Testimonials</li></a>
-                <a href="/#Faq"><li className="!mb-4">FAQ</li></a>
+                <li className="!mb-4">
+                  <a href="/" className="block">
+                    Home
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a href="/#steps" className="block">
+                    Process
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a href="/projects" className="block">
+                    Projects
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a href="/#testimonial" className="block">
+                    Testimonials
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a href="/#Faq" className="block">
+                    FAQ
+                  </a>
+                </li>
               </ul>
+
             </div>
 
             {/* Links */}
@@ -130,12 +181,45 @@ export default function Footer() {
               <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                 Success Stories
               </h4>
+
               <ul className="space-y-3 sm:space-y-4 text-[16px] sm:text-[20px]">
-                <a href="https://sankalpsetufoundation.org/"><li className="!mb-4">Sankalp Setu</li></a>
-                <a href="https://fiscoriseconsultants.com/"><li className="!mb-4">Fiscorise</li></a>
-                <a href="https://www.chugenhatcheries.com/"><li className="!mb-4">Chugen</li></a>
-                <a href="https://manpowersolution.org.in/"><li className="!mb-4">Manpower Solution</li></a>
+                <li className="!mb-4">
+                  <a
+                    href="https://sankalpsetufoundation.org/"
+                    className="block"
+                  >
+                    Sankalp Setu
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a
+                    href="https://fiscoriseconsultants.com/"
+                    className="block"
+                  >
+                    Fiscorise
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a
+                    href="https://www.chugenhatcheries.com/"
+                    className="block"
+                  >
+                    Chugen
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a
+                    href="https://manpowersolution.org.in/"
+                    className="block"
+                  >
+                    Manpower Solution
+                  </a>
+                </li>
               </ul>
+
             </div>
 
             {/* Contact */}
@@ -143,13 +227,28 @@ export default function Footer() {
               <h4 className="text-[14px] sm:text-[16px] opacity-70 mb-4 sm:mb-6">
                 Contact
               </h4>
+
               <ul className="space-y-3 sm:space-y-4 !text-[16px] font-[500] sm:text-[24px] leading-[150%]">
-                <a href="tel:+91 92666 88954"><li className="!mb-4">+91 92666 88954</li></a>
-                <a href="mailto:office.athratech@gmail.com"><li className="!mb-4">office.athratech@gmail.com</li></a>
+                <li className="!mb-4">
+                  <a href="tel:+919266688954" className="block">
+                    +91 92666 88954
+                  </a>
+                </li>
+
+                <li className="!mb-4">
+                  <a
+                    href="mailto:office.athratech@gmail.com"
+                    className="block"
+                  >
+                    office.athratech@gmail.com
+                  </a>
+                </li>
+
                 <li className="!mb-4">
                   Address : Office - Tower B2, Unit 244A, Spaze ITech Park, Sector 49, Gurugram, Haryana - 122018
                 </li>
               </ul>
+
 
             </div>
           </div>
