@@ -188,6 +188,6 @@ export default function HomePage() {
           <ContactCTA image="/contactMockup3.jpeg" />
         </div>
       </section>
-    </main>
+    </div>
   );
 }
