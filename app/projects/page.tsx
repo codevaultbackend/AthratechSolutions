@@ -475,7 +475,7 @@ function ProjectCard({ project }: { project: Project }) {
             font-[400]
             leading-[120%]
             tracking-[-2%]
-            text-[#797979]
+            text-[#666666]
 
             sm:text-[17px]
             lg:text-[17px]

@@ -104,7 +104,7 @@ export default function Overview() {
                       text-[12px]
                       uppercase
                       tracking-[0.2em]
-                      text-[#8A8A8A]
+                      text-[#666666]
                       font-medium
                     "
                   >

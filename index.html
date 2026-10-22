@@ -1,465 +1,556 @@
-
- <script>
-    (function () {
-    'use strict';
-
-    /*
-     * =========================================================
-     * IHW AMELIA SERVICE CARD DETAILS
-     * =========================================================
-     *
-     * Adds the custom text required by the IHW service-card design.
-     *
-     * Free Phone Consultation:
-     * 30 min (The $10 secures the booking)
-     * Credited if you book a Doctor’s Visit
-     *
-     * Wellness Evaluation:
-     * 60 min (Discovery & root cause assessment)
-     * Standard rate · Local rate may apply
-     */
-
-    const IHW_SERVICE_DETAILS = {
-        'Free Phone Consultation': {
-            duration: '30 min (The $10 secures the booking)',
-            note: 'Credited if you book a Doctor’s Visit'
+{
+  "package": {
+    "id": 27,
+    "name": "1st 90-Day Program – PA Local – plan",
+    "description": "",
+    "color": "#1a84ee",
+    "price": 799,
+    "deposit": 50,
+    "depositPayment": "percentage",
+    "depositPerPerson": null,
+    "pictureFullPath": null,
+    "pictureThumbPath": null,
+    "extras": {},
+    "coupons": {},
+    "position": null,
+    "settings": null,
+    "fullPayment": false,
+    "type": "package",
+    "status": "purchased",
+    "gallery": {},
+    "bookable": {
+      "0": {
+        "id": 253,
+        "quantity": 1,
+        "service": {
+          "id": 35,
+          "name": "1 DO visit",
+          "description": null,
+          "color": "#1a84ee",
+          "price": 0,
+          "deposit": null,
+          "depositPayment": null,
+          "depositPerPerson": null,
+          "pictureFullPath": null,
+          "pictureThumbPath": null,
+          "extras": {},
+          "coupons": {},
+          "position": null,
+          "settings": null,
+          "fullPayment": null,
+          "minCapacity": 1,
+          "maxCapacity": 1,
+          "duration": 1800,
+          "timeBefore": null,
+          "timeAfter": null,
+          "bringingAnyone": null,
+          "show": true,
+          "aggregatedPrice": null,
+          "status": "visible",
+          "categoryId": 11,
+          "category": null,
+          "priority": {},
+          "gallery": {},
+          "recurringCycle": null,
+          "recurringSub": null,
+          "recurringPayment": 0,
+          "translations": null,
+          "minSelectedExtras": null,
+          "mandatoryExtra": null,
+          "customPricing": null,
+          "maxExtraPeople": null,
+          "limitPerCustomer": null
         },
-
-        'Wellness Evaluation': {
-            duration: '60 min (Discovery & root cause assessment)',
-            note: 'Standard rate · Local rate may apply'
-        }
-    };
-
-
-    /**
-     * Find Amelia service cards and add IHW custom details.
-     */
-    function updateIHWServiceCards() {
-
-        const container = document.querySelector(
-            '#amelia-container'
-        );
-
-        if (!container) {
-            return;
-        }
-
-        const cards = container.querySelectorAll(
-            '.am-fs-service-step .am-fs__init-item'
-        );
-
-        if (!cards.length) {
-            return;
-        }
-
-        cards.forEach(function (card) {
-
-            /*
-             * Find service name
-             */
-            const nameElement = card.querySelector(
-                '.am-fs__init-item__name'
-            );
-
-            if (!nameElement) {
-                return;
-            }
-
-            const serviceName = nameElement.textContent
-                .replace(/\s+/g, ' ')
-                .trim();
-
-
-            /*
-             * Only modify the two services
-             * that require custom content.
-             */
-            const details = IHW_SERVICE_DETAILS[serviceName];
-
-            if (!details) {
-                return;
-            }
-
-
-            /*
-             * Prevent duplicate elements.
-             */
-            if (card.querySelector('.ihw-service-details')) {
-                return;
-            }
-
-
-            /*
-             * Hide Amelia's original duration row.
-             *
-             * We only hide the clock/duration row.
-             * Category and location remain untouched.
-             */
-            const infoRows = card.querySelectorAll(
-                '.am-fs__init-item__info-inner'
-            );
-
-            infoRows.forEach(function (row) {
-
-                const rowText = row.textContent
-                    .replace(/\s+/g, ' ')
-                    .trim()
-                    .toLowerCase();
-
-                if (
-                    rowText === '30min' ||
-                    rowText === '30 min' ||
-                    rowText === '1h' ||
-                    rowText === '1 h' ||
-                    rowText === '60min' ||
-                    rowText === '60 min'
-                ) {
-                    row.classList.add(
-                        'ihw-hide-native-duration'
-                    );
-                }
-            });
-
-
-            /*
-             * Create the custom details container.
-             */
-            const detailsWrapper =
-                document.createElement('div');
-
-            detailsWrapper.className =
-                'ihw-service-details';
-
-
-            /*
-             * Duration text
-             */
-            const durationElement =
-                document.createElement('div');
-
-            durationElement.className =
-                'ihw-service-duration';
-
-            durationElement.textContent =
-                details.duration;
-
-
-            /*
-             * Note text
-             */
-            const noteElement =
-                document.createElement('div');
-
-            noteElement.className =
-                'ihw-service-note';
-
-            noteElement.textContent =
-                details.note;
-
-
-            /*
-             * Build:
-             *
-             * .ihw-service-details
-             *   ├── .ihw-service-duration
-             *   └── .ihw-service-note
-             */
-            detailsWrapper.appendChild(
-                durationElement
-            );
-
-            detailsWrapper.appendChild(
-                noteElement
-            );
-
-
-            /*
-             * Put the new content directly after
-             * Amelia's existing information block.
-             */
-            const infoElement = card.querySelector(
-                '.am-fs__init-item__info'
-            );
-
-            if (infoElement) {
-
-                infoElement.insertAdjacentElement(
-                    'afterend',
-                    detailsWrapper
-                );
-
-            } else {
-
-                /*
-                 * Fallback if Amelia changes the
-                 * information markup.
-                 */
-                const contentElement =
-                    card.querySelector(
-                        '.am-fs__init-item__content'
-                    );
-
-                if (contentElement) {
-                    contentElement.appendChild(
-                        detailsWrapper
-                    );
-                }
-            }
-
-        });
-    }
-
-
-    /**
-     * Amelia renders/re-renders parts of the form dynamically.
-     * Therefore we run once and observe future DOM changes.
-     */
-    function initIHWServiceDetails() {
-
-        updateIHWServiceCards();
-
-
-        const ameliaContainer =
-            document.querySelector('#amelia-container');
-
-        if (!ameliaContainer) {
-            return;
-        }
-
-
-        const observer =
-            new MutationObserver(function () {
-
-                updateIHWServiceCards();
-
-            });
-
-
-        observer.observe(
-            ameliaContainer,
-            {
-                childList: true,
-                subtree: true
-            }
-        );
-    }
-
-
-    /*
-     * Start after DOM is ready.
-     */
-    if (
-        document.readyState === 'loading'
-    ) {
-
-        document.addEventListener(
-            'DOMContentLoaded',
-            initIHWServiceDetails
-        );
-
-    } else {
-
-        initIHWServiceDetails();
-
-    }
-
-})();
-     </script>
-
-
-
-<script>
-(function () {
-    'use strict';
-
-    const IHW_DETAILS = {
-        'Free Phone Consultation': {
-            duration: '30 min (The $10 secures the booking)',
-            note: 'Credited if you book a Doctor’s Visit'
+        "minimumScheduled": 0,
+        "maximumScheduled": 1,
+        "providers": {
+          "0": {
+            "id": 1,
+            "firstName": "Peter",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          },
+          "1": {
+            "id": 2,
+            "firstName": "Steven",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test2@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          }
         },
-
-        'Wellness Evaluation': {
-            duration: '60 min (Discovery & root cause assessment)',
-            note: 'Standard rate · Local rate may apply'
-        }
-    };
-
-    function addServiceDetails() {
-
-        const cards = document.querySelectorAll(
-            '#amelia-container .am-fs__init-item'
-        );
-
-        if (!cards.length) {
-            return;
-        }
-
-        cards.forEach(function (card) {
-
-            const nameEl = card.querySelector(
-                '.am-fs__init-item__name'
-            );
-
-            if (!nameEl) {
-                return;
-            }
-
-            const serviceName = nameEl.textContent
-                .replace(/\s+/g, ' ')
-                .trim();
-
-            const details = IHW_DETAILS[serviceName];
-
-            if (!details) {
-                return;
-            }
-
-            /*
-             * Don't add twice.
-             */
-            if (card.querySelector('.ihw-service-details')) {
-                return;
-            }
-
-            /*
-             * Find Amelia's info rows.
-             */
-            const info = card.querySelector(
-                '.am-fs__init-item__info'
-            );
-
-            if (!info) {
-                return;
-            }
-
-            /*
-             * Hide ONLY the native duration row.
-             *
-             * First row  = Individual Visits
-             * Second row = Duration
-             * Third row  = Location
-             */
-            const rows = info.querySelectorAll(
-                '.am-fs__init-item__info-inner'
-            );
-
-            if (rows[1]) {
-                rows[1].style.setProperty(
-                    'display',
-                    'none',
-                    'important'
-                );
-            }
-
-            /*
-             * Create wrapper.
-             */
-            const wrapper = document.createElement('div');
-
-            wrapper.className = 'ihw-service-details';
-
-            /*
-             * Duration.
-             */
-            const duration = document.createElement('div');
-
-            duration.className =
-                'ihw-service-duration';
-
-            duration.textContent =
-                details.duration;
-
-            /*
-             * Note.
-             */
-            const note = document.createElement('div');
-
-            note.className =
-                'ihw-service-note';
-
-            note.textContent =
-                details.note;
-
-            /*
-             * Add elements.
-             */
-            wrapper.appendChild(duration);
-            wrapper.appendChild(note);
-
-            /*
-             * Put custom details after Amelia info.
-             */
-            info.insertAdjacentElement(
-                'afterend',
-                wrapper
-            );
-        });
-    }
-
-
-    /*
-     * Amelia loads dynamically.
-     *
-     * Run repeatedly for a short period so we catch
-     * the service cards whenever Amelia creates them.
-     */
-    function start() {
-
-        addServiceDetails();
-
-        let attempts = 0;
-
-        const timer = setInterval(function () {
-
-            addServiceDetails();
-
-            attempts++;
-
-            if (attempts >= 40) {
-                clearInterval(timer);
-            }
-
-        }, 500);
-
-
-        /*
-         * Also watch Amelia for changes.
-         */
-        const container = document.querySelector(
-            '#amelia-container'
-        );
-
-        if (container) {
-
-            const observer =
-                new MutationObserver(function () {
-                    addServiceDetails();
-                });
-
-            observer.observe(container, {
-                childList: true,
-                subtree: true
-            });
-        }
-    }
-
-
-    /*
-     * Start after page load.
-     */
-    if (document.readyState === 'loading') {
-
-        document.addEventListener(
-            'DOMContentLoaded',
-            start
-        );
-
-    } else {
-
-        start();
-
-    }
-
-})();
-</script>
+        "locations": {
+          "0": {
+            "id": 1,
+            "status": null,
+            "name": "Pennsylvania",
+            "description": null,
+            "address": "Dalton · Harmony Mountain",
+            "phone": "",
+            "latitude": 40.748441,
+            "longitude": -73.987853,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "pin": null,
+            "translations": null,
+            "serviceList": {},
+            "eventList": {},
+            "providerList": {},
+            "countryPhoneIso": null
+          }
+        },
+        "allowProviderSelection": true,
+        "position": 1
+      },
+      "1": {
+        "id": 254,
+        "quantity": 1,
+        "service": {
+          "id": 36,
+          "name": "2 DO visit",
+          "description": null,
+          "color": "#1a84ee",
+          "price": 0,
+          "deposit": null,
+          "depositPayment": null,
+          "depositPerPerson": null,
+          "pictureFullPath": null,
+          "pictureThumbPath": null,
+          "extras": {},
+          "coupons": {},
+          "position": null,
+          "settings": null,
+          "fullPayment": null,
+          "minCapacity": 1,
+          "maxCapacity": 1,
+          "duration": 1800,
+          "timeBefore": null,
+          "timeAfter": null,
+          "bringingAnyone": null,
+          "show": true,
+          "aggregatedPrice": null,
+          "status": "visible",
+          "categoryId": 11,
+          "category": null,
+          "priority": {},
+          "gallery": {},
+          "recurringCycle": null,
+          "recurringSub": null,
+          "recurringPayment": 0,
+          "translations": null,
+          "minSelectedExtras": null,
+          "mandatoryExtra": null,
+          "customPricing": null,
+          "maxExtraPeople": null,
+          "limitPerCustomer": null
+        },
+        "minimumScheduled": 0,
+        "maximumScheduled": 1,
+        "providers": {
+          "0": {
+            "id": 1,
+            "firstName": "Peter",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          },
+          "1": {
+            "id": 2,
+            "firstName": "Steven",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test2@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          }
+        },
+        "locations": {
+          "0": {
+            "id": 1,
+            "status": null,
+            "name": "Pennsylvania",
+            "description": null,
+            "address": "Dalton · Harmony Mountain",
+            "phone": "",
+            "latitude": 40.748441,
+            "longitude": -73.987853,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "pin": null,
+            "translations": null,
+            "serviceList": {},
+            "eventList": {},
+            "providerList": {},
+            "countryPhoneIso": null
+          }
+        },
+        "allowProviderSelection": true,
+        "position": 2
+      },
+      "2": {
+        "id": 255,
+        "quantity": 1,
+        "service": {
+          "id": 37,
+          "name": "3 DO visit",
+          "description": null,
+          "color": "#1a84ee",
+          "price": 0,
+          "deposit": null,
+          "depositPayment": null,
+          "depositPerPerson": null,
+          "pictureFullPath": null,
+          "pictureThumbPath": null,
+          "extras": {},
+          "coupons": {},
+          "position": null,
+          "settings": null,
+          "fullPayment": null,
+          "minCapacity": 1,
+          "maxCapacity": 1,
+          "duration": 1800,
+          "timeBefore": null,
+          "timeAfter": null,
+          "bringingAnyone": null,
+          "show": true,
+          "aggregatedPrice": null,
+          "status": "visible",
+          "categoryId": 11,
+          "category": null,
+          "priority": {},
+          "gallery": {},
+          "recurringCycle": null,
+          "recurringSub": null,
+          "recurringPayment": 0,
+          "translations": null,
+          "minSelectedExtras": null,
+          "mandatoryExtra": null,
+          "customPricing": null,
+          "maxExtraPeople": null,
+          "limitPerCustomer": null
+        },
+        "minimumScheduled": 0,
+        "maximumScheduled": 1,
+        "providers": {
+          "0": {
+            "id": 2,
+            "firstName": "Steven",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test2@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          },
+          "1": {
+            "id": 1,
+            "firstName": "Peter",
+            "lastName": "confirm",
+            "birthday": null,
+            "email": "test@gmail.com",
+            "phone": null,
+            "type": "provider",
+            "status": "visible",
+            "note": null,
+            "zoomUserId": null,
+            "countryPhoneIso": null,
+            "externalId": null,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "translations": null,
+            "customFields": null,
+            "appleCalendarId": null,
+            "googleCalendarId": null,
+            "outlookCalendarId": null,
+            "weekDayList": {},
+            "serviceList": {},
+            "eventList": {},
+            "dayOffList": {},
+            "blockTimeList": {},
+            "specialDayList": {},
+            "locationId": null,
+            "googleCalendar": null,
+            "outlookCalendar": null,
+            "timeZone": null,
+            "description": null,
+            "badgeId": null,
+            "stripeConnect": {
+              "id": null,
+              "amount": 0,
+              "accountId": null
+            },
+            "employeeAppleCalendar": null,
+            "show": null
+          }
+        },
+        "locations": {
+          "0": {
+            "id": 1,
+            "status": null,
+            "name": "Pennsylvania",
+            "description": null,
+            "address": "Dalton · Harmony Mountain",
+            "phone": "",
+            "latitude": 40.748441,
+            "longitude": -73.987853,
+            "pictureFullPath": null,
+            "pictureThumbPath": null,
+            "pin": null,
+            "translations": null,
+            "serviceList": {},
+            "eventList": {},
+            "providerList": {},
+            "countryPhoneIso": null
+          }
+        },
+        "allowProviderSelection": true,
+        "position": 3
+      }
+    },
+    "calculatedPrice": false,
+    "discount": 0,
+    "endDate": null,
+    "durationCount": 90,
+    "durationType": "day",
+    "translations": null,
+    "sharedCapacity": false,
+    "quantity": 1,
+    "limitPerCustomer": "",
+    "customer": {
+      "id": 38,
+      "firstName": "vivek vivek",
+      "lastName": "pnd4321@gmail.com",
+      "birthday": {
+        "date": "2026-10-08 12:40:24.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "email": "vivekpnd4321@gmail.com",
+      "phone": null,
+      "type": "customer",
+      "status": "visible",
+      "note": null,
+      "zoomUserId": null,
+      "countryPhoneIso": null,
+      "externalId": null,
+      "pictureFullPath": null,
+      "pictureThumbPath": null,
+      "translations": null,
+      "customFields": null,
+      "appleCalendarId": null,
+      "googleCalendarId": null,
+      "outlookCalendarId": null,
+      "gender": "male",
+      "stripeConnect": null,
+      "customerPanelUrl": "https://newstaging.innerharmonywellness.com/costomer-panel?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL25ld3N0YWdpbmcuaW5uZXJoYXJtb255d2VsbG5lc3MuY29tIiwiaWF0IjoxNzkxODA4ODI0LCJlbWFpbCI6InZpdmVrcG5kNDMyMUBnbWFpbC5jb20iLCJ3cCI6NCwiZXhwIjoxNzk0NDAwODI0fQ.ktWKRWmK_Lgx7LbsmGIcTJISWFyShg3FrvapFYMJdQA"
+    },
+    "icsFiles": {},
+    "packageCustomerId": 92,
+    "isRetry": null,
+    "recurring": {},
+    "paymentLinks": {
+      "payment_link_square": "https://newstaging.innerharmonywellness.com/wp-admin/admin-ajax.php?action=wpamelia_api&call=/payments/link/196&token=818cd05c72&paymentMethod=square"
+    },
+    "onlyOneEmployee": null
+  },
+  "bookings": {},
+  "headers": {
+    "host": "services.leadconnectorhq.com",
+    "x-forwarded-for": "2a02:4780:1:541:0:1a09:c9de:1,10.16.64.7",
+    "content-length": "9276",
+    "content-type": "application/json",
+    "cf-verified-bot": "false",
+    "cf-ew-via": "15",
+    "cdn-loop": "cloudflare; loops=1; subreqs=1",
+    "cf-timezone": "America/New_York",
+    "cf-threat-score": "0",
+    "cf-ray": "a4962c48fe31bd16-ATL",
+    "accept-encoding": "gzip, br",
+    "accept": "*/*",
+    "cf-connecting-ip": "2a02:4780:1:541:0:1a09:c9de:1",
+    "cf-visitor": {
+      "scheme": "https"
+    },
+    "cf-bot-score": "1",
+    "cf-ipcity": "Asheville",
+    "cf-ipcontinent": "NA",
+    "cf-region-code": "NC",
+    "cf-iplatitude": "35.60095",
+    "cf-iplongitude": "-82.55402",
+    "cf-ja3-hash": "42cb4ba4c818da3ce6424cb212377c24",
+    "cf-ja4": "t13d3513h2_bfa337485184_e6e5606e7304",
+    "cf-metro-code": "567",
+    "cf-postal-code": "28801",
+    "cf-region": "North Carolina",
+    "cf-worker": "leadconnectorhq.com",
+    "cf-ipcountry": "US",
+    "x-forwarded-proto": "https",
+    "x-envoy-external-address": "10.16.64.7",
+    "x-request-id": "2c6e8639-f61c-4f48-8373-35ed55fdd11b",
+    "x-envoy-decorator-operation": "automation-workflows-hooks-external-api-service.default.svc.cluster.local:6050/hooks/*",
+    "x-envoy-attempt-count": "1",
+    "x-b3-traceid": "e753fdc9b1c5574a9fe42134ff265c1a",
+    "x-b3-spanid": "9fe42134ff265c1a",
+    "x-b3-sampled": "0"
+  }
+}

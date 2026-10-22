@@ -185,7 +185,7 @@ function FastResponseHero({
                     <div className="grid grid-cols-2 gap-x-7 gap-y-3 sm:gap-x-10 lg:gap-x-14">
                         {caseStudy.meta.slice(0, 2).map((item, index) => (
                             <div key={index}>
-                                <p className="text-[8px] uppercase leading-none tracking-[0.18em] text-[#8A8A8A] lg:text-[9px]">
+                                <p className="text-[8px] uppercase leading-none tracking-[0.18em] text-[#666666] lg:text-[9px]">
                                     {item.label}
                                 </p>
                                 <p className="mt-[5px] text-[11px] font-medium leading-[1.2] text-[#111111] lg:text-[12px]">

@@ -70,8 +70,8 @@ export default function StackedProjects() {
                 >
                   <div
                     className={`grid min-h-[529px] grid-cols-1 items-stretch md:grid-cols-2 ${project.reverse
-                        ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
-                        : ""
+                      ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
+                      : ""
                       }`}
                   >
                     {/* Image */}
@@ -121,7 +121,7 @@ export default function StackedProjects() {
                           {project.title}
                         </h3>
 
-                        <p className="mb-4  max-w-[460px] text-[18px] font-[400] leading-[100%] text-[#797979] ">
+                        <p className="max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#666666]">
                           {project.description}
                         </p>
 
@@ -134,7 +134,7 @@ export default function StackedProjects() {
                               <h4 className="text-[16px] font-[500] tracking-[0] text-[#0E0E0E]">
                                 {detail.title}
                               </h4>
-                              <p className=" max-w-[460px] text-[16px] font-[400] leading-[100%] text-[#797979] ">
+                              <p className="mb-4 max-w-[460px] text-[18px] font-[400] leading-[100%] text-[#666666]">
                                 {detail.description}
                               </p>
                             </div>
@@ -153,7 +153,7 @@ export default function StackedProjects() {
                           rel={project.websiteUrl ? "noopener noreferrer" : undefined}
                           className="inline-flex h-[50px] w-full max-w-[194px] items-center justify-between gap-1 rounded-[33px] border-[0.5px] border-[#CCCCCC] bg-[#F2F2F2] p-[9px] text-sm font-medium text-black transition-all hover:gap-4"
                         >
-                          <span className="pl-[20px] text-center text-[16px] font-[400] leading-[100%] text-[#797979]">
+                          <span className="pl-[20px] text-center text-[16px] font-[400] leading-[100%] text-[#666666]">
                             View Project
                           </span>
                           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DDD] bg-[#121212] text-[#fff]">

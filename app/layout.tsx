@@ -21,11 +21,23 @@ import {
 import { BlogsProvider } from "./context/BlogsContext";
 import { ServicesProvider } from "./context/ServicesContext";
 
+
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.athratech.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
 
-  title: "Athratech | Information Technology Company",
+  title: {
+    default: "AthraTech | Information Technology Company",
+    template: "%s | AthraTech",
+  },
 
-  keywords: [
+  description:
+    "AthraTech delivers website development, UI/UX design, and digital marketing solutions for businesses.",
+
+   keywords: [
     "website development company",
     "website development services",
     "mobile app development company",
@@ -35,9 +47,6 @@ export const metadata: Metadata = {
     "CRM development company",
     "cybersecurity solutions",
   ],
-
-  description:
-    "Explore Athratech, a fast-growing IT services company helping businesses grow through website development, mobile app development, SEO, digital marketing, and custom software solutions.",
 
   icons: {
     icon: [
@@ -54,7 +63,6 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       },
     ],
-
     apple: "/apple-touch-icon.png",
   },
 };
@@ -77,35 +85,6 @@ export default function RootLayout({
 
   {/* Open Graph */}
 
-<meta
-  property="og:title"
-  content="Athratech | Digital Solutions & IT Services"
-/>
-
-<meta
-  property="og:description"
-  content="Build, grow and scale your business with website, mobile app, UI/UX, software, ERP, CRM, SEO and digital marketing solutions."
-/>
-
-<meta
-  property="og:image"
-  content="https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png"
-/>
-
-<meta
-  property="og:url"
-  content="https://www.athratech.com/"
-/>
-
-<meta
-  property="og:type"
-  content="website"
-/>
-
-<meta
-  property="og:site_name"
-  content="Athratech"
-/>
       </head>
 
       <body className="relative bg-[#FFFFFF] antialiased mt-[107px] ">

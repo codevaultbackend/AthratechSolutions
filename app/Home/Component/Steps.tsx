@@ -107,7 +107,7 @@ bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
                 >
                     Take the first step 🚶
                     <br />
-                    <span className="text-[#8A8A8A]">and we will guide you</span>
+                    <span className="text-[#666666]">and we will guide you</span>
                 </h2>
             </div>
 

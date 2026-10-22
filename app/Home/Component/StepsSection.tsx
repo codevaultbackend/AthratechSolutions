@@ -71,7 +71,7 @@ export default function StepsSection() {
                         Take the first step 🚶
                         <br />
 
-                        <span className="text-[#8A8A8A]">
+                        <span className="text-[#666666]">
                             and we will guide you
                         </span>
 

@@ -42,7 +42,7 @@ export default function FAQSection() {
         >
           Your Questions, Answered
         </h2>
-        <p className="text-[#8A8A8A] text-[16px] font-[400] leading-[100%] mt-[24px] font-inter">Helping you understand our process and offerings at Athratech</p>
+        <p className="text-[#666666] text-[16px] font-[400] leading-[100%] mt-[24px] font-inter">Helping you understand our process and offerings at Athratech</p>
       </div>
 
       {/* ===== FAQ Grid ===== */}
