@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { seoPages, getPageMetadata } from "@/app/lib/seo";
 import { getServiceBySlug, services } from "@/app/context/services";
 import LetsTeamUp from "@/app/blog/Component/LetsTeamUp";
 import CardGrid from "@/app/Component/services/CardGrid";
@@ -28,6 +29,14 @@ export function generateStaticParams() {
   }));
 }
 
+const serviceSeoMap: Record<string, keyof typeof seoPages> = {
+  "frontend-backend-development": "frontendBackend",
+  "ui-ux-design": "uiUxDesign",
+  "mobile-application-design": "mobileAppDesign",
+};
+
+
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -35,16 +44,29 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
 
   if (!service) {
-    return {
-      title: "Service Not Found | Athratech",
-      description: "The requested service page could not be found.",
-    };
+    notFound();
   }
 
-  return {
-    title: `${service.detailPage.heroTitle} | Athratech`,
-    description: service.detailPage.heroDescription,
-  };
+  const seoKey = serviceSeoMap[slug];
+
+  if (!seoKey) {
+    throw new Error(
+      `Missing SEO configuration for service slug: ${slug}`
+    );
+  }
+
+  const seo = seoPages[seoKey];
+
+  // Prevent a slug from accidentally using another page's SEO entry.
+  const expectedPath = `/services/${slug}`;
+
+  if (seo.path !== expectedPath) {
+    throw new Error(
+      `SEO path mismatch for "${slug}". Expected "${expectedPath}", received "${seo.path}".`
+    );
+  }
+
+  return getPageMetadata(seo);
 }
 
 

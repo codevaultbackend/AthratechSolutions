@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { seoPages, getPageMetadata } from "@/app/lib/seo"
 
 import MarketingHero from "../../Component/marketing/MarketingHero";
 import MarketingBusiness from "../../Component/marketing/MarketingBusiness";
@@ -8,6 +9,8 @@ import CommonHeroHeader from "@/app/Component/CommonHeroHead";
 import Strategy from "@/app/Component/Strategy";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
+
+export const metadata: Metadata = getPageMetadata(seoPages.marketing);
 
 
 export default function HomePage() {

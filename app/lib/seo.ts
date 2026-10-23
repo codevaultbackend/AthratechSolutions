@@ -10,7 +10,7 @@ type SeoEntry = {
 
 export const seoPages = {
   home: {
-    title: "Digital Marketing & SEO Agency in Gurgaon",
+    title: "Digital Marketing & SEO Agency in Gurgaon ",
     description:
       "Athratech is a digital marketing agency in Gurgaon offering SEO, Google Ads, web development and AI search optimization to help businesses generate qualified leads.",
     path: "/",
@@ -18,15 +18,14 @@ export const seoPages = {
       "Digital Marketing Agency in Gurgaon",
       "SEO Agency in Gurgaon",
       "Digital Marketing Company in Gurgaon",
-      "SEO Services in Gurgaon",
-      "Google Ads Agency",
+      "SEO Services in Gurgaon, Google Ads Agency"
     ],
   },
 
   uiUxDesign: {
-    title: "UI/UX Design Company in Gurgaon",
+    title: "UI/UX Design Company in Gurgaon ",
     description:
-      "Athratech is a UI/UX design agency in Gurgaon offering website design, mobile app UI/UX, wireframing and scalable design systems for businesses.",
+      "Athratech is a UI/UX design agency in Gurgaon offering website design, mobile app UI/UX, wireframing and scalable design systems for businesses. ",
     path: "/services/ui-ux-design",
     keywords: [
       "UI UX design agency in Gurgaon",
@@ -41,7 +40,7 @@ export const seoPages = {
   },
 
   frontendBackend: {
-    title: "Frontend & Backend Development Services",
+    title: "Frontend & Backend Development Services | Athratech",
     description:
       "Athratech offers frontend and backend development services in Gurgaon, including website development, custom web applications, CRM, ERP and SaaS solutions.",
     path: "/services/frontend-backend-development",
@@ -95,7 +94,7 @@ export const seoPages = {
     description:
       "Discover Athratech's brand identity design services, including logo design, brand strategy, visual identity systems and brand guidelines.",
     // Replace with the exact route for the Brand Identity page.
-    path: "/REPLACE-WITH-BRAND-IDENTITY-ROUTE",
+    path: "/services/ui-ux-design/brand-design-identity",
     keywords: [
       "brand identity design",
       "logo design services",
@@ -106,37 +105,14 @@ export const seoPages = {
     ],
   },
 
-  projects: {
-    title: "Our Projects & Digital Portfolio",
-    description:
-      "Explore Athratech's digital portfolio, including website development, software and digital solutions.",
-    path: "/projects",
-    keywords: [
-      "web development portfolio",
-      "software development projects",
-      "website design portfolio",
-      "digital solutions portfolio",
-    ],
-  },
-
-  contact: {
-    title: "Contact Athratech | Start Your Project",
-    description:
-      "Contact Athratech to discuss your website, software, mobile app or digital marketing project.",
-    path: "/contact-us",
-    keywords: [
-      "contact Athratech",
-      "web development consultation",
-      "software development consultation",
-      "digital marketing consultation",
-    ],
-  },
 } satisfies Record<string, SeoEntry>;
+
+
 
 export function getPageMetadata(page: SeoEntry): Metadata {
   return {
-    title: page.title,
-    description: page.description,
+    title: page.title.trim(),
+    description: page.description.trim(),
     keywords: page.keywords,
 
     alternates: {
@@ -144,11 +120,26 @@ export function getPageMetadata(page: SeoEntry): Metadata {
     },
 
     openGraph: {
-      title: `${page.title} | Athratech`,
-      description: page.description,
+      title: `${page.title.trim()} | Athratech`,
+      description: page.description.trim(),
       url: page.path,
       siteName: "Athratech",
       type: "website",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Athratech Digital Marketing and Web Development",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${page.title.trim()} | Athratech`,
+      description: page.description.trim(),
+      images: ["/og-image.jpg"],
     },
   };
 }

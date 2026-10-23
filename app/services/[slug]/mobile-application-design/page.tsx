@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { seoPages, getPageMetadata } from "@/app/lib/seo";
 
 import MobileHero from "../../../Component/mobile/MobileHero";
 import Strategy from "../../../Component/Strategy";
@@ -104,6 +105,10 @@ const landingProcessData = {
     },
   ],
 };
+
+export const metadata: Metadata = getPageMetadata(
+  seoPages.mobileAppDesign
+);
 
 export default function HomePage() {
   return (

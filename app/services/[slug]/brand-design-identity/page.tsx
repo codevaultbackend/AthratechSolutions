@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import BrandHero from "../../../Component/brand/BrandHero";
 import BrandGallery from "../../../Component/brand/BrandGallery";
 import BrandApproach from "../../../Component/brand/BrandApproach";
+import { seoPages, getPageMetadata } from "@/app/lib/seo";
 import MarketingCTA from "@/app/Component/MarketingCTA";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
 import VideoSection from "@/app/Home/Component/VideoSection";
@@ -125,6 +126,10 @@ const landingProcessContent: ProcessContent = {
     },
   ],
 };
+
+export const metadata: Metadata = getPageMetadata(
+  seoPages.brandIdentity
+);
 
 export default function BrandPage() {
   return (
