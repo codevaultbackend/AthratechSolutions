@@ -71,7 +71,7 @@ export default function Projects() {
         <SectionLabel label="Projects" />
 
         <h2 className="text-[56px] font-[400] leading-[100%] text-black font-bricolage max-md:text-[26px] max-md:font-[500]">
-          Work Booming in the Market
+          Our Projects & Results
         </h2>
       </div>
 

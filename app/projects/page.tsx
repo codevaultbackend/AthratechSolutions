@@ -254,7 +254,7 @@ function LetsTalkButton() {
                 text-white
               "
             >
-              Let’s Talk
+              Book a Free Consultation
             </span>
 
             <TrustedAvatars />

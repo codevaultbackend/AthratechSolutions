@@ -40,7 +40,7 @@ export default function StackedProjects() {
             className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
             style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
           >
-            Work Booming in the Market
+            Our Projects & Results
           </h2>
         </div>
 

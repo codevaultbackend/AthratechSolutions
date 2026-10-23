@@ -41,7 +41,7 @@ export default function ServicesPage() {
             lg:max-w-[720px] lg:text-[48px]
           "
         >
-          What we <span className="text-[#666666]">excel </span> at ?
+          Our <span className="text-[#666666]">Services </span> at ?
         </h1>
       </div>
 

@@ -75,7 +75,7 @@ export type ProjectItem = {
 
 export const projectsData: ProjectItem[] = [
   {
-    title: "Mark Day",
+    title: "Mark Day: Biometric & GPS Attendance App",
     slug: "markday",
     description:
       "An intuitive attendance portal designed for seamless tracking and leave management, enhancing workforce efficiency and contributing to scalable organizational growth.",
@@ -180,24 +180,24 @@ export const projectsData: ProjectItem[] = [
     websiteUrl: "https://www.sankalpsetufoundation.org/",
     details: [
       {
-        title: "Education",
+        title: "Education Programs Showcase",
         description:
           "Supporting children with access to learning and awareness programs.",
       },
       {
-        title: "Healthcare",
+        title: "Healthcare Initiatives Section",
         description:
           "Providing essential aid, hygiene support, and community health initiatives.",
       },
       {
-        title: "Skill Development",
+        title: "Skill Development Section",
         description:
           "Enabling youth with vocational training for sustainable livelihoods.",
       },
     ],
   },
   {
-    title: "Fast Response",
+    title: "FastResponse: Home Service Booking Platform",
     slug: "fastresponse",
     description:
       "FastResponse is a platform for quickly booking trusted professionals for household services, offering seamless scheduling and a fast, hassle-free experience.",
@@ -219,7 +219,7 @@ export const projectsData: ProjectItem[] = [
           "Users can discover and book trusted household professionals with a fast, intuitive flow.",
       },
       {
-        title: "Better Visibility & Operations",
+        title: "Technician Scheduling & Job Tracking",
         description:
           "Improves technician scheduling, job tracking, and service efficiency across the platform.",
       },

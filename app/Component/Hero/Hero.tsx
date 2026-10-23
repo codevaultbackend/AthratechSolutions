@@ -173,7 +173,7 @@ export default function Hero() {
                 text-[#202020]
               "
             >
-              Why Businesses Trust Us?
+              Why Gurgaon Businesses Choose Athratech?
             </h2>
 
             <p

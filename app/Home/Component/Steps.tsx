@@ -14,19 +14,19 @@ export default function Steps() {
     const steps: Step[] = [
         {
             count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count1_0x9mSOEVq.jpg",
-            title: "Conversation",
+            title: "Discovery Call",
             des: "We talk about your business, you tell us about your current activities and results.",
             side: "right",
         },
         {
             count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count2_5ieaQKyPW.jpg",
-            title: "Analysis",
+            title: "Analysis & Strategy",
             des: "We analyse your design requirement and current solutions to lead you to your goals.",
             side: "left",
         },
         {
             count: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/count3_QhqB7zVw_.jpg",
-            title: "Get your work Done",
+            title: "Build, Launch & Support",
             des: "We execute the plan efficiently and deliver measurable results.",
             side: "right",
         },
@@ -105,9 +105,7 @@ bg-gradient-to-t from-[#000000]/8 via-[#000000]/4 to-transparent" />
       lg:max-w-[620px] lg:text-[48px]
     "
                 >
-                    Take the first step 🚶
-                    <br />
-                    <span className="text-[#666666]">and we will guide you</span>
+                    How We Work 
                 </h2>
             </div>
 

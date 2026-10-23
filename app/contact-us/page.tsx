@@ -94,7 +94,7 @@ export default function ContactForm() {
           </p>
 
           <h1 className="font-bricolage mt-2 text-[56px] font-semibold leading-[0.92] tracking-[-0.055em] text-[#111111] md:mt-3 md:text-[108px] lg:text-[118px] max-[600px]:mt-[22px]">
-            Let’s Talk!
+            Book a Free Consultation
           </h1>
 
           <p className="mx-auto mt-4 max-w-[570px] text-[24px] leading-[150%] font-[400] text-[#4A4A4A] md:mt-6 md:text-[18px] md:leading-[1.5] font-inter max-[600px]:mt-[22px] max-[768px]:mb-[68px]">

@@ -41,7 +41,7 @@ export default function VideoSection() {
             max-[768px]:mt-[21px]
           "
         >
-          Trusted by Companies
+          Businesses We’ve Worked With
         </h3>
 
         <div className="my-8 flex w-max animate-logo-scroll gap-16 max-[768px]:mb-1">

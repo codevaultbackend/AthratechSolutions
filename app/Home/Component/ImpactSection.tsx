@@ -131,7 +131,7 @@ export default function ImpactSection() {
                         className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
                         style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
                     >
-                        We make it simple, <br />and deliver results.
+                        Our Impact in Numbers
                     </h2>
                 </div>
 

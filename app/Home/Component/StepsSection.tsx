@@ -68,12 +68,7 @@ export default function StepsSection() {
                         "
                     >
 
-                        Take the first step 🚶
-                        <br />
-
-                        <span className="text-[#666666]">
-                            and we will guide you
-                        </span>
+                        How We Work 
 
                     </h2>
 
@@ -424,7 +419,7 @@ export default function StepsSection() {
                             "
                         >
 
-                            <h3
+                            <div
                                 className="
                                     mb-[8px]
                                     font-bricolage
@@ -437,7 +432,7 @@ export default function StepsSection() {
                                 "
                             >
                                 Get Your Work Done
-                            </h3>
+                            </div>
 
 
 

@@ -46,7 +46,7 @@ const MARKETING_HERO_DESCRIPTION =
 export const services: ServiceCard[] = [
   {
     id: 1,
-    title: "UI/UX Design",
+    title: "UI/UX Design Services",
     slug: "ui-ux-design",
     description:
       "Where design meets motion and performance. Thoughtfully crafted to engage, impress, and convert.",
@@ -135,7 +135,7 @@ export const services: ServiceCard[] = [
   },
   {
     id: 2,
-    title: "Frontend & Backend Development",
+    title: "Website & Software Development",
     slug: "frontend-backend-development",
     description:
       "We build reliable, scalable digital solutions aligned with your business goals.",
@@ -225,7 +225,7 @@ export const services: ServiceCard[] = [
   },
   {
     id: 3,
-    title: "Digital Marketing",
+    title: "Digital Marketing & SEO Services",
     slug: "marketing",
     description:
       "Smart strategies focused on real growth, your audience, your brand, and measurable success.",

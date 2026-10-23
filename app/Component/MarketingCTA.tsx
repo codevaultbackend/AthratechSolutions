@@ -60,7 +60,7 @@ export default function MarketingCTA() {
 
                                     {/* TEXT */}
                                     <h3 className="text-white text-[16px] max-md:text-[14px] font-[500] tracking-tight">
-                                        Let’s Talk
+                                        Book a Free Consultation
                                     </h3>
 
                                     {/* AVATARS */}

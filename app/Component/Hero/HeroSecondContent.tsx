@@ -32,7 +32,7 @@ export default function HeroSecondContent() {
           text-[#202020]
         "
       >
-        Why Businesses Trust Us ?
+        Why Gurgaon Businesses Choose Athratech
       </h2>
 
       {/* Description */}

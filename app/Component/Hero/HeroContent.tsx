@@ -20,12 +20,12 @@ export default function HeroContent({
 
   const headingContent = (
     <>   
-      <span className="text-[#202020]">Digital </span>
-      <span>Marketing &</span>
+      <span className="text-[#202020]">Website Development, </span>
+      <span>UI/UX & Digital</span>
 
       <br />
 
-      <span>SEO Agency </span>
+      <span>Marketing Company </span>
       <span className="text-[#202020]">in Gurgaon</span>
     </>
   );

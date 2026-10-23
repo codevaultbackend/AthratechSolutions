@@ -91,7 +91,7 @@ overflow-hidden
           lg:text-[48px]
         "
       >
-        We’ll reply in 24hrs
+        Get a Reply Within 24 Hours
       </h2>
 
       <p
@@ -168,7 +168,7 @@ overflow-hidden
                     sm:text-[16px]
                   "
                 >
-                  Let’s Talk
+                  Book a Free Consultation
                 </h3>
 
                 <div className="flex shrink-0 -space-x-3">
