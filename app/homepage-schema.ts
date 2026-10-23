@@ -8,7 +8,7 @@ const homepageSchema = {
       "name": "Athratech",
       "legalName": "Athratech Pvt. Ltd.",
       "url": "https://www.athratech.com/",
-      "description": ".Athratech is a digital marketing agency in Gurgaon offering SEO, Google Ads, web development and AI search optimization to help businesses generate qualified leads. ",
+      "description": "Athratech is a digital marketing agency in Gurgaon offering SEO, Google Ads, web development and AI search optimization to help businesses generate qualified leads. ",
       "slogan": "Building digital experiences that move your brand forward",
       "logo": {
         "@type": "ImageObject",

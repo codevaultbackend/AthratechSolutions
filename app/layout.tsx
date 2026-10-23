@@ -153,27 +153,6 @@ export default function RootLayout({
         </Script>
 
 
-        {/* Athratech schema */}
-
-        <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://www.athratech.com/#organization",
-      name: "Athratech",
-      url: "https://www.athratech.com/",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://res.cloudinary.com/ddcy9noqo/image/upload/v1775279365/AthraWhiteLogo_n1xlnv.png",
-      },
-      description:
-        "Athratech is an IT services company providing website development, mobile app development, SEO, digital marketing, UI/UX design, and custom software solutions.",
-    }),
-  }}
-/>
-
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="lazyOnload">
           {`
