@@ -144,7 +144,7 @@ export const services: ServiceCard[] = [
     cardType: "wide",
     bgColor: "#4E641F",
     detailPage: {
-      heroTitle: "Frontend & Backend Development ",
+      heroTitle: "Frontend & Backend Development Services in Gurgaon ",
       heroDescription: DEVELOPMENT_HERO_DESCRIPTION,
       heroImage: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255601/website-images/hlu7pvlhtx1cl8aoju2z.png",
       sections: [

@@ -119,6 +119,11 @@ export function getPageMetadata(page: SeoEntry): Metadata {
       canonical: page.path,
     },
 
+    robots: {
+      index: true,
+      follow: true,
+    },
+
     openGraph: {
       title: `${page.title.trim()} | Athratech`,
       description: page.description.trim(),
