@@ -54,7 +54,7 @@ export const services: ServiceCard[] = [
     alt: "UI UX Design",
     cardType: "large",
     detailPage: {
-      heroTitle: "UI/UX Design",
+      heroTitle: "UI/UX Design Services in Gurgaon",
       heroDescription: UI_UX_HERO_DESCRIPTION,
       heroImage: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255606/website-images/ggr6qpqd3u7yoynlacon.png",
       sections: [
@@ -144,7 +144,7 @@ export const services: ServiceCard[] = [
     cardType: "wide",
     bgColor: "#4E641F",
     detailPage: {
-      heroTitle: "Frontend & Backend Development",
+      heroTitle: "Frontend & Backend Development ",
       heroDescription: DEVELOPMENT_HERO_DESCRIPTION,
       heroImage: "https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255601/website-images/hlu7pvlhtx1cl8aoju2z.png",
       sections: [
@@ -225,7 +225,7 @@ export const services: ServiceCard[] = [
   },
   {
     id: 3,
-    title: "Marketing",
+    title: "Digital Marketing",
     slug: "marketing",
     description:
       "Smart strategies focused on real growth, your audience, your brand, and measurable success.",

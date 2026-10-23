@@ -18,30 +18,7 @@ import CodaLogo from "@/app/svgIcons/CodaLogo";
 import LifeBouy from "@/app/svgIcons/LifeBouy";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "Website Development | Athratech",
-  description:
-    "Pixel-perfect website development, frontend development, backend development, CRM and ERP platforms, responsive websites, and scalable web applications.",
-  keywords: [
-    "website development",
-    "frontend development",
-    "backend development",
-    "web application development",
-    "CRM development",
-    "ERP development",
-    "responsive website development",
-    "Next.js development",
-  ],
-  openGraph: {
-    title: "Website Development | Athratech",
-    description:
-      "Frontend and backend website development for scalable digital products.",
-    type: "website",
-  },
-};
+
 
 type HeadDataItem = {
   title: ReactNode;

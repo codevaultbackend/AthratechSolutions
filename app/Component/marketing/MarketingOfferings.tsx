@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -96,197 +97,126 @@ const offerings = [
 ];
 
 export default function MarketingOfferings() {
+  const leftColumn = offerings
+    .map((item, index) => ({ item, index }))
+    .filter(({ index }) => index % 2 === 0);
+
+  const rightColumn = offerings
+    .map((item, index) => ({ item, index }))
+    .filter(({ index }) => index % 2 !== 0);
+
   return (
     <section className="w-full py-[70px] md:py-[90px] lg:py-[100px]">
       <div className="mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-0">
-        {/* Heading */}
         <div className="text-center">
-          <h2 className="text-[34px] font-[600] font-bricolage leading-[100%] tracking-[-4%] text-black max-[768px]:text-[44px] lg:text-[56px] mb-[110px]">
+          <h2 className="mb-[110px] text-[34px] font-[600] font-bricolage leading-[100%] tracking-[-4%] text-black max-[768px]:text-[44px] lg:text-[56px]">
             Our Offerings
           </h2>
         </div>
 
-        {/* Desktop Layout */}
-        <div className="mt-[40px] hidden grid-cols-2 gap-6 lg:grid">
-          {/* LEFT */}
-          <div className="flex flex-col gap-6">
-            <Card item={offerings[0]} />
-            <Card item={offerings[2]} />
-            <Card item={offerings[4]} />
-            <Card item={offerings[6]} />
-            <Card item={offerings[8]} />
+        {/* One set of cards for every screen size */}
+        <div className="mt-[40px] grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:flex lg:items-start lg:gap-6">
+          {/* Left column on desktop */}
+          <div className="contents lg:flex lg:w-1/2 lg:flex-col lg:gap-6">
+            {leftColumn.map(({ item, index }) => (
+              <Card key={item.title} item={item} order={index} />
+            ))}
           </div>
 
-          {/* RIGHT */}
-          <div className="flex flex-col gap-6">
-            <Card item={offerings[1]} />
-            <Card item={offerings[3]} />
-            <Card item={offerings[5]} />
-            <Card item={offerings[7]} />
-            <Card item={offerings[9]} />
+          {/* Right column on desktop */}
+          <div className="contents lg:flex lg:w-1/2 lg:flex-col lg:gap-6">
+            {rightColumn.map(({ item, index }) => (
+              <Card key={item.title} item={item} order={index} />
+            ))}
           </div>
-        </div>
-
-        {/* Tablet Layout */}
-        <div className="mt-[45px] hidden grid-cols-2 gap-5 sm:grid lg:hidden">
-          {offerings.map((item, index) => (
-            <Card key={index} item={item} tablet />
-          ))}
-        </div>
-
-        {/* Mobile Layout */}
-        <div className="mt-[35px] flex flex-col gap-4 sm:hidden">
-          {offerings.map((item, index) => (
-            <Card key={index} item={item} mobile />
-          ))}
         </div>
       </div>
     </section>
   );
 }
 
+type Offering = (typeof offerings)[number];
+
 function Card({
   item,
-  mobile = false,
-  tablet = false,
+  order,
 }: {
-  item: {
-    title: string;
-    description: string;
-    bg: string;
-    src: string;
-    height: string;
-    large: boolean;
-  };
-  mobile?: boolean;
-  tablet?: boolean;
+  item: Offering;
+  order: number;
 }) {
-  const isResponsiveSmall = mobile || tablet;
-
   return (
     <article
+      style={{ order }}
       className={`
-        relative overflow-hidden rounded-[24px] md:rounded-[28px] lg:rounded-[32px]
-        ${item.bg}
-        ${
-          mobile
-            ? "min-h-[230px]"
-            : tablet
-            ? "min-h-[260px]"
-            : item.height
-        }
-        w-full
+        relative w-full min-h-[230px] overflow-hidden rounded-[24px]
         shadow-[0px_4px_20px_rgba(0,0,0,0.18)]
-        transition-all duration-300 hover:-translate-y-1
+        transition-transform duration-300 hover:-translate-y-1
+        md:min-h-[260px] md:rounded-[28px]
+        lg:min-h-0 lg:rounded-[32px] ${item.height}
+        ${item.bg}
       `}
     >
-      {/* LARGE CARD DESKTOP */}
-      {item.large && !isResponsiveSmall ? (
-        <div className="flex h-full flex-col justify-between p-8">
-          {/* Icon */}
-          <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
+      <div
+        className={`
+          flex h-full flex-col justify-between p-5
+          sm:flex-row sm:items-start sm:gap-5 sm:p-6
+          md:p-7
+          lg:gap-5
+          ${item.large
+            ? "lg:flex-col lg:justify-between lg:p-8"
+            : "lg:flex-row lg:items-start lg:justify-start lg:p-6 lg:pt-6"}
+        `}
+      >
+        {/* One image per card */}
+        <div className="shrink-0">
+          <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.18)] sm:h-[72px] sm:w-[72px]">
             <Image
               src={item.src}
-              alt={item.title}
+              alt=""
               width={72}
               height={72}
-              className="h-[72px] w-[72px] rounded-full object-cover"
-              priority
+              sizes="72px"
+              className="h-full w-full rounded-full object-cover"
             />
           </div>
-
-          {/* Content */}
-          <div className="mt-8">
-            <h3 className="whitespace-pre-line text-[32px] font-[500] leading-[100%] tracking-[-0.04em] text-white">
-              {item.title}
-            </h3>
-
-            <p className="mt-4 max-w-[420px] text-[16px] font-[400] leading-[1.65] text-[#CECECE]">
-              {item.description}
-            </p>
-          </div>
         </div>
-      ) : (
-        /* SMALL + RESPONSIVE CARD */
+
+        {/* One heading and description per card */}
         <div
           className={`
-            flex h-full
-            ${
-              mobile
-                ? "flex-col justify-between p-5"
-                : "flex-row items-start gap-5 p-6 md:p-7"
-            }
+            mt-6 w-full
+            sm:mt-0 sm:min-w-0 sm:flex-1 sm:pt-1
+            ${item.large ? "lg:mt-8 lg:flex-none lg:pt-0" : "lg:mt-0"}
           `}
         >
-          {/* Icon */}
-          <div className="shrink-0">
-            <div
-              className={`
-                flex items-center justify-center rounded-full bg-white
-                shadow-[0px_8px_24px_rgba(0,0,0,0.18)]
-                ${
-                  mobile
-                    ? "h-[64px] w-[64px]"
-                    : "h-[72px] w-[72px]"
-                }
-              `}
-            >
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={72}
-                height={72}
-                className={`
-                  rounded-full object-cover
-                  ${
-                    mobile
-                      ? "h-[64px] w-[64px]"
-                      : "h-[72px] w-[72px]"
-                  }
-                `}
-                priority
-              />
-            </div>
-          </div>
+          <h3
+            className={`
+              whitespace-pre-line font-[500] leading-[100%]
+              tracking-[-0.04em] text-white
+              text-[26px]
+              ${item.large ? "lg:text-[32px]" : "lg:text-[28px]"}
+            `}
+          >
+            {item.title}
+          </h3>
 
-          {/* Content */}
-          <div className={`${mobile ? "mt-6" : "flex-1 pt-1"}`}>
-            <h3
-              className={`
-                whitespace-pre-line font-[500] leading-[100%]
-                tracking-[-0.04em] text-white
-                ${
-                  mobile
-                    ? "text-[26px]"
-                    : tablet
-                    ? "text-[26px]"
-                    : "text-[28px]"
-                }
-              `}
-            >
-              {item.title}
-            </h3>
-
-            <p
-              className={`
-                mt-4 font-[400] leading-[1.6] text-[#CECECE]
-                ${
-                  mobile
-                    ? "max-w-full text-[14px]"
-                    : tablet
-                    ? "max-w-full text-[14px]"
-                    : "max-w-[320px] text-[15px]"
-                }
-              `}
-            >
-              {item.description}
-            </p>
-          </div>
+          <p
+            className={`
+              mt-4 text-[14px] font-[400] leading-[1.6] text-[#CECECE]
+              sm:max-w-full sm:text-[14px]
+              lg:text-[15px]
+              ${item.large
+                ? "lg:max-w-[420px] lg:text-[16px] lg:leading-[1.65]"
+                : "lg:max-w-[320px]"}
+            `}
+          >
+            {item.description}
+          </p>
         </div>
-      )}
+      </div>
 
-      {/* Gradient */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_100%)]" />
+      {/* Decorative gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_100%]" />
     </article>
   );
 }

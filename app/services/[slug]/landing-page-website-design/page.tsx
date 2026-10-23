@@ -15,32 +15,7 @@ import Uiux from "@/app/Component/landing/Uiux";
 import CommonHeroHeader from "@/app/Component/CommonHeroHead";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  title: "Landing Page & Website Design | Athratech",
-  description:
-    "High-converting landing page, website design, UI/UX design, mobile scaling, and digital platform design for modern brands.",
-  keywords: [
-    "landing page design",
-    "website design",
-    "UI UX design",
-    "web design agency",
-    "mobile website design",
-    "digital business platform",
-  ],
-  openGraph: {
-    title: "Landing Page & Website Design | Athratech",
-    description: "Pixel-perfect landing page and UI/UX design for digital brands.",
-    type: "website",
-    images: [
-      {
-        url: "/landing/hero-dashboard.png",
-        width: 1200,
-        height: 720,
-        alt: "Landing page dashboard website design preview",
-      },
-    ],
-  },
-};
+
 
 type HeadDataItem = {
   title: ReactNode;

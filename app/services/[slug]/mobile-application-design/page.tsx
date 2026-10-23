@@ -13,28 +13,7 @@ import Execution from "@/app/Component/mobile/Execution";
 import MobilePhoneShowcase from "@/app/Component/mobile/MobilePhoneShowcase";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "Mobile Application Design | Athratech",
-  description:
-    "Pixel-perfect mobile application design, app UI/UX, responsive mobile interfaces, design systems, and scalable digital product experiences.",
-  keywords: [
-    "mobile application design",
-    "app UI design",
-    "mobile UX design",
-    "app design agency",
-    "mobile app interface",
-    "UI UX design",
-  ],
-  openGraph: {
-    title: "Mobile Application Design | Athratech",
-    description:
-      "Premium mobile app UI/UX design for scalable digital products.",
-    type: "website",
-  },
-};
+
 
 type HeadDataItem = {
   title: ReactNode;
@@ -45,7 +24,7 @@ type HeadDataItem = {
 };
 
 const headData: HeadDataItem = {
-  title: "Mobile Application Design",
+  title: "Mobile App UI/UX Design Services",
   para:
     "Designing applications isn’t just about how they look — it’s about how they work, feel, and guide users through every interaction.",
   buttonText: "Contact Us",
@@ -55,8 +34,8 @@ const headData: HeadDataItem = {
 const strategyData = {
   heading: (
     <>
-      App UI/UX that{" "}
-      <span className="text-[#999999]">Grows</span> your business
+      Mobile App UI/UX Design{" "}
+      <span className="text-[#999999]">That Elevates User </span> Experience
     </>
   ),
   para:
@@ -70,7 +49,7 @@ const platformsData = {
     "We design digital products with clear structure, business-focused flows and scalable interface systems that work across every important screen.",
   services: [
     {
-      title: "User-Centered Interface",
+      title: "Explain intuitive app navigation, touch-friendly screens and user journeys",
       content:
         "Landing pages, company websites, portfolio pages and marketing websites designed with clear conversion flow, strong visual hierarchy and responsive structure.",
     },
@@ -91,7 +70,7 @@ const platformsData = {
     },
   ],
   cta: {
-    text: "Need a website design or redesign? We can help!",
+    text: "Need a Mobile App UI/UX Design Partner?",
     buttonText: "Let’s Connect",
     href: "/contact-us",
     ariaLabel: "Contact Athratech",
@@ -101,7 +80,7 @@ const platformsData = {
 const landingProcessData = {
   title: "Our Process",
   description:
-    "We follow a clear design process that keeps every project structured, focused and conversion-ready.",
+    "WExplain research, app wireframing, prototypes and usability-focused refinements",
   steps: [
     {
       title: "Research & Understanding",

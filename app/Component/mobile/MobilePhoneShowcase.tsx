@@ -6,7 +6,7 @@ export default function MobilePhoneShowcase() {
       <div className="mx-auto max-w-full px-5 sm:px-6 lg:px-8">
         <Image
           src="https://res.cloudinary.com/dpo9e7wp5/image/upload/v1779255577/website-images/g4zenqu0cq1cio48tprm.png"
-          alt="Mobile application showcase"
+          alt="fast Responce Mobile App"
           width={1440}
           height={982}
           priority

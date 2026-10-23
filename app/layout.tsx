@@ -23,6 +23,9 @@ import { ServicesProvider } from "./context/ServicesContext";
 
 
 
+
+
+
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.athratech.com";
 
@@ -30,23 +33,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "AthraTech | Information Technology Company",
+    default: "Digital Marketing & SEO Agency in Gurgaon | Athratech",
     template: "%s | AthraTech",
   },
 
   description:
     "AthraTech delivers website development, UI/UX design, and digital marketing solutions for businesses.",
-
-   keywords: [
-    "website development company",
-    "website development services",
-    "mobile app development company",
-    "SEO services",
-    "digital marketing agency",
-    "ERP software development",
-    "CRM development company",
-    "cybersecurity solutions",
-  ],
 
   icons: {
     icon: [
@@ -66,6 +58,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
 
 export default function RootLayout({
   children,

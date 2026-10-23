@@ -12,29 +12,7 @@ import Platforms from "@/app/Component/Platforms";
 import Uiux from "@/app/Component/landing/Uiux";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "Design System & UI Kit || Athratech",
-  description:
-    "Great products aren’t just designed—they’re built to scale. We create design systems and UI kits that bring consistency, clarity, and speed, giving your team reusable components and a seamless foundation across platforms.",
-  keywords: [
-    "design system",
-    "UI kit",
-    "component library",
-    "design tokens",
-    "Figma UI kit",
-    "product design system",
-    "UI UX design",
-  ],
-  openGraph: {
-    title: "Design System & UI Kit | Athratech",
-    description:
-      "Pixel-perfect design systems and UI kits for scalable digital products.",
-    type: "website",
-  },
-};
+
 
 type HeadDataItem = {
   title: ReactNode;

@@ -23,52 +23,7 @@ import Browser from "@/app/svgIcons/Browser";
 import Shapes from "@/app/svgIcons/Shapes";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
 
-  title: "Application Development | Athratech",
-
-  description:
-    "Custom application development for mobile apps, web apps, SaaS platforms, CRM, ERP, dashboards, backend systems, APIs, and scalable digital products.",
-
-  keywords: [
-    "application development",
-    "mobile app development",
-    "web app development",
-    "custom application development",
-    "frontend development",
-    "backend development",
-    "CRM development",
-    "ERP development",
-    "SaaS application development",
-    "UI UX application design",
-  ],
-
-  alternates: {
-    canonical: "/services/application-development",
-  },
-
-  openGraph: {
-    title: "Application Development | Athratech",
-
-    description:
-      "We design and develop scalable web and mobile applications with clean UI, strong backend, and production-ready architecture.",
-
-    type: "website",
-    url: "/services/application-development",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title: "Application Development | Athratech",
-
-    description:
-      "Build scalable mobile apps, web apps, CRM, ERP, SaaS platforms, APIs, and dashboards.",
-  },
-};
 
 type HeadDataItem = {
   title: ReactNode;

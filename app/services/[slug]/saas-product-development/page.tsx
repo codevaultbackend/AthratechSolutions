@@ -8,42 +8,7 @@ import Strategy from "@/app/Component/Strategy";
 import Uiux from "@/app/Component/landing/Uiux";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "SaaS Product Development | Athratech",
-  description:
-    "Custom SaaS product development for CRM, ERP, dashboards, subscription platforms, admin panels, web apps, mobile apps, and scalable cloud-based business software.",
-  keywords: [
-    "SaaS product development",
-    "CRM SaaS development",
-    "ERP SaaS development",
-    "custom SaaS development",
-    "web app development",
-    "dashboard development",
-    "subscription software development",
-    "cloud software development",
-    "B2B SaaS platform",
-    "admin panel development",
-  ],
-  alternates: {
-    canonical: "/services/saas-product-development",
-  },
-  openGraph: {
-    title: "SaaS Product Development | Athratech",
-    description:
-      "We design and develop scalable SaaS products, CRM platforms, ERP systems, dashboards, and web applications for growing businesses.",
-    type: "website",
-    url: "/services/saas-product-development",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SaaS Product Development | Athratech",
-    description:
-      "Build scalable SaaS platforms, CRM systems, ERP products, dashboards, and cloud-based applications.",
-  },
-};
+
 type HeadDataItem = {
   title: ReactNode;
   para: string;

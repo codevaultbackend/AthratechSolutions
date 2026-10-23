@@ -13,7 +13,7 @@ const blogsContent = [
         title: "Glassmorphism in 2026: How to Use Frosted Glass Without Killing UX",
         cta1: "Motion Design",
         cta2: "Design",
-        img: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/Glassmorphism_DDWuIzHvq.jpg",
+        img: "/glassmorphism.webp",
         featured: true,
     },
     {

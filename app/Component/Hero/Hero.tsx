@@ -68,7 +68,7 @@ export default function Hero() {
                   will-change-transform
                 "
               >
-                <HeroContent />
+               <HeroContent headingLevel="h1" />
               </div>
 
               {/* RIGHT */}
@@ -149,7 +149,7 @@ export default function Hero() {
             pb-10
           "
         >
-          <HeroContent />
+          <HeroContent headingLevel="h2" />
 
           <div className="mt-5">
             <p className="text-[16px] leading-7 text-[#6B6B6B]">

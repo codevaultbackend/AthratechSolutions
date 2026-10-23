@@ -17,20 +17,20 @@ const stats: StatItem[] = [
         value: 50,
         suffix: "+",
         title: "Successful Projects",
-        label: "We build high-impact websites and digital experiences for startups and enterprises to scale fast",
+        label: "We deliver web development, mobile applications, and digital solutions tailored to business goals and user needs.",
     },
     {
         value: 240,
         suffix: "%+",
         title: "Increase in Conversion Rate",
-        label: "Purpose-built digital experiences that elevate brands and increase conversion rates at every touchpoint.",
+        label: "We improve website usability, landing pages, and conversion-focused user journeys to support measurable business growth.",
     },
     {
         value: 10,
         prefix: "$",
         suffix: "M+",
         title: "Revenue Generated",
-        label: "We create high-impact digital experiences that help startups and enterprises accelerate growth and maximize revenue.",
+        label: "We build digital products and business solutions designed to support customer acquisition, operational efficiency, and revenue growth.",
     },
 ];
 
@@ -49,7 +49,7 @@ function AnimatedCounter({
     duration?: number;
     start: boolean;
 }) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(value);
 
     useEffect(() => {
         if (!start) return;
@@ -61,8 +61,6 @@ function AnimatedCounter({
             if (!startTime) startTime = timestamp;
 
             const progress = Math.min((timestamp - startTime) / duration, 1);
-
-            // easeOutCubic
             const eased = 1 - Math.pow(1 - progress, 3);
 
             const current = value * eased;

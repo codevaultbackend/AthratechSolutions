@@ -9,45 +9,6 @@ import Strategy from "@/app/Component/Strategy";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "Digital Marketing Services | Athratech",
-  description:
-    "SEO, PPC, Google Ads, Meta Ads, Amazon PPC, WhatsApp marketing, email marketing, social media marketing, content marketing, and affiliate marketing services.",
-  keywords: [
-    "digital marketing services",
-    "SEO services",
-    "PPC advertising",
-    "Google Ads agency",
-    "Meta Ads",
-    "Facebook Ads",
-    "Instagram Ads",
-    "Amazon PPC",
-    "WhatsApp marketing",
-    "email marketing",
-    "social media marketing",
-    "content marketing",
-    "affiliate marketing",
-  ],
-  alternates: {
-    canonical: "/services/digital-marketing-services",
-  },
-  openGraph: {
-    title: "Digital Marketing Services | Athratech",
-    description:
-      "Grow your business with SEO, paid ads, content, email, social media, WhatsApp, and performance marketing.",
-    type: "website",
-    url: "/services/digital-marketing-services",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Digital Marketing Services | Athratech",
-    description:
-      "Performance-focused digital marketing services for modern brands and businesses.",
-  },
-};
 
 export default function HomePage() {
   const jsonLd = {
@@ -78,7 +39,7 @@ export default function HomePage() {
   };
 
   const headData: HeadDataItem = {
-    title: "Digital Marketing Services",
+    title: "Digital Marketing Services in Gurgaon",
     para: "We help your business grow online by combining strategy, creativity, and data-driven decisions. From increasing visibility to driving conversions, our digital marketing services are designed to deliver real results.",
     buttonText: "Contact Us",
     buttonHref: "/contact-us",

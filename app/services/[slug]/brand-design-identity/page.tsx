@@ -14,28 +14,7 @@ import Process from "@/app/Component/Process";
 import Uiux from "@/app/Component/landing/Uiux";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
-  title: "Brand and Identity Design | Athratech",
-  description:
-    "Strategic brand identity design, logo systems, visual language, brand storytelling, and UI/UX-ready design systems for modern businesses.",
-  keywords: [
-    "brand identity design",
-    "logo design",
-    "branding agency",
-    "visual identity",
-    "brand strategy",
-    "UI UX branding",
-  ],
-  openGraph: {
-    title: "Brand and Identity Design | Athratech",
-    description:
-      "Pixel-perfect brand identity and visual system design for strong businesses.",
-    type: "website",
-  },
-};
+
 
 type HeadDataItem = {
   title: ReactNode;

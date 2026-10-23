@@ -456,8 +456,7 @@ export default function StepsSection() {
                                     text-white
                                 "
                             >
-                                We talk about your business, your idea and current activities
-                                and results.
+                                We deliver custom web development, app development, and digital marketing solutions to help your business grow online.
                             </p>
 
 
@@ -735,8 +734,7 @@ export default function StepsSection() {
                                     text-white
                                 "
                             >
-                                We talk about your business, your idea and current activities
-                                and results.
+                             We put the strategy into action, delivering thoughtful solutions designed to move your business forward.
                             </p>
 
 
