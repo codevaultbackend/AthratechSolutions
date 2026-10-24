@@ -177,9 +177,9 @@ export default function BlogsSection() {
                         className="text-[28px] font-normal leading-[100%] tracking-[-0.04em] text-black sm:text-[36px] md:text-[42px] lg:text-[48px]"
                         style={{ fontFamily: "var(--font-bricolage), sans-serif" }}
                     >
-                        Fresh insights & ideas
+                        Latest Insights 
                         <br />
-                        from the team.
+                        from Our Blog
                     </h2>
                 </div>
 

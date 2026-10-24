@@ -16,81 +16,100 @@ const stats: StatItem[] = [
     {
         value: 50,
         suffix: "+",
-        title: "Successful Projects",
+        title: "Projects Delivered",
         label: "We deliver web development, mobile applications, and digital solutions tailored to business goals and user needs.",
     },
     {
         value: 240,
         suffix: "%+",
-        title: "Increase in Conversion Rate",
+        title: "Average Conversion Rate Increase",
         label: "We improve website usability, landing pages, and conversion-focused user journeys to support measurable business growth.",
     },
     {
         value: 10,
         prefix: "$",
         suffix: "M+",
-        title: "Revenue Generated",
+        title: "Client Revenue Generated",
         label: "We build digital products and business solutions designed to support customer acquisition, operational efficiency, and revenue growth.",
     },
 ];
 
+
+
 function AnimatedCounter({
-    value,
-    prefix = "",
-    suffix = "",
-    decimals = 0,
-    duration = 1800,
-    start,
+  value,
+  prefix = "",
+  suffix = "",
+  decimals = 0,
+  duration = 1800,
+  start,
 }: {
-    value: number;
-    prefix?: string;
-    suffix?: string;
-    decimals?: number;
-    duration?: number;
-    start: boolean;
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+  duration?: number;
+  start: boolean;
 }) {
-    const [count, setCount] = useState(value);
+  const [count, setCount] = useState(value);
+  const [hasMounted, setHasMounted] = useState(false);
 
-    useEffect(() => {
-        if (!start) return;
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
-        let startTime: number | null = null;
-        let animationFrame: number;
+  useEffect(() => {
+    if (!hasMounted || !start) return;
 
-        const animate = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
+    let startTime: number | null = null;
+    let animationFrame = 0;
 
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
+    // Animate from 0 to the real value.
+    setCount(0);
 
-            const current = value * eased;
-            setCount(current);
+    const animate = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp;
 
-            if (progress < 1) {
-                animationFrame = requestAnimationFrame(animate);
-            } else {
-                setCount(value);
-            }
-        };
+      const progress = Math.min(
+        (timestamp - startTime) / duration,
+        1
+      );
 
+      // Smooth ease-out animation
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(value * eased);
+
+      if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(value);
+      }
+    };
 
-        return () => cancelAnimationFrame(animationFrame);
-    }, [start, value, duration]);
+    animationFrame = requestAnimationFrame(animate);
 
-    const formatted =
-        value >= 1000 && decimals === 0
-            ? Math.floor(count).toLocaleString("en-IN")
-            : count.toFixed(decimals);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [hasMounted, start, value, duration]);
 
-    return (
-        <span>
-            {prefix}
-            {formatted}
-            {suffix}
-        </span>
-    );
+  // Actual values are present in server-rendered HTML.
+  // Animation begins only after the section enters the viewport.
+  const displayValue = hasMounted && start ? count : value;
+
+  const formatted =
+    decimals === 0
+      ? Math.floor(displayValue).toLocaleString("en-IN")
+      : displayValue.toFixed(decimals);
+
+  return (
+    <span>
+      {prefix}
+      {formatted}
+      {suffix}
+    </span>
+  );
 }
+
+
 
 export default function ImpactSection() {
     const sectionRef = useRef<HTMLElement | null>(null);
