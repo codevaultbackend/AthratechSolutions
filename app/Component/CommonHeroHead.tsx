@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 
+
 type CommonHeroHeaderProps = {
   headData: {
     title: ReactNode;

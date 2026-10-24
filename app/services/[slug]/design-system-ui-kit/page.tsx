@@ -11,6 +11,13 @@ import Strategy from "@/app/Component/Strategy";
 import Platforms from "@/app/Component/Platforms";
 import Uiux from "@/app/Component/landing/Uiux";
 import ContactCTA from "@/app/Home/Component/ContactCTA";
+import { getPageMetadata, seoPages } from "@/app/lib/seo"; 
+
+
+
+export const metadata = getPageMetadata(
+  seoPages.designSystemUiKit
+);
 
 
 

@@ -88,6 +88,17 @@ export const seoPages = {
       "mobile user experience design",
     ],
   },
+  designSystemUiKit: {
+  title: "Design System UI Kit | Athratech",
+  description:
+    "Explore scalable UI design systems and reusable UI kits for consistent digital experiences.",
+  path: "/services/ui-ux-design/design-system-ui-kit",
+  keywords: [
+    "design system UI kit",
+    "UI design system",
+    "reusable UI components",
+  ],
+},
 
   brandIdentity: {
     title: "Brand Identity Design Services",
@@ -108,15 +119,21 @@ export const seoPages = {
 } satisfies Record<string, SeoEntry>;
 
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.athratech.com";
 
 export function getPageMetadata(page: SeoEntry): Metadata {
+  const canonicalPath =
+    page.path === "/" ? "/" : `/${page.path.replace(/^\/+|\/+$/g, "")}`;
+
+  const canonicalUrl = new URL(canonicalPath, SITE_URL).toString();
+
   return {
     title: page.title.trim(),
     description: page.description.trim(),
     keywords: page.keywords,
 
     alternates: {
-      canonical: page.path,
+      canonical: canonicalUrl,
     },
 
     robots: {
@@ -127,7 +144,7 @@ export function getPageMetadata(page: SeoEntry): Metadata {
     openGraph: {
       title: `${page.title.trim()} | Athratech`,
       description: page.description.trim(),
-      url: page.path,
+      url: canonicalUrl,
       siteName: "Athratech",
       type: "website",
       images: [
@@ -148,3 +165,4 @@ export function getPageMetadata(page: SeoEntry): Metadata {
     },
   };
 }
+
