@@ -10,9 +10,9 @@ type SeoEntry = {
 
 export const seoPages = {
   home: {
-    title: "Digital Marketing & SEO Agency in Gurgaon ",
+    title: "Website Development & Digital Marketing Agency in Gurgaon",
     description:
-      "Athratech is a digital marketing agency in Gurgaon offering SEO, Google Ads, web development and AI search optimization to help businesses generate qualified leads.",
+      "Website development and digital marketing company in Gurgaon. SEO, Google Ads,Web and App solutions to generate qualified leads.",
     path: "/",
     keywords: [
       "Digital Marketing Agency in Gurgaon",

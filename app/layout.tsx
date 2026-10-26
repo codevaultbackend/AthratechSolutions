@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Digital Marketing & SEO Agency in Gurgaon | Athratech",
+    default: "Website Development & Digital Marketing Agency in Gurgaon ",
     template: "%s | AthraTech",
   },
 
   description:
-    "AthraTech delivers website development, UI/UX design, and digital marketing solutions for businesses.",
+    "Website development and digital marketing company in Gurgaon. SEO, Google Ads,Web and App solutions to generate qualified leads.",
 
     robots: {
     index: true,
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
 
   // Global Open Graph metadata
   openGraph: {
-    title: "Digital Marketing & SEO Agency in Gurgaon | Athratech",
+    title: "Website Development & Digital Marketing Agency in Gurgaon ",
     description:
-      "Athratech delivers website development, UI/UX design, and digital marketing solutions for businesses.",
+      "Website development and digital marketing company in Gurgaon. SEO, Google Ads,Web and App solutions to generate qualified leads.",
     siteName: "Athratech",
     type: "website",
     images: [
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
   // Global Twitter/X metadata
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing & SEO Agency in Gurgaon | Athratech",
+    title: "Website Development & Digital Marketing Agency in Gurgaon",
     description:
-      "Athratech delivers website development, UI/UX design, and digital marketing solutions for businesses.",
+      "Website development and digital marketing company in Gurgaon. SEO, Google Ads,Web and App solutions to generate qualified leads.",
     images: ["/og-image.jpg"],
   },
 

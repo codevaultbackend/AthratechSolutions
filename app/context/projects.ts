@@ -285,7 +285,7 @@ export const projectsData: ProjectItem[] = [
             "object-contain object-center w-full h-full p-3 sm:p-4 md:p-6",
         },
         {
-          image: "https://ik.imagekit.io/j4xu3pewo/fast_response_assets/fastresponce6_C5KAAqV81.jpg",
+          image: "/Salon.jpg",
           alt: "FastResponse premium salon service banner",
           className:
             "rounded-[16px] md:rounded-[22px] bg-[#F1F1F1] overflow-hidden",
