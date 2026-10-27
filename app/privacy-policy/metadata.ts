@@ -9,7 +9,7 @@ export const metadata = {
     title: "Privacy Policy | AthraTech",
     description:
       "Learn how AthraTech handles your personal information.",
-    url: "https://athratech.com/privacy-policy",
+    url: "https://www.athratech.com/privacy-policy",
     siteName: "AthraTech",
     type: "article",
   },
