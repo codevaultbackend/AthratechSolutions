@@ -17,15 +17,8 @@ import {
   geist,
 } from "./fonts";
 
-
 import { BlogsProvider } from "./context/BlogsContext";
 import { ServicesProvider } from "./context/ServicesContext";
-
-
-
-
-
-
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.athratech.com";
 
@@ -111,6 +104,7 @@ export default function RootLayout({
 
         <head>
   <meta name="p:domain_verify" content="78a39d68eed68b972d42bd531d8ffd25" />
+  <meta name="msvalidate.01" content="103AC95E9640C868EDEDD3BD986CE50A" />
 
   {/* Open Graph */}
 
